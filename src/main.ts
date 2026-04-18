@@ -71,6 +71,15 @@ async function bootstrap() {
   // Global filters
   app.useGlobalFilters(new GlobalExceptionFilter());
 
+  // Log all incoming request origins for CORS debugging
+  app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    if (origin) {
+      // console.log(`[CORS Debug] Incoming Origin: ${origin}`);
+    }
+    next();
+  });
+
   // CORS configuration
   const corsOrigin = process.env.CORS_ORIGIN || '*';
   const isWildcard = corsOrigin === '*';
@@ -81,7 +90,11 @@ async function bootstrap() {
   console.log(`CORS: Allowed Origins = ${corsOrigin}`);
 
   app.enableCors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+      // Temporarily allow all origins to diagnose if the issue is policy-based or network-based
+      // console.log(`[CORS Debug] Request from Origin: ${origin}`);
+      callback(null, true);
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: [
       'Content-Type',
