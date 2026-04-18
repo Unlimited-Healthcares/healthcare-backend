@@ -75,7 +75,7 @@ export class MedicalReportsService {
     // 2. Prepare verification code and report number
     const verificationCode = uuidv4().substring(0, 8).toUpperCase();
     const reportNumber = `REP-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
-    const verificationUrl = `https://app.unlimitedhealth.com/verify/report/${verificationCode}`;
+    const verificationUrl = `https://unlimitedhealthcares.com/verify/report/${verificationCode}`;
 
     // 3. Generate QR Code
     const qrCodeDataUrl = await QRCode.toDataURL(verificationUrl);
@@ -249,7 +249,7 @@ export class MedicalReportsService {
       doc.fontSize(8).fillColor(secondaryColor).font('Helvetica-Bold');
       doc.text('SECURE VERIFICATION QR', 140, footerY + 10);
       doc.font('Helvetica').text('This report is digitally signed and encrypted.', 140, footerY + 22);
-      doc.text(`Verify at: https://app.unlimitedhealth.com/verify`, 140, footerY + 34);
+      doc.text(`Verify at: https://unlimitedhealthcares.com/verify`, 140, footerY + 34);
       doc.text(`Verification Code: ${verificationCode}`, 140, footerY + 46);
       doc.text(`Checksum: ${this.generateChecksum(Buffer.from(reportNumber + verificationCode))}`, 140, footerY + 58);
 

@@ -1,6 +1,6 @@
 {
-    "latest_version": "1.1.43",
-    "update_url": "https://healthcare-backend-vih6.onrender.com/api/ota/download",
+    "latest_version": "1.1.44",
+    "update_url": "https://healthcare-backend-8tfs.onrender.com/api/ota/download",
     "min_required_version": "1.0.0",
-    "release_notes": "Specialty services widget added"
+    "release_notes": "Medical volunteer verification added"
 }

@@ -51,7 +51,7 @@ services:
       - key: FRONTEND_URL
         value: "https://unlimitedhealthcares.com"
       - key: CORS_ORIGIN
-        value: "https://unlimitedhealthcares.com,https://www.unlimitedhealthcares.com,https://healthcare-backend-vih6.onrender.com"
+        value: "https://unlimitedhealthcares.com,https://www.unlimitedhealthcares.com,https://healthcare-backend-8tfs.onrender.com"
   - type: keyvalue
     name: healthcare-cache
     plan: free

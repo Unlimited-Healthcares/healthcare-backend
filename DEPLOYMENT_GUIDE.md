@@ -206,8 +206,8 @@ const config = {
     WEB_SOCKET_URL: 'ws://localhost:3000',
   },
   production: {
-    API_BASE_URL: 'https://api.unlimtedhealth.com/api',
-    WEB_SOCKET_URL: 'wss://api.unlimtedhealth.com',
+    API_BASE_URL: 'https://healthcare-backend-8tfs.onrender.com/api',
+    WEB_SOCKET_URL: 'wss://healthcare-backend-8tfs.onrender.com',
   },
 };
 
@@ -318,23 +318,23 @@ const getPatients = async () => {
 
 ```bash
 # Test the health endpoint
-curl https://api.unlimtedhealth.com/health
+curl https://healthcare-backend-8tfs.onrender.com/health
 ```
 
 ### 2. API Documentation
 
-Visit: `https://api.unlimtedhealth.com/docs`
+Visit: `https://healthcare-backend-8tfs.onrender.com/docs`
 
 ### 3. Test API Endpoints
 
 ```bash
 # Test authentication
-curl -X POST https://api.unlimtedhealth.com/api/auth/login \
+curl -X POST https://healthcare-backend-8tfs.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","password":"password"}'
 
 # Test protected endpoint
-curl -X GET https://api.unlimtedhealth.com/api/patients \
+curl -X GET https://healthcare-backend-8tfs.onrender.com/api/patients \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
@@ -484,15 +484,15 @@ pm2 start ecosystem.config.js -i max
 If you encounter issues:
 
 1. Check the logs: `pm2 logs unlimitedhealth-api`
-2. Test the health endpoint: `curl https://api.unlimtedhealth.com/health`
-3. Verify DNS propagation: `nslookup api.unlimtedhealth.com`
+2. Test the health endpoint: `curl https://healthcare-backend-8tfs.onrender.com/health`
+3. Verify DNS propagation: `nslookup healthcare-backend-8tfs.onrender.com`
 4. Check SSL status: `certbot certificates`
 
 ## 🎉 Success!
 
 Your API is now deployed and accessible at:
-- **API Base URL**: `https://api.unlimtedhealth.com/api`
-- **Documentation**: `https://api.unlimtedhealth.com/docs`
-- **Health Check**: `https://api.unlimtedhealth.com/health`
+- **API Base URL**: `https://healthcare-backend-8tfs.onrender.com/api`
+- **Documentation**: `https://healthcare-backend-8tfs.onrender.com/docs`
+- **Health Check**: `https://healthcare-backend-8tfs.onrender.com/health`
 
 Your frontend applications can now use these URLs to connect to your healthcare API! 

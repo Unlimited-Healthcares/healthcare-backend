@@ -147,7 +147,7 @@ async function bootstrap() {
     )
     .setLicense('MIT', 'https://opensource.org/licenses/MIT')
     .addServer('http://localhost:3000', 'Development Server')
-    .addServer('https://healthcare-backend-vih6.onrender.com', 'Production Server')
+    .addServer('https://healthcare-backend-8tfs.onrender.com', 'Production Server')
     .addBearerAuth(
       {
         type: 'http',
@@ -238,7 +238,7 @@ async function bootstrap() {
   console.log(`📚 API Documentation: http://${host}:${port}/${globalPrefix}/docs`);
   console.log(`📄 API JSON: http://${host}:${port}/${globalPrefix}/api-json`);
   console.log(`🔍 Health Check: http://${host}:${port}/${globalPrefix}/health`);
-  console.log(`🌐 Production URL: https://healthcare-backend-vih6.onrender.com`);
+  console.log(`🌐 Production URL: https://healthcare-backend-8tfs.onrender.com`);
   console.log(`🔒 CORS: Enabled for ${corsOrigin}`);
 }
 

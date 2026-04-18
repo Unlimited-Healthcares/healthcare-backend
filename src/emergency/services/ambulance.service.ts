@@ -8,6 +8,7 @@ import { NotificationsService } from '../../notifications/notifications.service'
 import { SmsService } from '../../integrations/sms.service';
 import { AuditLogService } from '../../audit/audit-log.service';
 import { EmergencyMedicalData } from '../entities/emergency-medical-data.entity';
+import { EmergencyGateway } from '../emergency.gateway';
 
 // Define JsonObject type locally since TypeORM doesn't export it
 type JsonObject = Record<string, unknown>;
@@ -25,6 +26,7 @@ export class AmbulanceService {
     private notificationsService: NotificationsService,
     private smsService: SmsService,
     private auditLogService: AuditLogService,
+    private emergencyGateway: EmergencyGateway,
   ) { }
 
   async createAmbulanceRequest(requestData: {
@@ -90,8 +92,8 @@ export class AmbulanceService {
         message: `Critical: ${requestData.medicalCondition} at ${requestData.pickupAddress}`,
         type: 'emergency',
         isUrgent: true,
-        data: { 
-          requestId: savedRequest.id, 
+        data: {
+          requestId: savedRequest.id,
           requestNumber: savedRequest.requestNumber,
           priority: savedRequest.priority,
           location: { lat: pickupLatitude, lng: pickupLongitude }
@@ -275,6 +277,9 @@ export class AmbulanceService {
 
     await this.requestRepository.update(requestId, updateData);
 
+    // Emit status update via gateway
+    this.emergencyGateway.sendStatusUpdate(requestId, status, updateData.trackingNumber || request.trackingNumber);
+
     // Send status update notifications
     await this.sendStatusUpdateNotifications(request, status);
 
@@ -308,6 +313,27 @@ export class AmbulanceService {
       currentLongitude: longitude,
       lastLocationUpdate: new Date(),
     });
+
+    // Find request the ambulance is currently serving and emit location
+    const activeStatuses = [
+      RequestStatus.DISPATCHED,
+      RequestStatus.ACKNOWLEDGED,
+      RequestStatus.EN_ROUTE,
+      RequestStatus.TRANSPORTING,
+      RequestStatus.ON_SCENE
+    ];
+
+    const requests = await this.requestRepository.find({
+      where: {
+        ambulanceId,
+      }
+    });
+
+    const activeRequest = requests.find(r => activeStatuses.includes(r.status));
+
+    if (activeRequest) {
+      this.emergencyGateway.sendLocationUpdate(activeRequest.id, { latitude, longitude });
+    }
   }
 
   async getAmbulanceRequests(filters: {

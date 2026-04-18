@@ -14,6 +14,7 @@ import { AmbulanceService } from './services/ambulance.service';
 import { EmergencyAlertsService } from './services/emergency-alerts.service';
 import { ViralReportingService } from './services/viral-reporting.service';
 import { EmergencyDispatchService } from './services/emergency-dispatch.service';
+import { EmergencyGateway } from './emergency.gateway';
 
 // Entities
 import { AmbulanceRequest } from './entities/ambulance-request.entity';
@@ -59,12 +60,14 @@ import { AuditModule } from '../audit/audit.module';
     EmergencyAlertsService,
     ViralReportingService,
     EmergencyDispatchService,
+    EmergencyGateway,
   ],
   exports: [
     AmbulanceService,
     EmergencyAlertsService,
     ViralReportingService,
     EmergencyDispatchService,
+    EmergencyGateway,
   ],
 })
 export class EmergencyModule { }

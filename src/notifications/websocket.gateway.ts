@@ -41,13 +41,7 @@ interface SystemNotification {
 @WebSocketGateway(0, {
   namespace: '/notifications',
   cors: {
-    origin: [
-      'http://217.21.78.192:3001',
-      'https://unlimtedhealth.com',
-      'https://app.unlimtedhealth.com',
-      'http://localhost:3000',
-      'http://localhost:3001',
-    ],
+    origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : '*',
     credentials: true,
     methods: ['GET', 'POST'],
   },
@@ -59,7 +53,7 @@ export class NotificationGateway implements OnGatewayConnection, OnGatewayDiscon
   private readonly logger = new Logger(NotificationGateway.name);
   private userSockets: Map<string, Socket[]> = new Map();
 
-  constructor() {}
+  constructor() { }
 
   handleConnection(client: Socket) {
     this.logger.log(`Client connected: ${client.id}`);
@@ -67,7 +61,7 @@ export class NotificationGateway implements OnGatewayConnection, OnGatewayDiscon
 
   handleDisconnect(client: Socket) {
     this.logger.log(`Client disconnected: ${client.id}`);
-    
+
     // Remove client from user mapping
     for (const [userId, sockets] of this.userSockets.entries()) {
       const index = sockets.findIndex(socket => socket.id === client.id);
@@ -89,15 +83,15 @@ export class NotificationGateway implements OnGatewayConnection, OnGatewayDiscon
     try {
       // In a real implementation, verify the JWT token here
       const { userId } = data;
-      
+
       if (!this.userSockets.has(userId)) {
         this.userSockets.set(userId, []);
       }
       this.userSockets.get(userId)!.push(client);
-      
+
       client.join(`user_${userId}`);
       client.emit('authenticated', { success: true });
-      
+
       this.logger.log(`User ${userId} authenticated with socket ${client.id}`);
     } catch (error) {
       client.emit('authentication_error', { message: 'Authentication failed' });

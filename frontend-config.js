@@ -15,8 +15,8 @@ const config = {
     TWILIO_PHONE_NUMBER: 'your-dev-twilio-phone-number',
   },
   staging: {
-    API_BASE_URL: 'https://api-staging.unlimtedhealth.com/api',
-    WEB_SOCKET_URL: 'wss://api-staging.unlimtedhealth.com',
+    API_BASE_URL: 'https://api-staging.8tfs.onrender.com/api',
+    WEB_SOCKET_URL: 'wss://api-staging.8tfs.onrender.com',
     SUPABASE_URL: 'https://your-staging-project.supabase.co',
     SUPABASE_ANON_KEY: 'your-staging-supabase-anon-key',
     GOOGLE_MAPS_API_KEY: 'your-staging-google-maps-api-key',
@@ -25,8 +25,8 @@ const config = {
     TWILIO_PHONE_NUMBER: 'your-staging-twilio-phone-number',
   },
   production: {
-    API_BASE_URL: 'https://api.unlimtedhealth.com/api',
-    WEB_SOCKET_URL: 'wss://api.unlimtedhealth.com',
+    API_BASE_URL: 'https://api.8tfs.onrender.com/api',
+    WEB_SOCKET_URL: 'wss://api.8tfs.onrender.com',
     SUPABASE_URL: 'https://your-prod-project.supabase.co',
     SUPABASE_ANON_KEY: 'your-prod-supabase-anon-key',
     GOOGLE_MAPS_API_KEY: 'your-prod-google-maps-api-key',
@@ -48,7 +48,7 @@ const API_ENDPOINTS = {
     RESET_PASSWORD: '/auth/reset-password',
     VERIFY_EMAIL: '/auth/verify-email',
   },
-  
+
   // Users
   USERS: {
     PROFILE: '/users/profile',
@@ -56,7 +56,7 @@ const API_ENDPOINTS = {
     CHANGE_PASSWORD: '/users/change-password',
     UPLOAD_AVATAR: '/users/avatar',
   },
-  
+
   // Patients
   PATIENTS: {
     LIST: '/patients',
@@ -66,7 +66,7 @@ const API_ENDPOINTS = {
     DELETE: (id) => `/patients/${id}`,
     MEDICAL_RECORDS: (id) => `/patients/${id}/medical-records`,
   },
-  
+
   // Medical Records
   MEDICAL_RECORDS: {
     LIST: '/medical-records',
@@ -77,7 +77,7 @@ const API_ENDPOINTS = {
     SHARE: (id) => `/medical-records/${id}/share`,
     VERSIONS: (id) => `/medical-records/${id}/versions`,
   },
-  
+
   // Appointments
   APPOINTMENTS: {
     LIST: '/appointments',
@@ -88,7 +88,7 @@ const API_ENDPOINTS = {
     CANCEL: (id) => `/appointments/${id}/cancel`,
     RESCHEDULE: (id) => `/appointments/${id}/reschedule`,
   },
-  
+
   // Centers
   CENTERS: {
     LIST: '/centers',
@@ -99,7 +99,7 @@ const API_ENDPOINTS = {
     DOCTORS: (id) => `/centers/${id}/doctors`,
     SERVICES: (id) => `/centers/${id}/services`,
   },
-  
+
   // Chat
   CHAT: {
     CONVERSATIONS: '/chat/conversations',
@@ -107,7 +107,7 @@ const API_ENDPOINTS = {
     SEND_MESSAGE: (conversationId) => `/chat/conversations/${conversationId}/messages`,
     MARK_READ: (conversationId) => `/chat/conversations/${conversationId}/read`,
   },
-  
+
   // Video Conferencing
   VIDEO: {
     CREATE_ROOM: '/video/create-room',
@@ -115,7 +115,7 @@ const API_ENDPOINTS = {
     LEAVE_ROOM: (roomId) => `/video/rooms/${roomId}/leave`,
     ROOM_STATUS: (roomId) => `/video/rooms/${roomId}/status`,
   },
-  
+
   // Emergency Services
   EMERGENCY: {
     ALERT: '/emergency/alert',
@@ -123,7 +123,7 @@ const API_ENDPOINTS = {
     NEARBY_HOSPITALS: '/emergency/nearby-hospitals',
     TRACK_AMBULANCE: (ambulanceId) => `/emergency/ambulance/${ambulanceId}/track`,
   },
-  
+
   // Blood Donation
   BLOOD_DONATION: {
     DONORS: '/blood-donation/donors',
@@ -132,7 +132,7 @@ const API_ENDPOINTS = {
     DONATE: '/blood-donation/donate',
     NEARBY_DONORS: '/blood-donation/nearby-donors',
   },
-  
+
   // Equipment Marketplace
   EQUIPMENT: {
     LIST: '/equipment-marketplace',
@@ -143,7 +143,7 @@ const API_ENDPOINTS = {
     PURCHASE: (id) => `/equipment-marketplace/${id}/purchase`,
     RENT: (id) => `/equipment-marketplace/${id}/rent`,
   },
-  
+
   // AI Assistant
   AI: {
     CHAT: '/ai/chat',
@@ -152,7 +152,7 @@ const API_ENDPOINTS = {
     SYMPTOM_CHECKER: '/ai/symptom-checker',
     DRUG_INTERACTION: '/ai/drug-interaction',
   },
-  
+
   // Reviews & Ratings
   REVIEWS: {
     LIST: '/reviews',
@@ -162,7 +162,7 @@ const API_ENDPOINTS = {
     CENTER_REVIEWS: (centerId) => `/centers/${centerId}/reviews`,
     DOCTOR_REVIEWS: (doctorId) => `/doctors/${doctorId}/reviews`,
   },
-  
+
   // Location Services
   LOCATION: {
     NEARBY_CENTERS: '/location/nearby-centers',
@@ -170,7 +170,7 @@ const API_ENDPOINTS = {
     NEARBY_LABS: '/location/nearby-labs',
     ROUTE_TO_CENTER: (centerId) => `/location/route-to-center/${centerId}`,
   },
-  
+
   // Notifications
   NOTIFICATIONS: {
     LIST: '/notifications',
@@ -178,7 +178,7 @@ const API_ENDPOINTS = {
     MARK_ALL_READ: '/notifications/mark-all-read',
     SETTINGS: '/notifications/settings',
   },
-  
+
   // Admin
   ADMIN: {
     USERS: '/admin/users',
@@ -187,7 +187,7 @@ const API_ENDPOINTS = {
     ANALYTICS: '/admin/analytics',
     REPORTS: '/admin/reports',
   },
-  
+
   // Health Check
   HEALTH: '/health',
 };

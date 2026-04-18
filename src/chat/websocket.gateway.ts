@@ -44,13 +44,7 @@ interface ChatRoomData {
 @WebSocketGateway(0, {
   namespace: '/chat',
   cors: {
-    origin: [
-      'http://217.21.78.192:3001',
-      'https://unlimtedhealth.com',
-      'https://app.unlimtedhealth.com',
-      'http://localhost:3000',
-      'http://localhost:3001',
-    ],
+    origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : '*',
     credentials: true,
     methods: ['GET', 'POST'],
   },

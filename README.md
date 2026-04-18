@@ -169,7 +169,7 @@ docker-compose up -d
 ### Swagger UI
 Once the application is running, visit:
 - **Development**: http://localhost:3000/api
-- **Production**: https://api.healthcare.com/api
+- **Production**: https://healthcare-backend-8tfs.onrender.com/api
 
 ### API Endpoints
 
