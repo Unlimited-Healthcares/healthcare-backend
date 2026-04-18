@@ -8,12 +8,12 @@ import { Public } from '../auth/decorators/public.decorator';
 export class HealthController {
   @Public()
   @Get()
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Health check endpoint',
     description: 'Returns the current health status of the API and its dependencies'
   })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'API is healthy',
     schema: {
       type: 'object',
@@ -53,13 +53,13 @@ export class HealthController {
   async check() {
     const memoryUsage = process.memoryUsage();
     const uptime = process.uptime();
-    
+
     return {
       status: 'ok',
       timestamp: new Date().toISOString(),
       uptime: uptime,
       environment: process.env.NODE_ENV || 'development',
-      version: '2.1.0',
+      version: '2.1.3',
       database: {
         status: 'connected',
         response_time: '5ms'
@@ -83,12 +83,12 @@ export class HealthController {
 
   @Public()
   @Get('detailed')
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Detailed health check',
     description: 'Returns detailed health information including database connectivity and service status'
   })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Detailed health information'
   })
   async detailedCheck() {

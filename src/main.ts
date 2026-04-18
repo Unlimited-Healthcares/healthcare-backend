@@ -103,6 +103,10 @@ async function bootstrap() {
       'Cache-Control',
       'Accept',
       'X-Requested-With',
+      'X-API-Key',
+      'Origin',
+      'Access-Control-Allow-Origin',
+      'X-Original-Request-Date',
     ],
     exposedHeaders: ['Content-Type', 'Cache-Control', 'X-Accel-Buffering'],
     credentials: !isWildcard, // Only allow credentials when specific origins are set
@@ -152,7 +156,7 @@ async function bootstrap() {
       ## Support
       For API support, contact: codesphere@unlimitedhealthcares.com
     `)
-    .setVersion('2.1.3')
+    .setVersion('2.1.5')
     .setContact(
       'UNLIMITEDHEALTHCARE API Team',
       'https://unlimitedhealthcares.com',
