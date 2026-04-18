@@ -1,0 +1,678 @@
+{
+  "moduleName": "MedicalRecords",
+  "timestamp": "2025-07-11T05:19:12.330Z",
+  "summary": {
+    "total": 23,
+    "passed": 13,
+    "failed": 10,
+    "successRate": 56.52173913043478,
+    "averageResponseTime": 29.434782608695652
+  },
+  "results": [
+    {
+      "endpoint": "POST /users",
+      "status": "PASS",
+      "responseTime": 77,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "62ce8d30-78f5-447b-9a95-17e87ed1d91c",
+        "displayId": "PT151163683",
+        "email": "test-patient-1752211151098@example.com",
+        "password": "$2b$10$vTCeXCWi7GOEaQ79WVf4L.kWU0o/PF0jKkWfPYr7XF2dtIbLd6Wce",
+        "roles": [
+          "patient"
+        ],
+        "refreshToken": null,
+        "createdAt": "2025-07-11T05:19:11.164Z",
+        "updatedAt": "2025-07-11T05:19:11.164Z",
+        "profile": {
+          "id": "d3870620-8658-4976-8a13-a5e74fdd2248",
+          "userId": "62ce8d30-78f5-447b-9a95-17e87ed1d91c",
+          "firstName": "Test",
+          "lastName": "Patient",
+          "displayName": "Test Patient",
+          "phone": null,
+          "avatar": null,
+          "dateOfBirth": null,
+          "gender": null,
+          "address": null,
+          "specialization": null,
+          "licenseNumber": null,
+          "experience": null,
+          "createdAt": "2025-07-11T05:19:11.167Z",
+          "updatedAt": "2025-07-11T05:19:11.167Z"
+        }
+      }
+    },
+    {
+      "endpoint": "POST /patients",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "62ce8d30-78f5-447b-9a95-17e87ed1d91c",
+        "patientId": "PT151186849",
+        "medicalRecordNumber": "MRN1752211151176",
+        "emergencyContactName": "Emergency Contact",
+        "emergencyContactPhone": "+1234567890",
+        "emergencyContactRelationship": "Spouse",
+        "bloodType": "O+",
+        "allergies": "None",
+        "chronicConditions": "None",
+        "currentMedications": "None",
+        "insuranceProvider": "Test Insurance",
+        "insurancePolicyNumber": "POL123456",
+        "preferredLanguage": "English",
+        "consentDataSharing": true,
+        "consentResearch": false,
+        "consentMarketing": false,
+        "id": "e5dd9517-071a-4616-8fe8-892e5239469b",
+        "isActive": true,
+        "createdAt": "2025-07-11T05:19:11.187Z",
+        "updatedAt": "2025-07-11T05:19:11.187Z"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/tags",
+      "status": "FAIL",
+      "responseTime": 115,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:11.467Z",
+        "path": "/medical-records/tags",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"tags\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 70,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:11.537Z",
+        "path": "/medical-records/categories",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"categories\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/categories/hierarchy",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "e71cbff3-0c5e-4618-a873-8ce51427982e",
+          "name": "Test Category",
+          "description": "Test category for medical records",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T05:09:48.814Z",
+          "updatedAt": "2025-07-11T05:09:48.814Z",
+          "parent": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 25,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:11.580Z",
+        "path": "/medical-records/search?q=test&page=1&limit=10",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "patientId": "e5dd9517-071a-4616-8fe8-892e5239469b",
+        "recordType": "lab_result",
+        "title": "Blood Test Results",
+        "description": "Complete blood count test results",
+        "recordData": {
+          "vitals": {
+            "bloodPressure": "120/80",
+            "heartRate": 72
+          },
+          "symptoms": [
+            "fatigue",
+            "headache"
+          ]
+        },
+        "tags": [
+          "blood",
+          "lab",
+          "routine"
+        ],
+        "category": "laboratory",
+        "diagnosis": "Normal blood count",
+        "treatment": "Continue current medication",
+        "notes": "Patient shows normal blood count values",
+        "followUp": "Schedule follow-up in 3 months",
+        "medications": [
+          {
+            "name": "Aspirin",
+            "dosage": "100mg",
+            "frequency": "daily"
+          }
+        ],
+        "isSensitive": false,
+        "isShareable": true,
+        "sharingRestrictions": {
+          "allowedRoles": [
+            "doctor",
+            "nurse"
+          ],
+          "restrictedFields": [
+            "personalNotes"
+          ]
+        },
+        "version": 1,
+        "isLatestVersion": true,
+        "centerId": null,
+        "createdBy": null,
+        "parentRecordId": null,
+        "fileAttachments": null,
+        "id": "db790bd1-d0f2-419d-aa44-cc7b56935013",
+        "status": "active",
+        "createdAt": "2025-07-11T05:19:11.590Z",
+        "updatedAt": "2025-07-11T05:19:11.590Z"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 18,
+      "statusCode": 409,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 409",
+      "responseBody": {
+        "statusCode": 409,
+        "timestamp": "2025-07-11T05:19:11.612Z",
+        "path": "/medical-records/categories",
+        "method": "POST",
+        "message": "Category with this name already exists",
+        "error": "Conflict",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 53,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:11.665Z",
+        "path": "/medical-records/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:19:11.675Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:11.682Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID",
+          "recordType: recordType must be a string",
+          "title: title must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:11.688Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 201,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 201",
+      "responseBody": {
+        "patientId": "e5dd9517-071a-4616-8fe8-892e5239469b",
+        "recordType": "lab_result",
+        "title": "Blood Test Results",
+        "description": "Complete blood count test results",
+        "recordData": {
+          "vitals": {
+            "bloodPressure": "120/80",
+            "heartRate": 72
+          },
+          "symptoms": [
+            "fatigue",
+            "headache"
+          ]
+        },
+        "tags": [
+          "blood",
+          "lab",
+          "routine"
+        ],
+        "category": "laboratory",
+        "diagnosis": "Normal blood count",
+        "treatment": "Continue current medication",
+        "notes": "Patient shows normal blood count values",
+        "followUp": "Schedule follow-up in 3 months",
+        "medications": [
+          {
+            "name": "Aspirin",
+            "dosage": "100mg",
+            "frequency": "daily"
+          }
+        ],
+        "isSensitive": false,
+        "isShareable": true,
+        "sharingRestrictions": {
+          "allowedRoles": [
+            "doctor",
+            "nurse"
+          ],
+          "restrictedFields": [
+            "personalNotes"
+          ]
+        },
+        "version": 1,
+        "isLatestVersion": true,
+        "centerId": null,
+        "createdBy": null,
+        "parentRecordId": null,
+        "fileAttachments": null,
+        "id": "d3c9d10d-137b-487c-b0eb-9dbdfe3e2066",
+        "status": "active",
+        "createdAt": "2025-07-11T05:19:11.845Z",
+        "updatedAt": "2025-07-11T05:19:11.845Z"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 409,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 409",
+      "responseBody": {
+        "statusCode": 409,
+        "timestamp": "2025-07-11T05:19:11.863Z",
+        "path": "/medical-records/categories",
+        "method": "POST",
+        "message": "Category with this name already exists",
+        "error": "Conflict",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "d3c9d10d-137b-487c-b0eb-9dbdfe3e2066",
+          "patientId": "e5dd9517-071a-4616-8fe8-892e5239469b",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "lab_result",
+          "title": "Blood Test Results",
+          "description": "Complete blood count test results",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "fatigue",
+              "headache"
+            ]
+          },
+          "tags": [
+            "blood",
+            "lab",
+            "routine"
+          ],
+          "category": "laboratory",
+          "diagnosis": "Normal blood count",
+          "treatment": "Continue current medication",
+          "notes": "Patient shows normal blood count values",
+          "followUp": "Schedule follow-up in 3 months",
+          "medications": [
+            {
+              "name": "Aspirin",
+              "dosage": "100mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": {
+            "allowedRoles": [
+              "doctor",
+              "nurse"
+            ],
+            "restrictedFields": [
+              "personalNotes"
+            ]
+          },
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T05:19:11.845Z",
+          "updatedAt": "2025-07-11T05:19:11.845Z",
+          "patient": {
+            "id": "e5dd9517-071a-4616-8fe8-892e5239469b",
+            "userId": "62ce8d30-78f5-447b-9a95-17e87ed1d91c",
+            "patientId": "PT151186849",
+            "medicalRecordNumber": "MRN1752211151176",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567890",
+            "emergencyContactRelationship": "Spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T05:19:11.187Z",
+            "updatedAt": "2025-07-11T05:19:11.187Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "db790bd1-d0f2-419d-aa44-cc7b56935013",
+          "patientId": "e5dd9517-071a-4616-8fe8-892e5239469b",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "lab_result",
+          "title": "Blood Test Results",
+          "description": "Complete blood count test results",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "fatigue",
+              "headache"
+            ]
+          },
+          "tags": [
+            "blood",
+            "lab",
+            "routine"
+          ],
+          "category": "laboratory",
+          "diagnosis": "Normal blood count",
+          "treatment": "Continue current medication",
+          "notes": "Patient shows normal blood count values",
+          "followUp": "Schedule follow-up in 3 months",
+          "medications": [
+            {
+              "name": "Aspirin",
+              "dosage": "100mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": {
+            "allowedRoles": [
+              "doctor",
+              "nurse"
+            ],
+            "restrictedFields": [
+              "personalNotes"
+            ]
+          },
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T05:19:11.590Z",
+          "updatedAt": "2025-07-11T05:19:11.590Z",
+          "patient": {
+            "id": "e5dd9517-071a-4616-8fe8-892e5239469b",
+            "userId": "62ce8d30-78f5-447b-9a95-17e87ed1d91c",
+            "patientId": "PT151186849",
+            "medicalRecordNumber": "MRN1752211151176",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567890",
+            "emergencyContactRelationship": "Spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T05:19:11.187Z",
+            "updatedAt": "2025-07-11T05:19:11.187Z"
+          },
+          "creator": null,
+          "files": []
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 31,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:12.156Z",
+        "path": "/medical-records/categories",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"categories\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/e5dd9517-071a-4616-8fe8-892e5239469b",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:19:12.165Z",
+        "path": "/medical-records/e5dd9517-071a-4616-8fe8-892e5239469b",
+        "method": "GET",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /medical-records/e5dd9517-071a-4616-8fe8-892e5239469b",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:19:12.174Z",
+        "path": "/medical-records/e5dd9517-071a-4616-8fe8-892e5239469b",
+        "method": "PATCH",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/e5dd9517-071a-4616-8fe8-892e5239469b",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:19:12.182Z",
+        "path": "/medical-records/e5dd9517-071a-4616-8fe8-892e5239469b",
+        "method": "DELETE",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 77,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:12.259Z",
+        "path": "/medical-records/search?q=blood&category=laboratory&page=1&limit=5",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 32,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:12.291Z",
+        "path": "/medical-records/search?tags=lab,routine&recordType=lab_result",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 34,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:19:12.326Z",
+        "path": "/medical-records/search?dateFrom=2024-01-01&dateTo=2024-12-31",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    }
+  ]
+}

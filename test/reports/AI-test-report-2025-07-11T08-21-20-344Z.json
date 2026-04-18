@@ -1,0 +1,383 @@
+{
+  "moduleName": "AI",
+  "timestamp": "2025-07-11T08:21:20.343Z",
+  "summary": {
+    "total": 20,
+    "passed": 17,
+    "failed": 3,
+    "successRate": 85,
+    "averageResponseTime": 49.5
+  },
+  "results": [
+    {
+      "endpoint": "POST /ai/chat/sessions",
+      "status": "PASS",
+      "responseTime": 40,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "f6d4750e-0c71-4d7d-bf14-6dbf59891145",
+        "sessionType": "general",
+        "title": "Test Chat Session",
+        "metadata": {
+          "category": "health_inquiry",
+          "priority": "normal"
+        },
+        "patientId": null,
+        "endedAt": null,
+        "id": "0ffbed30-7940-4934-9da9-8f7c0ecfa708",
+        "status": "active",
+        "createdAt": "2025-07-11T08:21:19.067Z",
+        "updatedAt": "2025-07-11T08:21:19.067Z"
+      }
+    },
+    {
+      "endpoint": "GET /ai/chat/sessions",
+      "status": "PASS",
+      "responseTime": 26,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "0ffbed30-7940-4934-9da9-8f7c0ecfa708",
+            "userId": "f6d4750e-0c71-4d7d-bf14-6dbf59891145",
+            "patientId": null,
+            "sessionType": "general",
+            "title": "Test Chat Session",
+            "status": "active",
+            "metadata": {
+              "category": "health_inquiry",
+              "priority": "normal"
+            },
+            "createdAt": "2025-07-11T08:21:19.067Z",
+            "updatedAt": "2025-07-11T08:21:19.067Z",
+            "endedAt": null
+          }
+        ],
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 1,
+          "totalPages": 1
+        },
+        "timestamp": "2025-07-11T08:21:19.102Z"
+      }
+    },
+    {
+      "endpoint": "GET /ai/chat/history",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "88f71805-3dd4-4072-b251-05ad2fa49d89",
+            "sessionId": "0ffbed30-7940-4934-9da9-8f7c0ecfa708",
+            "messageType": "assistant",
+            "content": "Hello! I'm your AI health assistant. How can I help you today?",
+            "messageData": {
+              "isWelcomeMessage": true
+            },
+            "aiModel": null,
+            "tokensUsed": null,
+            "processingTimeMs": null,
+            "confidenceScore": null,
+            "createdAt": "2025-07-11T08:21:19.072Z"
+          }
+        ],
+        "pagination": {
+          "page": 1,
+          "limit": 50,
+          "total": 1,
+          "totalPages": 1
+        },
+        "timestamp": "2025-07-11T08:21:19.118Z"
+      }
+    },
+    {
+      "endpoint": "POST /ai/chat/message",
+      "status": "FAIL",
+      "responseTime": 399,
+      "statusCode": 400,
+      "expectedStatus": 500,
+      "error": "Expected 500, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T08:21:19.518Z",
+        "path": "/ai/chat/message",
+        "method": "POST",
+        "message": "null value in column \"sessionId\" of relation \"ai_chat_messages\" violates not-null constraint",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /ai/symptom-analysis/analyze",
+      "status": "PASS",
+      "responseTime": 67,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T08:21:19.585Z",
+        "path": "/ai/symptom-analysis/analyze",
+        "method": "POST",
+        "message": "OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.\n    at OpenAiService.createChatCompletion (/usr/src/app/src/ai/services/openai.service.ts:57:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at OpenAiService.analyzeSymptoms (/usr/src/app/src/ai/services/openai.service.ts:103:5)\n    at SymptomAnalysisService.analyzeSymptoms (/usr/src/app/src/ai/services/symptom-analysis.service.ts:23:24)\n    at SymptomAnalysisController.analyzeSymptoms (/usr/src/app/src/ai/controllers/symptom-analysis.controller.ts:21:12)"
+      }
+    },
+    {
+      "endpoint": "GET /ai/health-analytics/trends",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "No health data available for analysis"
+      }
+    },
+    {
+      "endpoint": "POST /ai/health-analytics/risk-assessment",
+      "status": "PASS",
+      "responseTime": 73,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T08:21:19.672Z",
+        "path": "/ai/health-analytics/risk-assessment",
+        "method": "POST",
+        "message": "OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.\n    at OpenAiService.createChatCompletion (/usr/src/app/src/ai/services/openai.service.ts:57:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at OpenAiService.performRiskAssessment (/usr/src/app/src/ai/services/openai.service.ts:201:5)\n    at HealthAnalyticsService.performRiskAssessment (/usr/src/app/src/ai/services/health-analytics.service.ts:61:28)\n    at HealthAnalyticsController.performRiskAssessment (/usr/src/app/src/ai/controllers/health-analytics.controller.ts:29:12)"
+      }
+    },
+    {
+      "endpoint": "POST /ai/medical-recommendations/generate",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /ai/chat/sessions/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 42,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T08:21:19.728Z",
+        "path": "/ai/chat/sessions/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /ai/chat/sessions/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T08:21:19.740Z",
+        "path": "/ai/chat/sessions/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Chat session not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /ai/chat/sessions",
+      "status": "FAIL",
+      "responseTime": 18,
+      "statusCode": 201,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 201",
+      "responseBody": {
+        "userId": "f6d4750e-0c71-4d7d-bf14-6dbf59891145",
+        "sessionType": "general",
+        "title": "Invalid Session",
+        "patientId": null,
+        "endedAt": null,
+        "id": "f6dd226d-c211-474d-a2f4-fc726f541331",
+        "status": "active",
+        "metadata": {},
+        "createdAt": "2025-07-11T08:21:19.750Z",
+        "updatedAt": "2025-07-11T08:21:19.750Z"
+      }
+    },
+    {
+      "endpoint": "POST /ai/chat/message",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T08:21:19.771Z",
+        "path": "/ai/chat/message",
+        "method": "POST",
+        "message": [
+          "content: content should not be empty, content must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /ai/symptom-analysis/analyze",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T08:21:19.785Z",
+        "path": "/ai/symptom-analysis/analyze",
+        "method": "POST",
+        "message": "Cannot read properties of undefined (reading 'map')",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'map')\n    at SymptomAnalysisService.analyzeSymptoms (/usr/src/app/src/ai/services/symptom-analysis.service.ts:22:35)\n    at SymptomAnalysisController.analyzeSymptoms (/usr/src/app/src/ai/controllers/symptom-analysis.controller.ts:21:46)\n    at /usr/src/app/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+      }
+    },
+    {
+      "endpoint": "POST /ai/symptom-analysis/analyze",
+      "status": "PASS",
+      "responseTime": 67,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T08:21:19.852Z",
+        "path": "/ai/symptom-analysis/analyze",
+        "method": "POST",
+        "message": "OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.\n    at OpenAiService.createChatCompletion (/usr/src/app/src/ai/services/openai.service.ts:57:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at OpenAiService.analyzeSymptoms (/usr/src/app/src/ai/services/openai.service.ts:103:5)\n    at SymptomAnalysisService.analyzeSymptoms (/usr/src/app/src/ai/services/symptom-analysis.service.ts:23:24)\n    at SymptomAnalysisController.analyzeSymptoms (/usr/src/app/src/ai/controllers/symptom-analysis.controller.ts:21:12)"
+      }
+    },
+    {
+      "endpoint": "POST /ai/health-analytics/risk-assessment",
+      "status": "PASS",
+      "responseTime": 62,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T08:21:19.914Z",
+        "path": "/ai/health-analytics/risk-assessment",
+        "method": "POST",
+        "message": "OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.\n    at OpenAiService.createChatCompletion (/usr/src/app/src/ai/services/openai.service.ts:57:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at OpenAiService.performRiskAssessment (/usr/src/app/src/ai/services/openai.service.ts:201:5)\n    at HealthAnalyticsService.performRiskAssessment (/usr/src/app/src/ai/services/health-analytics.service.ts:61:28)\n    at HealthAnalyticsController.performRiskAssessment (/usr/src/app/src/ai/controllers/health-analytics.controller.ts:29:12)"
+      }
+    },
+    {
+      "endpoint": "POST /ai/chat/sessions",
+      "status": "PASS",
+      "responseTime": 20,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "b928a9ba-56ac-4f96-86ad-9aca0dfd46b8",
+        "sessionType": "general",
+        "title": "Test Chat Session",
+        "metadata": {
+          "category": "health_inquiry",
+          "priority": "normal"
+        },
+        "patientId": null,
+        "endedAt": null,
+        "id": "76137b46-efbf-481c-8670-d2a525877445",
+        "status": "active",
+        "createdAt": "2025-07-11T08:21:20.082Z",
+        "updatedAt": "2025-07-11T08:21:20.082Z"
+      }
+    },
+    {
+      "endpoint": "POST /ai/symptom-analysis/analyze",
+      "status": "PASS",
+      "responseTime": 58,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T08:21:20.147Z",
+        "path": "/ai/symptom-analysis/analyze",
+        "method": "POST",
+        "message": "OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.\n    at OpenAiService.createChatCompletion (/usr/src/app/src/ai/services/openai.service.ts:57:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at OpenAiService.analyzeSymptoms (/usr/src/app/src/ai/services/openai.service.ts:103:5)\n    at SymptomAnalysisService.analyzeSymptoms (/usr/src/app/src/ai/services/symptom-analysis.service.ts:23:24)\n    at SymptomAnalysisController.analyzeSymptoms (/usr/src/app/src/ai/controllers/symptom-analysis.controller.ts:21:12)"
+      }
+    },
+    {
+      "endpoint": "GET /ai/chat/sessions",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T08:21:20.319Z",
+        "path": "/ai/chat/sessions",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /ai/health-analytics/trends",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "No health data available for analysis"
+      }
+    },
+    {
+      "endpoint": "POST /ai/medical-recommendations/generate",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": []
+    }
+  ]
+}

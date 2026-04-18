@@ -1,0 +1,100 @@
+{
+  "moduleName": "appointments",
+  "timestamp": "2025-06-08T04:34:34.572Z",
+  "summary": {
+    "total": 5,
+    "passed": 0,
+    "failed": 5,
+    "successRate": 0,
+    "averageResponseTime": 73.6
+  },
+  "results": [
+    {
+      "endpoint": "POST /appointments",
+      "status": "FAIL",
+      "responseTime": 34,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-06-08T04:34:34.231Z",
+        "path": "/appointments",
+        "method": "POST",
+        "message": "Validation failed",
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /appointments",
+      "status": "FAIL",
+      "responseTime": 271,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-06-08T04:34:34.504Z",
+        "path": "/appointments?page=1&limit=10&status=scheduled",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /appointments/{{appointment_id}}",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-06-08T04:34:34.520Z",
+        "path": "/appointments/%7B%7Bappointment_id%7D%7D",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /appointments/{{appointment_id}}",
+      "status": "FAIL",
+      "responseTime": 28,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-06-08T04:34:34.549Z",
+        "path": "/appointments/%7B%7Bappointment_id%7D%7D",
+        "method": "PATCH",
+        "message": [
+          "property duration should not exist"
+        ],
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /appointments/me",
+      "status": "FAIL",
+      "responseTime": 19,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-06-08T04:34:34.569Z",
+        "path": "/appointments/me?status=scheduled&upcoming=true&limit=20",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2180 @@
+{
+  "moduleName": "Referrals",
+  "timestamp": "2025-07-11T04:58:32.416Z",
+  "summary": {
+    "total": 21,
+    "passed": 19,
+    "failed": 2,
+    "successRate": 90.47619047619048,
+    "averageResponseTime": 9.571428571428571
+  },
+  "results": [
+    {
+      "endpoint": "GET /referrals",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "0d4b9104-fcd0-405e-99d0-3a1af2ff7499",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.846Z",
+          "updatedAt": "2025-07-11T04:58:01.846Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+            "displayId": "DR881698515",
+            "email": "test-referrals-doctor-1752209881633@example.com",
+            "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+            "createdAt": "2025-07-11T04:58:01.699Z",
+            "updatedAt": "2025-07-11T04:58:01.786Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "4e82da9a-db2b-4042-9f67-99bd76acd394",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.625Z",
+          "updatedAt": "2025-07-11T04:58:01.625Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+            "displayId": "AD881511656",
+            "email": "test-referrals-admin-1752209881450@example.com",
+            "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+            "createdAt": "2025-07-11T04:58:01.512Z",
+            "updatedAt": "2025-07-11T04:58:01.593Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "033253d0-6ed9-4e70-89cf-e8aba516085e",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "accepted",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": "2025-07-11T04:58:01.145Z",
+          "responseNotes": "Referral accepted for specialist consultation",
+          "respondedById": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "createdAt": "2025-07-11T04:58:01.081Z",
+          "updatedAt": "2025-07-11T04:58:01.157Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "60caf492-03eb-4365-8918-5d7a9159b630",
+            "displayId": "AD880829096",
+            "email": "test-referrals-admin-1752209880767@example.com",
+            "password": "$2b$10$Lh4fyF.ENu2zNcXsnd/0buunSU.sGmw5tT7nUlzRZcSTWMCHpn2OG",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA3NjdAZXhhbXBsZS5jb20iLCJzdWIiOiI2MGNhZjQ5Mi0wM2ViLTQzNjUtODkxOC01ZDdhOTE1OWI2MzAiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.N5X0JQr1q7EdrvXRxViIKAl9wKDM4bwD78y7haS5tVI",
+            "createdAt": "2025-07-11T04:58:00.830Z",
+            "updatedAt": "2025-07-11T04:58:00.912Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /referrals",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "0d4b9104-fcd0-405e-99d0-3a1af2ff7499",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.846Z",
+          "updatedAt": "2025-07-11T04:58:01.846Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+            "displayId": "DR881698515",
+            "email": "test-referrals-doctor-1752209881633@example.com",
+            "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+            "createdAt": "2025-07-11T04:58:01.699Z",
+            "updatedAt": "2025-07-11T04:58:01.786Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "4e82da9a-db2b-4042-9f67-99bd76acd394",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.625Z",
+          "updatedAt": "2025-07-11T04:58:01.625Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+            "displayId": "AD881511656",
+            "email": "test-referrals-admin-1752209881450@example.com",
+            "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+            "createdAt": "2025-07-11T04:58:01.512Z",
+            "updatedAt": "2025-07-11T04:58:01.593Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /referrals",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "0d4b9104-fcd0-405e-99d0-3a1af2ff7499",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.846Z",
+          "updatedAt": "2025-07-11T04:58:01.846Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+            "displayId": "DR881698515",
+            "email": "test-referrals-doctor-1752209881633@example.com",
+            "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+            "createdAt": "2025-07-11T04:58:01.699Z",
+            "updatedAt": "2025-07-11T04:58:01.786Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "4e82da9a-db2b-4042-9f67-99bd76acd394",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.625Z",
+          "updatedAt": "2025-07-11T04:58:01.625Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+            "displayId": "AD881511656",
+            "email": "test-referrals-admin-1752209881450@example.com",
+            "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+            "createdAt": "2025-07-11T04:58:01.512Z",
+            "updatedAt": "2025-07-11T04:58:01.593Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "033253d0-6ed9-4e70-89cf-e8aba516085e",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "accepted",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": "2025-07-11T04:58:01.145Z",
+          "responseNotes": "Referral accepted for specialist consultation",
+          "respondedById": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "createdAt": "2025-07-11T04:58:01.081Z",
+          "updatedAt": "2025-07-11T04:58:01.157Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "60caf492-03eb-4365-8918-5d7a9159b630",
+            "displayId": "AD880829096",
+            "email": "test-referrals-admin-1752209880767@example.com",
+            "password": "$2b$10$Lh4fyF.ENu2zNcXsnd/0buunSU.sGmw5tT7nUlzRZcSTWMCHpn2OG",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA3NjdAZXhhbXBsZS5jb20iLCJzdWIiOiI2MGNhZjQ5Mi0wM2ViLTQzNjUtODkxOC01ZDdhOTE1OWI2MzAiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.N5X0JQr1q7EdrvXRxViIKAl9wKDM4bwD78y7haS5tVI",
+            "createdAt": "2025-07-11T04:58:00.830Z",
+            "updatedAt": "2025-07-11T04:58:00.912Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /referrals",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+        "referringProviderId": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+        "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+        "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+        "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+        "referralType": "specialist",
+        "status": "pending",
+        "priority": "normal",
+        "reason": "Specialist consultation for diabetes management",
+        "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+        "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+        "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+        "scheduledDate": "2023-10-15T00:00:00.000Z",
+        "expirationDate": "2023-12-31T00:00:00.000Z",
+        "metadata": {
+          "urgencyScore": 7,
+          "insuranceVerified": true
+        },
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "10mg",
+            "frequency": "daily"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "Penicillin",
+            "reaction": "Rash",
+            "severity": "Moderate"
+          }
+        ],
+        "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+        "respondedDate": null,
+        "responseNotes": null,
+        "respondedById": null,
+        "id": "ef72509d-be0b-49ba-af58-2cbe2958a40f",
+        "createdAt": "2025-07-11T04:58:31.831Z",
+        "updatedAt": "2025-07-11T04:58:31.831Z"
+      }
+    },
+    {
+      "endpoint": "GET /referrals/ef72509d-be0b-49ba-af58-2cbe2958a40f/documents",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /referrals/ef72509d-be0b-49ba-af58-2cbe2958a40f",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "ef72509d-be0b-49ba-af58-2cbe2958a40f",
+        "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+        "referringProviderId": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+        "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+        "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+        "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+        "referralType": "specialist",
+        "status": "pending",
+        "priority": "normal",
+        "reason": "Specialist consultation for diabetes management",
+        "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+        "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+        "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+        "scheduledDate": "2023-10-15T00:00:00.000Z",
+        "expirationDate": "2023-12-31T00:00:00.000Z",
+        "metadata": {
+          "urgencyScore": 7,
+          "insuranceVerified": true
+        },
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "10mg",
+            "frequency": "daily"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "Penicillin",
+            "reaction": "Rash",
+            "severity": "Moderate"
+          }
+        ],
+        "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+        "respondedDate": null,
+        "responseNotes": null,
+        "respondedById": null,
+        "createdAt": "2025-07-11T04:58:31.831Z",
+        "updatedAt": "2025-07-11T04:58:31.831Z",
+        "patient": {
+          "id": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+          "userId": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+          "patientId": "PT911396383",
+          "medicalRecordNumber": "MRN1752209911166",
+          "emergencyContactName": "Emergency Contact",
+          "emergencyContactPhone": "+1234567891",
+          "emergencyContactRelationship": "spouse",
+          "bloodType": "O+",
+          "allergies": "None",
+          "chronicConditions": "None",
+          "currentMedications": "None",
+          "insuranceProvider": "Test Insurance",
+          "insurancePolicyNumber": "POL123456",
+          "preferredLanguage": "English",
+          "consentDataSharing": true,
+          "consentResearch": false,
+          "consentMarketing": false,
+          "isActive": true,
+          "createdAt": "2025-07-11T04:58:31.396Z",
+          "updatedAt": "2025-07-11T04:58:31.396Z"
+        },
+        "referringProvider": {
+          "id": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "displayId": "AD911601471",
+          "email": "test-referrals-admin-1752209911542@example.com",
+          "password": "$2b$10$BSAloHVp8bt/CLUMttvuW.e6aj1yqwwBmGC5FJj.FN3LAGQkxMgv2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTE1NDJAZXhhbXBsZS5jb20iLCJzdWIiOiI4OTZlODFiMC0yMDkzLTRjZWYtYjQ1NS0yOWUzNDYxZmY5ZmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.TymrT3pxts_hgrTOnzSv9kqtZMAQ_g6dXANX6AT156k",
+          "createdAt": "2025-07-11T04:58:31.602Z",
+          "updatedAt": "2025-07-11T04:58:31.680Z"
+        },
+        "receivingProvider": {
+          "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "displayId": "DR911777774",
+          "email": "test-doctor-1752209911166@example.com",
+          "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:31.777Z",
+          "updatedAt": "2025-07-11T04:58:31.777Z"
+        },
+        "documents": []
+      }
+    },
+    {
+      "endpoint": "PATCH /referrals/ef72509d-be0b-49ba-af58-2cbe2958a40f",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "ef72509d-be0b-49ba-af58-2cbe2958a40f",
+        "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+        "referringProviderId": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+        "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+        "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+        "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+        "referralType": "specialist",
+        "status": "accepted",
+        "priority": "normal",
+        "reason": "Specialist consultation for diabetes management",
+        "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+        "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+        "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+        "scheduledDate": "2023-10-15T00:00:00.000Z",
+        "expirationDate": "2023-12-31T00:00:00.000Z",
+        "metadata": {
+          "urgencyScore": 7,
+          "insuranceVerified": true
+        },
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "10mg",
+            "frequency": "daily"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "Penicillin",
+            "reaction": "Rash",
+            "severity": "Moderate"
+          }
+        ],
+        "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+        "respondedDate": "2025-07-11T04:58:31.865Z",
+        "responseNotes": "Referral accepted for specialist consultation",
+        "respondedById": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+        "createdAt": "2025-07-11T04:58:31.831Z",
+        "updatedAt": "2025-07-11T04:58:31.867Z",
+        "patient": {
+          "id": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+          "userId": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+          "patientId": "PT911396383",
+          "medicalRecordNumber": "MRN1752209911166",
+          "emergencyContactName": "Emergency Contact",
+          "emergencyContactPhone": "+1234567891",
+          "emergencyContactRelationship": "spouse",
+          "bloodType": "O+",
+          "allergies": "None",
+          "chronicConditions": "None",
+          "currentMedications": "None",
+          "insuranceProvider": "Test Insurance",
+          "insurancePolicyNumber": "POL123456",
+          "preferredLanguage": "English",
+          "consentDataSharing": true,
+          "consentResearch": false,
+          "consentMarketing": false,
+          "isActive": true,
+          "createdAt": "2025-07-11T04:58:31.396Z",
+          "updatedAt": "2025-07-11T04:58:31.396Z"
+        },
+        "referringProvider": {
+          "id": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "displayId": "AD911601471",
+          "email": "test-referrals-admin-1752209911542@example.com",
+          "password": "$2b$10$BSAloHVp8bt/CLUMttvuW.e6aj1yqwwBmGC5FJj.FN3LAGQkxMgv2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTE1NDJAZXhhbXBsZS5jb20iLCJzdWIiOiI4OTZlODFiMC0yMDkzLTRjZWYtYjQ1NS0yOWUzNDYxZmY5ZmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.TymrT3pxts_hgrTOnzSv9kqtZMAQ_g6dXANX6AT156k",
+          "createdAt": "2025-07-11T04:58:31.602Z",
+          "updatedAt": "2025-07-11T04:58:31.680Z"
+        },
+        "receivingProvider": {
+          "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "displayId": "DR911777774",
+          "email": "test-doctor-1752209911166@example.com",
+          "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:31.777Z",
+          "updatedAt": "2025-07-11T04:58:31.777Z"
+        },
+        "documents": []
+      }
+    },
+    {
+      "endpoint": "GET /referrals/analytics/de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 500,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 500",
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T04:58:31.881Z",
+        "path": "/referrals/analytics/de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+        "method": "GET",
+        "message": "Cannot read properties of undefined (reading 'constructor')",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'constructor')\n    at ValidationExecutor.execute (/usr/src/app/node_modules/src/validation/ValidationExecutor.ts:62:14)\n    at Validator.coreValidate (/usr/src/app/node_modules/src/validation/Validator.ts:107:14)\n    at Validator.validate (/usr/src/app/node_modules/src/validation/Validator.ts:32:17)\n    at validate (/usr/src/app/node_modules/src/index.ts:58:40)\n    at ValidationPipe.transform (/usr/src/app/src/pipes/validation.pipe.ts:15:34)\n    at /usr/src/app/node_modules/@nestjs/core/pipes/pipes-consumer.js:16:33\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /usr/src/app/node_modules/@nestjs/core/pipes/pipes-consumer.js:15:25"
+      }
+    },
+    {
+      "endpoint": "GET /referrals/analytics/de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:58:31.888Z",
+        "path": "/referrals/analytics/de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0?startDate=2023-01-01&endDate=2023-12-31",
+        "method": "GET",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /referrals/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:58:31.894Z",
+        "path": "/referrals/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /referrals/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T04:58:31.903Z",
+        "path": "/referrals/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Referral with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /referrals/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T04:58:31.912Z",
+        "path": "/referrals/00000000-0000-0000-0000-000000000000",
+        "method": "PATCH",
+        "message": "Referral with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /referrals/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T04:58:31.921Z",
+        "path": "/referrals/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Referral with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /referrals",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:58:31.932Z",
+        "path": "/referrals",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID",
+          "referringCenterId: referringCenterId must be a UUID",
+          "receivingCenterId: receivingCenterId must be a UUID",
+          "referralType: referralType must be one of the following values: specialist, diagnostic, procedure, consultation, follow_up, second_opinion, transfer"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /referrals",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:58:31.941Z",
+        "path": "/referrals",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /referrals",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T04:58:32.088Z",
+        "path": "/referrals",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /referrals",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T04:58:32.092Z",
+        "path": "/referrals",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /referrals",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "ef72509d-be0b-49ba-af58-2cbe2958a40f",
+          "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+          "referringProviderId": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+          "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+          "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "referralType": "specialist",
+          "status": "accepted",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": "2025-07-11T04:58:31.865Z",
+          "responseNotes": "Referral accepted for specialist consultation",
+          "respondedById": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "createdAt": "2025-07-11T04:58:31.831Z",
+          "updatedAt": "2025-07-11T04:58:31.867Z",
+          "patient": {
+            "id": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+            "userId": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+            "patientId": "PT911396383",
+            "medicalRecordNumber": "MRN1752209911166",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:31.396Z",
+            "updatedAt": "2025-07-11T04:58:31.396Z"
+          },
+          "referringProvider": {
+            "id": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+            "displayId": "AD911601471",
+            "email": "test-referrals-admin-1752209911542@example.com",
+            "password": "$2b$10$BSAloHVp8bt/CLUMttvuW.e6aj1yqwwBmGC5FJj.FN3LAGQkxMgv2",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTE1NDJAZXhhbXBsZS5jb20iLCJzdWIiOiI4OTZlODFiMC0yMDkzLTRjZWYtYjQ1NS0yOWUzNDYxZmY5ZmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.TymrT3pxts_hgrTOnzSv9kqtZMAQ_g6dXANX6AT156k",
+            "createdAt": "2025-07-11T04:58:31.602Z",
+            "updatedAt": "2025-07-11T04:58:31.680Z"
+          },
+          "receivingProvider": {
+            "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+            "displayId": "DR911777774",
+            "email": "test-doctor-1752209911166@example.com",
+            "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:31.777Z",
+            "updatedAt": "2025-07-11T04:58:31.777Z"
+          }
+        },
+        {
+          "id": "0d4b9104-fcd0-405e-99d0-3a1af2ff7499",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.846Z",
+          "updatedAt": "2025-07-11T04:58:01.846Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+            "displayId": "DR881698515",
+            "email": "test-referrals-doctor-1752209881633@example.com",
+            "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+            "createdAt": "2025-07-11T04:58:01.699Z",
+            "updatedAt": "2025-07-11T04:58:01.786Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "4e82da9a-db2b-4042-9f67-99bd76acd394",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.625Z",
+          "updatedAt": "2025-07-11T04:58:01.625Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+            "displayId": "AD881511656",
+            "email": "test-referrals-admin-1752209881450@example.com",
+            "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+            "createdAt": "2025-07-11T04:58:01.512Z",
+            "updatedAt": "2025-07-11T04:58:01.593Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "033253d0-6ed9-4e70-89cf-e8aba516085e",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "accepted",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": "2025-07-11T04:58:01.145Z",
+          "responseNotes": "Referral accepted for specialist consultation",
+          "respondedById": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "createdAt": "2025-07-11T04:58:01.081Z",
+          "updatedAt": "2025-07-11T04:58:01.157Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "60caf492-03eb-4365-8918-5d7a9159b630",
+            "displayId": "AD880829096",
+            "email": "test-referrals-admin-1752209880767@example.com",
+            "password": "$2b$10$Lh4fyF.ENu2zNcXsnd/0buunSU.sGmw5tT7nUlzRZcSTWMCHpn2OG",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA3NjdAZXhhbXBsZS5jb20iLCJzdWIiOiI2MGNhZjQ5Mi0wM2ViLTQzNjUtODkxOC01ZDdhOTE1OWI2MzAiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.N5X0JQr1q7EdrvXRxViIKAl9wKDM4bwD78y7haS5tVI",
+            "createdAt": "2025-07-11T04:58:00.830Z",
+            "updatedAt": "2025-07-11T04:58:00.912Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /referrals",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+        "referringProviderId": "51a0c579-bb5b-4814-8593-74ebaafb1745",
+        "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+        "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+        "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+        "referralType": "specialist",
+        "status": "pending",
+        "priority": "normal",
+        "reason": "Specialist consultation for diabetes management",
+        "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+        "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+        "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+        "scheduledDate": "2023-10-15T00:00:00.000Z",
+        "expirationDate": "2023-12-31T00:00:00.000Z",
+        "metadata": {
+          "urgencyScore": 7,
+          "insuranceVerified": true
+        },
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "10mg",
+            "frequency": "daily"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "Penicillin",
+            "reaction": "Rash",
+            "severity": "Moderate"
+          }
+        ],
+        "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+        "respondedDate": null,
+        "responseNotes": null,
+        "respondedById": null,
+        "id": "a18b0153-ceda-47d1-98b4-1bb6d7e71f75",
+        "createdAt": "2025-07-11T04:58:32.245Z",
+        "updatedAt": "2025-07-11T04:58:32.245Z"
+      }
+    },
+    {
+      "endpoint": "GET /referrals",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "a18b0153-ceda-47d1-98b4-1bb6d7e71f75",
+          "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+          "referringProviderId": "51a0c579-bb5b-4814-8593-74ebaafb1745",
+          "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+          "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+          "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:32.245Z",
+          "updatedAt": "2025-07-11T04:58:32.245Z",
+          "patient": {
+            "id": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+            "userId": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+            "patientId": "PT911396383",
+            "medicalRecordNumber": "MRN1752209911166",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:31.396Z",
+            "updatedAt": "2025-07-11T04:58:31.396Z"
+          },
+          "referringProvider": {
+            "id": "51a0c579-bb5b-4814-8593-74ebaafb1745",
+            "displayId": "AD912151292",
+            "email": "test-referrals-admin-1752209912093@example.com",
+            "password": "$2b$10$PA2nRrlYLV3LWGn1RUE7sumIY0iDIsd3fV1fnP/wn7UNSRdnn0HwW",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTIwOTNAZXhhbXBsZS5jb20iLCJzdWIiOiI1MWEwYzU3OS1iYjViLTQ4MTQtODU5My03NGViYWFmYjE3NDUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTIsImV4cCI6MTc1MjgxNDcxMn0.1pR8ezZAZec562pjbuaqGFvGTvva61Lb68BFRPSsHkI",
+            "createdAt": "2025-07-11T04:58:32.152Z",
+            "updatedAt": "2025-07-11T04:58:32.225Z"
+          },
+          "receivingProvider": {
+            "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+            "displayId": "DR911777774",
+            "email": "test-doctor-1752209911166@example.com",
+            "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:31.777Z",
+            "updatedAt": "2025-07-11T04:58:31.777Z"
+          }
+        },
+        {
+          "id": "ef72509d-be0b-49ba-af58-2cbe2958a40f",
+          "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+          "referringProviderId": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+          "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+          "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "referralType": "specialist",
+          "status": "accepted",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": "2025-07-11T04:58:31.865Z",
+          "responseNotes": "Referral accepted for specialist consultation",
+          "respondedById": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "createdAt": "2025-07-11T04:58:31.831Z",
+          "updatedAt": "2025-07-11T04:58:31.867Z",
+          "patient": {
+            "id": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+            "userId": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+            "patientId": "PT911396383",
+            "medicalRecordNumber": "MRN1752209911166",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:31.396Z",
+            "updatedAt": "2025-07-11T04:58:31.396Z"
+          },
+          "referringProvider": {
+            "id": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+            "displayId": "AD911601471",
+            "email": "test-referrals-admin-1752209911542@example.com",
+            "password": "$2b$10$BSAloHVp8bt/CLUMttvuW.e6aj1yqwwBmGC5FJj.FN3LAGQkxMgv2",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTE1NDJAZXhhbXBsZS5jb20iLCJzdWIiOiI4OTZlODFiMC0yMDkzLTRjZWYtYjQ1NS0yOWUzNDYxZmY5ZmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.TymrT3pxts_hgrTOnzSv9kqtZMAQ_g6dXANX6AT156k",
+            "createdAt": "2025-07-11T04:58:31.602Z",
+            "updatedAt": "2025-07-11T04:58:31.680Z"
+          },
+          "receivingProvider": {
+            "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+            "displayId": "DR911777774",
+            "email": "test-doctor-1752209911166@example.com",
+            "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:31.777Z",
+            "updatedAt": "2025-07-11T04:58:31.777Z"
+          }
+        },
+        {
+          "id": "0d4b9104-fcd0-405e-99d0-3a1af2ff7499",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.846Z",
+          "updatedAt": "2025-07-11T04:58:01.846Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+            "displayId": "DR881698515",
+            "email": "test-referrals-doctor-1752209881633@example.com",
+            "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+            "createdAt": "2025-07-11T04:58:01.699Z",
+            "updatedAt": "2025-07-11T04:58:01.786Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "4e82da9a-db2b-4042-9f67-99bd76acd394",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "pending",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": null,
+          "responseNotes": null,
+          "respondedById": null,
+          "createdAt": "2025-07-11T04:58:01.625Z",
+          "updatedAt": "2025-07-11T04:58:01.625Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+            "displayId": "AD881511656",
+            "email": "test-referrals-admin-1752209881450@example.com",
+            "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+            "createdAt": "2025-07-11T04:58:01.512Z",
+            "updatedAt": "2025-07-11T04:58:01.593Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        },
+        {
+          "id": "033253d0-6ed9-4e70-89cf-e8aba516085e",
+          "patientId": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+          "referringProviderId": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "referringCenterId": "50571862-3a63-4b5d-a0de-a2b662cb0790",
+          "receivingCenterId": "cb2c503b-fb9a-4677-838e-73dbcad91abb",
+          "receivingProviderId": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "referralType": "specialist",
+          "status": "accepted",
+          "priority": "normal",
+          "reason": "Specialist consultation for diabetes management",
+          "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+          "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+          "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+          "scheduledDate": "2023-10-15T00:00:00.000Z",
+          "expirationDate": "2023-12-31T00:00:00.000Z",
+          "metadata": {
+            "urgencyScore": 7,
+            "insuranceVerified": true
+          },
+          "medications": [
+            {
+              "name": "Metformin",
+              "dosage": "1000mg",
+              "frequency": "BID"
+            },
+            {
+              "name": "Lisinopril",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "allergies": [
+            {
+              "allergen": "Penicillin",
+              "reaction": "Rash",
+              "severity": "Moderate"
+            }
+          ],
+          "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+          "respondedDate": "2025-07-11T04:58:01.145Z",
+          "responseNotes": "Referral accepted for specialist consultation",
+          "respondedById": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "createdAt": "2025-07-11T04:58:01.081Z",
+          "updatedAt": "2025-07-11T04:58:01.157Z",
+          "patient": {
+            "id": "d5d68b3d-daf5-4ca0-bfe6-b381a38d6c8b",
+            "userId": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+            "patientId": "PT880602771",
+            "medicalRecordNumber": "MRN1752209880357",
+            "emergencyContactName": "Emergency Contact",
+            "emergencyContactPhone": "+1234567891",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "O+",
+            "allergies": "None",
+            "chronicConditions": "None",
+            "currentMedications": "None",
+            "insuranceProvider": "Test Insurance",
+            "insurancePolicyNumber": "POL123456",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T04:58:00.603Z",
+            "updatedAt": "2025-07-11T04:58:00.603Z"
+          },
+          "referringProvider": {
+            "id": "60caf492-03eb-4365-8918-5d7a9159b630",
+            "displayId": "AD880829096",
+            "email": "test-referrals-admin-1752209880767@example.com",
+            "password": "$2b$10$Lh4fyF.ENu2zNcXsnd/0buunSU.sGmw5tT7nUlzRZcSTWMCHpn2OG",
+            "roles": [
+              "admin"
+            ],
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA3NjdAZXhhbXBsZS5jb20iLCJzdWIiOiI2MGNhZjQ5Mi0wM2ViLTQzNjUtODkxOC01ZDdhOTE1OWI2MzAiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.N5X0JQr1q7EdrvXRxViIKAl9wKDM4bwD78y7haS5tVI",
+            "createdAt": "2025-07-11T04:58:00.830Z",
+            "updatedAt": "2025-07-11T04:58:00.912Z"
+          },
+          "receivingProvider": {
+            "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+            "displayId": "DR881018435",
+            "email": "test-doctor-1752209880357@example.com",
+            "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+            "roles": [
+              "doctor"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-07-11T04:58:01.019Z",
+            "updatedAt": "2025-07-11T04:58:01.019Z"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /referrals",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "patientId": "b99f1232-cd55-44cb-bd09-6669c5a40963",
+        "referringProviderId": "839e53ce-6591-4cdd-abaa-aaddf2a2de83",
+        "referringCenterId": "de3b7035-3a1c-4e8b-b3c8-f3284bdeaaa0",
+        "receivingCenterId": "ed3a87bb-3250-4974-ac69-7bd435dd15e2",
+        "receivingProviderId": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+        "referralType": "specialist",
+        "status": "pending",
+        "priority": "normal",
+        "reason": "Specialist consultation for diabetes management",
+        "clinicalNotes": "Patient has uncontrolled Type 2 diabetes with recent HbA1c of 9.2%",
+        "diagnosis": "Type 2 Diabetes Mellitus (E11.9)",
+        "instructions": "Please evaluate for insulin therapy and provide nutritional guidance",
+        "scheduledDate": "2023-10-15T00:00:00.000Z",
+        "expirationDate": "2023-12-31T00:00:00.000Z",
+        "metadata": {
+          "urgencyScore": 7,
+          "insuranceVerified": true
+        },
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "10mg",
+            "frequency": "daily"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "Penicillin",
+            "reaction": "Rash",
+            "severity": "Moderate"
+          }
+        ],
+        "medicalHistory": "History of hypertension and hyperlipidemia. Family history of cardiovascular disease.",
+        "respondedDate": null,
+        "responseNotes": null,
+        "respondedById": null,
+        "id": "9b1120c4-ff30-4b2a-9476-74673b02a726",
+        "createdAt": "2025-07-11T04:58:32.408Z",
+        "updatedAt": "2025-07-11T04:58:32.408Z"
+      }
+    }
+  ]
+}

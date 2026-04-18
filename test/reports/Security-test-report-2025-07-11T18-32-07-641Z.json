@@ -1,0 +1,1032 @@
+{
+  "moduleName": "Security",
+  "timestamp": "2025-07-11T18:32:07.641Z",
+  "summary": {
+    "total": 52,
+    "passed": 46,
+    "failed": 6,
+    "successRate": 88.46153846153845,
+    "averageResponseTime": 14.057692307692308
+  },
+  "results": [
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 429,
+      "error": "Expected 429, got 200",
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 429,
+      "error": "Expected 429, got 200",
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 429,
+      "error": "Expected 429, got 200",
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 429,
+      "error": "Expected 429, got 200",
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 429,
+      "error": "Expected 429, got 200",
+      "responseBody": {
+        "id": "da49c25c-97b9-4847-a3cf-61a9a85768ce",
+        "email": "test-security-admin-1752258726095@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726159332",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.170Z",
+        "updatedAt": "2025-07-11T18:32:06.252Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "94553527-e8c9-4a3e-a65e-059d11be2362",
+        "email": "test-security-admin-1752258726439@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726501993",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.502Z",
+        "updatedAt": "2025-07-11T18:32:06.581Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.602Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.607Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "password: password must be longer than or equal to 8 characters, password must be a string",
+          "name: name must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.611Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password should not be empty, password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T18:32:06.615Z",
+        "path": "/auth/me",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /auth/logout",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T18:32:06.618Z",
+        "path": "/auth/logout",
+        "method": "POST",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "0824ee21-d179-4c5b-ad14-48b1b8472b12",
+        "email": "test-security-admin-1752258726620@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD726682089",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:06.683Z",
+        "updatedAt": "2025-07-11T18:32:06.760Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.777Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.780Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.784Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.787Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.791Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.794Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.798Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.803Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.809Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.814Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.819Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.822Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.827Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.831Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.835Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.841Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 70,
+      "statusCode": 201,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 201",
+      "responseBody": {
+        "user": {
+          "id": "3454f02c-868f-40fd-b99d-1bfd418e36ee",
+          "email": "test-1752258726842@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT726902247"
+        },
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtMTc1MjI1ODcyNjg0MkBleGFtcGxlLmNvbSIsInN1YiI6IjM0NTRmMDJjLTg2OGYtNDBmZC1iOTlkLTFiZmQ0MThlMzZlZSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjU4NzI2LCJleHAiOjE3NTIzNDUxMjZ9.-7jARpVp9p3ew-uMFhCFFG9m0pbd0iCTQo0IADZV00I"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.916Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.920Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:32:06.925Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "password: password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 70,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "d9483d1d-daa0-4f55-8b01-72ad54aeee89",
+          "email": "test-1752258726926@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT726985884"
+        },
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtMTc1MjI1ODcyNjkyNkBleGFtcGxlLmNvbSIsInN1YiI6ImQ5NDgzZDFkLWRhYTAtNGY1NS04YjAxLTcyYWQ1NGFlZWU4OSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjU4NzI2LCJleHAiOjE3NTIzNDUxMjZ9.ucxthtV5mI1njLIt1siO3vHEqm9ei9EbqF8nc3Yj3q4"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 75,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "77d23863-1ac6-4114-9eda-1bda58e8bbce",
+          "email": "test-1752258726996@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT727060323"
+        },
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtMTc1MjI1ODcyNjk5NkBleGFtcGxlLmNvbSIsInN1YiI6Ijc3ZDIzODYzLTFhYzYtNDExNC05ZWRhLTFiZGE1OGU4YmJjZSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjU4NzI3LCJleHAiOjE3NTIzNDUxMjd9.yk1md5cehVJGmmVIIX_eWjpMwDDFCL8nE0_-GHEM83E"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 69,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "ed410912-67e6-410b-b83b-cafcb08944be",
+          "email": "test-1752258727071@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT727130640"
+        },
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtMTc1MjI1ODcyNzA3MUBleGFtcGxlLmNvbSIsInN1YiI6ImVkNDEwOTEyLTY3ZTYtNDEwYi1iODNiLWNhZmNiMDg5NDRiZSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjU4NzI3LCJleHAiOjE3NTIzNDUxMjd9.DtedSK20joZkP7eidNpq1p2A9BMol8hLabOmPhOiOU0"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 71,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "a460e822-9bf0-420a-83ff-708d71cafb50",
+          "email": "test-1752258727140@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT727201003"
+        },
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtMTc1MjI1ODcyNzE0MEBleGFtcGxlLmNvbSIsInN1YiI6ImE0NjBlODIyLTliZjAtNDIwYS04M2ZmLTcwOGQ3MWNhZmI1MCIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjU4NzI3LCJleHAiOjE3NTIzNDUxMjd9.DALhK17DKCfsrHYggAONxfGGPm2ydAw3owukdPgVdzI"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 70,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "f954f8e3-6968-4d4f-adcc-b20ac791160c",
+          "email": "test-1752258727212@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT727271515"
+        },
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtMTc1MjI1ODcyNzIxMkBleGFtcGxlLmNvbSIsInN1YiI6ImY5NTRmOGUzLTY5NjgtNGQ0Zi1hZGNjLWIyMGFjNzkxMTYwYyIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjU4NzI3LCJleHAiOjE3NTIzNDUxMjd9.zn1Kes3lZRTzjw5nzAxMDzOYgmvmcoyQClfW547d94Q"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "a88f85dd-6bc8-46ed-82b1-859776cd9c81",
+        "email": "test-security-admin-1752258727318@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD727379465",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:07.380Z",
+        "updatedAt": "2025-07-11T18:32:07.461Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "506668ea-0df9-4f08-bb20-a1cc0577cc1c",
+        "email": "test-security-admin-1752258727479@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD727544568",
+        "profile": null,
+        "createdAt": "2025-07-11T18:32:07.545Z",
+        "updatedAt": "2025-07-11T18:32:07.624Z",
+        "isActive": true
+      }
+    }
+  ]
+}

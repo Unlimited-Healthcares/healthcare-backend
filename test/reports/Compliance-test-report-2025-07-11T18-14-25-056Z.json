@@ -1,0 +1,358 @@
+{
+  "moduleName": "Compliance",
+  "timestamp": "2025-07-11T18:14:25.056Z",
+  "summary": {
+    "total": 21,
+    "passed": 12,
+    "failed": 9,
+    "successRate": 57.14285714285714,
+    "averageResponseTime": 15.571428571428571
+  },
+  "results": [
+    {
+      "endpoint": "GET /compliance/consents",
+      "status": "PASS",
+      "responseTime": 25,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /compliance/consent/marketing",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hasConsent": false
+      }
+    },
+    {
+      "endpoint": "GET /compliance/consent/analytics",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hasConsent": false
+      }
+    },
+    {
+      "endpoint": "GET /compliance/data-export",
+      "status": "FAIL",
+      "responseTime": 112,
+      "statusCode": 500,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 500",
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T18:14:24.134Z",
+        "path": "/compliance/data-export",
+        "method": "GET",
+        "message": "Failed to export user data",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.150Z",
+        "path": "/compliance/consent",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-deletion",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.165Z",
+        "path": "/compliance/data-deletion",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-correction",
+      "status": "FAIL",
+      "responseTime": 19,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.184Z",
+        "path": "/compliance/data-correction",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.348Z",
+        "path": "/compliance/phi-access/validate",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-breach",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.518Z",
+        "path": "/compliance/data-breach",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/hipaa-audit-report",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.526Z",
+        "path": "/compliance/hipaa-audit-report",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.535Z",
+        "path": "/compliance/consent",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.549Z",
+        "path": "/compliance/consent",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-deletion",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.558Z",
+        "path": "/compliance/data-deletion",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.567Z",
+        "path": "/compliance/phi-access/validate",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-breach",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T18:14:24.720Z",
+        "path": "/compliance/data-breach",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/hipaa-audit-report",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T18:14:24.725Z",
+        "path": "/compliance/hipaa-audit-report",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T18:14:24.730Z",
+        "path": "/compliance/phi-access/validate",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /compliance/consents",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:24.888Z",
+        "path": "/compliance/consent",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /compliance/consents",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:14:25.053Z",
+        "path": "/compliance/phi-access/validate",
+        "method": "POST",
+        "message": [
+          "undefined: an unknown value was passed to the validate function"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    }
+  ]
+}

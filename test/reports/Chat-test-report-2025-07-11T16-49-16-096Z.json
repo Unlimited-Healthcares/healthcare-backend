@@ -1,0 +1,571 @@
+{
+  "moduleName": "Chat",
+  "timestamp": "2025-07-11T16:49:16.096Z",
+  "summary": {
+    "total": 29,
+    "passed": 28,
+    "failed": 1,
+    "successRate": 96.55172413793103,
+    "averageResponseTime": 19.379310344827587
+  },
+  "results": [
+    {
+      "endpoint": "GET /chat/rooms",
+      "status": "PASS",
+      "responseTime": 60,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms",
+      "status": "PASS",
+      "responseTime": 46,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "f9781d79-4394-4ee2-844c-2c4ef5f0f98d",
+        "name": "Test Consultation Room 1752252555214",
+        "type": "consultation",
+        "isActive": true,
+        "appointmentId": null,
+        "centerId": null,
+        "createdBy": "b6da8b82-789f-4d17-80d1-86f2f4e6ba8c",
+        "maxParticipants": 10,
+        "isEncrypted": true,
+        "autoDeleteAfterDays": 30,
+        "roomSettings": {
+          "allowReactions": true,
+          "allowFileSharing": true,
+          "messageRetentionDays": 30
+        },
+        "createdAt": "2025-07-11T16:49:15.499Z",
+        "updatedAt": "2025-07-11T16:49:15.499Z",
+        "participants": [],
+        "messages": []
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 25,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "88b3e61c-ceec-4566-9551-d9059ccc77a8",
+        "name": "Direct Chat 1752252555214",
+        "type": "direct",
+        "isActive": true,
+        "appointmentId": null,
+        "centerId": null,
+        "createdBy": "b6da8b82-789f-4d17-80d1-86f2f4e6ba8c",
+        "maxParticipants": 10,
+        "isEncrypted": true,
+        "autoDeleteAfterDays": 30,
+        "roomSettings": {
+          "allowReactions": true,
+          "allowFileSharing": true,
+          "messageRetentionDays": 30
+        },
+        "createdAt": "2025-07-11T16:49:15.521Z",
+        "updatedAt": "2025-07-11T16:49:15.521Z",
+        "participants": [],
+        "messages": []
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 25,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "7fff2afc-bf13-4662-bdf1-84c453237ebf",
+        "name": "Group Chat 1752252555214",
+        "type": "group",
+        "isActive": true,
+        "appointmentId": null,
+        "centerId": null,
+        "createdBy": "b6da8b82-789f-4d17-80d1-86f2f4e6ba8c",
+        "maxParticipants": 10,
+        "isEncrypted": true,
+        "autoDeleteAfterDays": 30,
+        "roomSettings": {
+          "allowReactions": true,
+          "allowFileSharing": true,
+          "messageRetentionDays": 30
+        },
+        "createdAt": "2025-07-11T16:49:15.549Z",
+        "updatedAt": "2025-07-11T16:49:15.549Z",
+        "participants": [],
+        "messages": []
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.582Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "GET",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.607Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /chat/messages/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:49:15.630Z",
+        "path": "/chat/messages/00000000-0000-0000-0000-000000000000",
+        "method": "PATCH",
+        "message": "Message not found or you do not have permission to edit it",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /chat/messages/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:49:15.654Z",
+        "path": "/chat/messages/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Message not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/messages/00000000-0000-0000-0000-000000000000/reactions",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:49:15.671Z",
+        "path": "/chat/messages/00000000-0000-0000-0000-000000000000/reactions",
+        "method": "POST",
+        "message": "Message not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/participants",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.688Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/participants",
+        "method": "POST",
+        "message": "Only room admins can add participants",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /chat/rooms/00000000-0000-0000-0000-000000000000/participants/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 20,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.708Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/participants/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Only room admins can remove other participants",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms/invalid-uuid/messages",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:49:15.727Z",
+        "path": "/chat/rooms/invalid-uuid/messages",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/invalid-uuid/messages",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:49:15.741Z",
+        "path": "/chat/rooms/invalid-uuid/messages",
+        "method": "POST",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:49:15.754Z",
+        "path": "/chat/rooms",
+        "method": "POST",
+        "message": [
+          "type: type must be one of the following values: "
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:49:15.762Z",
+        "path": "/chat/rooms",
+        "method": "POST",
+        "message": [
+          "participantIds: each value in participantIds must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.776Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:49:15.788Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": [
+          "messageType: messageType must be one of the following values: "
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "6bf2cb45-79bd-45ee-8dd5-4a6911d42c4f",
+        "name": "Test Consultation Room 1752252555214",
+        "type": "consultation",
+        "isActive": true,
+        "appointmentId": null,
+        "centerId": null,
+        "createdBy": "7e528c52-db8a-4b78-bfc5-dbd56b7e912f",
+        "maxParticipants": 10,
+        "isEncrypted": true,
+        "autoDeleteAfterDays": 30,
+        "roomSettings": {
+          "allowReactions": true,
+          "allowFileSharing": true,
+          "messageRetentionDays": 30
+        },
+        "createdAt": "2025-07-11T16:49:15.942Z",
+        "updatedAt": "2025-07-11T16:49:15.942Z",
+        "participants": [],
+        "messages": []
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 2,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.986Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages?page=1&limit=20",
+        "method": "GET",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:15.993Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:16.002Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:16.011Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:49:16.021Z",
+        "path": "/chat/rooms/00000000-0000-0000-0000-000000000000/messages",
+        "method": "POST",
+        "message": "You are not a participant in this chat room",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 32,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "290666bb-18d6-40b3-8ecf-0a51ca3eb868",
+        "name": "Encrypted Room 1752252555214",
+        "type": "consultation",
+        "isActive": true,
+        "appointmentId": null,
+        "centerId": null,
+        "createdBy": "7e528c52-db8a-4b78-bfc5-dbd56b7e912f",
+        "maxParticipants": 10,
+        "isEncrypted": true,
+        "autoDeleteAfterDays": 7,
+        "roomSettings": {
+          "maxFileSize": 10485760,
+          "allowReactions": true,
+          "encryptionLevel": "high",
+          "allowFileSharing": false,
+          "messageRetentionDays": 7
+        },
+        "createdAt": "2025-07-11T16:49:16.043Z",
+        "updatedAt": "2025-07-11T16:49:16.043Z",
+        "participants": [],
+        "messages": []
+      }
+    },
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "PASS",
+      "responseTime": 39,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "da4240c8-eace-41c0-8ed6-4a2b5d966507",
+        "name": "Emergency Room 1752252555214",
+        "type": "emergency",
+        "isActive": true,
+        "appointmentId": null,
+        "centerId": null,
+        "createdBy": "7e528c52-db8a-4b78-bfc5-dbd56b7e912f",
+        "maxParticipants": 5,
+        "isEncrypted": true,
+        "autoDeleteAfterDays": 90,
+        "roomSettings": {
+          "autoNotify": true,
+          "priorityLevel": "high",
+          "recordingEnabled": true
+        },
+        "createdAt": "2025-07-11T16:49:16.066Z",
+        "updatedAt": "2025-07-11T16:49:16.066Z",
+        "participants": [],
+        "messages": []
+      }
+    }
+  ]
+}

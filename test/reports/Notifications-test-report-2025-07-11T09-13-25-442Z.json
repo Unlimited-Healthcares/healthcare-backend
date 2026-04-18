@@ -1,0 +1,353 @@
+{
+  "moduleName": "Notifications",
+  "timestamp": "2025-07-11T09:13:25.442Z",
+  "summary": {
+    "total": 23,
+    "passed": 21,
+    "failed": 2,
+    "successRate": 91.30434782608695,
+    "averageResponseTime": 40.21739130434783
+  },
+  "results": [
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 30,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications/unread-count",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": 0
+    },
+    {
+      "endpoint": "GET /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userId": "e0f382dd-869e-4550-afad-029e81711470",
+        "quietHoursStart": null,
+        "quietHoursEnd": null,
+        "id": "b3d2ec3a-ae18-47f8-9c2e-c16742813012",
+        "emailVerified": false,
+        "phoneVerified": false,
+        "medicalRecordRequest": "both",
+        "medicalRecordAccess": "push",
+        "recordShareExpiring": "both",
+        "appointment": "both",
+        "message": "both",
+        "system": "push",
+        "referral": "both",
+        "testResult": "both",
+        "payment": "both",
+        "marketing": "none",
+        "timezone": "UTC",
+        "createdAt": "2025-07-11T09:13:24.268Z",
+        "updatedAt": "2025-07-11T09:13:24.268Z"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "FAIL",
+      "responseTime": 101,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:13:24.529Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": "invalid input syntax for type uuid: \"test-user-id\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 29,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userId": "a6613a9e-c75b-479b-a44a-a4d58c21f935",
+        "quietHoursStart": "22:00",
+        "quietHoursEnd": "08:00",
+        "id": "96a95ac7-e5f0-4fda-97e4-3eab2df97a7d",
+        "emailVerified": true,
+        "phoneVerified": false,
+        "medicalRecordRequest": "email",
+        "medicalRecordAccess": "push",
+        "recordShareExpiring": "both",
+        "appointment": "both",
+        "message": "email",
+        "system": "push",
+        "referral": "both",
+        "testResult": "email",
+        "payment": "push",
+        "marketing": "none",
+        "timezone": "UTC",
+        "createdAt": "2025-07-11T09:13:24.543Z",
+        "updatedAt": "2025-07-11T09:13:24.550Z"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/test/email",
+      "status": "PASS",
+      "responseTime": 124,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications/test/push",
+      "status": "PASS",
+      "responseTime": 123,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications/test/sms",
+      "status": "PASS",
+      "responseTime": 122,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "PUT /notifications/invalid-uuid/read",
+      "status": "PASS",
+      "responseTime": 47,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:13:24.976Z",
+        "path": "/notifications/invalid-uuid/read",
+        "method": "PUT",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/00000000-0000-0000-0000-000000000000/read",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:13:24.990Z",
+        "path": "/notifications/00000000-0000-0000-0000-000000000000/read",
+        "method": "PUT",
+        "message": "Notification not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /notifications/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:13:25.002Z",
+        "path": "/notifications/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Notification not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:13:25.013Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": [
+          "title: title must be a string",
+          "type: type must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:13:25.023Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": [
+          "deliveryMethod: deliveryMethod must be one of the following values: in_app, email, sms, push, both, all"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:13:25.034Z",
+        "path": "/notifications/preferences",
+        "method": "PUT",
+        "message": [
+          "medicalRecordRequest: medicalRecordRequest must be one of the following values: none, email, push, both",
+          "appointment: appointment must be one of the following values: none, email, push, both"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/test/invalid_type",
+      "status": "PASS",
+      "responseTime": 122,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "FAIL",
+      "responseTime": 51,
+      "statusCode": 400,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:13:25.356Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": "invalid input syntax for type uuid: \"test-user-id\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/mark-all-read",
+      "status": "PASS",
+      "responseTime": 31,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    }
+  ]
+}

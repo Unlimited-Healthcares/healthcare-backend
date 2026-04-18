@@ -1,0 +1,55 @@
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+      cache_from:
+        - node:18-alpine
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+    volumes:
+      - .:/usr/src/app
+      - api_node_modules:/usr/src/app/node_modules
+    command: npm run start:dev
+    env_file:
+      - .env.development
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - healthcare-network
+
+  postgres:
+    image: postgres:14
+    env_file:
+      - .env.development
+    expose:
+      - "5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - healthcare-network
+
+  redis:
+    image: redis:7-alpine
+    expose:
+      - "6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - healthcare-network
+
+networks:
+  healthcare-network:
+
+volumes:
+  postgres-data:
+  redis-data:
+  api_node_modules:

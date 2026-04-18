@@ -1,0 +1,126 @@
+
+> unlimitedhealthcare-backend@1.0.0 migration:run
+> typeorm-ts-node-commonjs migration:run -d src/datasource.ts
+
+query: SELECT version()
+query: SELECT * FROM current_schema()
+query: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+query: SELECT * FROM "information_schema"."tables" WHERE "table_schema" = 'public' AND "table_name" = 'migrations'
+query: SELECT * FROM "migrations" "migrations" ORDER BY "id" DESC
+6 migrations are already loaded in the database.
+12 migrations were found in the source code.
+CreatePatientProviderRelationship1759803125105 is the last executed migration. It was executed on Tue Oct 07 2025 02:12:05 GMT+0000 (Coordinated Universal Time).
+6 migrations are new migrations must be executed.
+query: START TRANSACTION
+query: 
+      CREATE TABLE IF NOT EXISTS location_history (
+        id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+        "entityType" VARCHAR(50) NOT NULL,
+        "entityId" UUID NOT NULL,
+        latitude DECIMAL(10,8) NOT NULL,
+        longitude DECIMAL(11,8) NOT NULL,
+        accuracy DECIMAL(8,2),
+        source VARCHAR(50) DEFAULT 'manual',
+        metadata JSONB,
+        timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    
+query: 
+      CREATE TABLE IF NOT EXISTS geofence_zones (
+        id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+        name VARCHAR(100) NOT NULL,
+        description TEXT,
+        centerLatitude DECIMAL(10,8) NOT NULL,
+        centerLongitude DECIMAL(11,8) NOT NULL,
+        radius DECIMAL(8,2) NOT NULL,
+        centerId UUID,
+        status VARCHAR(20) DEFAULT 'active',
+        createdBy UUID NOT NULL,
+        createdAt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updatedAt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    
+query: 
+      CREATE INDEX IF NOT EXISTS IDX_location_history_entity ON location_history ("entityType", "entityId");
+    
+query: 
+      CREATE INDEX IF NOT EXISTS IDX_location_history_timestamp ON location_history ("timestamp");
+    
+query: 
+      DO $$
+      BEGIN
+        IF EXISTS (SELECT 1 FROM information_schema.columns 
+                   WHERE table_name = 'geofence_zones' AND column_name = 'centerId') THEN
+          CREATE INDEX IF NOT EXISTS IDX_geofence_zones_center_id ON geofence_zones ("centerId");
+        END IF;
+      END $$;
+    
+query: 
+      CREATE INDEX IF NOT EXISTS IDX_geofence_zones_status ON geofence_zones (status);
+    
+query: 
+      CREATE INDEX IF NOT EXISTS IDX_geofence_zones_location ON geofence_zones ("centerLatitude", "centerLongitude");
+    
+query failed: 
+      CREATE INDEX IF NOT EXISTS IDX_geofence_zones_location ON geofence_zones ("centerLatitude", "centerLongitude");
+    
+error: error: column "centerLatitude" does not exist
+Migration "CreateLocationTables1748490203000" failed, error: column "centerLatitude" does not exist
+query: ROLLBACK
+Error during migration run:
+QueryFailedError: column "centerLatitude" does not exist
+    at PostgresQueryRunner.query (/usr/src/app/node_modules/typeorm/src/driver/postgres/PostgresQueryRunner.ts:325:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CreateLocationTables1748490203000.up (/usr/src/app/src/migrations/1748490203000-CreateLocationTables.ts:65:5)
+    at async MigrationExecutor.executePendingMigrations (/usr/src/app/node_modules/src/migration/MigrationExecutor.ts:336:17)
+    at async DataSource.runMigrations (/usr/src/app/node_modules/src/data-source/DataSource.ts:404:13)
+    at async Object.handler (/usr/src/app/node_modules/src/commands/MigrationRunCommand.ts:76:13) {
+  query: '\n' +
+    '      CREATE INDEX IF NOT EXISTS IDX_geofence_zones_location ON geofence_zones ("centerLatitude", "centerLongitude");\n' +
+    '    ',
+  parameters: undefined,
+  driverError: error: column "centerLatitude" does not exist
+      at /usr/src/app/node_modules/pg/lib/client.js:545:17
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async PostgresQueryRunner.query (/usr/src/app/node_modules/typeorm/src/driver/postgres/PostgresQueryRunner.ts:254:25)
+      at async CreateLocationTables1748490203000.up (/usr/src/app/src/migrations/1748490203000-CreateLocationTables.ts:65:5)
+      at async MigrationExecutor.executePendingMigrations (/usr/src/app/node_modules/src/migration/MigrationExecutor.ts:336:17)
+      at async DataSource.runMigrations (/usr/src/app/node_modules/src/data-source/DataSource.ts:404:13)
+      at async Object.handler (/usr/src/app/node_modules/src/commands/MigrationRunCommand.ts:76:13) {
+    length: 104,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'indexcmds.c',
+    line: '1840',
+    routine: 'ComputeIndexAttrs'
+  },
+  length: 104,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'indexcmds.c',
+  line: '1840',
+  routine: 'ComputeIndexAttrs'
+}

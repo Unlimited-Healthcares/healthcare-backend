@@ -1,0 +1,838 @@
+{
+  "timestamp": "2025-06-08T04:34:37.253Z",
+  "summary": {
+    "total": 41,
+    "passed": 6,
+    "failed": 35,
+    "successRate": 14.634146341463413
+  },
+  "moduleResults": [
+    {
+      "moduleName": "application",
+      "timestamp": "2025-06-08T04:34:31.810Z",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "successRate": 100,
+        "averageResponseTime": 9
+      },
+      "results": [
+        {
+          "endpoint": "GET /",
+          "status": "PASS",
+          "responseTime": 9,
+          "statusCode": 200,
+          "expectedStatus": 200,
+          "error": null,
+          "responseBody": "Welcome to UNLIMITEDHEALTHCARE API!"
+        }
+      ]
+    },
+    {
+      "moduleName": "authentication",
+      "timestamp": "2025-06-08T04:34:32.778Z",
+      "summary": {
+        "total": 6,
+        "passed": 4,
+        "failed": 2,
+        "successRate": 66.66666666666666,
+        "averageResponseTime": 93.16666666666667
+      },
+      "results": [
+        {
+          "endpoint": "POST /auth/register",
+          "status": "PASS",
+          "responseTime": 195,
+          "statusCode": 201,
+          "expectedStatus": 201,
+          "error": null,
+          "responseBody": {
+            "id": "dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+            "displayId": "PT272305289",
+            "email": "patient@test.com",
+            "password": "$2b$10$VmMBwuRuph1FrN44kXObiOCpCA8pVGsuqPnza7/gH1JJ5RAr99mvy",
+            "roles": [
+              "patient"
+            ],
+            "refreshToken": null,
+            "createdAt": "2025-06-08T04:34:32.306Z",
+            "updatedAt": "2025-06-08T04:34:32.306Z",
+            "profile": null
+          }
+        },
+        {
+          "endpoint": "POST /auth/register/staff",
+          "status": "FAIL",
+          "responseTime": 19,
+          "statusCode": 403,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:32.427Z",
+            "path": "/auth/register/staff",
+            "method": "POST",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "POST /auth/login",
+          "status": "PASS",
+          "responseTime": 201,
+          "statusCode": 200,
+          "expectedStatus": 200,
+          "error": null,
+          "responseBody": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdGllbnRAdGVzdC5jb20iLCJzdWIiOiJkY2NiMjcxNS1lMzE2LTRjOGQtOWVlOC1kZDZjYmUxYjRjZjMiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc0OTM1NzI3MiwiZXhwIjoxNzQ5NDQzNjcyfQ.-o3tw7gLZTUjuVE1e9csV0X4VESf7PFdFo60ZGASwhg",
+            "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdGllbnRAdGVzdC5jb20iLCJzdWIiOiJkY2NiMjcxNS1lMzE2LTRjOGQtOWVlOC1kZDZjYmUxYjRjZjMiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc0OTM1NzI3MiwiZXhwIjoxNzQ5OTYyMDcyfQ.uRA4U6CpUmQVMtSuXImTmgh92lNFDkORxjOvMdDr3CQ",
+            "user": {
+              "id": "dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+              "email": "patient@test.com",
+              "roles": [
+                "patient"
+              ],
+              "displayId": "PT272305289"
+            }
+          }
+        },
+        {
+          "endpoint": "GET /auth/me",
+          "status": "PASS",
+          "responseTime": 21,
+          "statusCode": 200,
+          "expectedStatus": 200,
+          "error": null,
+          "responseBody": {
+            "id": "6cd76397-92eb-4219-a8c4-a805006ad129",
+            "email": "test-authentication-1749357271829@example.com",
+            "roles": [
+              "patient"
+            ],
+            "displayId": "PT271913419",
+            "profile": null,
+            "createdAt": "2025-06-08T04:34:31.914Z",
+            "updatedAt": "2025-06-08T04:34:32.096Z"
+          }
+        },
+        {
+          "endpoint": "POST /auth/refresh",
+          "status": "FAIL",
+          "responseTime": 11,
+          "statusCode": 401,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 401",
+          "responseBody": {
+            "statusCode": 401,
+            "timestamp": "2025-06-08T04:34:32.662Z",
+            "path": "/auth/refresh",
+            "method": "POST",
+            "message": "Unauthorized",
+            "error": "Http Exception",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "POST /auth/logout",
+          "status": "PASS",
+          "responseTime": 112,
+          "statusCode": 200,
+          "expectedStatus": 200,
+          "error": null,
+          "responseBody": {
+            "message": "Successfully logged out"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "users",
+      "timestamp": "2025-06-08T04:34:33.311Z",
+      "summary": {
+        "total": 5,
+        "passed": 0,
+        "failed": 5,
+        "successRate": 0,
+        "averageResponseTime": 14.8
+      },
+      "results": [
+        {
+          "endpoint": "POST /users",
+          "status": "FAIL",
+          "responseTime": 11,
+          "statusCode": 403,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.242Z",
+            "path": "/users",
+            "method": "POST",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /users",
+          "status": "FAIL",
+          "responseTime": 16,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.257Z",
+            "path": "/users?page=1&limit=10&role=patient",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /users/{{user_id}}",
+          "status": "FAIL",
+          "responseTime": 19,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.278Z",
+            "path": "/users/%7B%7Buser_id%7D%7D",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "PATCH /users/{{user_id}}",
+          "status": "FAIL",
+          "responseTime": 14,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.294Z",
+            "path": "/users/%7B%7Buser_id%7D%7D",
+            "method": "PATCH",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "PATCH /users/{{user_id}}/profile",
+          "status": "FAIL",
+          "responseTime": 14,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.307Z",
+            "path": "/users/%7B%7Buser_id%7D%7D/profile",
+            "method": "PATCH",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "centers",
+      "timestamp": "2025-06-08T04:34:33.775Z",
+      "summary": {
+        "total": 5,
+        "passed": 0,
+        "failed": 5,
+        "successRate": 0,
+        "averageResponseTime": 12.2
+      },
+      "results": [
+        {
+          "endpoint": "POST /centers",
+          "status": "FAIL",
+          "responseTime": 14,
+          "statusCode": 403,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.722Z",
+            "path": "/centers",
+            "method": "POST",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /centers",
+          "status": "FAIL",
+          "responseTime": 13,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.737Z",
+            "path": "/centers?page=1&limit=10&type=hospital",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /centers/types",
+          "status": "FAIL",
+          "responseTime": 9,
+          "statusCode": 401,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 401",
+          "responseBody": {
+            "statusCode": 401,
+            "timestamp": "2025-06-08T04:34:33.746Z",
+            "path": "/centers/types",
+            "method": "GET",
+            "message": "Unauthorized",
+            "error": "Http Exception",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /centers/{{center_id}}",
+          "status": "FAIL",
+          "responseTime": 4,
+          "statusCode": 401,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 401",
+          "responseBody": {
+            "statusCode": 401,
+            "timestamp": "2025-06-08T04:34:33.751Z",
+            "path": "/centers/%7B%7Bcenter_id%7D%7D",
+            "method": "GET",
+            "message": "Unauthorized",
+            "error": "Http Exception",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "PATCH /centers/{{center_id}}",
+          "status": "FAIL",
+          "responseTime": 21,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:33.772Z",
+            "path": "/centers/%7B%7Bcenter_id%7D%7D",
+            "method": "PATCH",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "appointments",
+      "timestamp": "2025-06-08T04:34:34.571Z",
+      "summary": {
+        "total": 5,
+        "passed": 0,
+        "failed": 5,
+        "successRate": 0,
+        "averageResponseTime": 73.6
+      },
+      "results": [
+        {
+          "endpoint": "POST /appointments",
+          "status": "FAIL",
+          "responseTime": 34,
+          "statusCode": 400,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 400",
+          "responseBody": {
+            "statusCode": 400,
+            "timestamp": "2025-06-08T04:34:34.231Z",
+            "path": "/appointments",
+            "method": "POST",
+            "message": "Validation failed",
+            "error": "Http Exception",
+            "code": "VALIDATION_FAILED"
+          }
+        },
+        {
+          "endpoint": "GET /appointments",
+          "status": "FAIL",
+          "responseTime": 271,
+          "statusCode": 400,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 400",
+          "responseBody": {
+            "statusCode": 400,
+            "timestamp": "2025-06-08T04:34:34.504Z",
+            "path": "/appointments?page=1&limit=10&status=scheduled",
+            "method": "GET",
+            "message": "invalid input syntax for type uuid: \"\"",
+            "error": "Database Error",
+            "code": "DATABASE_ERROR"
+          }
+        },
+        {
+          "endpoint": "GET /appointments/{{appointment_id}}",
+          "status": "FAIL",
+          "responseTime": 16,
+          "statusCode": 400,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 400",
+          "responseBody": {
+            "statusCode": 400,
+            "timestamp": "2025-06-08T04:34:34.520Z",
+            "path": "/appointments/%7B%7Bappointment_id%7D%7D",
+            "method": "GET",
+            "message": "Validation failed (uuid is expected)",
+            "error": "Bad Request",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "PATCH /appointments/{{appointment_id}}",
+          "status": "FAIL",
+          "responseTime": 28,
+          "statusCode": 400,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 400",
+          "responseBody": {
+            "statusCode": 400,
+            "timestamp": "2025-06-08T04:34:34.549Z",
+            "path": "/appointments/%7B%7Bappointment_id%7D%7D",
+            "method": "PATCH",
+            "message": [
+              "property duration should not exist"
+            ],
+            "error": "Bad Request",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /appointments/me",
+          "status": "FAIL",
+          "responseTime": 19,
+          "statusCode": 400,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 400",
+          "responseBody": {
+            "statusCode": 400,
+            "timestamp": "2025-06-08T04:34:34.569Z",
+            "path": "/appointments/me?status=scheduled&upcoming=true&limit=20",
+            "method": "GET",
+            "message": "Validation failed (uuid is expected)",
+            "error": "Bad Request",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "referrals",
+      "timestamp": "2025-06-08T04:34:35.093Z",
+      "summary": {
+        "total": 4,
+        "passed": 0,
+        "failed": 4,
+        "successRate": 0,
+        "averageResponseTime": 16.75
+      },
+      "results": [
+        {
+          "endpoint": "POST /referrals",
+          "status": "FAIL",
+          "responseTime": 13,
+          "statusCode": 403,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:35.037Z",
+            "path": "/referrals",
+            "method": "POST",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /referrals",
+          "status": "FAIL",
+          "responseTime": 12,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:35.049Z",
+            "path": "/referrals?page=1&limit=10&status=pending",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /referrals/{{referral_id}}",
+          "status": "FAIL",
+          "responseTime": 19,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:35.066Z",
+            "path": "/referrals/%7B%7Breferral_id%7D%7D",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /referrals/me",
+          "status": "FAIL",
+          "responseTime": 23,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:35.086Z",
+            "path": "/referrals/me?type=all&status=active",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "medical-reports",
+      "timestamp": "2025-06-08T04:34:35.563Z",
+      "summary": {
+        "total": 4,
+        "passed": 0,
+        "failed": 4,
+        "successRate": 0,
+        "averageResponseTime": 10
+      },
+      "results": [
+        {
+          "endpoint": "POST /medical-reports/patient/dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+          "status": "FAIL",
+          "responseTime": 16,
+          "statusCode": 404,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:35.537Z",
+            "path": "/medical-reports/patient/dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+            "method": "POST",
+            "message": "Cannot POST /medical-reports/patient/dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /medical-reports",
+          "status": "FAIL",
+          "responseTime": 13,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:35.549Z",
+            "path": "/medical-reports?page=1&limit=20&type=patient&status=completed",
+            "method": "GET",
+            "message": "Cannot GET /medical-reports?page=1&limit=20&type=patient&status=completed",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /medical-reports/{{report_id}}",
+          "status": "FAIL",
+          "responseTime": 7,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:35.554Z",
+            "path": "/medical-reports/%7B%7Breport_id%7D%7D",
+            "method": "GET",
+            "message": "Cannot GET /medical-reports/%7B%7Breport_id%7D%7D",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /medical-reports/templates",
+          "status": "FAIL",
+          "responseTime": 4,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:35.561Z",
+            "path": "/medical-reports/templates?category=patient&active=true",
+            "method": "GET",
+            "message": "Cannot GET /medical-reports/templates?category=patient&active=true",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "blood-donation",
+      "timestamp": "2025-06-08T04:34:35.964Z",
+      "summary": {
+        "total": 4,
+        "passed": 0,
+        "failed": 4,
+        "successRate": 0,
+        "averageResponseTime": 10.25
+      },
+      "results": [
+        {
+          "endpoint": "POST /blood-donation/donors",
+          "status": "FAIL",
+          "responseTime": 7,
+          "statusCode": 404,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:35.927Z",
+            "path": "/blood-donation/donors",
+            "method": "POST",
+            "message": "Cannot POST /blood-donation/donors",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /blood-donation/donors",
+          "status": "FAIL",
+          "responseTime": 14,
+          "statusCode": 403,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:35.940Z",
+            "path": "/blood-donation/donors?page=1&limit=20&bloodType=A%2B&status=eligible",
+            "method": "GET",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "POST /blood-donation/donations",
+          "status": "FAIL",
+          "responseTime": 16,
+          "statusCode": 403,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 403",
+          "responseBody": {
+            "statusCode": 403,
+            "timestamp": "2025-06-08T04:34:35.953Z",
+            "path": "/blood-donation/donations",
+            "method": "POST",
+            "message": "Forbidden resource",
+            "error": "Forbidden",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "GET /blood-donation/inventory",
+          "status": "FAIL",
+          "responseTime": 4,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:35.962Z",
+            "path": "/blood-donation/inventory?centerId=%7B%7Bcenter_id%7D%7D&bloodType=A%2B&status=available",
+            "method": "GET",
+            "message": "Cannot GET /blood-donation/inventory?centerId=%7B%7Bcenter_id%7D%7D&bloodType=A%2B&status=available",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "ai-services",
+      "timestamp": "2025-06-08T04:34:36.526Z",
+      "summary": {
+        "total": 3,
+        "passed": 0,
+        "failed": 3,
+        "successRate": 0,
+        "averageResponseTime": 4.666666666666667
+      },
+      "results": [
+        {
+          "endpoint": "POST /ai/symptoms/analyze",
+          "status": "FAIL",
+          "responseTime": 5,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:36.513Z",
+            "path": "/ai/symptoms/analyze",
+            "method": "POST",
+            "message": "Cannot POST /ai/symptoms/analyze",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "POST /ai/treatment/recommend",
+          "status": "FAIL",
+          "responseTime": 4,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:36.519Z",
+            "path": "/ai/treatment/recommend",
+            "method": "POST",
+            "message": "Cannot POST /ai/treatment/recommend",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "POST /ai/drugs/interactions",
+          "status": "FAIL",
+          "responseTime": 5,
+          "statusCode": 404,
+          "expectedStatus": 200,
+          "error": "Expected 200, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:36.524Z",
+            "path": "/ai/drugs/interactions",
+            "method": "POST",
+            "message": "Cannot POST /ai/drugs/interactions",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    },
+    {
+      "moduleName": "chat-video",
+      "timestamp": "2025-06-08T04:34:37.248Z",
+      "summary": {
+        "total": 4,
+        "passed": 1,
+        "failed": 3,
+        "successRate": 25,
+        "averageResponseTime": 39.25
+      },
+      "results": [
+        {
+          "endpoint": "POST /chat/rooms",
+          "status": "FAIL",
+          "responseTime": 25,
+          "statusCode": 400,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 400",
+          "responseBody": {
+            "statusCode": 400,
+            "timestamp": "2025-06-08T04:34:37.110Z",
+            "path": "/chat/rooms",
+            "method": "POST",
+            "message": "Validation failed",
+            "error": "Http Exception",
+            "code": "VALIDATION_FAILED"
+          }
+        },
+        {
+          "endpoint": "GET /chat/rooms",
+          "status": "PASS",
+          "responseTime": 121,
+          "statusCode": 200,
+          "expectedStatus": 200,
+          "error": null,
+          "responseBody": {
+            "data": [],
+            "total": 0,
+            "page": 1,
+            "totalPages": 0
+          }
+        },
+        {
+          "endpoint": "POST /chat/messages",
+          "status": "FAIL",
+          "responseTime": 7,
+          "statusCode": 404,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:37.241Z",
+            "path": "/chat/messages",
+            "method": "POST",
+            "message": "Cannot POST /chat/messages",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        },
+        {
+          "endpoint": "POST /video/calls",
+          "status": "FAIL",
+          "responseTime": 4,
+          "statusCode": 404,
+          "expectedStatus": 201,
+          "error": "Expected 201, got 404",
+          "responseBody": {
+            "statusCode": 404,
+            "timestamp": "2025-06-08T04:34:37.246Z",
+            "path": "/video/calls",
+            "method": "POST",
+            "message": "Cannot POST /video/calls",
+            "error": "Not Found",
+            "code": "HTTP_EXCEPTION"
+          }
+        }
+      ]
+    }
+  ],
+  "testEnvironment": {
+    "nodeVersion": "v20.18.1",
+    "platform": "linux",
+    "database": "PostgreSQL (Test)",
+    "baseUrl": "http://localhost:3000"
+  }
+}

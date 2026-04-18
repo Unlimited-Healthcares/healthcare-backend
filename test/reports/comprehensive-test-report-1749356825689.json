@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-06-08T04:27:05.686Z",
+  "summary": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "successRate": null
+  },
+  "moduleResults": [],
+  "testEnvironment": {
+    "nodeVersion": "v20.18.1",
+    "platform": "linux",
+    "database": "PostgreSQL (Test)",
+    "baseUrl": "http://localhost:3000"
+  }
+}

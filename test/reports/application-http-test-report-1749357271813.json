@@ -1,0 +1,22 @@
+{
+  "moduleName": "application",
+  "timestamp": "2025-06-08T04:34:31.812Z",
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 9
+  },
+  "results": [
+    {
+      "endpoint": "GET /",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": "Welcome to UNLIMITEDHEALTHCARE API!"
+    }
+  ]
+}

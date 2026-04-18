@@ -1,0 +1,356 @@
+{
+  "moduleName": "MedicalRecords",
+  "timestamp": "2025-07-11T05:09:49.353Z",
+  "summary": {
+    "total": 21,
+    "passed": 11,
+    "failed": 10,
+    "successRate": 52.38095238095239,
+    "averageResponseTime": 24.38095238095238
+  },
+  "results": [
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/tags",
+      "status": "FAIL",
+      "responseTime": 63,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.624Z",
+        "path": "/medical-records/tags",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"tags\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 89,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.711Z",
+        "path": "/medical-records/categories",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"categories\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/categories/hierarchy",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 56,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.791Z",
+        "path": "/medical-records/search?q=test&page=1&limit=10",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.805Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Test Category",
+        "description": "Test category for medical records",
+        "parentCategoryId": null,
+        "id": "e71cbff3-0c5e-4618-a873-8ce51427982e",
+        "isActive": true,
+        "createdAt": "2025-07-11T05:09:48.814Z",
+        "updatedAt": "2025-07-11T05:09:48.814Z"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 33,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.851Z",
+        "path": "/medical-records/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:09:48.865Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.874Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID",
+          "recordType: recordType must be a string",
+          "title: title must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:48.882Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:49.038Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 409,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 409",
+      "responseBody": {
+        "statusCode": 409,
+        "timestamp": "2025-07-11T05:09:49.051Z",
+        "path": "/medical-records/categories",
+        "method": "POST",
+        "message": "Category with this name already exists",
+        "error": "Conflict",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 38,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:49.244Z",
+        "path": "/medical-records/categories",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"categories\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:09:49.253Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001",
+        "method": "GET",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /medical-records/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:09:49.263Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001",
+        "method": "PATCH",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T05:09:49.274Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001",
+        "method": "DELETE",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 27,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:49.301Z",
+        "path": "/medical-records/search?q=blood&category=laboratory&page=1&limit=5",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 26,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:49.326Z",
+        "path": "/medical-records/search?tags=lab,routine&recordType=lab_result",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "FAIL",
+      "responseTime": 23,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T05:09:49.350Z",
+        "path": "/medical-records/search?dateFrom=2024-01-01&dateTo=2024-12-31",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"search\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    }
+  ]
+}

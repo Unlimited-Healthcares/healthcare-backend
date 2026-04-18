@@ -1,0 +1,566 @@
+{
+  "moduleName": "Centers",
+  "timestamp": "2025-07-10T19:11:17.346Z",
+  "summary": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 10.411764705882353
+  },
+  "results": [
+    {
+      "endpoint": "GET /centers/types",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "value": "hospital",
+          "label": "Hospital"
+        },
+        {
+          "value": "pharmacy",
+          "label": "Pharmacy"
+        },
+        {
+          "value": "clinic",
+          "label": "Clinic"
+        },
+        {
+          "value": "laboratory",
+          "label": "Laboratory"
+        },
+        {
+          "value": "radiology",
+          "label": "Radiology"
+        },
+        {
+          "value": "dental",
+          "label": "Dental"
+        },
+        {
+          "value": "eye",
+          "label": "Eye"
+        },
+        {
+          "value": "maternity",
+          "label": "Maternity"
+        },
+        {
+          "value": "ambulance",
+          "label": "Ambulance"
+        },
+        {
+          "value": "virology",
+          "label": "Virology"
+        },
+        {
+          "value": "psychiatric",
+          "label": "Psychiatric"
+        },
+        {
+          "value": "care-home",
+          "label": "Care home"
+        },
+        {
+          "value": "hospice",
+          "label": "Hospice"
+        },
+        {
+          "value": "funeral",
+          "label": "Funeral"
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /centers",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+          "displayId": "HSP282693730",
+          "name": "Test Center 1752174282595",
+          "type": "hospital",
+          "address": "123 Test Street",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "+1234567890",
+          "email": "center-1752174282595@example.com",
+          "hours": null,
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:04:42.694Z",
+          "updatedAt": "2025-07-10T19:04:42.694Z",
+          "staff": [
+            {
+              "id": "e0067545-9472-4aaf-8b62-e711c3b5c809",
+              "userId": "c4564c85-9c0c-489d-a595-9cebf565c642",
+              "centerId": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+              "role": "owner",
+              "createdAt": "2025-07-10T19:04:42.697Z"
+            }
+          ]
+        },
+        {
+          "id": "1949f692-7308-4a76-9ade-b88e235e5291",
+          "displayId": "HSP518817888",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:08:38.818Z",
+          "updatedAt": "2025-07-10T19:08:38.818Z",
+          "staff": [
+            {
+              "id": "de0bbc89-2807-44cf-a340-95ba083e8f40",
+              "userId": "d4481bc3-0b74-4509-b79c-625cdf486c06",
+              "centerId": "1949f692-7308-4a76-9ade-b88e235e5291",
+              "role": "owner",
+              "createdAt": "2025-07-10T19:08:38.820Z"
+            }
+          ]
+        },
+        {
+          "id": "2fa40154-064f-4218-a127-a3e75ed2837e",
+          "displayId": "HSP564098578",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:09:24.098Z",
+          "updatedAt": "2025-07-10T19:09:24.098Z",
+          "staff": [
+            {
+              "id": "7eb409a9-3eec-4543-abf8-4c5ff37a53bb",
+              "userId": "8dd1d5da-f956-4ff6-991b-da27825bf82e",
+              "centerId": "2fa40154-064f-4218-a127-a3e75ed2837e",
+              "role": "owner",
+              "createdAt": "2025-07-10T19:09:24.101Z"
+            }
+          ]
+        },
+        {
+          "id": "2fadb61d-ac2b-45c5-8619-e20d1b417d89",
+          "displayId": "HSP622352401",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:10:22.352Z",
+          "updatedAt": "2025-07-10T19:10:22.352Z",
+          "staff": [
+            {
+              "id": "ee95cd2d-c6c4-404a-9318-4088c5f3ef16",
+              "userId": "98bf3fa2-efb1-4a1f-8bb5-38f0a01b91d3",
+              "centerId": "2fadb61d-ac2b-45c5-8619-e20d1b417d89",
+              "role": "owner",
+              "createdAt": "2025-07-10T19:10:22.356Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /centers/eye-clinics",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/maternity",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/virology",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/psychiatric",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/care-homes",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/hospice",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/funeral",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/hospital",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+          "displayId": "HSP282693730",
+          "name": "Test Center 1752174282595",
+          "type": "hospital",
+          "address": "123 Test Street",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "+1234567890",
+          "email": "center-1752174282595@example.com",
+          "hours": null,
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:04:42.694Z",
+          "updatedAt": "2025-07-10T19:04:42.694Z"
+        },
+        {
+          "id": "1949f692-7308-4a76-9ade-b88e235e5291",
+          "displayId": "HSP518817888",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:08:38.818Z",
+          "updatedAt": "2025-07-10T19:08:38.818Z"
+        },
+        {
+          "id": "2fa40154-064f-4218-a127-a3e75ed2837e",
+          "displayId": "HSP564098578",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:09:24.098Z",
+          "updatedAt": "2025-07-10T19:09:24.098Z"
+        },
+        {
+          "id": "2fadb61d-ac2b-45c5-8619-e20d1b417d89",
+          "displayId": "HSP622352401",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:10:22.352Z",
+          "updatedAt": "2025-07-10T19:10:22.352Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /centers/types/hospital",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+          "displayId": "HSP282693730",
+          "name": "Test Center 1752174282595",
+          "type": "hospital",
+          "address": "123 Test Street",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "+1234567890",
+          "email": "center-1752174282595@example.com",
+          "hours": null,
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:04:42.694Z",
+          "updatedAt": "2025-07-10T19:04:42.694Z"
+        },
+        {
+          "id": "1949f692-7308-4a76-9ade-b88e235e5291",
+          "displayId": "HSP518817888",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:08:38.818Z",
+          "updatedAt": "2025-07-10T19:08:38.818Z"
+        },
+        {
+          "id": "2fa40154-064f-4218-a127-a3e75ed2837e",
+          "displayId": "HSP564098578",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:09:24.098Z",
+          "updatedAt": "2025-07-10T19:09:24.098Z"
+        },
+        {
+          "id": "2fadb61d-ac2b-45c5-8619-e20d1b417d89",
+          "displayId": "HSP622352401",
+          "name": "Test Healthcare Center",
+          "type": "hospital",
+          "address": "123 Test Street, Test City, TS 12345",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "123-456-7890",
+          "email": "test@healthcare.com",
+          "hours": "9:00 AM - 5:00 PM",
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:10:22.352Z",
+          "updatedAt": "2025-07-10T19:10:22.352Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /centers",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "displayId": "HSP677120539",
+        "name": "Test Healthcare Center",
+        "type": "hospital",
+        "address": "123 Test Street, Test City, TS 12345",
+        "phone": "123-456-7890",
+        "email": "test@healthcare.com",
+        "hours": "9:00 AM - 5:00 PM",
+        "latitude": null,
+        "longitude": null,
+        "city": null,
+        "state": null,
+        "country": null,
+        "postalCode": null,
+        "imageUrl": null,
+        "locationMetadata": null,
+        "id": "1383dc88-e3ac-401e-84aa-785db494c898",
+        "isActive": true,
+        "createdAt": "2025-07-10T19:11:17.121Z",
+        "updatedAt": "2025-07-10T19:11:17.121Z"
+      }
+    },
+    {
+      "endpoint": "GET /centers/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 39,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-10T19:11:17.167Z",
+        "path": "/centers/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /centers/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-10T19:11:17.175Z",
+        "path": "/centers/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Center with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /centers/types/invalid-type",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-10T19:11:17.336Z",
+        "path": "/centers",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /centers",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-10T19:11:17.343Z",
+        "path": "/centers",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

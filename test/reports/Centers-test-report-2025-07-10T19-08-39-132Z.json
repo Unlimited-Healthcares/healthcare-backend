@@ -1,0 +1,367 @@
+{
+  "moduleName": "Centers",
+  "timestamp": "2025-07-10T19:08:39.132Z",
+  "summary": {
+    "total": 18,
+    "passed": 15,
+    "failed": 3,
+    "successRate": 83.33333333333334,
+    "averageResponseTime": 15.222222222222221
+  },
+  "results": [
+    {
+      "endpoint": "GET /centers/types",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "value": "hospital",
+          "label": "Hospital"
+        },
+        {
+          "value": "pharmacy",
+          "label": "Pharmacy"
+        },
+        {
+          "value": "clinic",
+          "label": "Clinic"
+        },
+        {
+          "value": "laboratory",
+          "label": "Laboratory"
+        },
+        {
+          "value": "radiology",
+          "label": "Radiology"
+        },
+        {
+          "value": "dental",
+          "label": "Dental"
+        },
+        {
+          "value": "eye",
+          "label": "Eye"
+        },
+        {
+          "value": "maternity",
+          "label": "Maternity"
+        },
+        {
+          "value": "ambulance",
+          "label": "Ambulance"
+        },
+        {
+          "value": "virology",
+          "label": "Virology"
+        },
+        {
+          "value": "psychiatric",
+          "label": "Psychiatric"
+        },
+        {
+          "value": "care-home",
+          "label": "Care home"
+        },
+        {
+          "value": "hospice",
+          "label": "Hospice"
+        },
+        {
+          "value": "funeral",
+          "label": "Funeral"
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /centers",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+          "displayId": "HSP282693730",
+          "name": "Test Center 1752174282595",
+          "type": "hospital",
+          "address": "123 Test Street",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "+1234567890",
+          "email": "center-1752174282595@example.com",
+          "hours": null,
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:04:42.694Z",
+          "updatedAt": "2025-07-10T19:04:42.694Z",
+          "staff": [
+            {
+              "id": "e0067545-9472-4aaf-8b62-e711c3b5c809",
+              "userId": "c4564c85-9c0c-489d-a595-9cebf565c642",
+              "centerId": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+              "role": "owner",
+              "createdAt": "2025-07-10T19:04:42.697Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /centers/eye-clinics",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/maternity",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/virology",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/psychiatric",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/care-homes",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/hospice",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/funeral",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers/hospital",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+          "displayId": "HSP282693730",
+          "name": "Test Center 1752174282595",
+          "type": "hospital",
+          "address": "123 Test Street",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "+1234567890",
+          "email": "center-1752174282595@example.com",
+          "hours": null,
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:04:42.694Z",
+          "updatedAt": "2025-07-10T19:04:42.694Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /centers/types/hospital",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "bb43208c-a01e-4e6f-a2c9-db3875cd376b",
+          "displayId": "HSP282693730",
+          "name": "Test Center 1752174282595",
+          "type": "hospital",
+          "address": "123 Test Street",
+          "latitude": null,
+          "longitude": null,
+          "city": null,
+          "state": null,
+          "country": null,
+          "postalCode": null,
+          "phone": "+1234567890",
+          "email": "center-1752174282595@example.com",
+          "hours": null,
+          "imageUrl": null,
+          "locationMetadata": null,
+          "isActive": true,
+          "createdAt": "2025-07-10T19:04:42.694Z",
+          "updatedAt": "2025-07-10T19:04:42.694Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /centers",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "displayId": "HSP518817888",
+        "name": "Test Healthcare Center",
+        "type": "hospital",
+        "address": "123 Test Street, Test City, TS 12345",
+        "phone": "123-456-7890",
+        "email": "test@healthcare.com",
+        "hours": "9:00 AM - 5:00 PM",
+        "latitude": null,
+        "longitude": null,
+        "city": null,
+        "state": null,
+        "country": null,
+        "postalCode": null,
+        "imageUrl": null,
+        "locationMetadata": null,
+        "id": "1949f692-7308-4a76-9ade-b88e235e5291",
+        "isActive": true,
+        "createdAt": "2025-07-10T19:08:38.818Z",
+        "updatedAt": "2025-07-10T19:08:38.818Z"
+      }
+    },
+    {
+      "endpoint": "GET /centers/services",
+      "status": "FAIL",
+      "responseTime": 45,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-10T19:08:38.866Z",
+        "path": "/centers/services",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"services\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /centers/invalid-uuid",
+      "status": "FAIL",
+      "responseTime": 63,
+      "statusCode": 400,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-10T19:08:38.929Z",
+        "path": "/centers/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /centers/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-10T19:08:38.954Z",
+        "path": "/centers/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Center with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /centers/types/invalid-type",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 200",
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /centers",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-10T19:08:39.120Z",
+        "path": "/centers",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /centers",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-10T19:08:39.128Z",
+        "path": "/centers",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

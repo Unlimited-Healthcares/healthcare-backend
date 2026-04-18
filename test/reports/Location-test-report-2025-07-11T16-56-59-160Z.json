@@ -1,0 +1,449 @@
+{
+  "moduleName": "Location",
+  "timestamp": "2025-07-11T16:56:59.159Z",
+  "summary": {
+    "total": 19,
+    "passed": 17,
+    "failed": 2,
+    "successRate": 89.47368421052632,
+    "averageResponseTime": 23.842105263157894
+  },
+  "results": [
+    {
+      "endpoint": "POST /location/validate-coordinates",
+      "status": "PASS",
+      "responseTime": 32,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "valid": true,
+        "coordinates": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        },
+        "normalized": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        }
+      }
+    },
+    {
+      "endpoint": "POST /location/calculate-distance",
+      "status": "PASS",
+      "responseTime": 21,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "distance": 5.42,
+        "unit": "kilometers",
+        "point1": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        },
+        "point2": {
+          "latitude": 40.7589,
+          "longitude": -73.9851
+        }
+      }
+    },
+    {
+      "endpoint": "POST /location/geocode",
+      "status": "PASS",
+      "responseTime": 34,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:56:58.164Z",
+        "path": "/location/geocode",
+        "method": "POST",
+        "message": "Unable to geocode address: 123 Main St, New York, NY 10001",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/reverse-geocode",
+      "status": "PASS",
+      "responseTime": 44,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "coordinates": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        },
+        "address": {
+          "formattedAddress": "962 Main St, New York, NY 10001",
+          "city": "New York",
+          "state": "NY",
+          "country": "United States",
+          "postalCode": "10001"
+        },
+        "confidence": 0.7,
+        "source": "openstreetmap"
+      }
+    },
+    {
+      "endpoint": "POST /location/geofences",
+      "status": "PASS",
+      "responseTime": 26,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Test Hospital Entrance",
+        "description": "Geofence zone for the main hospital entrance area",
+        "centerLatitude": 40.7128,
+        "centerLongitude": -74.006,
+        "radius": 100,
+        "status": "active",
+        "createdBy": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+        "centerId": null,
+        "id": "662b4a36-e18f-4507-a01d-441b6f4fa5ee",
+        "createdAt": "2025-07-11T16:56:58.392Z",
+        "updatedAt": "2025-07-11T16:56:58.392Z"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences",
+      "status": "PASS",
+      "responseTime": 19,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "662b4a36-e18f-4507-a01d-441b6f4fa5ee",
+            "name": "Test Hospital Entrance",
+            "description": "Geofence zone for the main hospital entrance area",
+            "centerLatitude": "40.71280000",
+            "centerLongitude": "-74.00600000",
+            "radius": "100.00",
+            "centerId": null,
+            "status": "active",
+            "createdBy": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+            "createdAt": "2025-07-11T16:56:58.392Z",
+            "updatedAt": "2025-07-11T16:56:58.392Z",
+            "center": null,
+            "createdByUser": {
+              "id": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+              "displayId": "DR018274607",
+              "email": "test-location-doctor-1752253018211@example.com",
+              "password": "$2b$10$vMkmasQJkbv9d0h6ULJToecx0xPo8Z1rjLnJnHV8v03VvZBFhWUAS",
+              "roles": [
+                "doctor"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtbG9jYXRpb24tZG9jdG9yLTE3NTIyNTMwMTgyMTFAZXhhbXBsZS5jb20iLCJzdWIiOiIyZTMyNWUxMC1kNTJiLTQyMTctYTc2Zi02ZjI5N2I5ZTBkZTAiLCJyb2xlcyI6WyJkb2N0b3IiXSwiaWF0IjoxNzUyMjUzMDE4LCJleHAiOjE3NTI4NTc4MTh9.rqlVtWG4pFUH9RWm1mGRfs1bhOAdk4PjQ5XOkIcvJ5Y",
+              "createdAt": "2025-07-11T16:56:58.275Z",
+              "updatedAt": "2025-07-11T16:56:58.364Z"
+            }
+          },
+          {
+            "id": "e8a786be-0ced-46da-9eb9-eda3897507e6",
+            "name": "Test Hospital Entrance",
+            "description": "Geofence zone for the main hospital entrance area",
+            "centerLatitude": "40.71280000",
+            "centerLongitude": "-74.00600000",
+            "radius": "100.00",
+            "centerId": null,
+            "status": "active",
+            "createdBy": "f3358844-6b8a-4a62-8641-6bf8ee2b0151",
+            "createdAt": "2025-07-11T16:56:05.702Z",
+            "updatedAt": "2025-07-11T16:56:05.702Z",
+            "center": null,
+            "createdByUser": {
+              "id": "f3358844-6b8a-4a62-8641-6bf8ee2b0151",
+              "displayId": "DR965594180",
+              "email": "test-location-doctor-1752252965508@example.com",
+              "password": "$2b$10$aQqjtmhmw/qIWK2A4YS34uMDCaIUC3uoMjSEZLGIhRMAfL.txAcAC",
+              "roles": [
+                "doctor"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtbG9jYXRpb24tZG9jdG9yLTE3NTIyNTI5NjU1MDhAZXhhbXBsZS5jb20iLCJzdWIiOiJmMzM1ODg0NC02YjhhLTRhNjItODY0MS02YmY4ZWUyYjAxNTEiLCJyb2xlcyI6WyJkb2N0b3IiXSwiaWF0IjoxNzUyMjUyOTY1LCJleHAiOjE3NTI4NTc3NjV9.HOaYod_DobgQt-ckoMhSU5vAT_dF6SuUGvFmKFAT6eM",
+              "createdAt": "2025-07-11T16:56:05.595Z",
+              "updatedAt": "2025-07-11T16:56:05.681Z"
+            }
+          }
+        ],
+        "message": "All geofence zones retrieved successfully"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [],
+        "message": "Geofence zones retrieved successfully"
+      }
+    },
+    {
+      "endpoint": "PUT /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "FAIL",
+      "responseTime": 19,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:56:58.615Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "PUT",
+        "message": "Geofence zone with ID 123e4567-e89b-12d3-a456-426614174000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "FAIL",
+      "responseTime": 17,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:56:58.633Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "DELETE",
+        "message": "Geofence zone with ID 123e4567-e89b-12d3-a456-426614174000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/validate-coordinates",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "valid": true,
+        "coordinates": {
+          "latitude": 100,
+          "longitude": -74.006
+        },
+        "normalized": {
+          "latitude": 100,
+          "longitude": -74.006
+        }
+      }
+    },
+    {
+      "endpoint": "POST /location/calculate-distance",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:56:58.659Z",
+        "path": "/location/calculate-distance",
+        "method": "POST",
+        "message": "Failed to calculate distance",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/geocode",
+      "status": "PASS",
+      "responseTime": 30,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:56:58.689Z",
+        "path": "/location/geocode",
+        "method": "POST",
+        "message": [
+          "address: address must be longer than or equal to 5 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 133,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:56:58.823Z",
+        "path": "/location/geofences/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:56:58.831Z",
+        "path": "/location/geofences/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Geofence zone with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/geofences",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:56:58.985Z",
+        "path": "/location/geofences",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:56:58.991Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "PUT",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:56:58.996Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "DELETE",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "662b4a36-e18f-4507-a01d-441b6f4fa5ee",
+            "name": "Test Hospital Entrance",
+            "description": "Geofence zone for the main hospital entrance area",
+            "centerLatitude": "40.71280000",
+            "centerLongitude": "-74.00600000",
+            "radius": "100.00",
+            "centerId": null,
+            "status": "active",
+            "createdBy": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+            "createdAt": "2025-07-11T16:56:58.392Z",
+            "updatedAt": "2025-07-11T16:56:58.392Z",
+            "center": null,
+            "createdByUser": {
+              "id": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+              "displayId": "DR018274607",
+              "email": "test-location-doctor-1752253018211@example.com",
+              "password": "$2b$10$vMkmasQJkbv9d0h6ULJToecx0xPo8Z1rjLnJnHV8v03VvZBFhWUAS",
+              "roles": [
+                "doctor"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtbG9jYXRpb24tZG9jdG9yLTE3NTIyNTMwMTgyMTFAZXhhbXBsZS5jb20iLCJzdWIiOiIyZTMyNWUxMC1kNTJiLTQyMTctYTc2Zi02ZjI5N2I5ZTBkZTAiLCJyb2xlcyI6WyJkb2N0b3IiXSwiaWF0IjoxNzUyMjUzMDE4LCJleHAiOjE3NTI4NTc4MTh9.rqlVtWG4pFUH9RWm1mGRfs1bhOAdk4PjQ5XOkIcvJ5Y",
+              "createdAt": "2025-07-11T16:56:58.275Z",
+              "updatedAt": "2025-07-11T16:56:58.364Z"
+            }
+          },
+          {
+            "id": "e8a786be-0ced-46da-9eb9-eda3897507e6",
+            "name": "Test Hospital Entrance",
+            "description": "Geofence zone for the main hospital entrance area",
+            "centerLatitude": "40.71280000",
+            "centerLongitude": "-74.00600000",
+            "radius": "100.00",
+            "centerId": null,
+            "status": "active",
+            "createdBy": "f3358844-6b8a-4a62-8641-6bf8ee2b0151",
+            "createdAt": "2025-07-11T16:56:05.702Z",
+            "updatedAt": "2025-07-11T16:56:05.702Z",
+            "center": null,
+            "createdByUser": {
+              "id": "f3358844-6b8a-4a62-8641-6bf8ee2b0151",
+              "displayId": "DR965594180",
+              "email": "test-location-doctor-1752252965508@example.com",
+              "password": "$2b$10$aQqjtmhmw/qIWK2A4YS34uMDCaIUC3uoMjSEZLGIhRMAfL.txAcAC",
+              "roles": [
+                "doctor"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtbG9jYXRpb24tZG9jdG9yLTE3NTIyNTI5NjU1MDhAZXhhbXBsZS5jb20iLCJzdWIiOiJmMzM1ODg0NC02YjhhLTRhNjItODY0MS02YmY4ZWUyYjAxNTEiLCJyb2xlcyI6WyJkb2N0b3IiXSwiaWF0IjoxNzUyMjUyOTY1LCJleHAiOjE3NTI4NTc3NjV9.HOaYod_DobgQt-ckoMhSU5vAT_dF6SuUGvFmKFAT6eM",
+              "createdAt": "2025-07-11T16:56:05.595Z",
+              "updatedAt": "2025-07-11T16:56:05.681Z"
+            }
+          }
+        ],
+        "message": "All geofence zones retrieved successfully"
+      }
+    },
+    {
+      "endpoint": "POST /location/geofences",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:56:59.157Z",
+        "path": "/location/geofences",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

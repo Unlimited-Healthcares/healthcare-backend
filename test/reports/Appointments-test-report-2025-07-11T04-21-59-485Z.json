@@ -1,0 +1,90 @@
+{
+  "moduleName": "Appointments",
+  "timestamp": "2025-07-11T04:21:59.484Z",
+  "summary": {
+    "total": 5,
+    "passed": 3,
+    "failed": 2,
+    "successRate": 60,
+    "averageResponseTime": 204.6
+  },
+  "results": [
+    {
+      "endpoint": "POST /appointments",
+      "status": "FAIL",
+      "responseTime": 384,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:21:58.685Z",
+        "path": "/appointments",
+        "method": "POST",
+        "message": "insert or update on table \"appointments\" violates foreign key constraint \"FK_3330f054416745deaa2cc130700\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /appointments",
+      "status": "PASS",
+      "responseTime": 307,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /appointments/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 147,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T04:21:59.140Z",
+        "path": "/appointments/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Appointment with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /appointments/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 85,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:21:59.225Z",
+        "path": "/appointments/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /appointments",
+      "status": "FAIL",
+      "responseTime": 100,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T04:21:59.481Z",
+        "path": "/appointments",
+        "method": "POST",
+        "message": "insert or update on table \"appointments\" violates foreign key constraint \"FK_3330f054416745deaa2cc130700\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    }
+  ]
+}

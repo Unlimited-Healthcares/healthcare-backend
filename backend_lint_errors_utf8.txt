@@ -1,0 +1,4 @@
+﻿
+> unlimitedhealthcare-backend@1.0.0 lint
+> eslint "src/**/*.ts" "test/**/*.ts" --fix --no-ignore
+

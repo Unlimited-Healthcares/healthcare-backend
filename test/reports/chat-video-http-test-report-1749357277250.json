@@ -1,0 +1,78 @@
+{
+  "moduleName": "chat-video",
+  "timestamp": "2025-06-08T04:34:37.249Z",
+  "summary": {
+    "total": 4,
+    "passed": 1,
+    "failed": 3,
+    "successRate": 25,
+    "averageResponseTime": 39.25
+  },
+  "results": [
+    {
+      "endpoint": "POST /chat/rooms",
+      "status": "FAIL",
+      "responseTime": 25,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-06-08T04:34:37.110Z",
+        "path": "/chat/rooms",
+        "method": "POST",
+        "message": "Validation failed",
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /chat/rooms",
+      "status": "PASS",
+      "responseTime": 121,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "POST /chat/messages",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:37.241Z",
+        "path": "/chat/messages",
+        "method": "POST",
+        "message": "Cannot POST /chat/messages",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /video/calls",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:37.246Z",
+        "path": "/video/calls",
+        "method": "POST",
+        "message": "Cannot POST /video/calls",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

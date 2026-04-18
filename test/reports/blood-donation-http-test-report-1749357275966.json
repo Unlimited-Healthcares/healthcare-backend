@@ -1,0 +1,81 @@
+{
+  "moduleName": "blood-donation",
+  "timestamp": "2025-06-08T04:34:35.966Z",
+  "summary": {
+    "total": 4,
+    "passed": 0,
+    "failed": 4,
+    "successRate": 0,
+    "averageResponseTime": 10.25
+  },
+  "results": [
+    {
+      "endpoint": "POST /blood-donation/donors",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:35.927Z",
+        "path": "/blood-donation/donors",
+        "method": "POST",
+        "message": "Cannot POST /blood-donation/donors",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors",
+      "status": "FAIL",
+      "responseTime": 14,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:35.940Z",
+        "path": "/blood-donation/donors?page=1&limit=20&bloodType=A%2B&status=eligible",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donations",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:35.953Z",
+        "path": "/blood-donation/donations",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/inventory",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:35.962Z",
+        "path": "/blood-donation/inventory?centerId=%7B%7Bcenter_id%7D%7D&bloodType=A%2B&status=available",
+        "method": "GET",
+        "message": "Cannot GET /blood-donation/inventory?centerId=%7B%7Bcenter_id%7D%7D&bloodType=A%2B&status=available",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

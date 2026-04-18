@@ -1,0 +1,139 @@
+{
+  "moduleName": "Users",
+  "timestamp": "2025-07-11T06:15:26.992Z",
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 46.6
+  },
+  "results": [
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "c54048c5-1ef4-4216-a11c-92a5f81b8f11",
+        "email": "test-users-patient-1752214526371@example.com",
+        "roles": [
+          "patient"
+        ],
+        "displayId": "PT526454035",
+        "profile": null,
+        "createdAt": "2025-07-11T06:15:26.474Z",
+        "updatedAt": "2025-07-11T06:15:26.588Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "c54048c5-1ef4-4216-a11c-92a5f81b8f11",
+          "displayId": "PT526454035",
+          "email": "test-users-patient-1752214526371@example.com",
+          "password": "$2b$10$T2hhhcq2aNinoRQkOCDKwelTEinN16fMwoxEZ9oL.jM87LJLaFWAi",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMjE0NTI2MzcxQGV4YW1wbGUuY29tIiwic3ViIjoiYzU0MDQ4YzUtMWVmNC00MjE2LWExMWMtOTJhNWY4MWI4ZjExIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMTQ1MjYsImV4cCI6MTc1MjgxOTMyNn0.mDuoHNn1sAN63QZsUuTsBGHYPKcIJWIkVtRhvof8jmE",
+          "createdAt": "2025-07-11T06:15:26.474Z",
+          "updatedAt": "2025-07-11T06:15:26.588Z",
+          "profile": null
+        },
+        {
+          "id": "9338b4a1-9131-4d2e-8f63-2037ccbb29a8",
+          "displayId": "AD526676834",
+          "email": "test-users-admin-1752214526615@example.com",
+          "password": "$2b$10$vzxw55YyO5xq0U1UVmsa/O631kfsnYeAuR1pJn050sv9Thymd5gp6",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjIxNDUyNjYxNUBleGFtcGxlLmNvbSIsInN1YiI6IjkzMzhiNGExLTkxMzEtNGQyZS04ZjYzLTIwMzdjY2JiMjlhOCIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjIxNDUyNiwiZXhwIjoxNzUyODE5MzI2fQ.1HMX-VlSr1f36ZwulBM-kNmHuIDI3C5IzFpkMycn9L4",
+          "createdAt": "2025-07-11T06:15:26.677Z",
+          "updatedAt": "2025-07-11T06:15:26.763Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "c54048c5-1ef4-4216-a11c-92a5f81b8f11",
+          "displayId": "PT526454035",
+          "email": "test-users-patient-1752214526371@example.com",
+          "password": "$2b$10$T2hhhcq2aNinoRQkOCDKwelTEinN16fMwoxEZ9oL.jM87LJLaFWAi",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMjE0NTI2MzcxQGV4YW1wbGUuY29tIiwic3ViIjoiYzU0MDQ4YzUtMWVmNC00MjE2LWExMWMtOTJhNWY4MWI4ZjExIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMTQ1MjYsImV4cCI6MTc1MjgxOTMyNn0.mDuoHNn1sAN63QZsUuTsBGHYPKcIJWIkVtRhvof8jmE",
+          "createdAt": "2025-07-11T06:15:26.474Z",
+          "updatedAt": "2025-07-11T06:15:26.588Z",
+          "profile": null
+        },
+        {
+          "id": "9338b4a1-9131-4d2e-8f63-2037ccbb29a8",
+          "displayId": "AD526676834",
+          "email": "test-users-admin-1752214526615@example.com",
+          "password": "$2b$10$vzxw55YyO5xq0U1UVmsa/O631kfsnYeAuR1pJn050sv9Thymd5gp6",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjIxNDUyNjYxNUBleGFtcGxlLmNvbSIsInN1YiI6IjkzMzhiNGExLTkxMzEtNGQyZS04ZjYzLTIwMzdjY2JiMjlhOCIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjIxNDUyNiwiZXhwIjoxNzUyODE5MzI2fQ.1HMX-VlSr1f36ZwulBM-kNmHuIDI3C5IzFpkMycn9L4",
+          "createdAt": "2025-07-11T06:15:26.677Z",
+          "updatedAt": "2025-07-11T06:15:26.763Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /users/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 172,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:15:26.965Z",
+        "path": "/users/invalid-uuid",
+        "method": "GET",
+        "message": "User with ID invalid-uuid not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /users/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:15:26.988Z",
+        "path": "/users/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "User with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

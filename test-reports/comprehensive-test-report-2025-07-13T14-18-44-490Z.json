@@ -1,0 +1,558 @@
+{
+  "timestamp": "2025-07-13T14:18:44.490Z",
+  "summary": {
+    "total": 72,
+    "passed": 3,
+    "failed": 69,
+    "successRate": 4.166666666666666
+  },
+  "moduleResults": [
+    {
+      "name": "application",
+      "status": "passed",
+      "endpoints": [
+        {
+          "status": "passed",
+          "duration": 24981
+        }
+      ],
+      "errors": [],
+      "duration": 24981
+    },
+    {
+      "name": "authentication",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "passed",
+          "duration": 170
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 9
+        },
+        {
+          "status": "passed",
+          "duration": 89
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        }
+      ],
+      "errors": [
+        "POST /auth/register/staff: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /auth/me: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /auth/refresh: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /auth/logout: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 280
+    },
+    {
+      "name": "users",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 6
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        }
+      ],
+      "errors": [
+        "POST /users: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /users: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /users/{{user_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /users/{{user_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /users/{{user_id}}/profile: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 19
+    },
+    {
+      "name": "centers",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        }
+      ],
+      "errors": [
+        "POST /centers: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /centers: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /centers/types: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /centers/{{center_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /centers/{{center_id}}: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 16
+    },
+    {
+      "name": "appointments",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /appointments: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /appointments: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /appointments/{{appointment_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /appointments/{{appointment_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /appointments/me: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 14
+    },
+    {
+      "name": "referrals",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /referrals: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /referrals: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /referrals/{{referral_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /referrals/me: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 9
+    },
+    {
+      "name": "medical-records",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 1
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "GET /medical-records: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /medical-records/tags: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /medical-records/categories: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /medical-records/categories/hierarchy: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /medical-records: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /medical-records/search: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /medical-records/categories: expected 201 \"Created\", got 401 \"Unauthorized\""
+      ],
+      "duration": 16
+    },
+    {
+      "name": "medical-reports",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /medical-reports/patient/{{patient_id}}: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /medical-reports: expected 200 \"OK\", got 404 \"Not Found\"",
+        "GET /medical-reports/{{report_id}}: expected 200 \"OK\", got 404 \"Not Found\"",
+        "GET /medical-reports/templates: expected 200 \"OK\", got 404 \"Not Found\""
+      ],
+      "duration": 10
+    },
+    {
+      "name": "blood-donation",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 15
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /blood-donation/donors: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /blood-donation/donors: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /blood-donation/donations: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /blood-donation/inventory: expected 200 \"OK\", got 404 \"Not Found\""
+      ],
+      "duration": 21
+    },
+    {
+      "name": "ai-services",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /ai/chat/sessions: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /ai/chat/sessions: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /ai/chat/message: expected 201 \"Created\", got 404 \"Not Found\"",
+        "POST /ai/symptom-analysis/analyze: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /ai/health-analytics/trends: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /ai/health-analytics/risk-assessment: expected 201 \"Created\", got 404 \"Not Found\"",
+        "POST /ai/medical-recommendations/generate: expected 201 \"Created\", got 404 \"Not Found\""
+      ],
+      "duration": 14
+    },
+    {
+      "name": "chat-video",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /chat/rooms: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /chat/rooms: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /chat/messages: expected 201 \"Created\", got 404 \"Not Found\"",
+        "POST /video/calls: expected 201 \"Created\", got 404 \"Not Found\""
+      ],
+      "duration": 9
+    },
+    {
+      "name": "video-conferencing",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /video-conferences: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /video-conferences: expected 200 \"OK\", got 404 \"Not Found\"",
+        "GET /video-conferences/{{conference_id}}: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /video-conferences/{{conference_id}}/start: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /video-conferences/{{conference_id}}/join: expected 200 \"OK\", got 404 \"Not Found\"",
+        "PATCH /video-conferences/{{conference_id}}/settings: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /video-conferences/{{conference_id}}/recording/toggle: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /video-conferences/{{conference_id}}/end: expected 200 \"OK\", got 404 \"Not Found\"",
+        "GET /video-conferences/{{conference_id}}/recordings: expected 200 \"OK\", got 404 \"Not Found\""
+      ],
+      "duration": 18
+    },
+    {
+      "name": "equipment-marketplace",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 1
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 404 \"Not Found\"",
+          "duration": 12
+        }
+      ],
+      "errors": [
+        "GET /equipment/categories: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /equipment/categories: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /equipment/vendors: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /equipment/vendors: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /equipment/items: expected 200 \"OK\", got 404 \"Not Found\"",
+        "GET /equipment/items/featured: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /equipment/items: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /equipment/rental/requests: expected 200 \"OK\", got 404 \"Not Found\"",
+        "POST /equipment/rental/requests: expected 201 \"Created\", got 404 \"Not Found\"",
+        "GET /equipment/sales/listings: expected 200 \"OK\", got 404 \"Not Found\"",
+        "GET /equipment/maintenance/schedules: expected 200 \"OK\", got 404 \"Not Found\""
+      ],
+      "duration": 33
+    }
+  ],
+  "testConfiguration": {
+    "totalModules": 13,
+    "testEnvironment": "test",
+    "databaseUrl": "Not configured"
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "moduleName": "Integrations",
+  "timestamp": "2025-07-11T17:56:30.438Z",
+  "summary": {
+    "total": 27,
+    "passed": 27,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 622.5925925925926
+  },
+  "results": [
+    {
+      "endpoint": "POST /integrations/payments/process",
+      "status": "PASS",
+      "responseTime": 2031,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1752256573026",
+        "status": "succeeded",
+        "amount": 15000,
+        "currency": "usd",
+        "transactionId": "txn_1752256573026"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/payments/pay_1234567890/status",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1234567890",
+        "status": "succeeded",
+        "amount": 10000,
+        "currency": "usd",
+        "transactionId": "txn_pay_1234567890"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/insurance/verify",
+      "status": "PASS",
+      "responseTime": 1513,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "isValid": true,
+        "eligibilityStatus": "active",
+        "coverageDetails": {
+          "planName": "Health Plan Gold",
+          "deductible": 1000,
+          "copay": 25,
+          "outOfPocketMax": 5000,
+          "coveragePercentage": 80
+        },
+        "benefits": [
+          "Primary Care Visits",
+          "Specialist Visits",
+          "Emergency Room",
+          "Prescription Drugs",
+          "Lab Tests",
+          "Imaging"
+        ],
+        "effectiveDate": "2024-01-01",
+        "expirationDate": "2024-12-31"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/insurance/ins_1234567890/benefits",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "medicalBenefits": {
+          "preventiveCare": "100% covered",
+          "primaryCare": "$25 copay",
+          "specialistCare": "$50 copay",
+          "emergencyRoom": "$500 copay",
+          "urgentCare": "$75 copay"
+        },
+        "prescriptionBenefits": {
+          "generic": "$10 copay",
+          "brandName": "$35 copay",
+          "specialty": "20% coinsurance"
+        },
+        "mentalHealthBenefits": {
+          "therapy": "$25 copay",
+          "psychiatry": "$50 copay"
+        }
+      }
+    },
+    {
+      "endpoint": "POST /integrations/healthcare/lookup",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /integrations/sms/send",
+      "status": "PASS",
+      "responseTime": 515,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "sms_1752256576589",
+        "status": "sent",
+        "to": "+1234567890",
+        "message": "Your appointment is confirmed for tomorrow at 2:00 PM.",
+        "sentAt": "2025-07-11T17:56:16.589Z"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/sms/sms_1234567890/status",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "sms_1234567890",
+        "status": "delivered",
+        "to": "+1234567890",
+        "message": "Your appointment is confirmed.",
+        "sentAt": "2025-07-11T17:51:17.102Z",
+        "deliveredAt": "2025-07-11T17:51:27.102Z"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/payments/process",
+      "status": "PASS",
+      "responseTime": 2014,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1752256577115",
+        "status": "succeeded",
+        "amount": 15000,
+        "currency": "usd",
+        "transactionId": "txn_1752256577115"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/insurance/verify",
+      "status": "PASS",
+      "responseTime": 1510,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "isValid": true,
+        "eligibilityStatus": "active",
+        "coverageDetails": {
+          "planName": "Health Plan Gold",
+          "deductible": 1000,
+          "copay": 25,
+          "outOfPocketMax": 5000,
+          "coveragePercentage": 80
+        },
+        "benefits": [
+          "Primary Care Visits",
+          "Specialist Visits",
+          "Emergency Room",
+          "Prescription Drugs",
+          "Lab Tests",
+          "Imaging"
+        ],
+        "effectiveDate": "2024-01-01",
+        "expirationDate": "2024-12-31"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/sms/send",
+      "status": "PASS",
+      "responseTime": 511,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "sms_1752256580637",
+        "status": "sent",
+        "message": "Test message",
+        "sentAt": "2025-07-11T17:56:20.637Z"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/payments/invalid-id/status",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "invalid-id",
+        "status": "succeeded",
+        "amount": 10000,
+        "currency": "usd",
+        "transactionId": "txn_invalid-id"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/sms/invalid-id/status",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "invalid-id",
+        "status": "delivered",
+        "to": "+1234567890",
+        "message": "Your appointment is confirmed.",
+        "sentAt": "2025-07-11T17:51:21.155Z",
+        "deliveredAt": "2025-07-11T17:51:31.155Z"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/payments/process",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:56:21.319Z",
+        "path": "/integrations/payments/process",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/insurance/verify",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:56:21.326Z",
+        "path": "/integrations/insurance/verify",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/healthcare/lookup",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:56:21.336Z",
+        "path": "/integrations/healthcare/lookup",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/sms/send",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:56:21.344Z",
+        "path": "/integrations/sms/send",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/payments/process",
+      "status": "PASS",
+      "responseTime": 2012,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1752256581501",
+        "status": "succeeded",
+        "amount": 15000,
+        "currency": "usd",
+        "transactionId": "txn_1752256581501"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/insurance/verify",
+      "status": "PASS",
+      "responseTime": 1513,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "isValid": true,
+        "eligibilityStatus": "active",
+        "coverageDetails": {
+          "planName": "Health Plan Gold",
+          "deductible": 1000,
+          "copay": 25,
+          "outOfPocketMax": 5000,
+          "coveragePercentage": 80
+        },
+        "benefits": [
+          "Primary Care Visits",
+          "Specialist Visits",
+          "Emergency Room",
+          "Prescription Drugs",
+          "Lab Tests",
+          "Imaging"
+        ],
+        "effectiveDate": "2024-01-01",
+        "expirationDate": "2024-12-31"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/healthcare/lookup",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /integrations/sms/send",
+      "status": "PASS",
+      "responseTime": 512,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "sms_1752256585037",
+        "status": "sent",
+        "to": "+1234567890",
+        "message": "Your appointment is confirmed for tomorrow at 2:00 PM.",
+        "sentAt": "2025-07-11T17:56:25.037Z"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/payments/process",
+      "status": "PASS",
+      "responseTime": 2013,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1752256585703",
+        "status": "succeeded",
+        "amount": 15000,
+        "currency": "usd",
+        "transactionId": "txn_1752256585703"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/payments/pay_1234567890/status",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1234567890",
+        "status": "succeeded",
+        "amount": 10000,
+        "currency": "usd",
+        "transactionId": "txn_pay_1234567890"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/sms/send",
+      "status": "PASS",
+      "responseTime": 511,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "sms_1752256587723",
+        "status": "sent",
+        "to": "+1234567890",
+        "message": "Your appointment is confirmed for tomorrow at 2:00 PM.",
+        "sentAt": "2025-07-11T17:56:27.723Z"
+      }
+    },
+    {
+      "endpoint": "GET /integrations/payments/pay_1234567890/status",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "pay_1234567890",
+        "status": "succeeded",
+        "amount": 10000,
+        "currency": "usd",
+        "transactionId": "txn_pay_1234567890"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/insurance/verify",
+      "status": "PASS",
+      "responseTime": 1513,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "isValid": true,
+        "eligibilityStatus": "active",
+        "coverageDetails": {
+          "planName": "Health Plan Gold",
+          "deductible": 1000,
+          "copay": 25,
+          "outOfPocketMax": 5000,
+          "coveragePercentage": 80
+        },
+        "benefits": [
+          "Primary Care Visits",
+          "Specialist Visits",
+          "Emergency Room",
+          "Prescription Drugs",
+          "Lab Tests",
+          "Imaging"
+        ],
+        "effectiveDate": "2024-01-01",
+        "expirationDate": "2024-12-31"
+      }
+    },
+    {
+      "endpoint": "POST /integrations/healthcare/lookup",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /integrations/sms/send",
+      "status": "PASS",
+      "responseTime": 509,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "sms_1752256589933",
+        "status": "sent",
+        "to": "+1234567890",
+        "message": "Your appointment is confirmed for tomorrow at 2:00 PM.",
+        "sentAt": "2025-07-11T17:56:29.933Z"
+      }
+    }
+  ]
+}

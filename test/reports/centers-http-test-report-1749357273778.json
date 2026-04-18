@@ -1,0 +1,98 @@
+{
+  "moduleName": "centers",
+  "timestamp": "2025-06-08T04:34:33.778Z",
+  "summary": {
+    "total": 5,
+    "passed": 0,
+    "failed": 5,
+    "successRate": 0,
+    "averageResponseTime": 12.2
+  },
+  "results": [
+    {
+      "endpoint": "POST /centers",
+      "status": "FAIL",
+      "responseTime": 14,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.722Z",
+        "path": "/centers",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /centers",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.737Z",
+        "path": "/centers?page=1&limit=10&type=hospital",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /centers/types",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 401,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 401",
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-06-08T04:34:33.746Z",
+        "path": "/centers/types",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /centers/{{center_id}}",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 401,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 401",
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-06-08T04:34:33.751Z",
+        "path": "/centers/%7B%7Bcenter_id%7D%7D",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /centers/{{center_id}}",
+      "status": "FAIL",
+      "responseTime": 21,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.772Z",
+        "path": "/centers/%7B%7Bcenter_id%7D%7D",
+        "method": "PATCH",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

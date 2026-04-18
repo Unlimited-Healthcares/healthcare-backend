@@ -1,0 +1,341 @@
+{
+  "moduleName": "Location",
+  "timestamp": "2025-07-11T16:54:22.537Z",
+  "summary": {
+    "total": 19,
+    "passed": 11,
+    "failed": 8,
+    "successRate": 57.89473684210527,
+    "averageResponseTime": 18.157894736842106
+  },
+  "results": [
+    {
+      "endpoint": "POST /location/validate-coordinates",
+      "status": "FAIL",
+      "responseTime": 22,
+      "statusCode": 201,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 201",
+      "responseBody": {
+        "valid": true,
+        "coordinates": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        },
+        "normalized": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        }
+      }
+    },
+    {
+      "endpoint": "POST /location/calculate-distance",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 201",
+      "responseBody": {
+        "distance": 5.42,
+        "unit": "kilometers",
+        "point1": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        },
+        "point2": {
+          "latitude": 40.7589,
+          "longitude": -73.9851
+        }
+      }
+    },
+    {
+      "endpoint": "POST /location/geocode",
+      "status": "FAIL",
+      "responseTime": 21,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:54:21.638Z",
+        "path": "/location/geocode",
+        "method": "POST",
+        "message": "Unable to geocode address: 123 Main St, New York, NY 10001",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/reverse-geocode",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 201,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 201",
+      "responseBody": {
+        "coordinates": {
+          "latitude": 40.7128,
+          "longitude": -74.006
+        },
+        "address": {
+          "formattedAddress": "3992 Main St, New York, NY 10001",
+          "city": "New York",
+          "state": "NY",
+          "country": "United States",
+          "postalCode": "10001"
+        },
+        "confidence": 0.7,
+        "source": "openstreetmap"
+      }
+    },
+    {
+      "endpoint": "POST /location/geofences",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:54:21.824Z",
+        "path": "/location/geofences",
+        "method": "POST",
+        "message": [
+          "status: status must be one of the following values: active, inactive, suspended"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [],
+        "message": "All geofence zones retrieved successfully"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [],
+        "message": "Geofence zones retrieved successfully"
+      }
+    },
+    {
+      "endpoint": "PUT /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "FAIL",
+      "responseTime": 18,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:54:22.023Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "PUT",
+        "message": "Geofence zone with ID 123e4567-e89b-12d3-a456-426614174000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:54:22.034Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "DELETE",
+        "message": "Geofence zone with ID 123e4567-e89b-12d3-a456-426614174000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/validate-coordinates",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 201,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 201",
+      "responseBody": {
+        "valid": true,
+        "coordinates": {
+          "latitude": 100,
+          "longitude": -74.006
+        },
+        "normalized": {
+          "latitude": 100,
+          "longitude": -74.006
+        }
+      }
+    },
+    {
+      "endpoint": "POST /location/calculate-distance",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:54:22.062Z",
+        "path": "/location/calculate-distance",
+        "method": "POST",
+        "message": "Failed to calculate distance",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/geocode",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:54:22.071Z",
+        "path": "/location/geocode",
+        "method": "POST",
+        "message": [
+          "address: address must be longer than or equal to 5 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 115,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T16:54:22.185Z",
+        "path": "/location/geofences/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T16:54:22.201Z",
+        "path": "/location/geofences/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Geofence zone with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /location/geofences",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:54:22.361Z",
+        "path": "/location/geofences",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:54:22.367Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "PUT",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /location/geofences/123e4567-e89b-12d3-a456-426614174000",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:54:22.374Z",
+        "path": "/location/geofences/123e4567-e89b-12d3-a456-426614174000",
+        "method": "DELETE",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /location/geofences",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [],
+        "message": "All geofence zones retrieved successfully"
+      }
+    },
+    {
+      "endpoint": "POST /location/geofences",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T16:54:22.534Z",
+        "path": "/location/geofences",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

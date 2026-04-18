@@ -1,0 +1,3012 @@
+{
+  "info": {
+    "_postman_id": "healthcare-api-collection",
+    "name": "UNLIMITEDHEALTHCARE API - Complete Collection",
+    "description": "Comprehensive API collection for the UNLIMITEDHEALTHCARE backend system including all modules and endpoints (1-13 phases)",
+    "version": "3.0.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "access_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "refresh_token", 
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "user_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "patient_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "center_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "provider_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "appointment_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "record_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "report_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "notification_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "review_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "donor_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "donation_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "blood_request_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "referral_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "conference_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "chat_room_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "message_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "equipment_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "vendor_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "category_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "attachment_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "specialist_provider_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "specialist_center_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "alternative_provider_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "visit_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "service_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "availability_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "call_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "ambulance_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "incident_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "analysis_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "order_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "rental_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "maintenance_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "video_call_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "timestamp",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "medical_record_id",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "🏠 Application",
+      "item": [
+        {
+          "name": "Get Application Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🔐 Authentication",
+      "item": [
+        {
+          "name": "Register Patient",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"John Doe\",\n  \"roles\": [\"patient\"],\n  \"phone\": \"+1234567890\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/register",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "register"]
+            }
+          }
+        },
+        {
+          "name": "Register Staff",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"doctor@example.com\",\n  \"password\": \"password123\",\n  \"roles\": [\"doctor\"],\n  \"centerId\": \"{{center_id}}\",\n  \"specialization\": \"Cardiology\",\n  \"licenseNumber\": \"MD123456\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/register/staff",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "register", "staff"]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/me",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "me"]
+            }
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{refresh_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/refresh",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "refresh"]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/logout",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "logout"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "👥 Users Management",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"roles\": [\"patient\"],\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"phone\": \"+1234567890\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": ["{{base_url}}"],
+              "path": ["users"]
+            }
+          }
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users?page=1&limit=10&role=patient",
+              "host": ["{{base_url}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "role",
+                  "value": "patient"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"John Updated\",\n  \"lastName\": \"Doe Updated\",\n  \"phone\": \"+1234567891\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Update User Profile",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bio\": \"Updated bio\",\n  \"dateOfBirth\": \"1990-01-01\",\n  \"gender\": \"male\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"state\": \"NY\",\n    \"zipCode\": \"10001\",\n    \"country\": \"USA\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}/profile",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}", "profile"]
+            }
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🏥 Healthcare Centers",
+      "item": [
+        {
+          "name": "Create Center",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"City General Hospital\",\n  \"type\": \"hospital\",\n  \"description\": \"Full-service hospital with emergency care\",\n  \"address\": {\n    \"street\": \"123 Hospital Ave\",\n    \"city\": \"New York\",\n    \"state\": \"NY\",\n    \"zipCode\": \"10001\",\n    \"country\": \"USA\"\n  },\n  \"phone\": \"+1234567890\",\n  \"email\": \"info@citygeneral.com\",\n  \"website\": \"https://citygeneral.com\",\n  \"operatingHours\": {\n    \"monday\": \"00:00-23:59\",\n    \"tuesday\": \"00:00-23:59\",\n    \"wednesday\": \"00:00-23:59\",\n    \"thursday\": \"00:00-23:59\",\n    \"friday\": \"00:00-23:59\",\n    \"saturday\": \"00:00-23:59\",\n    \"sunday\": \"00:00-23:59\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/centers",
+              "host": ["{{base_url}}"],
+              "path": ["centers"]
+            }
+          }
+        },
+        {
+          "name": "Get All Centers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/centers?page=1&limit=10&type=hospital&city=New York",
+              "host": ["{{base_url}}"],
+              "path": ["centers"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "type",
+                  "value": "hospital"
+                },
+                {
+                  "key": "city",
+                  "value": "New York"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Center Types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/types",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "types"]
+            }
+          }
+        },
+        {
+          "name": "Get Centers by Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/types/hospital",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "types", "hospital"]
+            }
+          }
+        },
+        {
+          "name": "Get Eye Clinics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/eye-clinics",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "eye-clinics"]
+            }
+          }
+        },
+        {
+          "name": "Get Maternity Centers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/maternity",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "maternity"]
+            }
+          }
+        },
+        {
+          "name": "Get Virology Centers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/virology",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "virology"]
+            }
+          }
+        },
+        {
+          "name": "Get Psychiatric Centers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/psychiatric",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "psychiatric"]
+            }
+          }
+        },
+        {
+          "name": "Get Care Homes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/care-homes",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "care-homes"]
+            }
+          }
+        },
+        {
+          "name": "Get Hospice Centers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/hospice",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "hospice"]
+            }
+          }
+        },
+        {
+          "name": "Get Funeral Homes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/funeral",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "funeral"]
+            }
+          }
+        },
+        {
+          "name": "Get Hospitals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/hospital",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "hospital"]
+            }
+          }
+        },
+        {
+          "name": "Get Center by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/centers/{{center_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "{{center_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Get Centers by User",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/centers/user/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "user", "{{user_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Update Center",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Hospital Name\",\n  \"description\": \"Updated description\",\n  \"phone\": \"+1234567891\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/centers/{{center_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "{{center_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Delete Center",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/centers/{{center_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["centers", "{{center_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Center Services",
+          "item": [
+            {
+              "name": "Add Center Service",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Emergency Care\",\n  \"description\": \"24/7 emergency medical services\",\n  \"price\": 500.00,\n  \"duration\": 60,\n  \"isActive\": true\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/services",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "services"]
+                }
+              }
+            },
+            {
+              "name": "Get Center Services",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/services",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "services"]
+                }
+              }
+            },
+            {
+              "name": "Get Service by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/centers/services/{{service_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "services", "{{service_id}}"]
+                }
+              }
+            },
+            {
+              "name": "Update Service",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"price\": 550.00,\n  \"description\": \"Updated emergency care services\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/centers/services/{{service_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "services", "{{service_id}}"]
+                }
+              }
+            },
+            {
+              "name": "Delete Service",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/centers/services/{{service_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "services", "{{service_id}}"]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Center Availability",
+          "item": [
+            {
+              "name": "Add Availability",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dayOfWeek\": \"monday\",\n  \"startTime\": \"09:00\",\n  \"endTime\": \"17:00\",\n  \"isAvailable\": true\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/availability",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "availability"]
+                }
+              }
+            },
+            {
+              "name": "Get Center Availability",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/availability",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "availability"]
+                }
+              }
+            },
+            {
+              "name": "Get Availability by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/centers/availability/{{availability_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "availability", "{{availability_id}}"]
+                }
+              }
+            },
+            {
+              "name": "Update Availability",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"startTime\": \"08:00\",\n  \"endTime\": \"18:00\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/centers/availability/{{availability_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "availability", "{{availability_id}}"]
+                }
+              }
+            },
+            {
+              "name": "Delete Availability",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/centers/availability/{{availability_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "availability", "{{availability_id}}"]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Center Staff",
+          "item": [
+            {
+              "name": "Add Staff to Center",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"{{user_id}}\",\n  \"role\": \"doctor\",\n  \"specialization\": \"Cardiology\",\n  \"licenseNumber\": \"MD123456\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/staff",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "staff"]
+                }
+              }
+            },
+            {
+              "name": "Get Center Staff",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/staff",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "staff"]
+                }
+              }
+            },
+            {
+              "name": "Remove Staff from Center",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/centers/{{center_id}}/staff/{{user_id}}",
+                  "host": ["{{base_url}}"],
+                  "path": ["centers", "{{center_id}}", "staff", "{{user_id}}"]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "📅 Appointments",
+      "item": [
+        {
+          "name": "Create Appointment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"providerId\": \"{{provider_id}}\",\n  \"centerId\": \"{{center_id}}\",\n  \"appointmentDate\": \"2024-02-20T14:00:00Z\",\n  \"duration\": 30,\n  \"appointmentType\": \"consultation\",\n  \"reason\": \"Follow-up for hypertension\",\n  \"priority\": \"normal\",\n  \"notes\": \"Patient requested afternoon appointment\",\n  \"reminderPreferences\": {\n    \"email\": true,\n    \"sms\": true,\n    \"reminderTime\": 24\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments",
+              "host": ["{{base_url}}"],
+              "path": ["appointments"]
+            }
+          }
+        },
+        {
+          "name": "Get All Appointments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments?page=1&limit=10&status=scheduled&date=2024-02-20&providerId={{provider_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["appointments"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "status",
+                  "value": "scheduled"
+                },
+                {
+                  "key": "date",
+                  "value": "2024-02-20"
+                },
+                {
+                  "key": "providerId",
+                  "value": "{{provider_id}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Appointment by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/{{appointment_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "{{appointment_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Update Appointment",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appointmentDate\": \"2024-02-21T15:00:00Z\",\n  \"duration\": 45,\n  \"reason\": \"Follow-up for hypertension and medication review\",\n  \"notes\": \"Extended appointment for comprehensive review\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments/{{appointment_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "{{appointment_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Cancel Appointment",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Patient unable to attend\",\n  \"cancelledBy\": \"patient\",\n  \"notifyProvider\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments/{{appointment_id}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "{{appointment_id}}", "cancel"]
+            }
+          }
+        },
+        {
+          "name": "Confirm Appointment",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"confirmedBy\": \"patient\",\n  \"confirmationMethod\": \"app\",\n  \"notes\": \"Patient confirmed attendance\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments/{{appointment_id}}/confirm",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "{{appointment_id}}", "confirm"]
+            }
+          }
+        },
+        {
+          "name": "Reschedule Appointment",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"newAppointmentDate\": \"2024-02-22T10:00:00Z\",\n  \"reason\": \"Schedule conflict\",\n  \"rescheduledBy\": \"patient\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments/{{appointment_id}}/reschedule",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "{{appointment_id}}", "reschedule"]
+            }
+          }
+        },
+        {
+          "name": "Get My Appointments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/me?status=scheduled&upcoming=true&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "me"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "scheduled"
+                },
+                {
+                  "key": "upcoming",
+                  "value": "true"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Provider Appointments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/provider/{{provider_id}}?date=2024-02-20&status=scheduled",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "provider", "{{provider_id}}"],
+              "query": [
+                {
+                  "key": "date",
+                  "value": "2024-02-20"
+                },
+                {
+                  "key": "status",
+                  "value": "scheduled"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Center Appointments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/center/{{center_id}}?date=2024-02-20&page=1&limit=50",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "center", "{{center_id}}"],
+              "query": [
+                {
+                  "key": "date",
+                  "value": "2024-02-20"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Available Slots",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/slots/available?providerId={{provider_id}}&date=2024-02-20&duration=30",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "slots", "available"],
+              "query": [
+                {
+                  "key": "providerId",
+                  "value": "{{provider_id}}"
+                },
+                {
+                  "key": "date",
+                  "value": "2024-02-20"
+                },
+                {
+                  "key": "duration",
+                  "value": "30"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Block Time Slot",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"{{provider_id}}\",\n  \"startTime\": \"2024-02-20T12:00:00Z\",\n  \"endTime\": \"2024-02-20T13:00:00Z\",\n  \"reason\": \"Lunch break\",\n  \"blockType\": \"break\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments/slots/block",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "slots", "block"]
+            }
+          }
+        },
+        {
+          "name": "Get Appointment Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/statistics?providerId={{provider_id}}&startDate=2024-02-01&endDate=2024-02-29",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "statistics"],
+              "query": [
+                {
+                  "key": "providerId",
+                  "value": "{{provider_id}}"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-02-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-02-29"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Send Appointment Reminder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reminderType\": \"email\",\n  \"customMessage\": \"Don't forget your appointment tomorrow\",\n  \"sendImmediately\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/appointments/{{appointment_id}}/reminder",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "{{appointment_id}}", "reminder"]
+            }
+          }
+        },
+        {
+          "name": "Get Appointment History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/appointments/history/{{patient_id}}?page=1&limit=20&startDate=2024-01-01",
+              "host": ["{{base_url}}"],
+              "path": ["appointments", "history", "{{patient_id}}"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🔄 Referrals",
+      "item": [
+        {
+          "name": "Create Referral",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"fromProviderId\": \"{{provider_id}}\",\n  \"toProviderId\": \"{{specialist_provider_id}}\",\n  \"toCenterId\": \"{{specialist_center_id}}\",\n  \"referralType\": \"specialist_consultation\",\n  \"specialty\": \"cardiology\",\n  \"priority\": \"routine\",\n  \"reason\": \"Elevated blood pressure requiring specialist evaluation\",\n  \"clinicalSummary\": \"45-year-old patient with persistent hypertension despite medication\",\n  \"currentMedications\": [\n    {\n      \"name\": \"Lisinopril\",\n      \"dosage\": \"10mg\",\n      \"frequency\": \"once daily\"\n    }\n  ],\n  \"relevantHistory\": \"Family history of cardiovascular disease\",\n  \"urgentBy\": \"2024-03-15T00:00:00Z\",\n  \"attachments\": [\n    {\n      \"type\": \"lab_results\",\n      \"description\": \"Recent blood work\"\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/referrals",
+              "host": ["{{base_url}}"],
+              "path": ["referrals"]
+            }
+          }
+        },
+        {
+          "name": "Get All Referrals",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/referrals?page=1&limit=10&status=pending&specialty=cardiology&priority=routine",
+              "host": ["{{base_url}}"],
+              "path": ["referrals"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "status",
+                  "value": "pending"
+                },
+                {
+                  "key": "specialty",
+                  "value": "cardiology"
+                },
+                {
+                  "key": "priority",
+                  "value": "routine"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Referral by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/referrals/{{referral_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "{{referral_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Update Referral",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"priority\": \"urgent\",\n  \"reason\": \"Patient experiencing chest pain - urgent cardiology consultation needed\",\n  \"urgentBy\": \"2024-02-25T00:00:00Z\",\n  \"additionalNotes\": \"Patient reports new symptoms since initial referral\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/referrals/{{referral_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "{{referral_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Accept Referral",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"acceptedBy\": \"{{provider_id}}\",\n  \"estimatedAppointmentDate\": \"2024-02-28T14:00:00Z\",\n  \"notes\": \"Referral accepted, will schedule appointment within 48 hours\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/referrals/{{referral_id}}/accept",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "{{referral_id}}", "accept"]
+            }
+          }
+        },
+        {
+          "name": "Decline Referral",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"declinedBy\": \"{{provider_id}}\",\n  \"reason\": \"Outside area of expertise\",\n  \"suggestedAlternative\": {\n    \"providerId\": \"{{alternative_provider_id}}\",\n    \"specialty\": \"interventional_cardiology\",\n    \"notes\": \"Recommend referral to interventional cardiologist\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/referrals/{{referral_id}}/decline",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "{{referral_id}}", "decline"]
+            }
+          }
+        },
+        {
+          "name": "Complete Referral",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"completedBy\": \"{{provider_id}}\",\n  \"completionDate\": \"2024-02-28T16:00:00Z\",\n  \"outcome\": \"Patient evaluated, treatment plan established\",\n  \"recommendations\": \"Continue current medication, follow up in 3 months\",\n  \"followUpRequired\": true,\n  \"reportBackToReferrer\": true,\n  \"summary\": \"Comprehensive cardiac evaluation completed. Patient stable on current regimen.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/referrals/{{referral_id}}/complete",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "{{referral_id}}", "complete"]
+            }
+          }
+        },
+        {
+          "name": "Get My Referrals",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/referrals/me?type=all&status=active&page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "me"],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "all"
+                },
+                {
+                  "key": "status",
+                  "value": "active"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Sent Referrals",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/referrals/sent?status=pending&page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "sent"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "pending"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Received Referrals",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/referrals/received?status=pending&priority=urgent&page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "received"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "pending"
+                },
+                {
+                  "key": "priority",
+                  "value": "urgent"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Referral Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/referrals/statistics?providerId={{provider_id}}&startDate=2024-01-01&endDate=2024-02-29&groupBy=specialty",
+              "host": ["{{base_url}}"],
+              "path": ["referrals", "statistics"],
+              "query": [
+                {
+                  "key": "providerId",
+                  "value": "{{provider_id}}"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-02-29"
+                },
+                {
+                  "key": "groupBy",
+                  "value": "specialty"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📊 Medical Reports",
+      "item": [
+        {
+          "name": "Generate Patient Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reportType\": \"comprehensive\",\n  \"dateRange\": {\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-02-29\"\n  },\n  \"includeSections\": [\n    \"demographics\",\n    \"medical_history\",\n    \"medications\",\n    \"appointments\",\n    \"lab_results\",\n    \"imaging\"\n  ],\n  \"format\": \"pdf\",\n  \"includeCharts\": true,\n  \"includeTimeline\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medical-reports/patient/{{patient_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "patient", "{{patient_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Generate Center Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reportType\": \"performance\",\n  \"dateRange\": {\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-02-29\"\n  },\n  \"metrics\": [\n    \"patient_volume\",\n    \"appointment_statistics\",\n    \"revenue\",\n    \"staff_utilization\",\n    \"patient_satisfaction\"\n  ],\n  \"format\": \"pdf\",\n  \"includeComparisons\": true,\n  \"includeTrends\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medical-reports/center/{{center_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "center", "{{center_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Generate Provider Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reportType\": \"productivity\",\n  \"dateRange\": {\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-02-29\"\n  },\n  \"metrics\": [\n    \"appointments_completed\",\n    \"patients_seen\",\n    \"revenue_generated\",\n    \"patient_outcomes\",\n    \"referrals_made\"\n  ],\n  \"format\": \"pdf\",\n  \"includePatientFeedback\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medical-reports/provider/{{provider_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "provider", "{{provider_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Get All Reports",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medical-reports?page=1&limit=20&type=patient&status=completed&startDate=2024-01-01",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "type",
+                  "value": "patient"
+                },
+                {
+                  "key": "status",
+                  "value": "completed"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Report by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medical-reports/{{report_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "{{report_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Download Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medical-reports/{{report_id}}/download?format=pdf",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "{{report_id}}", "download"],
+              "query": [
+                {
+                  "key": "format",
+                  "value": "pdf"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Report",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated Patient Report - Q1 2024\",\n  \"description\": \"Comprehensive patient report with updated metrics\",\n  \"tags\": [\"quarterly\", \"comprehensive\", \"updated\"],\n  \"isPublic\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medical-reports/{{report_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "{{report_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Delete Report",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medical-reports/{{report_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "{{report_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Share Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientIds\": [\"{{provider_id}}\", \"{{user_id}}\"],\n  \"accessLevel\": \"read\",\n  \"expiresAt\": \"2024-03-31T23:59:59Z\",\n  \"message\": \"Sharing patient report for consultation\",\n  \"notifyRecipients\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medical-reports/{{report_id}}/share",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "{{report_id}}", "share"]
+            }
+          }
+        },
+        {
+          "name": "Get Report Templates",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medical-reports/templates?category=patient&active=true",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "templates"],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "patient"
+                },
+                {
+                  "key": "active",
+                  "value": "true"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Custom Template",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Custom Patient Summary\",\n  \"description\": \"Customized template for patient summaries\",\n  \"category\": \"patient\",\n  \"sections\": [\n    {\n      \"name\": \"Patient Demographics\",\n      \"fields\": [\"name\", \"age\", \"gender\", \"contact\"]\n    },\n    {\n      \"name\": \"Medical History\",\n      \"fields\": [\"conditions\", \"allergies\", \"medications\"]\n    },\n    {\n      \"name\": \"Recent Visits\",\n      \"fields\": [\"visit_date\", \"diagnosis\", \"treatment\"]\n    }\n  ],\n  \"isPublic\": false,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medical-reports/templates",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "templates"]
+            }
+          }
+        },
+        {
+          "name": "Get Report Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medical-reports/statistics?startDate=2024-01-01&endDate=2024-02-29&groupBy=type&centerId={{center_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["medical-reports", "statistics"],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-02-29"
+                },
+                {
+                  "key": "groupBy",
+                  "value": "type"
+                },
+                {
+                  "key": "centerId",
+                  "value": "{{center_id}}"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🩸 Blood Donation",
+      "item": [
+        {
+          "name": "Register Donor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"bloodType\": \"A+\",\n  \"eligibilityStatus\": \"eligible\",\n  \"lastDonationDate\": \"2023-12-15T00:00:00Z\",\n  \"medicalHistory\": {\n    \"chronicConditions\": [],\n    \"currentMedications\": [],\n    \"allergies\": []\n  },\n  \"contactPreferences\": {\n    \"email\": true,\n    \"sms\": true,\n    \"emergencyContact\": true\n  },\n  \"emergencyContact\": {\n    \"name\": \"Jane Doe\",\n    \"phone\": \"+1234567891\",\n    \"relationship\": \"spouse\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donors",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donors"]
+            }
+          }
+        },
+        {
+          "name": "Get All Donors",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donors?page=1&limit=20&bloodType=A+&status=eligible",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donors"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "bloodType",
+                  "value": "A+"
+                },
+                {
+                  "key": "status",
+                  "value": "eligible"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Donor by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donors/{{donor_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donors", "{{donor_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Update Donor",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eligibilityStatus\": \"temporarily_ineligible\",\n  \"ineligibilityReason\": \"Recent travel to malaria-endemic area\",\n  \"eligibleAgainDate\": \"2024-05-01T00:00:00Z\",\n  \"contactPreferences\": {\n    \"email\": true,\n    \"sms\": false,\n    \"emergencyContact\": true\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donors/{{donor_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donors", "{{donor_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Schedule Donation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"donorId\": \"{{donor_id}}\",\n  \"centerId\": \"{{center_id}}\",\n  \"scheduledDate\": \"2024-03-15T10:00:00Z\",\n  \"donationType\": \"whole_blood\",\n  \"estimatedDuration\": 45,\n  \"specialInstructions\": \"First-time donor, provide extra guidance\",\n  \"reminderPreferences\": {\n    \"email\": true,\n    \"sms\": true,\n    \"reminderTime\": 24\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donations/schedule",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donations", "schedule"]
+            }
+          }
+        },
+        {
+          "name": "Record Donation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"donorId\": \"{{donor_id}}\",\n  \"centerId\": \"{{center_id}}\",\n  \"donationDate\": \"2024-03-15T10:30:00Z\",\n  \"donationType\": \"whole_blood\",\n  \"volumeCollected\": 450,\n  \"bloodType\": \"A+\",\n  \"vitalSigns\": {\n    \"bloodPressure\": \"120/80\",\n    \"heartRate\": 72,\n    \"temperature\": 98.6,\n    \"hemoglobin\": 14.5\n  },\n  \"complications\": [],\n  \"staffId\": \"{{provider_id}}\",\n  \"notes\": \"Successful donation, donor tolerated well\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donations",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donations"]
+            }
+          }
+        },
+        {
+          "name": "Get Donations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donations?page=1&limit=20&donorId={{donor_id}}&startDate=2024-01-01",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donations"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "donorId",
+                  "value": "{{donor_id}}"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Donation by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donations/{{donation_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donations", "{{donation_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Check Blood Compatibility",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"donorBloodType\": \"A+\",\n  \"recipientBloodType\": \"AB+\",\n  \"donationType\": \"whole_blood\",\n  \"urgencyLevel\": \"routine\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/compatibility/check",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "compatibility", "check"]
+            }
+          }
+        },
+        {
+          "name": "Get Blood Inventory",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/inventory?centerId={{center_id}}&bloodType=A+&status=available",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "inventory"],
+              "query": [
+                {
+                  "key": "centerId",
+                  "value": "{{center_id}}"
+                },
+                {
+                  "key": "bloodType",
+                  "value": "A+"
+                },
+                {
+                  "key": "status",
+                  "value": "available"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Inventory",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bloodType\": \"A+\",\n  \"unitsAvailable\": 25,\n  \"unitsReserved\": 5,\n  \"expirationDate\": \"2024-04-15T00:00:00Z\",\n  \"status\": \"available\",\n  \"location\": \"Blood Bank - Refrigerator A1\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/inventory/{{center_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "inventory", "{{center_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Create Blood Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"requestingCenterId\": \"{{center_id}}\",\n  \"bloodType\": \"A+\",\n  \"unitsNeeded\": 3,\n  \"urgencyLevel\": \"urgent\",\n  \"requiredBy\": \"2024-03-16T08:00:00Z\",\n  \"reason\": \"Emergency surgery - blood loss\",\n  \"requestingPhysician\": \"{{provider_id}}\",\n  \"patientCondition\": \"stable but requires transfusion\",\n  \"crossMatchRequired\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/requests",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "requests"]
+            }
+          }
+        },
+        {
+          "name": "Get Blood Requests",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/requests?page=1&limit=20&urgency=urgent&status=pending",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "requests"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "urgency",
+                  "value": "urgent"
+                },
+                {
+                  "key": "status",
+                  "value": "pending"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Blood Request",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"fulfilled\",\n  \"unitsFulfilled\": 3,\n  \"fulfilledBy\": \"{{center_id}}\",\n  \"fulfilledDate\": \"2024-03-15T14:30:00Z\",\n  \"notes\": \"Request fulfilled successfully, blood delivered to OR\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/requests/{{blood_request_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "requests", "{{blood_request_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Get Donation Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/statistics?startDate=2024-01-01&endDate=2024-03-31&centerId={{center_id}}&groupBy=bloodType",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "statistics"],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-03-31"
+                },
+                {
+                  "key": "centerId",
+                  "value": "{{center_id}}"
+                },
+                {
+                  "key": "groupBy",
+                  "value": "bloodType"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Donor History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-donation/donors/{{donor_id}}/history?page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "donors", "{{donor_id}}", "history"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Send Donor Notification",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"donorIds\": [\"{{donor_id}}\"],\n  \"bloodTypes\": [\"A+\", \"O+\"],\n  \"message\": \"Urgent need for blood donations. Your contribution can save lives!\",\n  \"urgencyLevel\": \"high\",\n  \"channels\": [\"email\", \"sms\"],\n  \"scheduledFor\": \"2024-03-15T09:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-donation/notifications/send",
+              "host": ["{{base_url}}"],
+              "path": ["blood-donation", "notifications", "send"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🤖 AI Services",
+      "item": [
+        {
+          "name": "Analyze Symptoms",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"symptoms\": [\n    {\n      \"name\": \"chest pain\",\n      \"severity\": 8,\n      \"duration\": \"2 hours\",\n      \"description\": \"Sharp pain in center of chest\"\n    },\n    {\n      \"name\": \"shortness of breath\",\n      \"severity\": 7,\n      \"duration\": \"1 hour\",\n      \"description\": \"Difficulty breathing, especially when lying down\"\n    }\n  ],\n  \"patientHistory\": {\n    \"age\": 45,\n    \"gender\": \"male\",\n    \"chronicConditions\": [\"hypertension\"],\n    \"medications\": [\"lisinopril\"],\n    \"allergies\": [],\n    \"familyHistory\": [\"heart disease\"]\n  },\n  \"vitalSigns\": {\n    \"bloodPressure\": \"150/95\",\n    \"heartRate\": 95,\n    \"temperature\": 98.6,\n    \"respiratoryRate\": 22\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/ai/symptoms/analyze",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "symptoms", "analyze"]
+            }
+          }
+        },
+        {
+          "name": "Analyze Medical Image",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "imageType",
+                  "value": "chest_xray",
+                  "type": "text"
+                },
+                {
+                  "key": "patientId",
+                  "value": "{{patient_id}}",
+                  "type": "text"
+                },
+                {
+                  "key": "clinicalContext",
+                  "value": "Patient presenting with chest pain and shortness of breath",
+                  "type": "text"
+                },
+                {
+                  "key": "urgency",
+                  "value": "routine",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/ai/imaging/analyze",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "imaging", "analyze"]
+            }
+          }
+        },
+        {
+          "name": "Get Treatment Recommendations",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"diagnosis\": \"hypertension\",\n  \"symptoms\": [\"elevated blood pressure\", \"headache\"],\n  \"patientProfile\": {\n    \"age\": 45,\n    \"weight\": 80,\n    \"height\": 175,\n    \"gender\": \"male\",\n    \"allergies\": [\"penicillin\"],\n    \"currentMedications\": [],\n    \"comorbidities\": []\n  },\n  \"treatmentGoals\": [\"reduce_blood_pressure\", \"prevent_complications\"],\n  \"preferences\": {\n    \"medicationPreference\": \"oral\",\n    \"lifestyleModifications\": true\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/ai/treatment/recommend",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "treatment", "recommend"]
+            }
+          }
+        },
+        {
+          "name": "Check Drug Interactions",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"medications\": [\n    {\n      \"name\": \"lisinopril\",\n      \"dosage\": \"10mg\",\n      \"frequency\": \"once daily\"\n    },\n    {\n      \"name\": \"warfarin\",\n      \"dosage\": \"5mg\",\n      \"frequency\": \"once daily\"\n    }\n  ],\n  \"newMedication\": {\n    \"name\": \"ibuprofen\",\n    \"dosage\": \"400mg\",\n    \"frequency\": \"twice daily\"\n  },\n  \"patientAllergies\": [\"penicillin\"],\n  \"patientConditions\": [\"hypertension\", \"atrial_fibrillation\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/ai/drugs/interactions",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "drugs", "interactions"]
+            }
+          }
+        },
+        {
+          "name": "Generate Health Predictions",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patientId\": \"{{patient_id}}\",\n  \"predictionType\": \"risk_assessment\",\n  \"timeframe\": \"1_year\",\n  \"riskFactors\": {\n    \"age\": 45,\n    \"gender\": \"male\",\n    \"bmi\": 28.5,\n    \"smokingStatus\": \"former\",\n    \"familyHistory\": [\"heart_disease\", \"diabetes\"],\n    \"currentConditions\": [\"hypertension\"],\n    \"labValues\": {\n      \"cholesterol\": 220,\n      \"hdl\": 40,\n      \"ldl\": 150,\n      \"triglycerides\": 180,\n      \"hba1c\": 5.8\n    }\n  },\n  \"conditions\": [\"cardiovascular_disease\", \"diabetes\", \"stroke\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/ai/predictions/health",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "predictions", "health"]
+            }
+          }
+        },
+        {
+          "name": "Process Medical Text",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"Patient is a 45-year-old male presenting with chest pain and shortness of breath. History of hypertension. Physical exam reveals elevated blood pressure 150/95, heart rate 95 bpm. EKG shows normal sinus rhythm. Chest X-ray pending.\",\n  \"processingType\": \"extract_entities\",\n  \"extractionTargets\": [\n    \"symptoms\",\n    \"medical_history\",\n    \"vital_signs\",\n    \"medications\",\n    \"procedures\",\n    \"diagnoses\"\n  ],\n  \"language\": \"en\",\n  \"confidenceThreshold\": 0.8\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/ai/nlp/process",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "nlp", "process"]
+            }
+          }
+        },
+        {
+          "name": "Get AI Analysis History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ai/analysis/history?patientId={{patient_id}}&type=symptom_analysis&page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "analysis", "history"],
+              "query": [
+                {
+                  "key": "patientId",
+                  "value": "{{patient_id}}"
+                },
+                {
+                  "key": "type",
+                  "value": "symptom_analysis"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get AI Service Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ai/statistics?startDate=2024-01-01&endDate=2024-03-31&serviceType=all&groupBy=service",
+              "host": ["{{base_url}}"],
+              "path": ["ai", "statistics"],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-03-31"
+                },
+                {
+                  "key": "serviceType",
+                  "value": "all"
+                },
+                {
+                  "key": "groupBy",
+                  "value": "service"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "💬 Chat & Video",
+      "item": [
+        {
+          "name": "Create Chat Room",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Patient Consultation - John Doe\",\n  \"type\": \"patient_consultation\",\n  \"participants\": [\n    {\n      \"userId\": \"{{provider_id}}\",\n      \"role\": \"doctor\",\n      \"permissions\": [\"read\", \"write\", \"moderate\"]\n    },\n    {\n      \"userId\": \"{{patient_id}}\",\n      \"role\": \"patient\",\n      \"permissions\": [\"read\", \"write\"]\n    }\n  ],\n  \"isPrivate\": true,\n  \"encryptionEnabled\": true,\n  \"autoDeleteAfter\": 30,\n  \"allowFileSharing\": true,\n  \"maxFileSize\": 10485760,\n  \"allowedFileTypes\": [\"pdf\", \"jpg\", \"png\", \"doc\", \"docx\"],\n  \"relatedAppointmentId\": \"{{appointment_id}}\",\n  \"metadata\": {\n    \"patientId\": \"{{patient_id}}\",\n    \"consultationType\": \"follow_up\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/chat/rooms",
+              "host": ["{{base_url}}"],
+              "path": ["chat", "rooms"]
+            }
+          }
+        },
+        {
+          "name": "Get Chat Rooms",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/chat/rooms?page=1&limit=20&type=patient_consultation&userId={{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["chat", "rooms"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "type",
+                  "value": "patient_consultation"
+                },
+                {
+                  "key": "userId",
+                  "value": "{{user_id}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Send Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"roomId\": \"{{chat_room_id}}\",\n  \"content\": \"Hello! I wanted to follow up on your recent test results. They look very promising.\",\n  \"messageType\": \"text\",\n  \"priority\": \"normal\",\n  \"isEncrypted\": true,\n  \"replyToMessageId\": null,\n  \"mentions\": [],\n  \"metadata\": {\n    \"messageCategory\": \"medical_update\",\n    \"relatedRecordId\": \"{{medical_record_id}}\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/chat/messages",
+              "host": ["{{base_url}}"],
+              "path": ["chat", "messages"]
+            }
+          }
+        },
+        {
+          "name": "Get Chat Messages",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/chat/rooms/{{chat_room_id}}/messages?page=1&limit=50&before={{timestamp}}",
+              "host": ["{{base_url}}"],
+              "path": ["chat", "rooms", "{{chat_room_id}}", "messages"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "50"
+                },
+                {
+                  "key": "before",
+                  "value": "{{timestamp}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Upload File to Chat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "roomId",
+                  "value": "{{chat_room_id}}",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "Lab results from recent blood work",
+                  "type": "text"
+                },
+                {
+                  "key": "isConfidential",
+                  "value": "true",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/chat/files/upload",
+              "host": ["{{base_url}}"],
+              "path": ["chat", "files", "upload"]
+            }
+          }
+        },
+        {
+          "name": "Start Video Call",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"roomId\": \"{{chat_room_id}}\",\n  \"callType\": \"video\",\n  \"participants\": [\n    {\n      \"userId\": \"{{provider_id}}\",\n      \"role\": \"host\",\n      \"permissions\": [\"video\", \"audio\", \"screen_share\", \"record\"]\n    },\n    {\n      \"userId\": \"{{patient_id}}\",\n      \"role\": \"participant\",\n      \"permissions\": [\"video\", \"audio\"]\n    }\n  ],\n  \"scheduledStartTime\": \"2024-03-15T14:00:00Z\",\n  \"estimatedDuration\": 30,\n  \"recordingEnabled\": true,\n  \"waitingRoomEnabled\": true,\n  \"requiresConsent\": true,\n  \"metadata\": {\n    \"appointmentId\": \"{{appointment_id}}\",\n    \"consultationType\": \"follow_up\",\n    \"specialtyArea\": \"cardiology\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/video/calls",
+              "host": ["{{base_url}}"],
+              "path": ["video", "calls"]
+            }
+          }
+        },
+        {
+          "name": "Join Video Call",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"callId\": \"{{video_call_id}}\",\n  \"deviceInfo\": {\n    \"camera\": true,\n    \"microphone\": true,\n    \"speakers\": true,\n    \"browser\": \"Chrome 120.0\",\n    \"os\": \"Windows 11\"\n  },\n  \"connectionQuality\": \"high\",\n  \"consentGiven\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/video/calls/{{video_call_id}}/join",
+              "host": ["{{base_url}}"],
+              "path": ["video", "calls", "{{video_call_id}}", "join"]
+            }
+          }
+        },
+        {
+          "name": "Get Video Call History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/video/calls/history?userId={{user_id}}&page=1&limit=20&startDate=2024-01-01",
+              "host": ["{{base_url}}"],
+              "path": ["video", "calls", "history"],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{user_id}}"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+

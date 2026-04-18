@@ -1,0 +1,118 @@
+{
+  "moduleName": "authentication",
+  "timestamp": "2025-06-08T04:34:32.780Z",
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "failed": 2,
+    "successRate": 66.66666666666666,
+    "averageResponseTime": 93.16666666666667
+  },
+  "results": [
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 195,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+        "displayId": "PT272305289",
+        "email": "patient@test.com",
+        "password": "$2b$10$VmMBwuRuph1FrN44kXObiOCpCA8pVGsuqPnza7/gH1JJ5RAr99mvy",
+        "roles": [
+          "patient"
+        ],
+        "refreshToken": null,
+        "createdAt": "2025-06-08T04:34:32.306Z",
+        "updatedAt": "2025-06-08T04:34:32.306Z",
+        "profile": null
+      }
+    },
+    {
+      "endpoint": "POST /auth/register/staff",
+      "status": "FAIL",
+      "responseTime": 19,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:32.427Z",
+        "path": "/auth/register/staff",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 201,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdGllbnRAdGVzdC5jb20iLCJzdWIiOiJkY2NiMjcxNS1lMzE2LTRjOGQtOWVlOC1kZDZjYmUxYjRjZjMiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc0OTM1NzI3MiwiZXhwIjoxNzQ5NDQzNjcyfQ.-o3tw7gLZTUjuVE1e9csV0X4VESf7PFdFo60ZGASwhg",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdGllbnRAdGVzdC5jb20iLCJzdWIiOiJkY2NiMjcxNS1lMzE2LTRjOGQtOWVlOC1kZDZjYmUxYjRjZjMiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc0OTM1NzI3MiwiZXhwIjoxNzQ5OTYyMDcyfQ.uRA4U6CpUmQVMtSuXImTmgh92lNFDkORxjOvMdDr3CQ",
+        "user": {
+          "id": "dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+          "email": "patient@test.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT272305289"
+        }
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 21,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6cd76397-92eb-4219-a8c4-a805006ad129",
+        "email": "test-authentication-1749357271829@example.com",
+        "roles": [
+          "patient"
+        ],
+        "displayId": "PT271913419",
+        "profile": null,
+        "createdAt": "2025-06-08T04:34:31.914Z",
+        "updatedAt": "2025-06-08T04:34:32.096Z"
+      }
+    },
+    {
+      "endpoint": "POST /auth/refresh",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 401,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 401",
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-06-08T04:34:32.662Z",
+        "path": "/auth/refresh",
+        "method": "POST",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /auth/logout",
+      "status": "PASS",
+      "responseTime": 112,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "Successfully logged out"
+      }
+    }
+  ]
+}

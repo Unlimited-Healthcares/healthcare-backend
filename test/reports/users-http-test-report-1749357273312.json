@@ -1,0 +1,98 @@
+{
+  "moduleName": "users",
+  "timestamp": "2025-06-08T04:34:33.312Z",
+  "summary": {
+    "total": 5,
+    "passed": 0,
+    "failed": 5,
+    "successRate": 0,
+    "averageResponseTime": 14.8
+  },
+  "results": [
+    {
+      "endpoint": "POST /users",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.242Z",
+        "path": "/users",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.257Z",
+        "path": "/users?page=1&limit=10&role=patient",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /users/{{user_id}}",
+      "status": "FAIL",
+      "responseTime": 19,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.278Z",
+        "path": "/users/%7B%7Buser_id%7D%7D",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /users/{{user_id}}",
+      "status": "FAIL",
+      "responseTime": 14,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.294Z",
+        "path": "/users/%7B%7Buser_id%7D%7D",
+        "method": "PATCH",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /users/{{user_id}}/profile",
+      "status": "FAIL",
+      "responseTime": 14,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:33.307Z",
+        "path": "/users/%7B%7Buser_id%7D%7D/profile",
+        "method": "PATCH",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

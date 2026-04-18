@@ -1,0 +1,81 @@
+{
+  "moduleName": "medical-reports",
+  "timestamp": "2025-06-08T04:34:35.565Z",
+  "summary": {
+    "total": 4,
+    "passed": 0,
+    "failed": 4,
+    "successRate": 0,
+    "averageResponseTime": 10
+  },
+  "results": [
+    {
+      "endpoint": "POST /medical-reports/patient/dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:35.537Z",
+        "path": "/medical-reports/patient/dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+        "method": "POST",
+        "message": "Cannot POST /medical-reports/patient/dccb2715-e316-4c8d-9ee8-dd6cbe1b4cf3",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-reports",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:35.549Z",
+        "path": "/medical-reports?page=1&limit=20&type=patient&status=completed",
+        "method": "GET",
+        "message": "Cannot GET /medical-reports?page=1&limit=20&type=patient&status=completed",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-reports/{{report_id}}",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:35.554Z",
+        "path": "/medical-reports/%7B%7Breport_id%7D%7D",
+        "method": "GET",
+        "message": "Cannot GET /medical-reports/%7B%7Breport_id%7D%7D",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-reports/templates",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:35.561Z",
+        "path": "/medical-reports/templates?category=patient&active=true",
+        "method": "GET",
+        "message": "Cannot GET /medical-reports/templates?category=patient&active=true",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "moduleName": "Compliance",
+  "timestamp": "2025-07-11T18:19:55.987Z",
+  "summary": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 10.238095238095237
+  },
+  "results": [
+    {
+      "endpoint": "GET /compliance/consents",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /compliance/consent/marketing",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hasConsent": false
+      }
+    },
+    {
+      "endpoint": "GET /compliance/consent/analytics",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hasConsent": false
+      }
+    },
+    {
+      "endpoint": "GET /compliance/data-export",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userProfile": {
+          "id": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+          "email": "test@example.com",
+          "name": "Test User",
+          "roles": [
+            "patient"
+          ]
+        },
+        "addresses": [],
+        "patientRecords": [],
+        "medicalRecords": [],
+        "appointments": [],
+        "consentRecords": []
+      }
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+        "consentType": "marketing",
+        "consentGiven": true,
+        "consentDate": "2025-07-11T18:19:55.083Z",
+        "ipAddress": "192.168.1.1",
+        "userAgent": null,
+        "consentVersion": null,
+        "expiryDate": null,
+        "additionalInfo": null,
+        "id": "533a6a6f-ab52-484a-a03b-e054aa2280b0",
+        "createdAt": "2025-07-11T18:19:55.084Z",
+        "updatedAt": "2025-07-11T18:19:55.084Z"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-deletion",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+        "requestDate": "2025-07-11T18:19:55.099Z",
+        "reason": "Privacy concerns",
+        "status": "PENDING",
+        "completedDate": null,
+        "rejectedReason": null,
+        "processedBy": null,
+        "verificationCode": null,
+        "verificationDate": null,
+        "id": "8fb7b96a-d8f6-4f23-87b0-a7b8fd7ed90f",
+        "createdAt": "2025-07-11T18:19:55.099Z",
+        "updatedAt": "2025-07-11T18:19:55.099Z"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-correction",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "message": "Data correction request processed successfully"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "isAuthorized": true
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-breach",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "message": "Data breach notification processed successfully"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/hipaa-audit-report",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "reportDate": "2025-07-11T18:19:55.452Z",
+        "startDate": "2025-06-11T18:19:55.436Z",
+        "endDate": "2025-07-11T18:19:55.436Z",
+        "accessEvents": [],
+        "abnormalAccesses": [],
+        "securityIncidents": []
+      }
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:19:55.461Z",
+        "path": "/compliance/consent",
+        "method": "POST",
+        "message": [
+          "consentType: consentType should not be empty, consentType must be a string",
+          "consentGiven: consentGiven must be a boolean value"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:19:55.470Z",
+        "path": "/compliance/consent",
+        "method": "POST",
+        "message": [
+          "consentGiven: consentGiven must be a boolean value"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-deletion",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:19:55.480Z",
+        "path": "/compliance/data-deletion",
+        "method": "POST",
+        "message": [
+          "reason: reason must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T18:19:55.490Z",
+        "path": "/compliance/phi-access/validate",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID",
+          "accessType: accessType must be one of the following values: ",
+          "resourceType: resourceType should not be empty, resourceType must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/data-breach",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T18:19:55.640Z",
+        "path": "/compliance/data-breach",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/hipaa-audit-report",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T18:19:55.646Z",
+        "path": "/compliance/hipaa-audit-report",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T18:19:55.654Z",
+        "path": "/compliance/phi-access/validate",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /compliance/consents",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /compliance/consent",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "91bd8440-6456-429b-9048-610b16367ec9",
+        "consentType": "medical_treatment",
+        "consentGiven": true,
+        "consentDate": "2025-07-11T18:19:55.814Z",
+        "ipAddress": "::ffff:172.19.0.1",
+        "userAgent": null,
+        "consentVersion": null,
+        "expiryDate": null,
+        "additionalInfo": null,
+        "id": "c5cbced1-cc47-4a79-8513-13704c542fc9",
+        "createdAt": "2025-07-11T18:19:55.814Z",
+        "updatedAt": "2025-07-11T18:19:55.814Z"
+      }
+    },
+    {
+      "endpoint": "GET /compliance/consents",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /compliance/phi-access/validate",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "isAuthorized": true
+      }
+    }
+  ]
+}

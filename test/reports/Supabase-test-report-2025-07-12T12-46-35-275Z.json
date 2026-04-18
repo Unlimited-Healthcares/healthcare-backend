@@ -1,0 +1,285 @@
+{
+  "moduleName": "Supabase",
+  "timestamp": "2025-07-12T12:46:35.275Z",
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 9.6
+  },
+  "results": [
+    {
+      "endpoint": "POST /medical-records/invalid-uuid/files",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.230Z",
+        "path": "/medical-records/invalid-uuid/files",
+        "method": "POST",
+        "message": [
+          "recordId: recordId must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/files/upload/presigned-url",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "url": "https://qnuzgpjkgyfdwxfkrscl.supabase.co/storage/v1/object/sign/equipment-files",
+        "fields": {
+          "bucket": "equipment-files",
+          "key": "equipment/00000000-0000-0000-0000-000000000000/images/test-image.jpg",
+          "Content-Type": "image/jpeg",
+          "x-amz-algorithm": "AWS4-HMAC-SHA256",
+          "x-amz-credential": "test-credential",
+          "x-amz-date": "20250712T124634Z",
+          "x-amz-signature": "test-signature"
+        }
+      }
+    },
+    {
+      "endpoint": "GET /equipment/files/upload/presigned-url",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "url": "https://qnuzgpjkgyfdwxfkrscl.supabase.co/storage/v1/object/sign/equipment-files",
+        "fields": {
+          "bucket": "equipment-files",
+          "key": "equipment/invalid-uuid/documents/test-document.pdf",
+          "Content-Type": "image/jpeg",
+          "x-amz-algorithm": "AWS4-HMAC-SHA256",
+          "x-amz-credential": "test-credential",
+          "x-amz-date": "20250712T124634Z",
+          "x-amz-signature": "test-signature"
+        }
+      }
+    },
+    {
+      "endpoint": "POST /referrals/invalid-uuid/documents",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.556Z",
+        "path": "/referrals/invalid-uuid/documents",
+        "method": "POST",
+        "message": [
+          "referralId: referralId must be a UUID",
+          "name: name must be a string",
+          "documentType: documentType must be one of the following values: report, lab_result, imaging, prescription, clinical_note, consent_form, other"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /referrals/00000000-0000-0000-0000-000000000000/documents",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.565Z",
+        "path": "/referrals/00000000-0000-0000-0000-000000000000/documents",
+        "method": "POST",
+        "message": [
+          "referralId: referralId must be a UUID",
+          "name: name must be a string",
+          "documentType: documentType must be one of the following values: report, lab_result, imaging, prescription, clinical_note, consent_form, other"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /patients/invalid-uuid/documents",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.724Z",
+        "path": "/patients/invalid-uuid/documents",
+        "method": "POST",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /patients/00000000-0000-0000-0000-000000000000/documents",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 500,
+      "expectedStatus": 500,
+      "error": null,
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-12T12:46:34.737Z",
+        "path": "/patients/00000000-0000-0000-0000-000000000000/documents",
+        "method": "POST",
+        "message": "Cannot read properties of undefined (reading 'originalname')",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'originalname')\n    at PatientsService.uploadDocument (/usr/src/app/src/patients/patients.service.ts:96:22)\n    at PatientsController.uploadDocument (/usr/src/app/src/patients/patients.controller.ts:129:33)\n    at /usr/src/app/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/invalid-uuid/photos",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.896Z",
+        "path": "/reviews/invalid-uuid/photos",
+        "method": "POST",
+        "message": [
+          "photos: each value in photos must be a string, photos must be an array"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/00000000-0000-0000-0000-000000000000/photos",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.904Z",
+        "path": "/reviews/00000000-0000-0000-0000-000000000000/photos",
+        "method": "POST",
+        "message": [
+          "photos: each value in photos must be a string, photos must be an array"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/00000000-0000-0000-0000-000000000000/files",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:34.913Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000/files",
+        "method": "POST",
+        "message": [
+          "recordId: recordId must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/files/upload",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:46:34.919Z",
+        "path": "/equipment/files/upload",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/files/upload",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:46:35.080Z",
+        "path": "/equipment/files/upload",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/00000000-0000-0000-0000-000000000000/files",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:46:35.095Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000/files",
+        "method": "POST",
+        "message": [
+          "recordId: recordId must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000000/files",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /referrals/00000000-0000-0000-0000-000000000000/documents",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T12:46:35.272Z",
+        "path": "/referrals/00000000-0000-0000-0000-000000000000/documents",
+        "method": "GET",
+        "message": "Referral with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

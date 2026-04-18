@@ -1,0 +1,378 @@
+{
+  "moduleName": "Notifications",
+  "timestamp": "2025-07-11T09:11:35.596Z",
+  "summary": {
+    "total": 23,
+    "passed": 11,
+    "failed": 12,
+    "successRate": 47.82608695652174,
+    "averageResponseTime": 34
+  },
+  "results": [
+    {
+      "endpoint": "GET /notifications",
+      "status": "FAIL",
+      "responseTime": 57,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:34.568Z",
+        "path": "/notifications",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications/unread-count",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": 0
+    },
+    {
+      "endpoint": "GET /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userId": "acf6ae38-aaab-467f-8675-0706b829fdeb",
+        "quietHoursStart": null,
+        "quietHoursEnd": null,
+        "id": "8c264329-fe84-4154-b97f-1f4b9c98074e",
+        "emailVerified": false,
+        "phoneVerified": false,
+        "medicalRecordRequest": "both",
+        "medicalRecordAccess": "push",
+        "recordShareExpiring": "both",
+        "appointment": "both",
+        "message": "both",
+        "system": "push",
+        "referral": "both",
+        "testResult": "both",
+        "payment": "both",
+        "marketing": "none",
+        "timezone": "UTC",
+        "createdAt": "2025-07-11T09:11:34.598Z",
+        "updatedAt": "2025-07-11T09:11:34.598Z"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "FAIL",
+      "responseTime": 43,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:34.795Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": "null value in column \"user_id\" of relation \"audit_logs\" violates not-null constraint",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 31,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userId": "185898fc-1052-4d38-b717-6b9aec76276f",
+        "quietHoursStart": "22:00",
+        "quietHoursEnd": "08:00",
+        "id": "64148b1f-6d7c-4930-86ee-a71b09c21757",
+        "emailVerified": true,
+        "phoneVerified": false,
+        "medicalRecordRequest": "email",
+        "medicalRecordAccess": "push",
+        "recordShareExpiring": "both",
+        "appointment": "both",
+        "message": "email",
+        "system": "push",
+        "referral": "both",
+        "testResult": "email",
+        "payment": "push",
+        "marketing": "none",
+        "timezone": "UTC",
+        "createdAt": "2025-07-11T09:11:34.815Z",
+        "updatedAt": "2025-07-11T09:11:34.821Z"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/test/email",
+      "status": "FAIL",
+      "responseTime": 122,
+      "statusCode": 201,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 201",
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications/test/push",
+      "status": "FAIL",
+      "responseTime": 118,
+      "statusCode": 201,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 201",
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications/test/sms",
+      "status": "FAIL",
+      "responseTime": 118,
+      "statusCode": 201,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 201",
+      "responseBody": ""
+    },
+    {
+      "endpoint": "GET /notifications/invalid-uuid/read",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:11:35.193Z",
+        "path": "/notifications/invalid-uuid/read",
+        "method": "GET",
+        "message": "Cannot GET /notifications/invalid-uuid/read",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/00000000-0000-0000-0000-000000000000/read",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:11:35.202Z",
+        "path": "/notifications/00000000-0000-0000-0000-000000000000/read",
+        "method": "PUT",
+        "message": "Notification not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /notifications/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:11:35.212Z",
+        "path": "/notifications/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Notification not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.220Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": [
+          "title: title must be a string",
+          "type: type must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.226Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": [
+          "deliveryMethod: deliveryMethod must be one of the following values: in_app, email, sms, push, both, all"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.233Z",
+        "path": "/notifications/preferences",
+        "method": "PUT",
+        "message": [
+          "medicalRecordRequest: medicalRecordRequest must be one of the following values: none, email, push, both",
+          "appointment: appointment must be one of the following values: none, email, push, both"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/test/invalid_type",
+      "status": "FAIL",
+      "responseTime": 118,
+      "statusCode": 201,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 201",
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "FAIL",
+      "responseTime": 28,
+      "statusCode": 400,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.522Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": "null value in column \"user_id\" of relation \"audit_logs\" violates not-null constraint",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/mark-all-read",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.542Z",
+        "path": "/notifications?type=medical_record",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.558Z",
+        "path": "/notifications?type=payment",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.569Z",
+        "path": "/notifications?type=system",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:11:35.582Z",
+        "path": "/notifications?isRead=true",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    }
+  ]
+}

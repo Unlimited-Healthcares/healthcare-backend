@@ -1,0 +1,2245 @@
+{
+  "moduleName": "Users",
+  "timestamp": "2025-07-11T04:58:51.161Z",
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 23
+  },
+  "results": [
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "63ab045d-43d6-4fa4-8a29-2f8cc20114d9",
+        "email": "test-users-patient-1752209930669@example.com",
+        "roles": [
+          "patient"
+        ],
+        "displayId": "PT930731513",
+        "profile": null,
+        "createdAt": "2025-07-11T04:58:50.743Z",
+        "updatedAt": "2025-07-11T04:58:50.825Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "65ff386b-e681-454c-9adb-939e35b09447",
+          "displayId": "DR416113164",
+          "email": "test-appointments-doctor-1752208416053@example.com",
+          "password": "$2b$10$9ki2z/WHgLMW9A.LkdUy6uk/MOuzA/N8qNjf.mW4VJJKmGhB7MGxW",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4NDE2MDUzQGV4YW1wbGUuY29tIiwic3ViIjoiNjVmZjM4NmItZTY4MS00NTRjLTlhZGItOTM5ZTM1YjA5NDQ3Iiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODQxNiwiZXhwIjoxNzUyODEzMjE2fQ.h9U9WuJs6vw4eaC64geGEzYcuf5uRhItk9K4iPsv5zs",
+          "createdAt": "2025-07-11T04:33:36.113Z",
+          "updatedAt": "2025-07-11T04:33:36.189Z",
+          "profile": null
+        },
+        {
+          "id": "8d9fd090-bdd2-4d9e-bbab-3dd28782f22b",
+          "displayId": "AD682445140",
+          "email": "test-referrals-admin-1752209682383@example.com",
+          "password": "$2b$10$/LKyO6C7J9POi6Qlth63iOisiJUYYHoqNAhtNdInOl3fs7tFZJGbK",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk2ODIzODNAZXhhbXBsZS5jb20iLCJzdWIiOiI4ZDlmZDA5MC1iZGQyLTRkOWUtYmJhYi0zZGQyODc4MmYyMmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk2ODIsImV4cCI6MTc1MjgxNDQ4Mn0.ExdXBsBTNsb2pdkzIYew2Xsj0YzGBQq6A-B6MihpLak",
+          "createdAt": "2025-07-11T04:54:42.446Z",
+          "updatedAt": "2025-07-11T04:54:42.521Z",
+          "profile": null
+        },
+        {
+          "id": "d02086e4-2c2d-4fc2-a22f-4478abac31cb",
+          "displayId": "PT482961920",
+          "email": "test-patient-1752209482899@example.com",
+          "password": "$2b$10$wjf/saIVtI6PFFD4AT12C.n8FagMMKJ4MyXiXQnes4.qr0vRh80le",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:51:22.961Z",
+          "updatedAt": "2025-07-11T04:51:22.961Z",
+          "profile": null
+        },
+        {
+          "id": "11f763be-8978-45ab-b552-dc0ae7d304ec",
+          "displayId": "DR988366952",
+          "email": "test-appointments-doctor-1752174988306@example.com",
+          "password": "$2b$10$KckCBaeaWX.y4zXihRzGbOyNdu71KfSXwFEsggmxaSHLXajjNrme.",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMTc0OTg4MzA2QGV4YW1wbGUuY29tIiwic3ViIjoiMTFmNzYzYmUtODk3OC00NWFiLWI1NTItZGMwYWU3ZDMwNGVjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjE3NDk4OCwiZXhwIjoxNzUyNzc5Nzg4fQ.i8tql_EAPGu59D0MLOlfFtxeotjE-SVaO8ouUq2qF4A",
+          "createdAt": "2025-07-10T19:16:28.383Z",
+          "updatedAt": "2025-07-10T19:16:28.480Z",
+          "profile": null
+        },
+        {
+          "id": "2040f4ac-90a6-4ebe-b6bc-c41fc675af05",
+          "displayId": "PT677244754",
+          "email": "test-centers-patient-1752174677183@example.com",
+          "password": "$2b$10$m5sBtaE6jj4P3hT2Cigbiuy/9PLBnofZra0u7wL3x3xl3CaxQ4ita",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ2NzcxODNAZXhhbXBsZS5jb20iLCJzdWIiOiIyMDQwZjRhYy05MGE2LTRlYmUtYjZiYy1jNDFmYzY3NWFmMDUiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDY3NywiZXhwIjoxNzUyNzc5NDc3fQ.u_eN0L2b54YcEXhvKUxC_ziK2GAgltGIWgrUn73A-gk",
+          "createdAt": "2025-07-10T19:11:17.245Z",
+          "updatedAt": "2025-07-10T19:11:17.322Z",
+          "profile": null
+        },
+        {
+          "id": "a340c9b5-b966-477b-ab30-d65e4f9261b9",
+          "displayId": "PT282674738",
+          "email": "admin-test-user-1752174282595@example.com",
+          "password": "$2b$10$X8W4Xgt46vdOcdzdRTgz/Owa9zlUYGokfANr7sB46an/fY6j1tld.",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-10T19:04:42.675Z",
+          "updatedAt": "2025-07-10T19:04:42.675Z",
+          "profile": null
+        },
+        {
+          "id": "944587ea-fdbc-4264-b5f8-b53212ce126a",
+          "displayId": "PT416005449",
+          "email": "test-patient-1752208415946@example.com",
+          "password": "$2b$10$by6JVYtKBU26Cgji6j/BI.2fLvraVOyWJwFnSw41afIXTHBLbTyzi",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:33:36.006Z",
+          "updatedAt": "2025-07-11T04:33:36.006Z",
+          "profile": null
+        },
+        {
+          "id": "04a6c987-652d-4f4f-b7f1-e0625471d1ea",
+          "displayId": "AD518457436",
+          "email": "test-centers-admin-1752174518395@example.com",
+          "password": "$2b$10$ypGiWGkCCAYmIkl2efBOZONcX.DWgSjE0QR4sIEFbwx4WqL/jFBX.",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0NTE4Mzk1QGV4YW1wbGUuY29tIiwic3ViIjoiMDRhNmM5ODctNjUyZC00ZjRmLWI3ZjEtZTA2MjU0NzFkMWVhIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0NTE4LCJleHAiOjE3NTI3NzkzMTh9.qIWyezYFfS-5R-vtiBH3sdhJY7huyTwAo2yKmfsXRQo",
+          "createdAt": "2025-07-10T19:08:38.467Z",
+          "updatedAt": "2025-07-10T19:08:38.551Z",
+          "profile": null
+        },
+        {
+          "id": "e4afe45b-f221-40f9-a28d-e161482c9ee3",
+          "displayId": "AD902754512",
+          "email": "test-centers-admin-1752209902692@example.com",
+          "password": "$2b$10$kUO9mGSod9JCbpR.tUPtZeqTp13J7Bp00cSVTDwYz8x3YWjcNkxqS",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMjA5OTAyNjkyQGV4YW1wbGUuY29tIiwic3ViIjoiZTRhZmU0NWItZjIyMS00MGY5LWEyOGQtZTE2MTQ4MmM5ZWUzIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMjA5OTAyLCJleHAiOjE3NTI4MTQ3MDJ9.rjQ8JGOtj_tM8F-KU-BGoGgATSt-Bf6Q511q2-qpB5s",
+          "createdAt": "2025-07-11T04:58:22.765Z",
+          "updatedAt": "2025-07-11T04:58:22.844Z",
+          "profile": null
+        },
+        {
+          "id": "457506c2-b8e4-4cac-98ac-297e7b6e7b5b",
+          "displayId": "PT235890155",
+          "email": "test-auth-1752174235830@example.com",
+          "password": "$2b$10$kwJpL6aKKjPEYbJjhgzJ2euCbxc4Fji.1sDtUfuZJx3TovT2pIGpy",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjM1ODMwQGV4YW1wbGUuY29tIiwic3ViIjoiNDU3NTA2YzItYjhlNC00Y2FjLTk4YWMtMjk3ZTdiNmU3YjViIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.X8gXQOw81goz23l9WP180kokti6tAFySVd0dPRzoNJs",
+          "createdAt": "2025-07-10T19:03:55.891Z",
+          "updatedAt": "2025-07-10T19:03:55.966Z",
+          "profile": null
+        },
+        {
+          "id": "de0a21ed-4b04-4327-8776-d5ffb0b395bb",
+          "displayId": "PT952894931",
+          "email": "test-authentication-patient-1752173952833@example.com",
+          "password": "$2b$10$E1fywIKylArGBlvoodB7b.W4kIjX/EoxtoAfjyRC1mOlZ1fyGS3pq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczOTUyODMzQGV4YW1wbGUuY29tIiwic3ViIjoiZGUwYTIxZWQtNGIwNC00MzI3LTg3NzYtZDVmZmIwYjM5NWJiIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM5NTIsImV4cCI6MTc1Mjc3ODc1Mn0.kdo-0Nc6pxoKrQ2E7pu_P_AKUqQ-lv9Q3nj_sSBc3FU",
+          "createdAt": "2025-07-10T18:59:12.904Z",
+          "updatedAt": "2025-07-10T18:59:12.983Z",
+          "profile": null
+        },
+        {
+          "id": "20f91e94-6f06-411b-a377-4f89b853471d",
+          "displayId": "DR301354980",
+          "email": "test-referrals-doctor-1752209301296@example.com",
+          "password": "$2b$10$1YmOqWNSiXuKPeSQal8dHenefbgAgHl/aGiK4BbwlYiNeocbVtkNq",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5MzAxMjk2QGV4YW1wbGUuY29tIiwic3ViIjoiMjBmOTFlOTQtNmYwNi00MTFiLWEzNzctNGY4OWI4NTM0NzFkIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTMwMSwiZXhwIjoxNzUyODE0MTAxfQ.TJTA40tR65sFXgyjrIHKkeQpXSOpz80nY4CHLABSy1s",
+          "createdAt": "2025-07-11T04:48:21.355Z",
+          "updatedAt": "2025-07-11T04:48:21.431Z",
+          "profile": null
+        },
+        {
+          "id": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "displayId": "AD911601471",
+          "email": "test-referrals-admin-1752209911542@example.com",
+          "password": "$2b$10$BSAloHVp8bt/CLUMttvuW.e6aj1yqwwBmGC5FJj.FN3LAGQkxMgv2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTE1NDJAZXhhbXBsZS5jb20iLCJzdWIiOiI4OTZlODFiMC0yMDkzLTRjZWYtYjQ1NS0yOWUzNDYxZmY5ZmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.TymrT3pxts_hgrTOnzSv9kqtZMAQ_g6dXANX6AT156k",
+          "createdAt": "2025-07-11T04:58:31.602Z",
+          "updatedAt": "2025-07-11T04:58:31.680Z",
+          "profile": null
+        },
+        {
+          "id": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+          "displayId": "PT911229086",
+          "email": "test-patient-1752209911166@example.com",
+          "password": "$2b$10$URj.QsaftMQ9FRo7JuKkNegHpChwr8E40h.HIGT0sKD6CuDlF.7jW",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:31.229Z",
+          "updatedAt": "2025-07-11T04:58:31.229Z",
+          "profile": null
+        },
+        {
+          "id": "911ffaa2-44a6-4a5f-a1a7-a8a159876b1e",
+          "displayId": "AD301157721",
+          "email": "test-referrals-admin-1752209301096@example.com",
+          "password": "$2b$10$p3cWL0piTiYn32e5M/VbhOTKC03xciaXTTJwMylvvt0imv4ZVS1W2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDkzMDEwOTZAZXhhbXBsZS5jb20iLCJzdWIiOiI5MTFmZmFhMi00NGE2LTRhNWYtYTFhNy1hOGExNTk4NzZiMWUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDkzMDEsImV4cCI6MTc1MjgxNDEwMX0.o32RJ_XcP1BCIEuIXt9XJb6mBrPVlhcn13cXIf9tVfM",
+          "createdAt": "2025-07-11T04:48:21.157Z",
+          "updatedAt": "2025-07-11T04:48:21.231Z",
+          "profile": null
+        },
+        {
+          "id": "dc9d0ed9-775a-4742-94a2-59aa03a0a4f4",
+          "displayId": "DR416258986",
+          "email": "test-doctor-1752208415946@example.com",
+          "password": "$2b$10$CY8qlZj0s98z7jXk86jLxu4xlIRXmY5epGOFWK5N9GAg9kW9FWlFm",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:33:36.258Z",
+          "updatedAt": "2025-07-11T04:33:36.258Z",
+          "profile": null
+        },
+        {
+          "id": "4d70bc25-6200-4635-ae7f-9dfbd6df85d1",
+          "displayId": "AD930915759",
+          "email": "test-users-admin-1752209930849@example.com",
+          "password": "$2b$10$HTnzCthhd11EU9DFZmuobecGHCH99L9Zy6dvDMX6PodU.CKaBbDHW",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjIwOTkzMDg0OUBleGFtcGxlLmNvbSIsInN1YiI6IjRkNzBiYzI1LTYyMDAtNDYzNS1hZTdmLTlkZmJkNmRmODVkMSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjIwOTkzMSwiZXhwIjoxNzUyODE0NzMxfQ.4gMi1PWvmR7K6lwUeBwAT6ICH85NS4POHDxF4JgA7CA",
+          "createdAt": "2025-07-11T04:58:50.916Z",
+          "updatedAt": "2025-07-11T04:58:51.047Z",
+          "profile": null
+        },
+        {
+          "id": "41f95141-e981-4158-9fa4-ba0203db14ef",
+          "displayId": "USR300263877",
+          "email": "test-referrals-healthcare_provider-1752209300200@example.com",
+          "password": "$2b$10$OspmbO1RMbYHDGtTSxzzfuLJnlyTQTJJ4GDWT/6yD/TtzUZMW1Zqm",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTMwMDIwMEBleGFtcGxlLmNvbSIsInN1YiI6IjQxZjk1MTQxLWU5ODEtNDE1OC05ZmE0LWJhMDIwM2RiMTRlZiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5MzAwLCJleHAiOjE3NTI4MTQxMDB9.ROUNHrUDgoNYGQHEahEvgoq19rR2RZjd7r8CIGU6HOQ",
+          "createdAt": "2025-07-11T04:48:20.276Z",
+          "updatedAt": "2025-07-11T04:48:20.373Z",
+          "profile": null
+        },
+        {
+          "id": "c79d34f3-8f97-49a0-8d16-117f241f5d61",
+          "displayId": "PT300981002",
+          "email": "test-referrals-patient-1752209300922@example.com",
+          "password": "$2b$10$y8KtJ3ksu0QZzGYgmF//YewRYBRi3jI7erpJEFDbVES7Pp7Bd7Ag.",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLXBhdGllbnQtMTc1MjIwOTMwMDkyMkBleGFtcGxlLmNvbSIsInN1YiI6ImM3OWQzNGYzLThmOTctNDlhMC04ZDE2LTExN2YyNDFmNWQ2MSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA5MzAxLCJleHAiOjE3NTI4MTQxMDF9.BUfMglSvRtXKMwM_j7ysA97UD7Q9zUt0CRRLfqTSgXk",
+          "createdAt": "2025-07-11T04:48:20.982Z",
+          "updatedAt": "2025-07-11T04:48:21.057Z",
+          "profile": null
+        },
+        {
+          "id": "63ab045d-43d6-4fa4-8a29-2f8cc20114d9",
+          "displayId": "PT930731513",
+          "email": "test-users-patient-1752209930669@example.com",
+          "password": "$2b$10$7b4LxS/lq9qJWJXJUafti.yUKfmMRy1/jQ3khMJmo5U3Jguo.sAXe",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMjA5OTMwNjY5QGV4YW1wbGUuY29tIiwic3ViIjoiNjNhYjA0NWQtNDNkNi00ZmE0LThhMjktMmY4Y2MyMDExNGQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMDk5MzAsImV4cCI6MTc1MjgxNDczMH0.0jEBm8_Z14gHBJ-D7IKEmfwWnQVOWLotenDweZYTwqw",
+          "createdAt": "2025-07-11T04:58:50.743Z",
+          "updatedAt": "2025-07-11T04:58:50.825Z",
+          "profile": null
+        },
+        {
+          "id": "44b326ff-5f61-41a1-8aa8-da10fea5ff86",
+          "displayId": "USR880255666",
+          "email": "test-referrals-healthcare_provider-1752209880190@example.com",
+          "password": "$2b$10$VwVnXEoXdf2304hyHfi4U.IdtRsgvhe/NBVrRJOXVnq3kFmcSARQy",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTg4MDE5MEBleGFtcGxlLmNvbSIsInN1YiI6IjQ0YjMyNmZmLTVmNjEtNDFhMS04YWE4LWRhMTBmZWE1ZmY4NiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5ODgwLCJleHAiOjE3NTI4MTQ2ODB9.hFLlP1_J2e57333FxQnH0jp_Fvp6-qQAB8xJ8durT5c",
+          "createdAt": "2025-07-11T04:58:00.265Z",
+          "updatedAt": "2025-07-11T04:58:00.350Z",
+          "profile": null
+        },
+        {
+          "id": "0ebbe559-e948-40c3-8abf-cf50702a7510",
+          "displayId": "PT060005514",
+          "email": "test-patient-1752208059946@example.com",
+          "password": "$2b$10$j398tdI/57EnmiZRm/dD8Ojk16CGVwzmPoJ/is4HvO.iPWRw13X1G",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:27:40.006Z",
+          "updatedAt": "2025-07-11T04:27:40.006Z",
+          "profile": null
+        },
+        {
+          "id": "6c106b0d-5fc8-4e19-86c9-823b3db956e6",
+          "displayId": "DR239519928",
+          "email": "test-appointments-doctor-1752208239454@example.com",
+          "password": "$2b$10$XoXYOu0WqenxslJLTR3Gwe4mWyl8zdSzhcENCNbKO8EYjKDXLaLOS",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4MjM5NDU0QGV4YW1wbGUuY29tIiwic3ViIjoiNmMxMDZiMGQtNWZjOC00ZTE5LTg2YzktODIzYjNkYjk1NmU2Iiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODIzOSwiZXhwIjoxNzUyODEzMDM5fQ.93hIpP4-or6XlObqwhiZuW7iNE026tGGSI2dEH-8deQ",
+          "createdAt": "2025-07-11T04:30:39.519Z",
+          "updatedAt": "2025-07-11T04:30:39.597Z",
+          "profile": null
+        },
+        {
+          "id": "9a840c46-fa4e-42cf-afbc-8f3fa5142c69",
+          "displayId": "PT988751009",
+          "email": "test-appointments-patient-1752174988693@example.com",
+          "password": "$2b$10$pHoytvCgwvy5IspYTLD4cO3r3kmUkJNwqIxTCQwxRPVE2vh0XhK0a",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjE3NDk4ODY5M0BleGFtcGxlLmNvbSIsInN1YiI6IjlhODQwYzQ2LWZhNGUtNDJjZi1hZmJjLThmM2ZhNTE0MmM2OSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMTc0OTg4LCJleHAiOjE3NTI3Nzk3ODh9.KqKXnBdxkPwfdXKQJTcQzH1QOGXETsPWEXYNQe8BXpk",
+          "createdAt": "2025-07-10T19:16:28.752Z",
+          "updatedAt": "2025-07-10T19:16:28.825Z",
+          "profile": null
+        },
+        {
+          "id": "baac8231-c638-41d9-9444-b085d5eb95c8",
+          "displayId": "DR239665682",
+          "email": "test-doctor-1752208239356@example.com",
+          "password": "$2b$10$CBlFSJWb5IpknV2t3MVpVuGjYzZWJwQv.tZDnUVQgCXm1tIhh.G8C",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:30:39.666Z",
+          "updatedAt": "2025-07-11T04:30:39.666Z",
+          "profile": null
+        },
+        {
+          "id": "2ed41d25-d01b-432b-8ccc-348c84a0b38e",
+          "displayId": "PT297996145",
+          "email": "test-users-patient-1752174297934@example.com",
+          "password": "$2b$10$YtFoebfRoY232oTYmDeXWevUpIAGMJm6SizLSdf50yKOQMbQlSVJe",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMTc0Mjk3OTM0QGV4YW1wbGUuY29tIiwic3ViIjoiMmVkNDFkMjUtZDAxYi00MzJiLThjY2MtMzQ4Yzg0YTBiMzhlIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyOTgsImV4cCI6MTc1Mjc3OTA5OH0.06bUPxng14wahoSbX-4vHEh162gZUroDVfFOsPv_ybE",
+          "createdAt": "2025-07-10T19:04:58.007Z",
+          "updatedAt": "2025-07-10T19:04:58.090Z",
+          "profile": null
+        },
+        {
+          "id": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "displayId": "AD880829096",
+          "email": "test-referrals-admin-1752209880767@example.com",
+          "password": "$2b$10$Lh4fyF.ENu2zNcXsnd/0buunSU.sGmw5tT7nUlzRZcSTWMCHpn2OG",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA3NjdAZXhhbXBsZS5jb20iLCJzdWIiOiI2MGNhZjQ5Mi0wM2ViLTQzNjUtODkxOC01ZDdhOTE1OWI2MzAiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.N5X0JQr1q7EdrvXRxViIKAl9wKDM4bwD78y7haS5tVI",
+          "createdAt": "2025-07-11T04:58:00.830Z",
+          "updatedAt": "2025-07-11T04:58:00.912Z",
+          "profile": null
+        },
+        {
+          "id": "7e169332-319d-452c-9adc-15d4d3700cfd",
+          "displayId": "USR482774781",
+          "email": "test-referrals-healthcare_provider-1752209482711@example.com",
+          "password": "$2b$10$iiDPAr7AmjSZCKkwOjwyGuQL05XUzA.s3gl8g.g0X8MCdX1hfxFZ.",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTQ4MjcxMUBleGFtcGxlLmNvbSIsInN1YiI6IjdlMTY5MzMyLTMxOWQtNDUyYy05YWRjLTE1ZDRkMzcwMGNmZCIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NDgyLCJleHAiOjE3NTI4MTQyODJ9.TjjspXhv5WN434Qq_qfRFv9xN_ebC8nriClt3qV3l3g",
+          "createdAt": "2025-07-11T04:51:22.805Z",
+          "updatedAt": "2025-07-11T04:51:22.889Z",
+          "profile": null
+        },
+        {
+          "id": "ec5f43a1-4eb8-4dae-980a-1efbba8b3e82",
+          "displayId": "PT116160859",
+          "email": "test-authentication-patient-1752174116096@example.com",
+          "password": "$2b$10$wnml0O9PJ9C5jHGXXd5UnuGMgLdMrE6L5f0tpM4yLUnfzy/CD1ibq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MTE2MDk2QGV4YW1wbGUuY29tIiwic3ViIjoiZWM1ZjQzYTEtNGViOC00ZGFlLTk4MGEtMWVmYmJhOGIzZTgyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQxMTYsImV4cCI6MTc1Mjc3ODkxNn0.vHYfUYVy1krh9rRpjF4YuBnZmcghTLk5K2wofGXB7F4",
+          "createdAt": "2025-07-10T19:01:56.169Z",
+          "updatedAt": "2025-07-10T19:01:56.250Z",
+          "profile": null
+        },
+        {
+          "id": "ebdeaa48-c01f-4c2c-83de-501e19e77bc7",
+          "displayId": "USR682210213",
+          "email": "test-referrals-healthcare_provider-1752209682146@example.com",
+          "password": "$2b$10$GvMGvuhGMsFVyeIZtbfdOONCO9zcOt0ruMcYE8uxy2R./hgZI2KUa",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTY4MjE0NkBleGFtcGxlLmNvbSIsInN1YiI6ImViZGVhYTQ4LWMwMWYtNGMyYy04M2RlLTUwMWUxOWU3N2JjNyIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NjgyLCJleHAiOjE3NTI4MTQ0ODJ9.RdY0fQYzSxKeMzoPorL-JcEp311NDt-65WQOT4TE5_E",
+          "createdAt": "2025-07-11T04:54:42.219Z",
+          "updatedAt": "2025-07-11T04:54:42.303Z",
+          "profile": null
+        },
+        {
+          "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "displayId": "DR911777774",
+          "email": "test-doctor-1752209911166@example.com",
+          "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:31.777Z",
+          "updatedAt": "2025-07-11T04:58:31.777Z",
+          "profile": null
+        },
+        {
+          "id": "4564698f-4b4a-47cb-8ac8-414870a8f0b3",
+          "displayId": "AD911302245",
+          "email": "test-referrals-admin-1752209911241@example.com",
+          "password": "$2b$10$1J8SlrAVg3jLEUujbXky8.1KVc5/zdwq.LbC6YNfAmdt6RKajlkYG",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTEyNDFAZXhhbXBsZS5jb20iLCJzdWIiOiI0NTY0Njk4Zi00YjRhLTQ3Y2ItOGFjOC00MTQ4NzBhOGYwYjMiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.CZLXVX9lf2Cypeog6ARnxidIsE8OH9CT-Yc79fqUcVc",
+          "createdAt": "2025-07-11T04:58:31.303Z",
+          "updatedAt": "2025-07-11T04:58:31.378Z",
+          "profile": null
+        },
+        {
+          "id": "d4481bc3-0b74-4509-b79c-625cdf486c06",
+          "displayId": "USR518724832",
+          "email": "test-centers-center-1752174518663@example.com",
+          "password": "$2b$10$rfdNuy/VtLAxioBUOes8eeZZe3gLch/9RlDrdsIUCRLyrjI4Y.qem",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDUxODY2M0BleGFtcGxlLmNvbSIsInN1YiI6ImQ0NDgxYmMzLTBiNzQtNDUwOS1iNzljLTYyNWNkZjQ4NmMwNiIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ1MTgsImV4cCI6MTc1Mjc3OTMxOH0.nQuAAkRT32SlLMxE5BLBbFxq_VWdqig1sMCOaxrx8_4",
+          "createdAt": "2025-07-10T19:08:38.725Z",
+          "updatedAt": "2025-07-10T19:08:38.800Z",
+          "profile": null
+        },
+        {
+          "id": "d888d1d5-cb87-4b18-a19b-004d899f09f7",
+          "displayId": "PT247495869",
+          "email": "test-authentication-patient-1752174247435@example.com",
+          "password": "$2b$10$m7xSHit7xtTtkEGiwDfqzOLwRsdcRWAoRffyZ.cHk3lNxVmWTsHNq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjQ3NDM1QGV4YW1wbGUuY29tIiwic3ViIjoiZDg4OGQxZDUtY2I4Ny00YjE4LWExOWItMDA0ZDg5OWYwOWY3Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.WG9JljJpkU-2BsnqXQ6VhE7m6ln9gEXiAGcoJfsMn_w",
+          "createdAt": "2025-07-10T19:04:07.505Z",
+          "updatedAt": "2025-07-10T19:04:07.585Z",
+          "profile": null
+        },
+        {
+          "id": "229bc596-0884-406d-9cdd-3651e62bc355",
+          "displayId": "DR001067772",
+          "email": "test-appointments-doctor-1752208001004@example.com",
+          "password": "$2b$10$fdaFieV02KlEUTC6z4G5i.29F1looy7nCX/XtmQXz4MXWHqBCvwZC",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4MDAxMDA0QGV4YW1wbGUuY29tIiwic3ViIjoiMjI5YmM1OTYtMDg4NC00MDZkLTljZGQtMzY1MWU2MmJjMzU1Iiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODAwMSwiZXhwIjoxNzUyODEyODAxfQ.KYSlLJ-MwGQskMvvwO7iKFGdYi06NvwA-3b8clYVhkc",
+          "createdAt": "2025-07-11T04:26:41.083Z",
+          "updatedAt": "2025-07-11T04:26:41.171Z",
+          "profile": null
+        },
+        {
+          "id": "ce926ff2-3856-4d03-8f4f-de734cccad69",
+          "displayId": "PT239419209",
+          "email": "test-patient-1752208239356@example.com",
+          "password": "$2b$10$hQzD1mMaQKAe.VnoUnTy6e9exLDzT.GScoS47Vz8U495g9C3FMuya",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:30:39.419Z",
+          "updatedAt": "2025-07-11T04:30:39.419Z",
+          "profile": null
+        },
+        {
+          "id": "5fdb1013-6bff-4018-8fc9-8d8a4d4660a2",
+          "displayId": "PT035903299",
+          "email": "test-authentication-patient-1752174035840@example.com",
+          "password": "$2b$10$dB2qVbUvGm6vl/Kfh0j7buLGxV25kR9mZmJgf/6W2nDBl1P1FFRFm",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MDM1ODQwQGV4YW1wbGUuY29tIiwic3ViIjoiNWZkYjEwMTMtNmJmZi00MDE4LThmYzktOGQ4YTRkNDY2MGEyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQwMzUsImV4cCI6MTc1Mjc3ODgzNX0.dvOehLI5ZrgwYba4ItwmMs3jJA0xXI9ar5t-SODuF8I",
+          "createdAt": "2025-07-10T19:00:35.913Z",
+          "updatedAt": "2025-07-10T19:00:35.996Z",
+          "profile": null
+        },
+        {
+          "id": "72200c6d-0252-43ea-b68d-b8e5ac730004",
+          "displayId": "USR677021102",
+          "email": "test-centers-center-1752174676957@example.com",
+          "password": "$2b$10$Hu9D2F91x43fViSpjYkBXeaa5iKEHvO/O/O49156xwbIni1MwaYLe",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDY3Njk1N0BleGFtcGxlLmNvbSIsInN1YiI6IjcyMjAwYzZkLTAyNTItNDNlYS1iNjhkLWI4ZTVhYzczMDAwNCIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ2NzcsImV4cCI6MTc1Mjc3OTQ3N30.ELny-PKAYPzHMb-AT6zY8Y7FUJrqw0rkJrWJicA1Z5s",
+          "createdAt": "2025-07-10T19:11:17.022Z",
+          "updatedAt": "2025-07-10T19:11:17.102Z",
+          "profile": null
+        },
+        {
+          "id": "e65e11e4-6bc7-4b4a-bbdd-aa7b6b255691",
+          "displayId": "PT833759949",
+          "email": "test-authentication-patient-1752173833687@example.com",
+          "password": "$2b$10$.MmXlGrGLq5WC7tnSBM10.jShTTBPbLCP8MCFyKk/0v61hwTtwDOG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczODMzNjg3QGV4YW1wbGUuY29tIiwic3ViIjoiZTY1ZTExZTQtNmJjNy00YjRhLWJiZGQtYWE3YjZiMjU1NjkxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM4MzMsImV4cCI6MTc1Mjc3ODYzM30.ssJxtm6uT7eext7gb_kwqraaHpu0o0wcru6RUy2fhF4",
+          "createdAt": "2025-07-10T18:57:13.778Z",
+          "updatedAt": "2025-07-10T18:57:13.884Z",
+          "profile": null
+        },
+        {
+          "id": "ec1af61b-dbbc-40cf-a1af-944b6d35241a",
+          "displayId": "AD880498709",
+          "email": "test-referrals-admin-1752209880434@example.com",
+          "password": "$2b$10$hoNG/ARvOU0A.oDSyIrgTuNcup6iig2UCD01S5T4xUm5mKUzu1t6C",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA0MzRAZXhhbXBsZS5jb20iLCJzdWIiOiJlYzFhZjYxYi1kYmJjLTQwY2YtYTFhZi05NDRiNmQzNTI0MWEiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.MsRBch7oCfmTsMCY7DLg3SQeb_NmnwpLjKwOzr4c8RY",
+          "createdAt": "2025-07-11T04:58:00.499Z",
+          "updatedAt": "2025-07-11T04:58:00.580Z",
+          "profile": null
+        },
+        {
+          "id": "0469e4f4-0e8e-4e2d-a04b-4c0449479e61",
+          "displayId": "PT451870150",
+          "email": "test-authentication-patient-1752173451760@example.com",
+          "password": "$2b$10$KS/I/h5M9EFwof4/iC7EHObJ82iuRWSnUy1RR5Do8BINKK/4C5.A2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczNDUxNzYwQGV4YW1wbGUuY29tIiwic3ViIjoiMDQ2OWU0ZjQtMGU4ZS00ZTJkLWEwNGItNGMwNDQ5NDc5ZTYxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM0NTIsImV4cCI6MTc1Mjc3ODI1Mn0.dJg0bQ-7woFDZ7z4feo3_bEAEzoLxqbERNzmcJsdCis",
+          "createdAt": "2025-07-10T18:50:51.890Z",
+          "updatedAt": "2025-07-10T18:50:52.024Z",
+          "profile": null
+        },
+        {
+          "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "displayId": "AD881511656",
+          "email": "test-referrals-admin-1752209881450@example.com",
+          "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+          "createdAt": "2025-07-11T04:58:01.512Z",
+          "updatedAt": "2025-07-11T04:58:01.593Z",
+          "profile": null
+        },
+        {
+          "id": "e4f19b36-5dbc-47a3-83de-0b430d3bb652",
+          "displayId": "USR458413841",
+          "email": "test-referrals-healthcare_provider-1752209458348@example.com",
+          "password": "$2b$10$/1QTkGvQPAqMa9B165r7beb6ccvet76f.tvHkXSRP3fpfFM.qscyu",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTQ1ODM0OEBleGFtcGxlLmNvbSIsInN1YiI6ImU0ZjE5YjM2LTVkYmMtNDdhMy04M2RlLTBiNDMwZDNiYjY1MiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NDU4LCJleHAiOjE3NTI4MTQyNTh9.jLv-m-vv-ewd6E6SvINjkf8xo-PLiZxw1AHAGwAuqk4",
+          "createdAt": "2025-07-11T04:50:58.439Z",
+          "updatedAt": "2025-07-11T04:50:58.532Z",
+          "profile": null
+        },
+        {
+          "id": "b1e90f62-c335-4e2f-ba6e-044bb7979fa7",
+          "displayId": "PT912001034",
+          "email": "test-referrals-patient-1752209911942@example.com",
+          "password": "$2b$10$pwiNdi.1469IaVO5IQbdEOuzQ1H809dFMCDCmlUTKAwtScoBKDI.u",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLXBhdGllbnQtMTc1MjIwOTkxMTk0MkBleGFtcGxlLmNvbSIsInN1YiI6ImIxZTkwZjYyLWMzMzUtNGUyZi1iYTZlLTA0NGJiNzk3OWZhNyIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA5OTEyLCJleHAiOjE3NTI4MTQ3MTJ9.qDjC1MfkGHTuW21s-lmLJCiAfGeCnlnCFgSKR3g_W-8",
+          "createdAt": "2025-07-11T04:58:32.002Z",
+          "updatedAt": "2025-07-11T04:58:32.077Z",
+          "profile": null
+        },
+        {
+          "id": "c4564c85-9c0c-489d-a595-9cebf565c642",
+          "displayId": "AD282498467",
+          "email": "test-admin-admin-1752174282436@example.com",
+          "password": "$2b$10$wxKZwST3Idng7wLcs0E2A.m8Stz41vh.PNhZKkh2E4KDeoUKiPRcq",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYWRtaW4tYWRtaW4tMTc1MjE3NDI4MjQzNkBleGFtcGxlLmNvbSIsInN1YiI6ImM0NTY0Yzg1LTljMGMtNDg5ZC1hNTk1LTljZWJmNTY1YzY0MiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI4MiwiZXhwIjoxNzUyNzc5MDgyfQ.KZ_vSjE_kPSQdvAlCiKYCB1jAVp1lf-Vor7ISGZHFEU",
+          "createdAt": "2025-07-10T19:04:42.507Z",
+          "updatedAt": "2025-07-10T19:04:42.586Z",
+          "profile": null
+        },
+        {
+          "id": "839e53ce-6591-4cdd-abaa-aaddf2a2de83",
+          "displayId": "DR912312457",
+          "email": "test-referrals-doctor-1752209912251@example.com",
+          "password": "$2b$10$JVBd7XPQtWl1DHl2zFnEOuObJI1rBCuju2e8DKxpWxY24n9v7bG7i",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5OTEyMjUxQGV4YW1wbGUuY29tIiwic3ViIjoiODM5ZTUzY2UtNjU5MS00Y2RkLWFiYWEtYWFkZGYyYTJkZTgzIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTkxMiwiZXhwIjoxNzUyODE0NzEyfQ.gsgs0DbKPe9Nu38b1yiktDzFxpwPFYvaP7DldS6FhBc",
+          "createdAt": "2025-07-11T04:58:32.312Z",
+          "updatedAt": "2025-07-11T04:58:32.384Z",
+          "profile": null
+        },
+        {
+          "id": "f35d8218-83aa-41ab-8005-973e29ac6b9e",
+          "displayId": "DR717778497",
+          "email": "test-appointments-doctor-1752207717594@example.com",
+          "password": "$2b$10$efIYf5ZHUyyq8GRpEPNQ/ezNwdPGhalbmcYFWrmFFa6iuCSmyvU7W",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA3NzE3NTk0QGV4YW1wbGUuY29tIiwic3ViIjoiZjM1ZDgyMTgtODNhYS00MWFiLTgwMDUtOTczZTI5YWM2YjllIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwNzcxOCwiZXhwIjoxNzUyODEyNTE4fQ._NOOkJtTrtlwG4GXsw-y7y7U-hUb95pAMdWOEwDCLqc",
+          "createdAt": "2025-07-11T04:21:57.959Z",
+          "updatedAt": "2025-07-11T04:21:58.275Z",
+          "profile": null
+        },
+        {
+          "id": "fe5e5a6a-8bde-41cc-adfe-2e7991ab6a35",
+          "displayId": "PT519025746",
+          "email": "test-centers-patient-1752174518963@example.com",
+          "password": "$2b$10$.U4uG5bKdJIfO061EM8nzO0RQiYNkgUI0EIkdJeEdV/E3Qfjhv1MS",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ1MTg5NjNAZXhhbXBsZS5jb20iLCJzdWIiOiJmZTVlNWE2YS04YmRlLTQxY2MtYWRmZS0yZTc5OTFhYjZhMzUiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDUxOSwiZXhwIjoxNzUyNzc5MzE5fQ.TUiqsN000Ez1_ec7Gd-ZwjkUE5iRMpbm1Lr9jQu4COE",
+          "createdAt": "2025-07-10T19:08:39.026Z",
+          "updatedAt": "2025-07-10T19:08:39.105Z",
+          "profile": null
+        },
+        {
+          "id": "0a2886e5-7a49-4179-91e9-f01ce708a5a7",
+          "displayId": "PT622493339",
+          "email": "test-centers-patient-1752174622432@example.com",
+          "password": "$2b$10$IDU11lXWZU6YGc9sYdpxk.hMn64BsGzjqvHQ5ic492TeGiUYiEZWO",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ2MjI0MzJAZXhhbXBsZS5jb20iLCJzdWIiOiIwYTI4ODZlNS03YTQ5LTQxNzktOTFlOS1mMDFjZTcwOGE1YTciLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDYyMiwiZXhwIjoxNzUyNzc5NDIyfQ.qnxaQuFFahkHPDQbGK3qoLIcf5Eb2Aq0If1opLlCcKU",
+          "createdAt": "2025-07-10T19:10:22.494Z",
+          "updatedAt": "2025-07-10T19:10:22.575Z",
+          "profile": null
+        },
+        {
+          "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "displayId": "DR881018435",
+          "email": "test-doctor-1752209880357@example.com",
+          "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:01.019Z",
+          "updatedAt": "2025-07-11T04:58:01.019Z",
+          "profile": null
+        },
+        {
+          "id": "4e2a1ecc-447c-4dbe-94fe-665f7c8906d9",
+          "displayId": "USR785775329",
+          "email": "test-referrals-healthcare_provider-1752209785712@example.com",
+          "password": "$2b$10$sOefp4hneqfkiWDNFNGw/erbrBu8GM/bnGNYueUzA9v/lk16nckpe",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTc4NTcxMkBleGFtcGxlLmNvbSIsInN1YiI6IjRlMmExZWNjLTQ0N2MtNGRiZS05NGZlLTY2NWY3Yzg5MDZkOSIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5Nzg1LCJleHAiOjE3NTI4MTQ1ODV9.niSyNAxv_qS_qwFtew8b0L853YEQAi7l3zv-lvsWSKM",
+          "createdAt": "2025-07-11T04:56:25.776Z",
+          "updatedAt": "2025-07-11T04:56:25.853Z",
+          "profile": null
+        },
+        {
+          "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "displayId": "DR881698515",
+          "email": "test-referrals-doctor-1752209881633@example.com",
+          "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+          "createdAt": "2025-07-11T04:58:01.699Z",
+          "updatedAt": "2025-07-11T04:58:01.786Z",
+          "profile": null
+        },
+        {
+          "id": "e92f95cd-c84d-4be4-92aa-ff9e74287249",
+          "displayId": "PT247655334",
+          "email": "test-auth-1752174247595@example.com",
+          "password": "$2b$10$YQEOz/5W1zNEtKm9PrQEGe0h71jn1iswjmHtdX6XiWqpmx65cd4q2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjQ3NTk1QGV4YW1wbGUuY29tIiwic3ViIjoiZTkyZjk1Y2QtYzg0ZC00YmU0LTkyYWEtZmY5ZTc0Mjg3MjQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.uoUFNFu52929sCn5XniVGfyElUaSXnv-r3dcmJTOyUM",
+          "createdAt": "2025-07-10T19:04:07.655Z",
+          "updatedAt": "2025-07-10T19:04:07.732Z",
+          "profile": null
+        },
+        {
+          "id": "64478ae1-cbf5-42d1-8642-e2559cb84982",
+          "displayId": "AD563740807",
+          "email": "test-centers-admin-1752174563675@example.com",
+          "password": "$2b$10$xB3ccQcxuKzq1jxd6FYQUOHMEkgMacHB10Kj3yd40ByWhop0p4vba",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0NTYzNjc1QGV4YW1wbGUuY29tIiwic3ViIjoiNjQ0NzhhZTEtY2JmNS00MmQxLTg2NDItZTI1NTljYjg0OTgyIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0NTYzLCJleHAiOjE3NTI3NzkzNjN9.VnjpqEoNTEirAt0yucboAfZ2JHkktjrzCGVVEVLsWUs",
+          "createdAt": "2025-07-10T19:09:23.750Z",
+          "updatedAt": "2025-07-10T19:09:23.832Z",
+          "profile": null
+        },
+        {
+          "id": "98bf3fa2-efb1-4a1f-8bb5-38f0a01b91d3",
+          "displayId": "USR622254603",
+          "email": "test-centers-center-1752174622193@example.com",
+          "password": "$2b$10$FT.glWbm/yBVTM/EDbeCHet3NAFfp0o.R2dfDMYYT0bBCPL5tFCvi",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDYyMjE5M0BleGFtcGxlLmNvbSIsInN1YiI6Ijk4YmYzZmEyLWVmYjEtNGExZi04YmI1LTM4ZjBhMDFiOTFkMyIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ2MjIsImV4cCI6MTc1Mjc3OTQyMn0.psg_zIK1B3smk4zaiiz_FwhyEbZXG7DXRWrY5gh02II",
+          "createdAt": "2025-07-10T19:10:22.254Z",
+          "updatedAt": "2025-07-10T19:10:22.330Z",
+          "profile": null
+        },
+        {
+          "id": "d5e64981-6785-46d3-bae1-fc5d1a935bd3",
+          "displayId": "AD415830387",
+          "email": "test-appointments-admin-1752208415768@example.com",
+          "password": "$2b$10$UrVssdBVN3JW7izG95UHjuHevOzYizc/Qbk7gDBPYZ//Uu4Pg5wza",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWFkbWluLTE3NTIyMDg0MTU3NjhAZXhhbXBsZS5jb20iLCJzdWIiOiJkNWU2NDk4MS02Nzg1LTQ2ZDMtYmFlMS1mYzVkMWE5MzViZDMiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDg0MTUsImV4cCI6MTc1MjgxMzIxNX0.lv68X-mE87b85lspjXv8e0l1r95OPLE3U5JHTmX0fc8",
+          "createdAt": "2025-07-11T04:33:35.852Z",
+          "updatedAt": "2025-07-11T04:33:35.937Z",
+          "profile": null
+        },
+        {
+          "id": "67156d46-540b-4ee3-a981-bce02c93b15d",
+          "displayId": "PT239964140",
+          "email": "test-appointments-patient-1752208239903@example.com",
+          "password": "$2b$10$rvQFFhFhfEoPeutvmlMUHepdCscX.cOAJ/AJe4n/3I6LPRwIboy0m",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjIwODIzOTkwM0BleGFtcGxlLmNvbSIsInN1YiI6IjY3MTU2ZDQ2LTU0MGItNGVlMy1hOTgxLWJjZTAyYzkzYjE1ZCIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA4MjQwLCJleHAiOjE3NTI4MTMwNDB9.6VA99NaYvdWskdtICuKg9ASb1YAxfj4aCOIA3_iGc7I",
+          "createdAt": "2025-07-11T04:30:39.965Z",
+          "updatedAt": "2025-07-11T04:30:40.041Z",
+          "profile": null
+        },
+        {
+          "id": "e37e0a10-55de-4d76-b5f4-ad908ec39f15",
+          "displayId": "PT235732770",
+          "email": "test-authentication-patient-1752174235671@example.com",
+          "password": "$2b$10$k2YhThcNeSjQ85.MY7MgnOfBaIVtE0RnwMIEckWXxiP3mXFw.HMe2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjM1NjcxQGV4YW1wbGUuY29tIiwic3ViIjoiZTM3ZTBhMTAtNTVkZS00ZDc2LWI1ZjQtYWQ5MDhlYzM5ZjE1Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.boh0r_Gk1CBi8I97wS-dzXGPW68v7xPb6Mz3904bR_M",
+          "createdAt": "2025-07-10T19:03:55.742Z",
+          "updatedAt": "2025-07-10T19:03:55.820Z",
+          "profile": null
+        },
+        {
+          "id": "a5bb1ddd-6e4a-4508-aab7-5ef882b19e1e",
+          "displayId": "AD298174839",
+          "email": "test-users-admin-1752174298111@example.com",
+          "password": "$2b$10$lepj3isiKNLCIpkp188.A.wFb4BlwtLHEMi6layXSiQxRYRNTqlte",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjE3NDI5ODExMUBleGFtcGxlLmNvbSIsInN1YiI6ImE1YmIxZGRkLTZlNGEtNDUwOC1hYWI3LTVlZjg4MmIxOWUxZSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI5OCwiZXhwIjoxNzUyNzc5MDk4fQ.bE3x_GWeWfJv9_qsbWoLrSAWmPcEzSwd4rDiBcrkcIg",
+          "createdAt": "2025-07-10T19:04:58.175Z",
+          "updatedAt": "2025-07-10T19:04:58.250Z",
+          "profile": null
+        },
+        {
+          "id": "a789e67c-1a5c-4d53-9cd7-4d06ec6b2c62",
+          "displayId": "USR880672617",
+          "email": "test-referrals-healthcare_provider-1752209880608@example.com",
+          "password": "$2b$10$UhJrLVrQfMDrcg/iDc77QOq8C6aYz.TshBgrzeCXiQkLCMTkBcTeS",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTg4MDYwOEBleGFtcGxlLmNvbSIsInN1YiI6ImE3ODllNjdjLTFhNWMtNGQ1My05Y2Q3LTRkMDZlYzZiMmM2MiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5ODgwLCJleHAiOjE3NTI4MTQ2ODB9.u6iSihiAKYMh1stcweHXB5w5VEh71KK87uXQEDp1zDc",
+          "createdAt": "2025-07-11T04:58:00.673Z",
+          "updatedAt": "2025-07-11T04:58:00.756Z",
+          "profile": null
+        },
+        {
+          "id": "fb9c3dcf-d0d7-4b43-b96a-58d2272d6e9d",
+          "displayId": "USR785371823",
+          "email": "test-referrals-healthcare_provider-1752209785307@example.com",
+          "password": "$2b$10$IMQjZKKHWZxOiaq9OpVL6O8ATDEKxZua3ZA.uou/1zn0ZtCQ8bnsu",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTc4NTMwN0BleGFtcGxlLmNvbSIsInN1YiI6ImZiOWMzZGNmLWQwZDctNGI0My1iOTZhLTU4ZDIyNzJkNmU5ZCIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5Nzg1LCJleHAiOjE3NTI4MTQ1ODV9.AuX8W81ROfXOlSIxl-SLnxNs8gUdukuVscaSyzdhGqQ",
+          "createdAt": "2025-07-11T04:56:25.380Z",
+          "updatedAt": "2025-07-11T04:56:25.464Z",
+          "profile": null
+        },
+        {
+          "id": "9d264c7a-b529-4b2e-9400-58bfbf3bf225",
+          "displayId": "AD785611119",
+          "email": "test-referrals-admin-1752209785550@example.com",
+          "password": "$2b$10$tARGBSg3RJPQ7WHTqOeMtOoF2jP1.VxaqDUyewpuXmE/FwNfjdvtS",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk3ODU1NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI5ZDI2NGM3YS1iNTI5LTRiMmUtOTQwMC01OGJmYmYzYmYyMjUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk3ODUsImV4cCI6MTc1MjgxNDU4NX0.o-7847QroKfbQR_yY_kCaOX34ekAf6EuDpAyITvq4Sc",
+          "createdAt": "2025-07-11T04:56:25.612Z",
+          "updatedAt": "2025-07-11T04:56:25.690Z",
+          "profile": null
+        },
+        {
+          "id": "8dd1d5da-f956-4ff6-991b-da27825bf82e",
+          "displayId": "USR563999521",
+          "email": "test-centers-center-1752174563938@example.com",
+          "password": "$2b$10$JtlwP8CK0xn1mHxpMEbuGOf3QEPAAquPA6eS25q9fi2ohMoN/.ktu",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDU2MzkzOEBleGFtcGxlLmNvbSIsInN1YiI6IjhkZDFkNWRhLWY5NTYtNGZmNi05OTFiLWRhMjc4MjViZjgyZSIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ1NjQsImV4cCI6MTc1Mjc3OTM2NH0.RjuacH-xaNtbZSpLgYJoB5YXtFP_GqtYePicObauJ2k",
+          "createdAt": "2025-07-10T19:09:24.000Z",
+          "updatedAt": "2025-07-10T19:09:24.081Z",
+          "profile": null
+        },
+        {
+          "id": "0b694f76-b09e-4158-b4f8-40828d872b5b",
+          "displayId": "PT719289568",
+          "email": "test-appointments-patient-1752207719227@example.com",
+          "password": "$2b$10$lnMQg4c87EEiqWvQImBLVOZ/yaiUqZ7hG1K9LxOkYtgZ8gaDd1rGu",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjIwNzcxOTIyN0BleGFtcGxlLmNvbSIsInN1YiI6IjBiNjk0Zjc2LWIwOWUtNDE1OC1iNGY4LTQwODI4ZDg3MmI1YiIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA3NzE5LCJleHAiOjE3NTI4MTI1MTl9.0aj7XU99bQFkAif-_MFgvPFjfOTdB__OD80zD51fkII",
+          "createdAt": "2025-07-11T04:21:59.290Z",
+          "updatedAt": "2025-07-11T04:21:59.375Z",
+          "profile": null
+        },
+        {
+          "id": "4f7ca3ad-3d5b-4239-b049-637eee3d251d",
+          "displayId": "PT785535531",
+          "email": "test-patient-1752209785474@example.com",
+          "password": "$2b$10$wzFYMC5qaS5gjG.tIvEWE.NNKTl4OKTXGpJSOsBslmHuKJJAQSBoO",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:56:25.536Z",
+          "updatedAt": "2025-07-11T04:56:25.536Z",
+          "profile": null
+        },
+        {
+          "id": "c2111d7c-c7c1-4e44-ad42-7978db31288d",
+          "displayId": "PT903259516",
+          "email": "test-centers-patient-1752209903196@example.com",
+          "password": "$2b$10$K4JzkBQVeb.j3cTU42v/Subo1FLtvmfOA1HauiTurcrw6UfFPDWO6",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIyMDk5MDMxOTZAZXhhbXBsZS5jb20iLCJzdWIiOiJjMjExMWQ3Yy1jN2MxLTRlNDQtYWQ0Mi03OTc4ZGIzMTI4OGQiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjIwOTkwMywiZXhwIjoxNzUyODE0NzAzfQ.3axt0TZpe9pyInhnpT9BZty9lX-tpi4ZyYL6mcwYDeY",
+          "createdAt": "2025-07-11T04:58:23.260Z",
+          "updatedAt": "2025-07-11T04:58:23.335Z",
+          "profile": null
+        },
+        {
+          "id": "ef4d3c6e-7807-4ccf-8449-dd3663159614",
+          "displayId": "USR911461844",
+          "email": "test-referrals-healthcare_provider-1752209911401@example.com",
+          "password": "$2b$10$OUQFOD6zQfhxdHUWU/3eYeScx4HbzSaIwJjsz5CY8SReNB5jVG1ca",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTkxMTQwMUBleGFtcGxlLmNvbSIsInN1YiI6ImVmNGQzYzZlLTc4MDctNGNjZi04NDQ5LWRkMzY2MzE1OTYxNCIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5OTExLCJleHAiOjE3NTI4MTQ3MTF9.pXQsAIwRlbaQbYapsrDjvThJxVuwhA0vs_3jMh0NxPc",
+          "createdAt": "2025-07-11T04:58:31.462Z",
+          "updatedAt": "2025-07-11T04:58:31.534Z",
+          "profile": null
+        },
+        {
+          "id": "be2a227f-7ff2-4bcf-adb5-9d7d1e174f59",
+          "displayId": "AD621986158",
+          "email": "test-centers-admin-1752174621923@example.com",
+          "password": "$2b$10$9nfCRcZYdFej98VzoWZziuJGJexsY39tY05vjQ.OOUpDXmqVVZBA2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0NjIxOTIzQGV4YW1wbGUuY29tIiwic3ViIjoiYmUyYTIyN2YtN2ZmMi00YmNmLWFkYjUtOWQ3ZDFlMTc0ZjU5Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0NjIyLCJleHAiOjE3NTI3Nzk0MjJ9.cYoGgbw6ol5P-Yvee65UmkDvNJ9XVsWIcw9jIdvcYcU",
+          "createdAt": "2025-07-10T19:10:21.995Z",
+          "updatedAt": "2025-07-10T19:10:22.078Z",
+          "profile": null
+        },
+        {
+          "id": "ef53784a-47a7-4316-9701-61c248a2c198",
+          "displayId": "PT881345814",
+          "email": "test-referrals-patient-1752209881283@example.com",
+          "password": "$2b$10$J4a8VCDYVhNd7Sw1lz2gLeX6nAWm48bgMJOVb1l10B0.dcIs6QuO6",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLXBhdGllbnQtMTc1MjIwOTg4MTI4M0BleGFtcGxlLmNvbSIsInN1YiI6ImVmNTM3ODRhLTQ3YTctNDMxNi05NzAxLTYxYzI0OGEyYzE5OCIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA5ODgxLCJleHAiOjE3NTI4MTQ2ODF9.HzCpb5zOcn96GSmmM9XVHyoC6odlsLNPqoSq3-8_Zww",
+          "createdAt": "2025-07-11T04:58:01.345Z",
+          "updatedAt": "2025-07-11T04:58:01.423Z",
+          "profile": null
+        },
+        {
+          "id": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+          "displayId": "PT880421164",
+          "email": "test-patient-1752209880357@example.com",
+          "password": "$2b$10$hkDfVjEaqCoByuXALYd5hu3tn.UD0rfXdYUe14lgvuUTI9EXZ64GK",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:00.421Z",
+          "updatedAt": "2025-07-11T04:58:00.421Z",
+          "profile": null
+        },
+        {
+          "id": "ee7cb848-fa9a-4b3d-9f72-4bb3addc3d9f",
+          "displayId": "DR059845278",
+          "email": "test-appointments-doctor-1752208059784@example.com",
+          "password": "$2b$10$LuHGx4t/RhRRrn.f5b/R2ea2nV9aLn4.IGeDQTnlEY1R/1/jg74dG",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4MDU5Nzg0QGV4YW1wbGUuY29tIiwic3ViIjoiZWU3Y2I4NDgtZmE5YS00YjNkLTlmNzItNGJiM2FkZGMzZDlmIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODA1OSwiZXhwIjoxNzUyODEyODU5fQ.AgQB-jzJRWcH35h62qS2kcsbxHoNZywbrF-idekK_s8",
+          "createdAt": "2025-07-11T04:27:39.856Z",
+          "updatedAt": "2025-07-11T04:27:39.938Z",
+          "profile": null
+        },
+        {
+          "id": "46e512fc-7c79-4630-8d22-584f40e4a204",
+          "displayId": "AD239255146",
+          "email": "test-appointments-admin-1752208239193@example.com",
+          "password": "$2b$10$2zXEoefSxz10YlNLO/qth.ONZSaotVsQPijbR8VeZAtVLwnHl9DEO",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWFkbWluLTE3NTIyMDgyMzkxOTNAZXhhbXBsZS5jb20iLCJzdWIiOiI0NmU1MTJmYy03Yzc5LTQ2MzAtOGQyMi01ODRmNDBlNGEyMDQiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDgyMzksImV4cCI6MTc1MjgxMzAzOX0.lm9EwXCNx5TJsy57SAPZ_9UL7hfNpULtOeJkOXGOxfE",
+          "createdAt": "2025-07-11T04:30:39.265Z",
+          "updatedAt": "2025-07-11T04:30:39.345Z",
+          "profile": null
+        },
+        {
+          "id": "ef3f92bd-892a-4921-91f1-31a7dbbd2a38",
+          "displayId": "USR903018208",
+          "email": "test-centers-center-1752209902955@example.com",
+          "password": "$2b$10$HUkkv2HhgoN5i5alB41PVumEDuciJobs8ndDwHH592bAx9B28yDg.",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjIwOTkwMjk1NUBleGFtcGxlLmNvbSIsInN1YiI6ImVmM2Y5MmJkLTg5MmEtNDkyMS05MWYxLTMxYTdkYmJkMmEzOCIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIyMDk5MDMsImV4cCI6MTc1MjgxNDcwM30.rCNoIfhAtIDcSNqeeyoH379AZRM1h8z9QLOsVes1oN4",
+          "createdAt": "2025-07-11T04:58:23.021Z",
+          "updatedAt": "2025-07-11T04:58:23.096Z",
+          "profile": null
+        },
+        {
+          "id": "a7deff5f-c587-4471-9b47-e9d1588f9e8d",
+          "displayId": "DR921446722",
+          "email": "test-appointments-doctor-1752207921384@example.com",
+          "password": "$2b$10$1Mk5Shy4r9ZY0wiTscQFheV1/dSxjJDegHJLgNRwkpNeoTR9LxcaG",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA3OTIxMzg0QGV4YW1wbGUuY29tIiwic3ViIjoiYTdkZWZmNWYtYzU4Ny00NDcxLTliNDctZTlkMTU4OGY5ZThkIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwNzkyMSwiZXhwIjoxNzUyODEyNzIxfQ.pfayZz5zMlhB8EWslWzIkGMrB3ZxyQ2oH95lt3NcGf0",
+          "createdAt": "2025-07-11T04:25:21.456Z",
+          "updatedAt": "2025-07-11T04:25:21.535Z",
+          "profile": null
+        },
+        {
+          "id": "1b289242-aa9e-4c2f-93e2-213826ea8940",
+          "displayId": "AD676723959",
+          "email": "test-centers-admin-1752174676662@example.com",
+          "password": "$2b$10$SPg8dkG.JII2Y11pIuJeZ.UXFt.0Gfdew3Q7W8Zv7TOXEsMFpj6py",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0Njc2NjYyQGV4YW1wbGUuY29tIiwic3ViIjoiMWIyODkyNDItYWE5ZS00YzJmLTkzZTItMjEzODI2ZWE4OTQwIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0Njc2LCJleHAiOjE3NTI3Nzk0NzZ9.PbaVuWGgfrMVmhD8FgMMy0PfYVKg-01-Mt0_sOOSRno",
+          "createdAt": "2025-07-10T19:11:16.733Z",
+          "updatedAt": "2025-07-10T19:11:16.831Z",
+          "profile": null
+        },
+        {
+          "id": "c5e30466-e806-437b-8d89-a3a888e3fc5c",
+          "displayId": "PT682374605",
+          "email": "test-patient-1752209682314@example.com",
+          "password": "$2b$10$ceHslWctrbhvwSFKPeIvVeKYZKHbHxo87gpBg4esbRtUb0/tse3JK",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:54:42.375Z",
+          "updatedAt": "2025-07-11T04:54:42.375Z",
+          "profile": null
+        },
+        {
+          "id": "54c3f5ec-61a8-4756-86d2-e20620eb9352",
+          "displayId": "PT885794092",
+          "email": "test@example.com",
+          "password": "$2b$10$lgqFcjFj8NkYrpiXLnpAZOgozS4XWiLxm990gJmC30RXOWVZW1h02",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAZXhhbXBsZS5jb20iLCJzdWIiOiI1NGMzZjVlYy02MWE4LTQ3NTYtODZkMi1lMjA2MjBlYjkzNTIiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDIwMiwiZXhwIjoxNzUyNzc5MDAyfQ.SRPL0EMxhdY9dkV1R1br_Q9IpiOIBb8-t_I7DF-DtUQ",
+          "createdAt": "2025-07-10T18:58:05.805Z",
+          "updatedAt": "2025-07-10T19:03:22.732Z",
+          "profile": null
+        },
+        {
+          "id": "44dea31d-f460-4e0a-b86e-485490dbd165",
+          "displayId": "USR587485942",
+          "email": "test-referrals-healthcare_provider-1752209587419@example.com",
+          "password": "$2b$10$NeOeyM3GOG9aSUP0FWqhguXosIvROVQ2FZdTO05iCfZkitjQcG6ie",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTU4NzQxOUBleGFtcGxlLmNvbSIsInN1YiI6IjQ0ZGVhMzFkLWY0NjAtNGUwYS1iODZlLTQ4NTQ5MGRiZDE2NSIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NTg3LCJleHAiOjE3NTI4MTQzODd9.Vk7AojnXsp8NsFzEhVxzV7VY8wN-ffqEhkjub3NspTM",
+          "createdAt": "2025-07-11T04:53:07.494Z",
+          "updatedAt": "2025-07-11T04:53:07.576Z",
+          "profile": null
+        },
+        {
+          "id": "d1397d8f-e237-4617-b77f-47bcd40fc5a2",
+          "displayId": "PT587647138",
+          "email": "test-patient-1752209587585@example.com",
+          "password": "$2b$10$I.E9/Ahy0EgLLGPK2PpLHOA1V/qOpc32B/ABeGwku/6yvf2ku.LfG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcGF0aWVudC0xNzUyMjA5NTg3NTg1QGV4YW1wbGUuY29tIiwic3ViIjoiZDEzOTdkOGYtZTIzNy00NjE3LWI3N2YtNDdiY2Q0MGZjNWEyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMDk1ODcsImV4cCI6MTc1MjgxNDM4N30.S8Nrg7xCQXlXGOAvNwCgByJnoGK51sadOnbgkS0MvDE",
+          "createdAt": "2025-07-11T04:53:07.647Z",
+          "updatedAt": "2025-07-11T04:53:07.723Z",
+          "profile": null
+        },
+        {
+          "id": "a3aad08b-4f12-45e7-b0da-057ad32e26ef",
+          "displayId": "USR911080972",
+          "email": "test-referrals-healthcare_provider-1752209911018@example.com",
+          "password": "$2b$10$I4vJaGqNk/OKxVnDKr2uVOlhJ7yJiRBztAR1h1EzGJN8xh0zyN/Ne",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTkxMTAxOEBleGFtcGxlLmNvbSIsInN1YiI6ImEzYWFkMDhiLTRmMTItNDVlNy1iMGRhLTA1N2FkMzJlMjZlZiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5OTExLCJleHAiOjE3NTI4MTQ3MTF9.PCszaQYpzHOzZMvgxBOYiXXyrrMMu8gcmqzuduplt-k",
+          "createdAt": "2025-07-11T04:58:31.081Z",
+          "updatedAt": "2025-07-11T04:58:31.157Z",
+          "profile": null
+        },
+        {
+          "id": "ddb8c356-43bd-47f0-a652-b5629e186be1",
+          "displayId": "PT416385923",
+          "email": "test-appointments-patient-1752208416326@example.com",
+          "password": "$2b$10$wYntgDWDlSD6QNm3eW1FY.TV/Qz9aOGb8exSXyz/XkvViAKPgpw5G",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjIwODQxNjMyNkBleGFtcGxlLmNvbSIsInN1YiI6ImRkYjhjMzU2LTQzYmQtNDdmMC1hNjUyLWI1NjI5ZTE4NmJlMSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA4NDE2LCJleHAiOjE3NTI4MTMyMTZ9.8EpMvBrOk7UxrTf-_WCf-2SIg7YT12zKv0TNqVHQuSQ",
+          "createdAt": "2025-07-11T04:33:36.386Z",
+          "updatedAt": "2025-07-11T04:33:36.460Z",
+          "profile": null
+        },
+        {
+          "id": "51a0c579-bb5b-4814-8593-74ebaafb1745",
+          "displayId": "AD912151292",
+          "email": "test-referrals-admin-1752209912093@example.com",
+          "password": "$2b$10$PA2nRrlYLV3LWGn1RUE7sumIY0iDIsd3fV1fnP/wn7UNSRdnn0HwW",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTIwOTNAZXhhbXBsZS5jb20iLCJzdWIiOiI1MWEwYzU3OS1iYjViLTQ4MTQtODU5My03NGViYWFmYjE3NDUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTIsImV4cCI6MTc1MjgxNDcxMn0.1pR8ezZAZec562pjbuaqGFvGTvva61Lb68BFRPSsHkI",
+          "createdAt": "2025-07-11T04:58:32.152Z",
+          "updatedAt": "2025-07-11T04:58:32.225Z",
+          "profile": null
+        },
+        {
+          "id": "6698ee76-8343-43b1-80bf-3cca51eedb46",
+          "displayId": "PT564292837",
+          "email": "test-centers-patient-1752174564206@example.com",
+          "password": "$2b$10$tTXD2boeNTms3YlyCRTz.O8hY7QV/hr0uZJj80KCttm394AW.Y.qG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ1NjQyMDZAZXhhbXBsZS5jb20iLCJzdWIiOiI2Njk4ZWU3Ni04MzQzLTQzYjEtODBiZi0zY2NhNTFlZWRiNDYiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDU2NCwiZXhwIjoxNzUyNzc5MzY0fQ.FyX3Mg22aBLfvvU8LTgnte2LZVLPQy56IfFzgbhF1wQ",
+          "createdAt": "2025-07-10T19:09:24.294Z",
+          "updatedAt": "2025-07-10T19:09:24.390Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "65ff386b-e681-454c-9adb-939e35b09447",
+          "displayId": "DR416113164",
+          "email": "test-appointments-doctor-1752208416053@example.com",
+          "password": "$2b$10$9ki2z/WHgLMW9A.LkdUy6uk/MOuzA/N8qNjf.mW4VJJKmGhB7MGxW",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4NDE2MDUzQGV4YW1wbGUuY29tIiwic3ViIjoiNjVmZjM4NmItZTY4MS00NTRjLTlhZGItOTM5ZTM1YjA5NDQ3Iiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODQxNiwiZXhwIjoxNzUyODEzMjE2fQ.h9U9WuJs6vw4eaC64geGEzYcuf5uRhItk9K4iPsv5zs",
+          "createdAt": "2025-07-11T04:33:36.113Z",
+          "updatedAt": "2025-07-11T04:33:36.189Z",
+          "profile": null
+        },
+        {
+          "id": "8d9fd090-bdd2-4d9e-bbab-3dd28782f22b",
+          "displayId": "AD682445140",
+          "email": "test-referrals-admin-1752209682383@example.com",
+          "password": "$2b$10$/LKyO6C7J9POi6Qlth63iOisiJUYYHoqNAhtNdInOl3fs7tFZJGbK",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk2ODIzODNAZXhhbXBsZS5jb20iLCJzdWIiOiI4ZDlmZDA5MC1iZGQyLTRkOWUtYmJhYi0zZGQyODc4MmYyMmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk2ODIsImV4cCI6MTc1MjgxNDQ4Mn0.ExdXBsBTNsb2pdkzIYew2Xsj0YzGBQq6A-B6MihpLak",
+          "createdAt": "2025-07-11T04:54:42.446Z",
+          "updatedAt": "2025-07-11T04:54:42.521Z",
+          "profile": null
+        },
+        {
+          "id": "d02086e4-2c2d-4fc2-a22f-4478abac31cb",
+          "displayId": "PT482961920",
+          "email": "test-patient-1752209482899@example.com",
+          "password": "$2b$10$wjf/saIVtI6PFFD4AT12C.n8FagMMKJ4MyXiXQnes4.qr0vRh80le",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:51:22.961Z",
+          "updatedAt": "2025-07-11T04:51:22.961Z",
+          "profile": null
+        },
+        {
+          "id": "11f763be-8978-45ab-b552-dc0ae7d304ec",
+          "displayId": "DR988366952",
+          "email": "test-appointments-doctor-1752174988306@example.com",
+          "password": "$2b$10$KckCBaeaWX.y4zXihRzGbOyNdu71KfSXwFEsggmxaSHLXajjNrme.",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMTc0OTg4MzA2QGV4YW1wbGUuY29tIiwic3ViIjoiMTFmNzYzYmUtODk3OC00NWFiLWI1NTItZGMwYWU3ZDMwNGVjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjE3NDk4OCwiZXhwIjoxNzUyNzc5Nzg4fQ.i8tql_EAPGu59D0MLOlfFtxeotjE-SVaO8ouUq2qF4A",
+          "createdAt": "2025-07-10T19:16:28.383Z",
+          "updatedAt": "2025-07-10T19:16:28.480Z",
+          "profile": null
+        },
+        {
+          "id": "2040f4ac-90a6-4ebe-b6bc-c41fc675af05",
+          "displayId": "PT677244754",
+          "email": "test-centers-patient-1752174677183@example.com",
+          "password": "$2b$10$m5sBtaE6jj4P3hT2Cigbiuy/9PLBnofZra0u7wL3x3xl3CaxQ4ita",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ2NzcxODNAZXhhbXBsZS5jb20iLCJzdWIiOiIyMDQwZjRhYy05MGE2LTRlYmUtYjZiYy1jNDFmYzY3NWFmMDUiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDY3NywiZXhwIjoxNzUyNzc5NDc3fQ.u_eN0L2b54YcEXhvKUxC_ziK2GAgltGIWgrUn73A-gk",
+          "createdAt": "2025-07-10T19:11:17.245Z",
+          "updatedAt": "2025-07-10T19:11:17.322Z",
+          "profile": null
+        },
+        {
+          "id": "a340c9b5-b966-477b-ab30-d65e4f9261b9",
+          "displayId": "PT282674738",
+          "email": "admin-test-user-1752174282595@example.com",
+          "password": "$2b$10$X8W4Xgt46vdOcdzdRTgz/Owa9zlUYGokfANr7sB46an/fY6j1tld.",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-10T19:04:42.675Z",
+          "updatedAt": "2025-07-10T19:04:42.675Z",
+          "profile": null
+        },
+        {
+          "id": "944587ea-fdbc-4264-b5f8-b53212ce126a",
+          "displayId": "PT416005449",
+          "email": "test-patient-1752208415946@example.com",
+          "password": "$2b$10$by6JVYtKBU26Cgji6j/BI.2fLvraVOyWJwFnSw41afIXTHBLbTyzi",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:33:36.006Z",
+          "updatedAt": "2025-07-11T04:33:36.006Z",
+          "profile": null
+        },
+        {
+          "id": "04a6c987-652d-4f4f-b7f1-e0625471d1ea",
+          "displayId": "AD518457436",
+          "email": "test-centers-admin-1752174518395@example.com",
+          "password": "$2b$10$ypGiWGkCCAYmIkl2efBOZONcX.DWgSjE0QR4sIEFbwx4WqL/jFBX.",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0NTE4Mzk1QGV4YW1wbGUuY29tIiwic3ViIjoiMDRhNmM5ODctNjUyZC00ZjRmLWI3ZjEtZTA2MjU0NzFkMWVhIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0NTE4LCJleHAiOjE3NTI3NzkzMTh9.qIWyezYFfS-5R-vtiBH3sdhJY7huyTwAo2yKmfsXRQo",
+          "createdAt": "2025-07-10T19:08:38.467Z",
+          "updatedAt": "2025-07-10T19:08:38.551Z",
+          "profile": null
+        },
+        {
+          "id": "e4afe45b-f221-40f9-a28d-e161482c9ee3",
+          "displayId": "AD902754512",
+          "email": "test-centers-admin-1752209902692@example.com",
+          "password": "$2b$10$kUO9mGSod9JCbpR.tUPtZeqTp13J7Bp00cSVTDwYz8x3YWjcNkxqS",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMjA5OTAyNjkyQGV4YW1wbGUuY29tIiwic3ViIjoiZTRhZmU0NWItZjIyMS00MGY5LWEyOGQtZTE2MTQ4MmM5ZWUzIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMjA5OTAyLCJleHAiOjE3NTI4MTQ3MDJ9.rjQ8JGOtj_tM8F-KU-BGoGgATSt-Bf6Q511q2-qpB5s",
+          "createdAt": "2025-07-11T04:58:22.765Z",
+          "updatedAt": "2025-07-11T04:58:22.844Z",
+          "profile": null
+        },
+        {
+          "id": "457506c2-b8e4-4cac-98ac-297e7b6e7b5b",
+          "displayId": "PT235890155",
+          "email": "test-auth-1752174235830@example.com",
+          "password": "$2b$10$kwJpL6aKKjPEYbJjhgzJ2euCbxc4Fji.1sDtUfuZJx3TovT2pIGpy",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjM1ODMwQGV4YW1wbGUuY29tIiwic3ViIjoiNDU3NTA2YzItYjhlNC00Y2FjLTk4YWMtMjk3ZTdiNmU3YjViIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.X8gXQOw81goz23l9WP180kokti6tAFySVd0dPRzoNJs",
+          "createdAt": "2025-07-10T19:03:55.891Z",
+          "updatedAt": "2025-07-10T19:03:55.966Z",
+          "profile": null
+        },
+        {
+          "id": "de0a21ed-4b04-4327-8776-d5ffb0b395bb",
+          "displayId": "PT952894931",
+          "email": "test-authentication-patient-1752173952833@example.com",
+          "password": "$2b$10$E1fywIKylArGBlvoodB7b.W4kIjX/EoxtoAfjyRC1mOlZ1fyGS3pq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczOTUyODMzQGV4YW1wbGUuY29tIiwic3ViIjoiZGUwYTIxZWQtNGIwNC00MzI3LTg3NzYtZDVmZmIwYjM5NWJiIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM5NTIsImV4cCI6MTc1Mjc3ODc1Mn0.kdo-0Nc6pxoKrQ2E7pu_P_AKUqQ-lv9Q3nj_sSBc3FU",
+          "createdAt": "2025-07-10T18:59:12.904Z",
+          "updatedAt": "2025-07-10T18:59:12.983Z",
+          "profile": null
+        },
+        {
+          "id": "20f91e94-6f06-411b-a377-4f89b853471d",
+          "displayId": "DR301354980",
+          "email": "test-referrals-doctor-1752209301296@example.com",
+          "password": "$2b$10$1YmOqWNSiXuKPeSQal8dHenefbgAgHl/aGiK4BbwlYiNeocbVtkNq",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5MzAxMjk2QGV4YW1wbGUuY29tIiwic3ViIjoiMjBmOTFlOTQtNmYwNi00MTFiLWEzNzctNGY4OWI4NTM0NzFkIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTMwMSwiZXhwIjoxNzUyODE0MTAxfQ.TJTA40tR65sFXgyjrIHKkeQpXSOpz80nY4CHLABSy1s",
+          "createdAt": "2025-07-11T04:48:21.355Z",
+          "updatedAt": "2025-07-11T04:48:21.431Z",
+          "profile": null
+        },
+        {
+          "id": "896e81b0-2093-4cef-b455-29e3461ff9fb",
+          "displayId": "AD911601471",
+          "email": "test-referrals-admin-1752209911542@example.com",
+          "password": "$2b$10$BSAloHVp8bt/CLUMttvuW.e6aj1yqwwBmGC5FJj.FN3LAGQkxMgv2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTE1NDJAZXhhbXBsZS5jb20iLCJzdWIiOiI4OTZlODFiMC0yMDkzLTRjZWYtYjQ1NS0yOWUzNDYxZmY5ZmIiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.TymrT3pxts_hgrTOnzSv9kqtZMAQ_g6dXANX6AT156k",
+          "createdAt": "2025-07-11T04:58:31.602Z",
+          "updatedAt": "2025-07-11T04:58:31.680Z",
+          "profile": null
+        },
+        {
+          "id": "1c0fa2b3-a38e-424e-bf43-e754d1f82745",
+          "displayId": "PT911229086",
+          "email": "test-patient-1752209911166@example.com",
+          "password": "$2b$10$URj.QsaftMQ9FRo7JuKkNegHpChwr8E40h.HIGT0sKD6CuDlF.7jW",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:31.229Z",
+          "updatedAt": "2025-07-11T04:58:31.229Z",
+          "profile": null
+        },
+        {
+          "id": "911ffaa2-44a6-4a5f-a1a7-a8a159876b1e",
+          "displayId": "AD301157721",
+          "email": "test-referrals-admin-1752209301096@example.com",
+          "password": "$2b$10$p3cWL0piTiYn32e5M/VbhOTKC03xciaXTTJwMylvvt0imv4ZVS1W2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDkzMDEwOTZAZXhhbXBsZS5jb20iLCJzdWIiOiI5MTFmZmFhMi00NGE2LTRhNWYtYTFhNy1hOGExNTk4NzZiMWUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDkzMDEsImV4cCI6MTc1MjgxNDEwMX0.o32RJ_XcP1BCIEuIXt9XJb6mBrPVlhcn13cXIf9tVfM",
+          "createdAt": "2025-07-11T04:48:21.157Z",
+          "updatedAt": "2025-07-11T04:48:21.231Z",
+          "profile": null
+        },
+        {
+          "id": "dc9d0ed9-775a-4742-94a2-59aa03a0a4f4",
+          "displayId": "DR416258986",
+          "email": "test-doctor-1752208415946@example.com",
+          "password": "$2b$10$CY8qlZj0s98z7jXk86jLxu4xlIRXmY5epGOFWK5N9GAg9kW9FWlFm",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:33:36.258Z",
+          "updatedAt": "2025-07-11T04:33:36.258Z",
+          "profile": null
+        },
+        {
+          "id": "4d70bc25-6200-4635-ae7f-9dfbd6df85d1",
+          "displayId": "AD930915759",
+          "email": "test-users-admin-1752209930849@example.com",
+          "password": "$2b$10$HTnzCthhd11EU9DFZmuobecGHCH99L9Zy6dvDMX6PodU.CKaBbDHW",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjIwOTkzMDg0OUBleGFtcGxlLmNvbSIsInN1YiI6IjRkNzBiYzI1LTYyMDAtNDYzNS1hZTdmLTlkZmJkNmRmODVkMSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjIwOTkzMSwiZXhwIjoxNzUyODE0NzMxfQ.4gMi1PWvmR7K6lwUeBwAT6ICH85NS4POHDxF4JgA7CA",
+          "createdAt": "2025-07-11T04:58:50.916Z",
+          "updatedAt": "2025-07-11T04:58:51.047Z",
+          "profile": null
+        },
+        {
+          "id": "41f95141-e981-4158-9fa4-ba0203db14ef",
+          "displayId": "USR300263877",
+          "email": "test-referrals-healthcare_provider-1752209300200@example.com",
+          "password": "$2b$10$OspmbO1RMbYHDGtTSxzzfuLJnlyTQTJJ4GDWT/6yD/TtzUZMW1Zqm",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTMwMDIwMEBleGFtcGxlLmNvbSIsInN1YiI6IjQxZjk1MTQxLWU5ODEtNDE1OC05ZmE0LWJhMDIwM2RiMTRlZiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5MzAwLCJleHAiOjE3NTI4MTQxMDB9.ROUNHrUDgoNYGQHEahEvgoq19rR2RZjd7r8CIGU6HOQ",
+          "createdAt": "2025-07-11T04:48:20.276Z",
+          "updatedAt": "2025-07-11T04:48:20.373Z",
+          "profile": null
+        },
+        {
+          "id": "c79d34f3-8f97-49a0-8d16-117f241f5d61",
+          "displayId": "PT300981002",
+          "email": "test-referrals-patient-1752209300922@example.com",
+          "password": "$2b$10$y8KtJ3ksu0QZzGYgmF//YewRYBRi3jI7erpJEFDbVES7Pp7Bd7Ag.",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLXBhdGllbnQtMTc1MjIwOTMwMDkyMkBleGFtcGxlLmNvbSIsInN1YiI6ImM3OWQzNGYzLThmOTctNDlhMC04ZDE2LTExN2YyNDFmNWQ2MSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA5MzAxLCJleHAiOjE3NTI4MTQxMDF9.BUfMglSvRtXKMwM_j7ysA97UD7Q9zUt0CRRLfqTSgXk",
+          "createdAt": "2025-07-11T04:48:20.982Z",
+          "updatedAt": "2025-07-11T04:48:21.057Z",
+          "profile": null
+        },
+        {
+          "id": "63ab045d-43d6-4fa4-8a29-2f8cc20114d9",
+          "displayId": "PT930731513",
+          "email": "test-users-patient-1752209930669@example.com",
+          "password": "$2b$10$7b4LxS/lq9qJWJXJUafti.yUKfmMRy1/jQ3khMJmo5U3Jguo.sAXe",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMjA5OTMwNjY5QGV4YW1wbGUuY29tIiwic3ViIjoiNjNhYjA0NWQtNDNkNi00ZmE0LThhMjktMmY4Y2MyMDExNGQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMDk5MzAsImV4cCI6MTc1MjgxNDczMH0.0jEBm8_Z14gHBJ-D7IKEmfwWnQVOWLotenDweZYTwqw",
+          "createdAt": "2025-07-11T04:58:50.743Z",
+          "updatedAt": "2025-07-11T04:58:50.825Z",
+          "profile": null
+        },
+        {
+          "id": "44b326ff-5f61-41a1-8aa8-da10fea5ff86",
+          "displayId": "USR880255666",
+          "email": "test-referrals-healthcare_provider-1752209880190@example.com",
+          "password": "$2b$10$VwVnXEoXdf2304hyHfi4U.IdtRsgvhe/NBVrRJOXVnq3kFmcSARQy",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTg4MDE5MEBleGFtcGxlLmNvbSIsInN1YiI6IjQ0YjMyNmZmLTVmNjEtNDFhMS04YWE4LWRhMTBmZWE1ZmY4NiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5ODgwLCJleHAiOjE3NTI4MTQ2ODB9.hFLlP1_J2e57333FxQnH0jp_Fvp6-qQAB8xJ8durT5c",
+          "createdAt": "2025-07-11T04:58:00.265Z",
+          "updatedAt": "2025-07-11T04:58:00.350Z",
+          "profile": null
+        },
+        {
+          "id": "0ebbe559-e948-40c3-8abf-cf50702a7510",
+          "displayId": "PT060005514",
+          "email": "test-patient-1752208059946@example.com",
+          "password": "$2b$10$j398tdI/57EnmiZRm/dD8Ojk16CGVwzmPoJ/is4HvO.iPWRw13X1G",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:27:40.006Z",
+          "updatedAt": "2025-07-11T04:27:40.006Z",
+          "profile": null
+        },
+        {
+          "id": "6c106b0d-5fc8-4e19-86c9-823b3db956e6",
+          "displayId": "DR239519928",
+          "email": "test-appointments-doctor-1752208239454@example.com",
+          "password": "$2b$10$XoXYOu0WqenxslJLTR3Gwe4mWyl8zdSzhcENCNbKO8EYjKDXLaLOS",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4MjM5NDU0QGV4YW1wbGUuY29tIiwic3ViIjoiNmMxMDZiMGQtNWZjOC00ZTE5LTg2YzktODIzYjNkYjk1NmU2Iiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODIzOSwiZXhwIjoxNzUyODEzMDM5fQ.93hIpP4-or6XlObqwhiZuW7iNE026tGGSI2dEH-8deQ",
+          "createdAt": "2025-07-11T04:30:39.519Z",
+          "updatedAt": "2025-07-11T04:30:39.597Z",
+          "profile": null
+        },
+        {
+          "id": "9a840c46-fa4e-42cf-afbc-8f3fa5142c69",
+          "displayId": "PT988751009",
+          "email": "test-appointments-patient-1752174988693@example.com",
+          "password": "$2b$10$pHoytvCgwvy5IspYTLD4cO3r3kmUkJNwqIxTCQwxRPVE2vh0XhK0a",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjE3NDk4ODY5M0BleGFtcGxlLmNvbSIsInN1YiI6IjlhODQwYzQ2LWZhNGUtNDJjZi1hZmJjLThmM2ZhNTE0MmM2OSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMTc0OTg4LCJleHAiOjE3NTI3Nzk3ODh9.KqKXnBdxkPwfdXKQJTcQzH1QOGXETsPWEXYNQe8BXpk",
+          "createdAt": "2025-07-10T19:16:28.752Z",
+          "updatedAt": "2025-07-10T19:16:28.825Z",
+          "profile": null
+        },
+        {
+          "id": "baac8231-c638-41d9-9444-b085d5eb95c8",
+          "displayId": "DR239665682",
+          "email": "test-doctor-1752208239356@example.com",
+          "password": "$2b$10$CBlFSJWb5IpknV2t3MVpVuGjYzZWJwQv.tZDnUVQgCXm1tIhh.G8C",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:30:39.666Z",
+          "updatedAt": "2025-07-11T04:30:39.666Z",
+          "profile": null
+        },
+        {
+          "id": "2ed41d25-d01b-432b-8ccc-348c84a0b38e",
+          "displayId": "PT297996145",
+          "email": "test-users-patient-1752174297934@example.com",
+          "password": "$2b$10$YtFoebfRoY232oTYmDeXWevUpIAGMJm6SizLSdf50yKOQMbQlSVJe",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMTc0Mjk3OTM0QGV4YW1wbGUuY29tIiwic3ViIjoiMmVkNDFkMjUtZDAxYi00MzJiLThjY2MtMzQ4Yzg0YTBiMzhlIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyOTgsImV4cCI6MTc1Mjc3OTA5OH0.06bUPxng14wahoSbX-4vHEh162gZUroDVfFOsPv_ybE",
+          "createdAt": "2025-07-10T19:04:58.007Z",
+          "updatedAt": "2025-07-10T19:04:58.090Z",
+          "profile": null
+        },
+        {
+          "id": "60caf492-03eb-4365-8918-5d7a9159b630",
+          "displayId": "AD880829096",
+          "email": "test-referrals-admin-1752209880767@example.com",
+          "password": "$2b$10$Lh4fyF.ENu2zNcXsnd/0buunSU.sGmw5tT7nUlzRZcSTWMCHpn2OG",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA3NjdAZXhhbXBsZS5jb20iLCJzdWIiOiI2MGNhZjQ5Mi0wM2ViLTQzNjUtODkxOC01ZDdhOTE1OWI2MzAiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.N5X0JQr1q7EdrvXRxViIKAl9wKDM4bwD78y7haS5tVI",
+          "createdAt": "2025-07-11T04:58:00.830Z",
+          "updatedAt": "2025-07-11T04:58:00.912Z",
+          "profile": null
+        },
+        {
+          "id": "7e169332-319d-452c-9adc-15d4d3700cfd",
+          "displayId": "USR482774781",
+          "email": "test-referrals-healthcare_provider-1752209482711@example.com",
+          "password": "$2b$10$iiDPAr7AmjSZCKkwOjwyGuQL05XUzA.s3gl8g.g0X8MCdX1hfxFZ.",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTQ4MjcxMUBleGFtcGxlLmNvbSIsInN1YiI6IjdlMTY5MzMyLTMxOWQtNDUyYy05YWRjLTE1ZDRkMzcwMGNmZCIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NDgyLCJleHAiOjE3NTI4MTQyODJ9.TjjspXhv5WN434Qq_qfRFv9xN_ebC8nriClt3qV3l3g",
+          "createdAt": "2025-07-11T04:51:22.805Z",
+          "updatedAt": "2025-07-11T04:51:22.889Z",
+          "profile": null
+        },
+        {
+          "id": "ec5f43a1-4eb8-4dae-980a-1efbba8b3e82",
+          "displayId": "PT116160859",
+          "email": "test-authentication-patient-1752174116096@example.com",
+          "password": "$2b$10$wnml0O9PJ9C5jHGXXd5UnuGMgLdMrE6L5f0tpM4yLUnfzy/CD1ibq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MTE2MDk2QGV4YW1wbGUuY29tIiwic3ViIjoiZWM1ZjQzYTEtNGViOC00ZGFlLTk4MGEtMWVmYmJhOGIzZTgyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQxMTYsImV4cCI6MTc1Mjc3ODkxNn0.vHYfUYVy1krh9rRpjF4YuBnZmcghTLk5K2wofGXB7F4",
+          "createdAt": "2025-07-10T19:01:56.169Z",
+          "updatedAt": "2025-07-10T19:01:56.250Z",
+          "profile": null
+        },
+        {
+          "id": "ebdeaa48-c01f-4c2c-83de-501e19e77bc7",
+          "displayId": "USR682210213",
+          "email": "test-referrals-healthcare_provider-1752209682146@example.com",
+          "password": "$2b$10$GvMGvuhGMsFVyeIZtbfdOONCO9zcOt0ruMcYE8uxy2R./hgZI2KUa",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTY4MjE0NkBleGFtcGxlLmNvbSIsInN1YiI6ImViZGVhYTQ4LWMwMWYtNGMyYy04M2RlLTUwMWUxOWU3N2JjNyIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NjgyLCJleHAiOjE3NTI4MTQ0ODJ9.RdY0fQYzSxKeMzoPorL-JcEp311NDt-65WQOT4TE5_E",
+          "createdAt": "2025-07-11T04:54:42.219Z",
+          "updatedAt": "2025-07-11T04:54:42.303Z",
+          "profile": null
+        },
+        {
+          "id": "de0b3e9a-59cd-498f-8dc5-781d41859c50",
+          "displayId": "DR911777774",
+          "email": "test-doctor-1752209911166@example.com",
+          "password": "$2b$10$qefill68brEgd5p8Jh3JUeZreMGJJZxncriuJlMn/ank5NgWER.4C",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:31.777Z",
+          "updatedAt": "2025-07-11T04:58:31.777Z",
+          "profile": null
+        },
+        {
+          "id": "4564698f-4b4a-47cb-8ac8-414870a8f0b3",
+          "displayId": "AD911302245",
+          "email": "test-referrals-admin-1752209911241@example.com",
+          "password": "$2b$10$1J8SlrAVg3jLEUujbXky8.1KVc5/zdwq.LbC6YNfAmdt6RKajlkYG",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTEyNDFAZXhhbXBsZS5jb20iLCJzdWIiOiI0NTY0Njk4Zi00YjRhLTQ3Y2ItOGFjOC00MTQ4NzBhOGYwYjMiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTEsImV4cCI6MTc1MjgxNDcxMX0.CZLXVX9lf2Cypeog6ARnxidIsE8OH9CT-Yc79fqUcVc",
+          "createdAt": "2025-07-11T04:58:31.303Z",
+          "updatedAt": "2025-07-11T04:58:31.378Z",
+          "profile": null
+        },
+        {
+          "id": "d4481bc3-0b74-4509-b79c-625cdf486c06",
+          "displayId": "USR518724832",
+          "email": "test-centers-center-1752174518663@example.com",
+          "password": "$2b$10$rfdNuy/VtLAxioBUOes8eeZZe3gLch/9RlDrdsIUCRLyrjI4Y.qem",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDUxODY2M0BleGFtcGxlLmNvbSIsInN1YiI6ImQ0NDgxYmMzLTBiNzQtNDUwOS1iNzljLTYyNWNkZjQ4NmMwNiIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ1MTgsImV4cCI6MTc1Mjc3OTMxOH0.nQuAAkRT32SlLMxE5BLBbFxq_VWdqig1sMCOaxrx8_4",
+          "createdAt": "2025-07-10T19:08:38.725Z",
+          "updatedAt": "2025-07-10T19:08:38.800Z",
+          "profile": null
+        },
+        {
+          "id": "d888d1d5-cb87-4b18-a19b-004d899f09f7",
+          "displayId": "PT247495869",
+          "email": "test-authentication-patient-1752174247435@example.com",
+          "password": "$2b$10$m7xSHit7xtTtkEGiwDfqzOLwRsdcRWAoRffyZ.cHk3lNxVmWTsHNq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjQ3NDM1QGV4YW1wbGUuY29tIiwic3ViIjoiZDg4OGQxZDUtY2I4Ny00YjE4LWExOWItMDA0ZDg5OWYwOWY3Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.WG9JljJpkU-2BsnqXQ6VhE7m6ln9gEXiAGcoJfsMn_w",
+          "createdAt": "2025-07-10T19:04:07.505Z",
+          "updatedAt": "2025-07-10T19:04:07.585Z",
+          "profile": null
+        },
+        {
+          "id": "229bc596-0884-406d-9cdd-3651e62bc355",
+          "displayId": "DR001067772",
+          "email": "test-appointments-doctor-1752208001004@example.com",
+          "password": "$2b$10$fdaFieV02KlEUTC6z4G5i.29F1looy7nCX/XtmQXz4MXWHqBCvwZC",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4MDAxMDA0QGV4YW1wbGUuY29tIiwic3ViIjoiMjI5YmM1OTYtMDg4NC00MDZkLTljZGQtMzY1MWU2MmJjMzU1Iiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODAwMSwiZXhwIjoxNzUyODEyODAxfQ.KYSlLJ-MwGQskMvvwO7iKFGdYi06NvwA-3b8clYVhkc",
+          "createdAt": "2025-07-11T04:26:41.083Z",
+          "updatedAt": "2025-07-11T04:26:41.171Z",
+          "profile": null
+        },
+        {
+          "id": "ce926ff2-3856-4d03-8f4f-de734cccad69",
+          "displayId": "PT239419209",
+          "email": "test-patient-1752208239356@example.com",
+          "password": "$2b$10$hQzD1mMaQKAe.VnoUnTy6e9exLDzT.GScoS47Vz8U495g9C3FMuya",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:30:39.419Z",
+          "updatedAt": "2025-07-11T04:30:39.419Z",
+          "profile": null
+        },
+        {
+          "id": "5fdb1013-6bff-4018-8fc9-8d8a4d4660a2",
+          "displayId": "PT035903299",
+          "email": "test-authentication-patient-1752174035840@example.com",
+          "password": "$2b$10$dB2qVbUvGm6vl/Kfh0j7buLGxV25kR9mZmJgf/6W2nDBl1P1FFRFm",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MDM1ODQwQGV4YW1wbGUuY29tIiwic3ViIjoiNWZkYjEwMTMtNmJmZi00MDE4LThmYzktOGQ4YTRkNDY2MGEyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQwMzUsImV4cCI6MTc1Mjc3ODgzNX0.dvOehLI5ZrgwYba4ItwmMs3jJA0xXI9ar5t-SODuF8I",
+          "createdAt": "2025-07-10T19:00:35.913Z",
+          "updatedAt": "2025-07-10T19:00:35.996Z",
+          "profile": null
+        },
+        {
+          "id": "72200c6d-0252-43ea-b68d-b8e5ac730004",
+          "displayId": "USR677021102",
+          "email": "test-centers-center-1752174676957@example.com",
+          "password": "$2b$10$Hu9D2F91x43fViSpjYkBXeaa5iKEHvO/O/O49156xwbIni1MwaYLe",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDY3Njk1N0BleGFtcGxlLmNvbSIsInN1YiI6IjcyMjAwYzZkLTAyNTItNDNlYS1iNjhkLWI4ZTVhYzczMDAwNCIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ2NzcsImV4cCI6MTc1Mjc3OTQ3N30.ELny-PKAYPzHMb-AT6zY8Y7FUJrqw0rkJrWJicA1Z5s",
+          "createdAt": "2025-07-10T19:11:17.022Z",
+          "updatedAt": "2025-07-10T19:11:17.102Z",
+          "profile": null
+        },
+        {
+          "id": "e65e11e4-6bc7-4b4a-bbdd-aa7b6b255691",
+          "displayId": "PT833759949",
+          "email": "test-authentication-patient-1752173833687@example.com",
+          "password": "$2b$10$.MmXlGrGLq5WC7tnSBM10.jShTTBPbLCP8MCFyKk/0v61hwTtwDOG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczODMzNjg3QGV4YW1wbGUuY29tIiwic3ViIjoiZTY1ZTExZTQtNmJjNy00YjRhLWJiZGQtYWE3YjZiMjU1NjkxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM4MzMsImV4cCI6MTc1Mjc3ODYzM30.ssJxtm6uT7eext7gb_kwqraaHpu0o0wcru6RUy2fhF4",
+          "createdAt": "2025-07-10T18:57:13.778Z",
+          "updatedAt": "2025-07-10T18:57:13.884Z",
+          "profile": null
+        },
+        {
+          "id": "ec1af61b-dbbc-40cf-a1af-944b6d35241a",
+          "displayId": "AD880498709",
+          "email": "test-referrals-admin-1752209880434@example.com",
+          "password": "$2b$10$hoNG/ARvOU0A.oDSyIrgTuNcup6iig2UCD01S5T4xUm5mKUzu1t6C",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODA0MzRAZXhhbXBsZS5jb20iLCJzdWIiOiJlYzFhZjYxYi1kYmJjLTQwY2YtYTFhZi05NDRiNmQzNTI0MWEiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODAsImV4cCI6MTc1MjgxNDY4MH0.MsRBch7oCfmTsMCY7DLg3SQeb_NmnwpLjKwOzr4c8RY",
+          "createdAt": "2025-07-11T04:58:00.499Z",
+          "updatedAt": "2025-07-11T04:58:00.580Z",
+          "profile": null
+        },
+        {
+          "id": "0469e4f4-0e8e-4e2d-a04b-4c0449479e61",
+          "displayId": "PT451870150",
+          "email": "test-authentication-patient-1752173451760@example.com",
+          "password": "$2b$10$KS/I/h5M9EFwof4/iC7EHObJ82iuRWSnUy1RR5Do8BINKK/4C5.A2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczNDUxNzYwQGV4YW1wbGUuY29tIiwic3ViIjoiMDQ2OWU0ZjQtMGU4ZS00ZTJkLWEwNGItNGMwNDQ5NDc5ZTYxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM0NTIsImV4cCI6MTc1Mjc3ODI1Mn0.dJg0bQ-7woFDZ7z4feo3_bEAEzoLxqbERNzmcJsdCis",
+          "createdAt": "2025-07-10T18:50:51.890Z",
+          "updatedAt": "2025-07-10T18:50:52.024Z",
+          "profile": null
+        },
+        {
+          "id": "86c4cdd1-efe6-4fb0-b521-6ad033ad4169",
+          "displayId": "AD881511656",
+          "email": "test-referrals-admin-1752209881450@example.com",
+          "password": "$2b$10$rULvEh/0I4cyKHxWHEVHG.NrIsKqyzuc.wFva7M/z8V0CgscR651a",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk4ODE0NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI4NmM0Y2RkMS1lZmU2LTRmYjAtYjUyMS02YWQwMzNhZDQxNjkiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk4ODEsImV4cCI6MTc1MjgxNDY4MX0.v-sLYdOTdSoLV4leCYoKzxj3z8q57idSJZ4sDqw5yWk",
+          "createdAt": "2025-07-11T04:58:01.512Z",
+          "updatedAt": "2025-07-11T04:58:01.593Z",
+          "profile": null
+        },
+        {
+          "id": "e4f19b36-5dbc-47a3-83de-0b430d3bb652",
+          "displayId": "USR458413841",
+          "email": "test-referrals-healthcare_provider-1752209458348@example.com",
+          "password": "$2b$10$/1QTkGvQPAqMa9B165r7beb6ccvet76f.tvHkXSRP3fpfFM.qscyu",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTQ1ODM0OEBleGFtcGxlLmNvbSIsInN1YiI6ImU0ZjE5YjM2LTVkYmMtNDdhMy04M2RlLTBiNDMwZDNiYjY1MiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NDU4LCJleHAiOjE3NTI4MTQyNTh9.jLv-m-vv-ewd6E6SvINjkf8xo-PLiZxw1AHAGwAuqk4",
+          "createdAt": "2025-07-11T04:50:58.439Z",
+          "updatedAt": "2025-07-11T04:50:58.532Z",
+          "profile": null
+        },
+        {
+          "id": "b1e90f62-c335-4e2f-ba6e-044bb7979fa7",
+          "displayId": "PT912001034",
+          "email": "test-referrals-patient-1752209911942@example.com",
+          "password": "$2b$10$pwiNdi.1469IaVO5IQbdEOuzQ1H809dFMCDCmlUTKAwtScoBKDI.u",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLXBhdGllbnQtMTc1MjIwOTkxMTk0MkBleGFtcGxlLmNvbSIsInN1YiI6ImIxZTkwZjYyLWMzMzUtNGUyZi1iYTZlLTA0NGJiNzk3OWZhNyIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA5OTEyLCJleHAiOjE3NTI4MTQ3MTJ9.qDjC1MfkGHTuW21s-lmLJCiAfGeCnlnCFgSKR3g_W-8",
+          "createdAt": "2025-07-11T04:58:32.002Z",
+          "updatedAt": "2025-07-11T04:58:32.077Z",
+          "profile": null
+        },
+        {
+          "id": "c4564c85-9c0c-489d-a595-9cebf565c642",
+          "displayId": "AD282498467",
+          "email": "test-admin-admin-1752174282436@example.com",
+          "password": "$2b$10$wxKZwST3Idng7wLcs0E2A.m8Stz41vh.PNhZKkh2E4KDeoUKiPRcq",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYWRtaW4tYWRtaW4tMTc1MjE3NDI4MjQzNkBleGFtcGxlLmNvbSIsInN1YiI6ImM0NTY0Yzg1LTljMGMtNDg5ZC1hNTk1LTljZWJmNTY1YzY0MiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI4MiwiZXhwIjoxNzUyNzc5MDgyfQ.KZ_vSjE_kPSQdvAlCiKYCB1jAVp1lf-Vor7ISGZHFEU",
+          "createdAt": "2025-07-10T19:04:42.507Z",
+          "updatedAt": "2025-07-10T19:04:42.586Z",
+          "profile": null
+        },
+        {
+          "id": "839e53ce-6591-4cdd-abaa-aaddf2a2de83",
+          "displayId": "DR912312457",
+          "email": "test-referrals-doctor-1752209912251@example.com",
+          "password": "$2b$10$JVBd7XPQtWl1DHl2zFnEOuObJI1rBCuju2e8DKxpWxY24n9v7bG7i",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5OTEyMjUxQGV4YW1wbGUuY29tIiwic3ViIjoiODM5ZTUzY2UtNjU5MS00Y2RkLWFiYWEtYWFkZGYyYTJkZTgzIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTkxMiwiZXhwIjoxNzUyODE0NzEyfQ.gsgs0DbKPe9Nu38b1yiktDzFxpwPFYvaP7DldS6FhBc",
+          "createdAt": "2025-07-11T04:58:32.312Z",
+          "updatedAt": "2025-07-11T04:58:32.384Z",
+          "profile": null
+        },
+        {
+          "id": "f35d8218-83aa-41ab-8005-973e29ac6b9e",
+          "displayId": "DR717778497",
+          "email": "test-appointments-doctor-1752207717594@example.com",
+          "password": "$2b$10$efIYf5ZHUyyq8GRpEPNQ/ezNwdPGhalbmcYFWrmFFa6iuCSmyvU7W",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA3NzE3NTk0QGV4YW1wbGUuY29tIiwic3ViIjoiZjM1ZDgyMTgtODNhYS00MWFiLTgwMDUtOTczZTI5YWM2YjllIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwNzcxOCwiZXhwIjoxNzUyODEyNTE4fQ._NOOkJtTrtlwG4GXsw-y7y7U-hUb95pAMdWOEwDCLqc",
+          "createdAt": "2025-07-11T04:21:57.959Z",
+          "updatedAt": "2025-07-11T04:21:58.275Z",
+          "profile": null
+        },
+        {
+          "id": "fe5e5a6a-8bde-41cc-adfe-2e7991ab6a35",
+          "displayId": "PT519025746",
+          "email": "test-centers-patient-1752174518963@example.com",
+          "password": "$2b$10$.U4uG5bKdJIfO061EM8nzO0RQiYNkgUI0EIkdJeEdV/E3Qfjhv1MS",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ1MTg5NjNAZXhhbXBsZS5jb20iLCJzdWIiOiJmZTVlNWE2YS04YmRlLTQxY2MtYWRmZS0yZTc5OTFhYjZhMzUiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDUxOSwiZXhwIjoxNzUyNzc5MzE5fQ.TUiqsN000Ez1_ec7Gd-ZwjkUE5iRMpbm1Lr9jQu4COE",
+          "createdAt": "2025-07-10T19:08:39.026Z",
+          "updatedAt": "2025-07-10T19:08:39.105Z",
+          "profile": null
+        },
+        {
+          "id": "0a2886e5-7a49-4179-91e9-f01ce708a5a7",
+          "displayId": "PT622493339",
+          "email": "test-centers-patient-1752174622432@example.com",
+          "password": "$2b$10$IDU11lXWZU6YGc9sYdpxk.hMn64BsGzjqvHQ5ic492TeGiUYiEZWO",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ2MjI0MzJAZXhhbXBsZS5jb20iLCJzdWIiOiIwYTI4ODZlNS03YTQ5LTQxNzktOTFlOS1mMDFjZTcwOGE1YTciLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDYyMiwiZXhwIjoxNzUyNzc5NDIyfQ.qnxaQuFFahkHPDQbGK3qoLIcf5Eb2Aq0If1opLlCcKU",
+          "createdAt": "2025-07-10T19:10:22.494Z",
+          "updatedAt": "2025-07-10T19:10:22.575Z",
+          "profile": null
+        },
+        {
+          "id": "abd50d80-3c3f-4080-921e-1eff408350e3",
+          "displayId": "DR881018435",
+          "email": "test-doctor-1752209880357@example.com",
+          "password": "$2b$10$.RAexQIBdIRlSMAlwBslIu7gDfeeUbvqG3SnMw/IbFnO6hUEan0US",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:01.019Z",
+          "updatedAt": "2025-07-11T04:58:01.019Z",
+          "profile": null
+        },
+        {
+          "id": "4e2a1ecc-447c-4dbe-94fe-665f7c8906d9",
+          "displayId": "USR785775329",
+          "email": "test-referrals-healthcare_provider-1752209785712@example.com",
+          "password": "$2b$10$sOefp4hneqfkiWDNFNGw/erbrBu8GM/bnGNYueUzA9v/lk16nckpe",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTc4NTcxMkBleGFtcGxlLmNvbSIsInN1YiI6IjRlMmExZWNjLTQ0N2MtNGRiZS05NGZlLTY2NWY3Yzg5MDZkOSIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5Nzg1LCJleHAiOjE3NTI4MTQ1ODV9.niSyNAxv_qS_qwFtew8b0L853YEQAi7l3zv-lvsWSKM",
+          "createdAt": "2025-07-11T04:56:25.776Z",
+          "updatedAt": "2025-07-11T04:56:25.853Z",
+          "profile": null
+        },
+        {
+          "id": "9ca8b8c4-4e44-4f93-83f7-4aa3b9c3f86c",
+          "displayId": "DR881698515",
+          "email": "test-referrals-doctor-1752209881633@example.com",
+          "password": "$2b$10$q5E3l5Ps1hNHibWtr8SaYui6/Wsc7PinvNcW3NK/vqCXkUKu6giJa",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWRvY3Rvci0xNzUyMjA5ODgxNjMzQGV4YW1wbGUuY29tIiwic3ViIjoiOWNhOGI4YzQtNGU0NC00ZjkzLTgzZjctNGFhM2I5YzNmODZjIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwOTg4MSwiZXhwIjoxNzUyODE0NjgxfQ.333yXLSTJ87SOSs8oS7vgkI2wqxOEpr8vUNLpZwyuH4",
+          "createdAt": "2025-07-11T04:58:01.699Z",
+          "updatedAt": "2025-07-11T04:58:01.786Z",
+          "profile": null
+        },
+        {
+          "id": "e92f95cd-c84d-4be4-92aa-ff9e74287249",
+          "displayId": "PT247655334",
+          "email": "test-auth-1752174247595@example.com",
+          "password": "$2b$10$YQEOz/5W1zNEtKm9PrQEGe0h71jn1iswjmHtdX6XiWqpmx65cd4q2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjQ3NTk1QGV4YW1wbGUuY29tIiwic3ViIjoiZTkyZjk1Y2QtYzg0ZC00YmU0LTkyYWEtZmY5ZTc0Mjg3MjQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.uoUFNFu52929sCn5XniVGfyElUaSXnv-r3dcmJTOyUM",
+          "createdAt": "2025-07-10T19:04:07.655Z",
+          "updatedAt": "2025-07-10T19:04:07.732Z",
+          "profile": null
+        },
+        {
+          "id": "64478ae1-cbf5-42d1-8642-e2559cb84982",
+          "displayId": "AD563740807",
+          "email": "test-centers-admin-1752174563675@example.com",
+          "password": "$2b$10$xB3ccQcxuKzq1jxd6FYQUOHMEkgMacHB10Kj3yd40ByWhop0p4vba",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0NTYzNjc1QGV4YW1wbGUuY29tIiwic3ViIjoiNjQ0NzhhZTEtY2JmNS00MmQxLTg2NDItZTI1NTljYjg0OTgyIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0NTYzLCJleHAiOjE3NTI3NzkzNjN9.VnjpqEoNTEirAt0yucboAfZ2JHkktjrzCGVVEVLsWUs",
+          "createdAt": "2025-07-10T19:09:23.750Z",
+          "updatedAt": "2025-07-10T19:09:23.832Z",
+          "profile": null
+        },
+        {
+          "id": "98bf3fa2-efb1-4a1f-8bb5-38f0a01b91d3",
+          "displayId": "USR622254603",
+          "email": "test-centers-center-1752174622193@example.com",
+          "password": "$2b$10$FT.glWbm/yBVTM/EDbeCHet3NAFfp0o.R2dfDMYYT0bBCPL5tFCvi",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDYyMjE5M0BleGFtcGxlLmNvbSIsInN1YiI6Ijk4YmYzZmEyLWVmYjEtNGExZi04YmI1LTM4ZjBhMDFiOTFkMyIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ2MjIsImV4cCI6MTc1Mjc3OTQyMn0.psg_zIK1B3smk4zaiiz_FwhyEbZXG7DXRWrY5gh02II",
+          "createdAt": "2025-07-10T19:10:22.254Z",
+          "updatedAt": "2025-07-10T19:10:22.330Z",
+          "profile": null
+        },
+        {
+          "id": "d5e64981-6785-46d3-bae1-fc5d1a935bd3",
+          "displayId": "AD415830387",
+          "email": "test-appointments-admin-1752208415768@example.com",
+          "password": "$2b$10$UrVssdBVN3JW7izG95UHjuHevOzYizc/Qbk7gDBPYZ//Uu4Pg5wza",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWFkbWluLTE3NTIyMDg0MTU3NjhAZXhhbXBsZS5jb20iLCJzdWIiOiJkNWU2NDk4MS02Nzg1LTQ2ZDMtYmFlMS1mYzVkMWE5MzViZDMiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDg0MTUsImV4cCI6MTc1MjgxMzIxNX0.lv68X-mE87b85lspjXv8e0l1r95OPLE3U5JHTmX0fc8",
+          "createdAt": "2025-07-11T04:33:35.852Z",
+          "updatedAt": "2025-07-11T04:33:35.937Z",
+          "profile": null
+        },
+        {
+          "id": "67156d46-540b-4ee3-a981-bce02c93b15d",
+          "displayId": "PT239964140",
+          "email": "test-appointments-patient-1752208239903@example.com",
+          "password": "$2b$10$rvQFFhFhfEoPeutvmlMUHepdCscX.cOAJ/AJe4n/3I6LPRwIboy0m",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjIwODIzOTkwM0BleGFtcGxlLmNvbSIsInN1YiI6IjY3MTU2ZDQ2LTU0MGItNGVlMy1hOTgxLWJjZTAyYzkzYjE1ZCIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA4MjQwLCJleHAiOjE3NTI4MTMwNDB9.6VA99NaYvdWskdtICuKg9ASb1YAxfj4aCOIA3_iGc7I",
+          "createdAt": "2025-07-11T04:30:39.965Z",
+          "updatedAt": "2025-07-11T04:30:40.041Z",
+          "profile": null
+        },
+        {
+          "id": "e37e0a10-55de-4d76-b5f4-ad908ec39f15",
+          "displayId": "PT235732770",
+          "email": "test-authentication-patient-1752174235671@example.com",
+          "password": "$2b$10$k2YhThcNeSjQ85.MY7MgnOfBaIVtE0RnwMIEckWXxiP3mXFw.HMe2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjM1NjcxQGV4YW1wbGUuY29tIiwic3ViIjoiZTM3ZTBhMTAtNTVkZS00ZDc2LWI1ZjQtYWQ5MDhlYzM5ZjE1Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.boh0r_Gk1CBi8I97wS-dzXGPW68v7xPb6Mz3904bR_M",
+          "createdAt": "2025-07-10T19:03:55.742Z",
+          "updatedAt": "2025-07-10T19:03:55.820Z",
+          "profile": null
+        },
+        {
+          "id": "a5bb1ddd-6e4a-4508-aab7-5ef882b19e1e",
+          "displayId": "AD298174839",
+          "email": "test-users-admin-1752174298111@example.com",
+          "password": "$2b$10$lepj3isiKNLCIpkp188.A.wFb4BlwtLHEMi6layXSiQxRYRNTqlte",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjE3NDI5ODExMUBleGFtcGxlLmNvbSIsInN1YiI6ImE1YmIxZGRkLTZlNGEtNDUwOC1hYWI3LTVlZjg4MmIxOWUxZSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI5OCwiZXhwIjoxNzUyNzc5MDk4fQ.bE3x_GWeWfJv9_qsbWoLrSAWmPcEzSwd4rDiBcrkcIg",
+          "createdAt": "2025-07-10T19:04:58.175Z",
+          "updatedAt": "2025-07-10T19:04:58.250Z",
+          "profile": null
+        },
+        {
+          "id": "a789e67c-1a5c-4d53-9cd7-4d06ec6b2c62",
+          "displayId": "USR880672617",
+          "email": "test-referrals-healthcare_provider-1752209880608@example.com",
+          "password": "$2b$10$UhJrLVrQfMDrcg/iDc77QOq8C6aYz.TshBgrzeCXiQkLCMTkBcTeS",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTg4MDYwOEBleGFtcGxlLmNvbSIsInN1YiI6ImE3ODllNjdjLTFhNWMtNGQ1My05Y2Q3LTRkMDZlYzZiMmM2MiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5ODgwLCJleHAiOjE3NTI4MTQ2ODB9.u6iSihiAKYMh1stcweHXB5w5VEh71KK87uXQEDp1zDc",
+          "createdAt": "2025-07-11T04:58:00.673Z",
+          "updatedAt": "2025-07-11T04:58:00.756Z",
+          "profile": null
+        },
+        {
+          "id": "fb9c3dcf-d0d7-4b43-b96a-58d2272d6e9d",
+          "displayId": "USR785371823",
+          "email": "test-referrals-healthcare_provider-1752209785307@example.com",
+          "password": "$2b$10$IMQjZKKHWZxOiaq9OpVL6O8ATDEKxZua3ZA.uou/1zn0ZtCQ8bnsu",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTc4NTMwN0BleGFtcGxlLmNvbSIsInN1YiI6ImZiOWMzZGNmLWQwZDctNGI0My1iOTZhLTU4ZDIyNzJkNmU5ZCIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5Nzg1LCJleHAiOjE3NTI4MTQ1ODV9.AuX8W81ROfXOlSIxl-SLnxNs8gUdukuVscaSyzdhGqQ",
+          "createdAt": "2025-07-11T04:56:25.380Z",
+          "updatedAt": "2025-07-11T04:56:25.464Z",
+          "profile": null
+        },
+        {
+          "id": "9d264c7a-b529-4b2e-9400-58bfbf3bf225",
+          "displayId": "AD785611119",
+          "email": "test-referrals-admin-1752209785550@example.com",
+          "password": "$2b$10$tARGBSg3RJPQ7WHTqOeMtOoF2jP1.VxaqDUyewpuXmE/FwNfjdvtS",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk3ODU1NTBAZXhhbXBsZS5jb20iLCJzdWIiOiI5ZDI2NGM3YS1iNTI5LTRiMmUtOTQwMC01OGJmYmYzYmYyMjUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk3ODUsImV4cCI6MTc1MjgxNDU4NX0.o-7847QroKfbQR_yY_kCaOX34ekAf6EuDpAyITvq4Sc",
+          "createdAt": "2025-07-11T04:56:25.612Z",
+          "updatedAt": "2025-07-11T04:56:25.690Z",
+          "profile": null
+        },
+        {
+          "id": "8dd1d5da-f956-4ff6-991b-da27825bf82e",
+          "displayId": "USR563999521",
+          "email": "test-centers-center-1752174563938@example.com",
+          "password": "$2b$10$JtlwP8CK0xn1mHxpMEbuGOf3QEPAAquPA6eS25q9fi2ohMoN/.ktu",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjE3NDU2MzkzOEBleGFtcGxlLmNvbSIsInN1YiI6IjhkZDFkNWRhLWY5NTYtNGZmNi05OTFiLWRhMjc4MjViZjgyZSIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIxNzQ1NjQsImV4cCI6MTc1Mjc3OTM2NH0.RjuacH-xaNtbZSpLgYJoB5YXtFP_GqtYePicObauJ2k",
+          "createdAt": "2025-07-10T19:09:24.000Z",
+          "updatedAt": "2025-07-10T19:09:24.081Z",
+          "profile": null
+        },
+        {
+          "id": "0b694f76-b09e-4158-b4f8-40828d872b5b",
+          "displayId": "PT719289568",
+          "email": "test-appointments-patient-1752207719227@example.com",
+          "password": "$2b$10$lnMQg4c87EEiqWvQImBLVOZ/yaiUqZ7hG1K9LxOkYtgZ8gaDd1rGu",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjIwNzcxOTIyN0BleGFtcGxlLmNvbSIsInN1YiI6IjBiNjk0Zjc2LWIwOWUtNDE1OC1iNGY4LTQwODI4ZDg3MmI1YiIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA3NzE5LCJleHAiOjE3NTI4MTI1MTl9.0aj7XU99bQFkAif-_MFgvPFjfOTdB__OD80zD51fkII",
+          "createdAt": "2025-07-11T04:21:59.290Z",
+          "updatedAt": "2025-07-11T04:21:59.375Z",
+          "profile": null
+        },
+        {
+          "id": "4f7ca3ad-3d5b-4239-b049-637eee3d251d",
+          "displayId": "PT785535531",
+          "email": "test-patient-1752209785474@example.com",
+          "password": "$2b$10$wzFYMC5qaS5gjG.tIvEWE.NNKTl4OKTXGpJSOsBslmHuKJJAQSBoO",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:56:25.536Z",
+          "updatedAt": "2025-07-11T04:56:25.536Z",
+          "profile": null
+        },
+        {
+          "id": "c2111d7c-c7c1-4e44-ad42-7978db31288d",
+          "displayId": "PT903259516",
+          "email": "test-centers-patient-1752209903196@example.com",
+          "password": "$2b$10$K4JzkBQVeb.j3cTU42v/Subo1FLtvmfOA1HauiTurcrw6UfFPDWO6",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIyMDk5MDMxOTZAZXhhbXBsZS5jb20iLCJzdWIiOiJjMjExMWQ3Yy1jN2MxLTRlNDQtYWQ0Mi03OTc4ZGIzMTI4OGQiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjIwOTkwMywiZXhwIjoxNzUyODE0NzAzfQ.3axt0TZpe9pyInhnpT9BZty9lX-tpi4ZyYL6mcwYDeY",
+          "createdAt": "2025-07-11T04:58:23.260Z",
+          "updatedAt": "2025-07-11T04:58:23.335Z",
+          "profile": null
+        },
+        {
+          "id": "ef4d3c6e-7807-4ccf-8449-dd3663159614",
+          "displayId": "USR911461844",
+          "email": "test-referrals-healthcare_provider-1752209911401@example.com",
+          "password": "$2b$10$OUQFOD6zQfhxdHUWU/3eYeScx4HbzSaIwJjsz5CY8SReNB5jVG1ca",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTkxMTQwMUBleGFtcGxlLmNvbSIsInN1YiI6ImVmNGQzYzZlLTc4MDctNGNjZi04NDQ5LWRkMzY2MzE1OTYxNCIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5OTExLCJleHAiOjE3NTI4MTQ3MTF9.pXQsAIwRlbaQbYapsrDjvThJxVuwhA0vs_3jMh0NxPc",
+          "createdAt": "2025-07-11T04:58:31.462Z",
+          "updatedAt": "2025-07-11T04:58:31.534Z",
+          "profile": null
+        },
+        {
+          "id": "be2a227f-7ff2-4bcf-adb5-9d7d1e174f59",
+          "displayId": "AD621986158",
+          "email": "test-centers-admin-1752174621923@example.com",
+          "password": "$2b$10$9nfCRcZYdFej98VzoWZziuJGJexsY39tY05vjQ.OOUpDXmqVVZBA2",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0NjIxOTIzQGV4YW1wbGUuY29tIiwic3ViIjoiYmUyYTIyN2YtN2ZmMi00YmNmLWFkYjUtOWQ3ZDFlMTc0ZjU5Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0NjIyLCJleHAiOjE3NTI3Nzk0MjJ9.cYoGgbw6ol5P-Yvee65UmkDvNJ9XVsWIcw9jIdvcYcU",
+          "createdAt": "2025-07-10T19:10:21.995Z",
+          "updatedAt": "2025-07-10T19:10:22.078Z",
+          "profile": null
+        },
+        {
+          "id": "ef53784a-47a7-4316-9701-61c248a2c198",
+          "displayId": "PT881345814",
+          "email": "test-referrals-patient-1752209881283@example.com",
+          "password": "$2b$10$J4a8VCDYVhNd7Sw1lz2gLeX6nAWm48bgMJOVb1l10B0.dcIs6QuO6",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLXBhdGllbnQtMTc1MjIwOTg4MTI4M0BleGFtcGxlLmNvbSIsInN1YiI6ImVmNTM3ODRhLTQ3YTctNDMxNi05NzAxLTYxYzI0OGEyYzE5OCIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA5ODgxLCJleHAiOjE3NTI4MTQ2ODF9.HzCpb5zOcn96GSmmM9XVHyoC6odlsLNPqoSq3-8_Zww",
+          "createdAt": "2025-07-11T04:58:01.345Z",
+          "updatedAt": "2025-07-11T04:58:01.423Z",
+          "profile": null
+        },
+        {
+          "id": "7845eb79-b8e4-4cde-a89c-f3982ab2e60f",
+          "displayId": "PT880421164",
+          "email": "test-patient-1752209880357@example.com",
+          "password": "$2b$10$hkDfVjEaqCoByuXALYd5hu3tn.UD0rfXdYUe14lgvuUTI9EXZ64GK",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:58:00.421Z",
+          "updatedAt": "2025-07-11T04:58:00.421Z",
+          "profile": null
+        },
+        {
+          "id": "ee7cb848-fa9a-4b3d-9f72-4bb3addc3d9f",
+          "displayId": "DR059845278",
+          "email": "test-appointments-doctor-1752208059784@example.com",
+          "password": "$2b$10$LuHGx4t/RhRRrn.f5b/R2ea2nV9aLn4.IGeDQTnlEY1R/1/jg74dG",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA4MDU5Nzg0QGV4YW1wbGUuY29tIiwic3ViIjoiZWU3Y2I4NDgtZmE5YS00YjNkLTlmNzItNGJiM2FkZGMzZDlmIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwODA1OSwiZXhwIjoxNzUyODEyODU5fQ.AgQB-jzJRWcH35h62qS2kcsbxHoNZywbrF-idekK_s8",
+          "createdAt": "2025-07-11T04:27:39.856Z",
+          "updatedAt": "2025-07-11T04:27:39.938Z",
+          "profile": null
+        },
+        {
+          "id": "46e512fc-7c79-4630-8d22-584f40e4a204",
+          "displayId": "AD239255146",
+          "email": "test-appointments-admin-1752208239193@example.com",
+          "password": "$2b$10$2zXEoefSxz10YlNLO/qth.ONZSaotVsQPijbR8VeZAtVLwnHl9DEO",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWFkbWluLTE3NTIyMDgyMzkxOTNAZXhhbXBsZS5jb20iLCJzdWIiOiI0NmU1MTJmYy03Yzc5LTQ2MzAtOGQyMi01ODRmNDBlNGEyMDQiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDgyMzksImV4cCI6MTc1MjgxMzAzOX0.lm9EwXCNx5TJsy57SAPZ_9UL7hfNpULtOeJkOXGOxfE",
+          "createdAt": "2025-07-11T04:30:39.265Z",
+          "updatedAt": "2025-07-11T04:30:39.345Z",
+          "profile": null
+        },
+        {
+          "id": "ef3f92bd-892a-4921-91f1-31a7dbbd2a38",
+          "displayId": "USR903018208",
+          "email": "test-centers-center-1752209902955@example.com",
+          "password": "$2b$10$HUkkv2HhgoN5i5alB41PVumEDuciJobs8ndDwHH592bAx9B28yDg.",
+          "roles": [
+            "center"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1jZW50ZXItMTc1MjIwOTkwMjk1NUBleGFtcGxlLmNvbSIsInN1YiI6ImVmM2Y5MmJkLTg5MmEtNDkyMS05MWYxLTMxYTdkYmJkMmEzOCIsInJvbGVzIjpbImNlbnRlciJdLCJpYXQiOjE3NTIyMDk5MDMsImV4cCI6MTc1MjgxNDcwM30.rCNoIfhAtIDcSNqeeyoH379AZRM1h8z9QLOsVes1oN4",
+          "createdAt": "2025-07-11T04:58:23.021Z",
+          "updatedAt": "2025-07-11T04:58:23.096Z",
+          "profile": null
+        },
+        {
+          "id": "a7deff5f-c587-4471-9b47-e9d1588f9e8d",
+          "displayId": "DR921446722",
+          "email": "test-appointments-doctor-1752207921384@example.com",
+          "password": "$2b$10$1Mk5Shy4r9ZY0wiTscQFheV1/dSxjJDegHJLgNRwkpNeoTR9LxcaG",
+          "roles": [
+            "doctor"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLWRvY3Rvci0xNzUyMjA3OTIxMzg0QGV4YW1wbGUuY29tIiwic3ViIjoiYTdkZWZmNWYtYzU4Ny00NDcxLTliNDctZTlkMTU4OGY5ZThkIiwicm9sZXMiOlsiZG9jdG9yIl0sImlhdCI6MTc1MjIwNzkyMSwiZXhwIjoxNzUyODEyNzIxfQ.pfayZz5zMlhB8EWslWzIkGMrB3ZxyQ2oH95lt3NcGf0",
+          "createdAt": "2025-07-11T04:25:21.456Z",
+          "updatedAt": "2025-07-11T04:25:21.535Z",
+          "profile": null
+        },
+        {
+          "id": "1b289242-aa9e-4c2f-93e2-213826ea8940",
+          "displayId": "AD676723959",
+          "email": "test-centers-admin-1752174676662@example.com",
+          "password": "$2b$10$SPg8dkG.JII2Y11pIuJeZ.UXFt.0Gfdew3Q7W8Zv7TOXEsMFpj6py",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1hZG1pbi0xNzUyMTc0Njc2NjYyQGV4YW1wbGUuY29tIiwic3ViIjoiMWIyODkyNDItYWE5ZS00YzJmLTkzZTItMjEzODI2ZWE4OTQwIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMTc0Njc2LCJleHAiOjE3NTI3Nzk0NzZ9.PbaVuWGgfrMVmhD8FgMMy0PfYVKg-01-Mt0_sOOSRno",
+          "createdAt": "2025-07-10T19:11:16.733Z",
+          "updatedAt": "2025-07-10T19:11:16.831Z",
+          "profile": null
+        },
+        {
+          "id": "c5e30466-e806-437b-8d89-a3a888e3fc5c",
+          "displayId": "PT682374605",
+          "email": "test-patient-1752209682314@example.com",
+          "password": "$2b$10$ceHslWctrbhvwSFKPeIvVeKYZKHbHxo87gpBg4esbRtUb0/tse3JK",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-11T04:54:42.375Z",
+          "updatedAt": "2025-07-11T04:54:42.375Z",
+          "profile": null
+        },
+        {
+          "id": "54c3f5ec-61a8-4756-86d2-e20620eb9352",
+          "displayId": "PT885794092",
+          "email": "test@example.com",
+          "password": "$2b$10$lgqFcjFj8NkYrpiXLnpAZOgozS4XWiLxm990gJmC30RXOWVZW1h02",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAZXhhbXBsZS5jb20iLCJzdWIiOiI1NGMzZjVlYy02MWE4LTQ3NTYtODZkMi1lMjA2MjBlYjkzNTIiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDIwMiwiZXhwIjoxNzUyNzc5MDAyfQ.SRPL0EMxhdY9dkV1R1br_Q9IpiOIBb8-t_I7DF-DtUQ",
+          "createdAt": "2025-07-10T18:58:05.805Z",
+          "updatedAt": "2025-07-10T19:03:22.732Z",
+          "profile": null
+        },
+        {
+          "id": "44dea31d-f460-4e0a-b86e-485490dbd165",
+          "displayId": "USR587485942",
+          "email": "test-referrals-healthcare_provider-1752209587419@example.com",
+          "password": "$2b$10$NeOeyM3GOG9aSUP0FWqhguXosIvROVQ2FZdTO05iCfZkitjQcG6ie",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTU4NzQxOUBleGFtcGxlLmNvbSIsInN1YiI6IjQ0ZGVhMzFkLWY0NjAtNGUwYS1iODZlLTQ4NTQ5MGRiZDE2NSIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5NTg3LCJleHAiOjE3NTI4MTQzODd9.Vk7AojnXsp8NsFzEhVxzV7VY8wN-ffqEhkjub3NspTM",
+          "createdAt": "2025-07-11T04:53:07.494Z",
+          "updatedAt": "2025-07-11T04:53:07.576Z",
+          "profile": null
+        },
+        {
+          "id": "d1397d8f-e237-4617-b77f-47bcd40fc5a2",
+          "displayId": "PT587647138",
+          "email": "test-patient-1752209587585@example.com",
+          "password": "$2b$10$I.E9/Ahy0EgLLGPK2PpLHOA1V/qOpc32B/ABeGwku/6yvf2ku.LfG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcGF0aWVudC0xNzUyMjA5NTg3NTg1QGV4YW1wbGUuY29tIiwic3ViIjoiZDEzOTdkOGYtZTIzNy00NjE3LWI3N2YtNDdiY2Q0MGZjNWEyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMDk1ODcsImV4cCI6MTc1MjgxNDM4N30.S8Nrg7xCQXlXGOAvNwCgByJnoGK51sadOnbgkS0MvDE",
+          "createdAt": "2025-07-11T04:53:07.647Z",
+          "updatedAt": "2025-07-11T04:53:07.723Z",
+          "profile": null
+        },
+        {
+          "id": "a3aad08b-4f12-45e7-b0da-057ad32e26ef",
+          "displayId": "USR911080972",
+          "email": "test-referrals-healthcare_provider-1752209911018@example.com",
+          "password": "$2b$10$I4vJaGqNk/OKxVnDKr2uVOlhJ7yJiRBztAR1h1EzGJN8xh0zyN/Ne",
+          "roles": [
+            "healthcare_provider"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWhlYWx0aGNhcmVfcHJvdmlkZXItMTc1MjIwOTkxMTAxOEBleGFtcGxlLmNvbSIsInN1YiI6ImEzYWFkMDhiLTRmMTItNDVlNy1iMGRhLTA1N2FkMzJlMjZlZiIsInJvbGVzIjpbImhlYWx0aGNhcmVfcHJvdmlkZXIiXSwiaWF0IjoxNzUyMjA5OTExLCJleHAiOjE3NTI4MTQ3MTF9.PCszaQYpzHOzZMvgxBOYiXXyrrMMu8gcmqzuduplt-k",
+          "createdAt": "2025-07-11T04:58:31.081Z",
+          "updatedAt": "2025-07-11T04:58:31.157Z",
+          "profile": null
+        },
+        {
+          "id": "ddb8c356-43bd-47f0-a652-b5629e186be1",
+          "displayId": "PT416385923",
+          "email": "test-appointments-patient-1752208416326@example.com",
+          "password": "$2b$10$wYntgDWDlSD6QNm3eW1FY.TV/Qz9aOGb8exSXyz/XkvViAKPgpw5G",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXBwb2ludG1lbnRzLXBhdGllbnQtMTc1MjIwODQxNjMyNkBleGFtcGxlLmNvbSIsInN1YiI6ImRkYjhjMzU2LTQzYmQtNDdmMC1hNjUyLWI1NjI5ZTE4NmJlMSIsInJvbGVzIjpbInBhdGllbnQiXSwiaWF0IjoxNzUyMjA4NDE2LCJleHAiOjE3NTI4MTMyMTZ9.8EpMvBrOk7UxrTf-_WCf-2SIg7YT12zKv0TNqVHQuSQ",
+          "createdAt": "2025-07-11T04:33:36.386Z",
+          "updatedAt": "2025-07-11T04:33:36.460Z",
+          "profile": null
+        },
+        {
+          "id": "51a0c579-bb5b-4814-8593-74ebaafb1745",
+          "displayId": "AD912151292",
+          "email": "test-referrals-admin-1752209912093@example.com",
+          "password": "$2b$10$PA2nRrlYLV3LWGn1RUE7sumIY0iDIsd3fV1fnP/wn7UNSRdnn0HwW",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtcmVmZXJyYWxzLWFkbWluLTE3NTIyMDk5MTIwOTNAZXhhbXBsZS5jb20iLCJzdWIiOiI1MWEwYzU3OS1iYjViLTQ4MTQtODU5My03NGViYWFmYjE3NDUiLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE3NTIyMDk5MTIsImV4cCI6MTc1MjgxNDcxMn0.1pR8ezZAZec562pjbuaqGFvGTvva61Lb68BFRPSsHkI",
+          "createdAt": "2025-07-11T04:58:32.152Z",
+          "updatedAt": "2025-07-11T04:58:32.225Z",
+          "profile": null
+        },
+        {
+          "id": "6698ee76-8343-43b1-80bf-3cca51eedb46",
+          "displayId": "PT564292837",
+          "email": "test-centers-patient-1752174564206@example.com",
+          "password": "$2b$10$tTXD2boeNTms3YlyCRTz.O8hY7QV/hr0uZJj80KCttm394AW.Y.qG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtY2VudGVycy1wYXRpZW50LTE3NTIxNzQ1NjQyMDZAZXhhbXBsZS5jb20iLCJzdWIiOiI2Njk4ZWU3Ni04MzQzLTQzYjEtODBiZi0zY2NhNTFlZWRiNDYiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDU2NCwiZXhwIjoxNzUyNzc5MzY0fQ.FyX3Mg22aBLfvvU8LTgnte2LZVLPQy56IfFzgbhF1wQ",
+          "createdAt": "2025-07-10T19:09:24.294Z",
+          "updatedAt": "2025-07-10T19:09:24.390Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /users/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 48,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T04:58:51.138Z",
+        "path": "/users/invalid-uuid",
+        "method": "GET",
+        "message": "User with ID invalid-uuid not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /users/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 19,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T04:58:51.157Z",
+        "path": "/users/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "User with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

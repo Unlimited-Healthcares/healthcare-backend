@@ -1,0 +1,631 @@
+{
+  "moduleName": "Emergency",
+  "timestamp": "2025-07-11T07:40:49.813Z",
+  "summary": {
+    "total": 24,
+    "passed": 15,
+    "failed": 9,
+    "successRate": 62.5,
+    "averageResponseTime": 43.625
+  },
+  "results": [
+    {
+      "endpoint": "POST /emergency/ambulance/request",
+      "status": "FAIL",
+      "responseTime": 53,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:40:48.513Z",
+        "path": "/emergency/ambulance/request",
+        "method": "POST",
+        "message": "No ambulances available",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/ambulance/requests",
+      "status": "FAIL",
+      "responseTime": 17,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:40:48.532Z",
+        "path": "/emergency/ambulance/requests",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/ambulance/available",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:40:48.541Z",
+        "path": "/emergency/ambulance/available",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/ambulance/nearby-services",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "1",
+            "name": "Central Hospital",
+            "type": "medical",
+            "latitude": 40.7228,
+            "longitude": -73.996,
+            "distance": 1.2,
+            "available": true
+          },
+          {
+            "id": "2",
+            "name": "Fire Station 1",
+            "type": "fire",
+            "latitude": 40.732800000000005,
+            "longitude": -73.986,
+            "distance": 2.1,
+            "available": true
+          }
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /emergency/ambulance/request",
+      "status": "PASS",
+      "responseTime": 165,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:40:48.719Z",
+        "path": "/emergency/ambulance/request",
+        "method": "POST",
+        "message": "invalid input syntax for type numeric: \"invalid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /emergency/alerts/sos",
+      "status": "PASS",
+      "responseTime": 538,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "alertNumber": "SOS-1752219648740-1RKJ",
+          "type": "medical_emergency",
+          "status": "active",
+          "userId": "4c3defba-b3ec-4079-a6e5-92d67525ff37",
+          "description": "Patient experiencing severe chest pain",
+          "latitude": 40.7128,
+          "longitude": -74.006,
+          "address": "123 Emergency Street, New York, NY 10001",
+          "contactNumber": "+1234567890",
+          "emergencyContacts": [],
+          "medicalInfo": {
+            "bloodType": "O+",
+            "allergies": [
+              "Penicillin"
+            ],
+            "medications": [
+              "Aspirin"
+            ],
+            "medicalConditions": [
+              "Hypertension"
+            ],
+            "emergencyContacts": [
+              {
+                "name": "Jane Doe",
+                "phone": "+1234567891",
+                "relationship": "Spouse"
+              }
+            ],
+            "notes": "Patient has history of heart disease"
+          },
+          "isTestAlert": false,
+          "patientId": null,
+          "responderIds": null,
+          "acknowledgedAt": null,
+          "acknowledgedBy": null,
+          "responseTimeMinutes": null,
+          "resolvedAt": null,
+          "resolvedBy": null,
+          "resolutionNotes": null,
+          "metadata": null,
+          "id": "ecc2f59e-a072-47aa-a7f5-68ab6df26e4d",
+          "createdAt": "2025-07-11T07:40:48.743Z",
+          "updatedAt": "2025-07-11T07:40:48.743Z"
+        },
+        "message": "SOS alert activated successfully"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/alerts",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "ecc2f59e-a072-47aa-a7f5-68ab6df26e4d",
+            "alertNumber": "SOS-1752219648740-1RKJ",
+            "type": "medical_emergency",
+            "status": "active",
+            "userId": "4c3defba-b3ec-4079-a6e5-92d67525ff37",
+            "patientId": null,
+            "description": "Patient experiencing severe chest pain",
+            "latitude": "40.71280000",
+            "longitude": "-74.00600000",
+            "address": "123 Emergency Street, New York, NY 10001",
+            "contactNumber": "+1234567890",
+            "emergencyContacts": [],
+            "medicalInfo": {
+              "notes": "Patient has history of heart disease",
+              "allergies": [
+                "Penicillin"
+              ],
+              "bloodType": "O+",
+              "medications": [
+                "Aspirin"
+              ],
+              "emergencyContacts": [
+                {
+                  "name": "Jane Doe",
+                  "phone": "+1234567891",
+                  "relationship": "Spouse"
+                }
+              ],
+              "medicalConditions": [
+                "Hypertension"
+              ]
+            },
+            "responderIds": null,
+            "acknowledgedAt": null,
+            "acknowledgedBy": null,
+            "responseTimeMinutes": null,
+            "resolvedAt": null,
+            "resolvedBy": null,
+            "resolutionNotes": null,
+            "isTestAlert": false,
+            "metadata": null,
+            "createdAt": "2025-07-11T07:40:48.743Z",
+            "updatedAt": "2025-07-11T07:40:48.743Z"
+          }
+        ],
+        "pagination": {
+          "total": 1,
+          "page": 1,
+          "limit": 10,
+          "pages": 1
+        }
+      }
+    },
+    {
+      "endpoint": "POST /emergency/alerts/emergency-contacts",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "userId": "4c3defba-b3ec-4079-a6e5-92d67525ff37",
+          "contactName": "Jane Doe",
+          "contactPhone": "+1234567891",
+          "contactEmail": "jane.doe@example.com",
+          "relationship": "Spouse",
+          "isPrimary": true,
+          "isMedicalContact": true,
+          "contactAddress": "123 Emergency Street, New York, NY 10001",
+          "notes": "Primary emergency contact",
+          "notificationPreferences": {
+            "sms": true,
+            "email": true,
+            "push": false
+          },
+          "id": "9a8bf720-9cf3-4516-b02e-9dd3209573d0",
+          "isActive": true,
+          "createdAt": "2025-07-11T07:40:49.284Z",
+          "updatedAt": "2025-07-11T07:40:49.284Z"
+        },
+        "message": "Emergency contact added successfully"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/alerts/emergency-contacts",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "9a8bf720-9cf3-4516-b02e-9dd3209573d0",
+            "userId": "4c3defba-b3ec-4079-a6e5-92d67525ff37",
+            "contactName": "Jane Doe",
+            "contactPhone": "+1234567891",
+            "contactEmail": "jane.doe@example.com",
+            "relationship": "Spouse",
+            "isPrimary": true,
+            "isMedicalContact": true,
+            "contactAddress": "123 Emergency Street, New York, NY 10001",
+            "notes": "Primary emergency contact",
+            "notificationPreferences": {
+              "sms": true,
+              "push": false,
+              "email": true
+            },
+            "isActive": true,
+            "createdAt": "2025-07-11T07:40:49.284Z",
+            "updatedAt": "2025-07-11T07:40:49.284Z"
+          }
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /emergency/alerts/sos",
+      "status": "PASS",
+      "responseTime": 34,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:40:49.330Z",
+        "path": "/emergency/alerts/sos",
+        "method": "POST",
+        "message": "invalid input value for enum emergency_alerts_type_enum: \"invalid_type\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /emergency/viral-reporting/reports",
+      "status": "FAIL",
+      "responseTime": 38,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:40:49.367Z",
+        "path": "/emergency/viral-reporting/reports",
+        "method": "POST",
+        "message": "invalid input value for enum viral_reports_type_enum: \"suspected_case\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/viral-reporting/reports",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:40:49.376Z",
+        "path": "/emergency/viral-reporting/reports",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /emergency/viral-reporting/reports",
+      "status": "PASS",
+      "responseTime": 32,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:40:49.408Z",
+        "path": "/emergency/viral-reporting/reports",
+        "method": "POST",
+        "message": "invalid input value for enum viral_reports_type_enum: \"invalid_type\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /emergency/ambulance/coordinate-response",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 500,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 500",
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T07:40:49.578Z",
+        "path": "/emergency/ambulance/coordinate-response",
+        "method": "POST",
+        "message": "Cannot read properties of undefined (reading 'distance')",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'distance')\n    at EmergencyDispatchService.calculateResponseTime (/usr/src/app/src/emergency/services/emergency-dispatch.service.ts:160:37)\n    at EmergencyDispatchService.coordinateEmergencyResponse (/usr/src/app/src/emergency/services/emergency-dispatch.service.ts:79:35)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at AmbulanceController.coordinateEmergencyResponse (/usr/src/app/src/emergency/controllers/ambulance.controller.ts:208:22)"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/ambulance/requests/invalid-uuid",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 200",
+      "responseBody": {
+        "success": true,
+        "data": {
+          "id": "ba1e829d-2dc5-42f3-8c03-f16744313fba",
+          "requestNumber": "EMR-1752219648486-CZS4",
+          "patientName": "John Doe",
+          "patientAge": 35,
+          "patientGender": "male",
+          "patientPhone": "+1234567890",
+          "emergencyContactName": "Jane Doe",
+          "emergencyContactPhone": "+1234567891",
+          "pickupLatitude": "40.71280000",
+          "pickupLongitude": "-74.00600000",
+          "pickupAddress": "123 Emergency Street, New York, NY 10001",
+          "destinationLatitude": "40.75890000",
+          "destinationLongitude": "-73.98510000",
+          "destinationAddress": "456 Hospital Avenue, New York, NY 10002",
+          "medicalCondition": "Chest pain and shortness of breath",
+          "symptoms": "Severe chest pain, difficulty breathing, sweating",
+          "priority": "high",
+          "status": "pending",
+          "specialRequirements": "Oxygen support needed",
+          "medicalHistory": {
+            "allergies": [
+              "Penicillin"
+            ],
+            "bloodType": "O+",
+            "medications": [
+              "Aspirin"
+            ],
+            "medicalConditions": [
+              "Hypertension"
+            ]
+          },
+          "requestedBy": "4c3defba-b3ec-4079-a6e5-92d67525ff37",
+          "ambulanceId": null,
+          "dispatchedAt": null,
+          "acknowledgedAt": null,
+          "arrivedAt": null,
+          "completedAt": null,
+          "estimatedArrival": null,
+          "actualArrival": null,
+          "totalCost": null,
+          "insuranceInfo": null,
+          "metadata": null,
+          "createdAt": "2025-07-11T07:40:48.487Z",
+          "updatedAt": "2025-07-11T07:40:48.487Z",
+          "ambulance": null
+        }
+      }
+    },
+    {
+      "endpoint": "GET /emergency/ambulance/requests/00000000-0000-0000-0000-000000000000",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 200",
+      "responseBody": {
+        "success": true,
+        "data": {
+          "id": "ba1e829d-2dc5-42f3-8c03-f16744313fba",
+          "requestNumber": "EMR-1752219648486-CZS4",
+          "patientName": "John Doe",
+          "patientAge": 35,
+          "patientGender": "male",
+          "patientPhone": "+1234567890",
+          "emergencyContactName": "Jane Doe",
+          "emergencyContactPhone": "+1234567891",
+          "pickupLatitude": "40.71280000",
+          "pickupLongitude": "-74.00600000",
+          "pickupAddress": "123 Emergency Street, New York, NY 10001",
+          "destinationLatitude": "40.75890000",
+          "destinationLongitude": "-73.98510000",
+          "destinationAddress": "456 Hospital Avenue, New York, NY 10002",
+          "medicalCondition": "Chest pain and shortness of breath",
+          "symptoms": "Severe chest pain, difficulty breathing, sweating",
+          "priority": "high",
+          "status": "pending",
+          "specialRequirements": "Oxygen support needed",
+          "medicalHistory": {
+            "allergies": [
+              "Penicillin"
+            ],
+            "bloodType": "O+",
+            "medications": [
+              "Aspirin"
+            ],
+            "medicalConditions": [
+              "Hypertension"
+            ]
+          },
+          "requestedBy": "4c3defba-b3ec-4079-a6e5-92d67525ff37",
+          "ambulanceId": null,
+          "dispatchedAt": null,
+          "acknowledgedAt": null,
+          "arrivedAt": null,
+          "completedAt": null,
+          "estimatedArrival": null,
+          "actualArrival": null,
+          "totalCost": null,
+          "insuranceInfo": null,
+          "metadata": null,
+          "createdAt": "2025-07-11T07:40:48.487Z",
+          "updatedAt": "2025-07-11T07:40:48.487Z",
+          "ambulance": null
+        }
+      }
+    },
+    {
+      "endpoint": "PUT /emergency/ambulance/requests/00000000-0000-0000-0000-000000000000/status",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:40:49.616Z",
+        "path": "/emergency/ambulance/requests/00000000-0000-0000-0000-000000000000/status",
+        "method": "PUT",
+        "message": "Ambulance request not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /emergency/alerts/00000000-0000-0000-0000-000000000000/acknowledge",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:40:49.628Z",
+        "path": "/emergency/alerts/00000000-0000-0000-0000-000000000000/acknowledge",
+        "method": "PUT",
+        "message": "Emergency alert not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /emergency/alerts/00000000-0000-0000-0000-000000000000/resolve",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:40:49.640Z",
+        "path": "/emergency/alerts/00000000-0000-0000-0000-000000000000/resolve",
+        "method": "PUT",
+        "message": "Emergency alert not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/viral-reporting/reports/00000000-0000-0000-0000-000000000000/contact-traces",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 200",
+      "responseBody": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "endpoint": "POST /emergency/ambulance/coordinate-response",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:40:49.800Z",
+        "path": "/emergency/ambulance/coordinate-response",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/ambulance/requests",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T07:40:49.804Z",
+        "path": "/emergency/ambulance/requests",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /emergency/alerts/sos",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T07:40:49.806Z",
+        "path": "/emergency/alerts/sos",
+        "method": "POST",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /emergency/viral-reporting/reports",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T07:40:49.809Z",
+        "path": "/emergency/viral-reporting/reports",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

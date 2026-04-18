@@ -1,0 +1,720 @@
+{
+  "moduleName": "Reviews",
+  "timestamp": "2025-07-11T17:44:34.213Z",
+  "summary": {
+    "total": 33,
+    "passed": 32,
+    "failed": 1,
+    "successRate": 96.96969696969697,
+    "averageResponseTime": 10.969696969696969
+  },
+  "results": [
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 5
+      }
+    },
+    {
+      "endpoint": "GET /reviews/123e4567-e89b-12d3-a456-426614174002",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.220Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002",
+        "method": "GET",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /reviews/appointments/77267992-6233-4eea-8619-9b984d0f6904",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /reviews/centers/d3dc99fa-b394-49a6-9fc0-fe048b03b1f2/summary",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "totalReviews": 0,
+        "averageRating": 0,
+        "ratingDistribution": {
+          "fiveStars": 0,
+          "fourStars": 0,
+          "threeStars": 0,
+          "twoStars": 0,
+          "oneStars": 0
+        },
+        "verifiedReviewsCount": 0,
+        "responseRate": 0,
+        "averageResponseTime": 86400000,
+        "recentReviews": []
+      }
+    },
+    {
+      "endpoint": "GET /reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.249Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+        "method": "GET",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+        "patientId": "90bb6721-3f6c-4085-a309-aaa9b13bf0ed",
+        "appointmentId": "77267992-6233-4eea-8619-9b984d0f6904",
+        "overallRating": 4.5,
+        "staffRating": 4,
+        "cleanlinessRating": 5,
+        "waitTimeRating": 3,
+        "treatmentRating": 4.5,
+        "title": "Great experience at the clinic",
+        "content": "The staff was very friendly and professional. The facility was clean and well-maintained.",
+        "isAnonymous": false,
+        "isVerified": true,
+        "status": "pending",
+        "photos": [
+          "https://example.com/photo1.jpg",
+          "https://example.com/photo2.jpg"
+        ],
+        "editedAt": null,
+        "moderationNotes": null,
+        "moderatedBy": null,
+        "id": "609c944e-c976-45ab-95a8-5921283602b5",
+        "helpfulVotes": 0,
+        "totalVotes": 0,
+        "isEdited": false,
+        "createdAt": "2025-07-11T17:44:33.265Z",
+        "updatedAt": "2025-07-11T17:44:33.265Z"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "PASS",
+      "responseTime": 19,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+        "patientId": "90bb6721-3f6c-4085-a309-aaa9b13bf0ed",
+        "appointmentId": "dfe0843a-22cd-4e80-a994-f8bf89b85920",
+        "overallRating": 5,
+        "title": "Another great review",
+        "content": "Excellent service and care.",
+        "isVerified": true,
+        "status": "pending",
+        "staffRating": null,
+        "cleanlinessRating": null,
+        "waitTimeRating": null,
+        "treatmentRating": null,
+        "photos": null,
+        "editedAt": null,
+        "moderationNotes": null,
+        "moderatedBy": null,
+        "id": "172d5514-8ada-4404-ad66-a9fd20e05367",
+        "isAnonymous": false,
+        "helpfulVotes": 0,
+        "totalVotes": 0,
+        "isEdited": false,
+        "createdAt": "2025-07-11T17:44:33.286Z",
+        "updatedAt": "2025-07-11T17:44:33.286Z"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.310Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002",
+        "method": "PUT",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /reviews/123e4567-e89b-12d3-a456-426614174002",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.326Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002",
+        "method": "DELETE",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.343Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+        "method": "POST",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/vote",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:44:33.354Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/vote",
+        "method": "POST",
+        "message": [
+          "isHelpful: isHelpful must be a boolean value"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/response",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.504Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/response",
+        "method": "POST",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:33.660Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+        "method": "PUT",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /reviews/centers/d3dc99fa-b394-49a6-9fc0-fe048b03b1f2/analytics",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /reviews/centers/d3dc99fa-b394-49a6-9fc0-fe048b03b1f2/trends",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "ratingTrend": [],
+        "categoryTrends": {
+          "staff": [],
+          "cleanliness": [],
+          "waitTime": [],
+          "treatment": []
+        },
+        "responseRateTrend": []
+      }
+    },
+    {
+      "endpoint": "GET /reviews/centers/d3dc99fa-b394-49a6-9fc0-fe048b03b1f2/advanced-analytics",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "totalReviews": 0,
+        "sentimentAnalysis": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0,
+          "averageSentiment": 0,
+          "sentimentTrend": "stable"
+        },
+        "responseMetrics": {
+          "averageResponseTime": 0,
+          "totalResponses": 0,
+          "responseRate": 0,
+          "quickResponseCount": 0,
+          "delayedResponseCount": 0
+        },
+        "photoMetrics": {
+          "totalPhotos": 6,
+          "reviewsWithPhotos": 3,
+          "averagePhotosPerReview": 2
+        },
+        "trends": {
+          "daily": {},
+          "weekly": {},
+          "monthly": {},
+          "trend": "stable"
+        },
+        "reviewsWithVotes": [
+          {
+            "id": "1583310a-589f-402e-b3d9-d6decb1a63ca",
+            "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+            "patientId": "5acf7cd0-0953-4173-9231-c0f22993304e",
+            "appointmentId": "2201bda8-950b-4566-8491-83d4b9e1e881",
+            "overallRating": "4.5",
+            "staffRating": "4.0",
+            "cleanlinessRating": "5.0",
+            "waitTimeRating": "3.0",
+            "treatmentRating": "4.5",
+            "title": "Great experience at the clinic",
+            "content": "The staff was very friendly and professional. The facility was clean and well-maintained.",
+            "isAnonymous": false,
+            "isVerified": true,
+            "status": "pending",
+            "photos": [
+              "https://example.com/photo1.jpg",
+              "https://example.com/photo2.jpg"
+            ],
+            "helpfulVotes": 0,
+            "totalVotes": 0,
+            "isEdited": false,
+            "editedAt": null,
+            "moderationNotes": null,
+            "moderatedBy": null,
+            "createdAt": "2025-07-11T17:39:27.830Z",
+            "updatedAt": "2025-07-11T17:39:27.830Z",
+            "votes": []
+          },
+          {
+            "id": "d11a9f2c-5c66-471f-a393-df721ab23ff4",
+            "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+            "patientId": "454e3ae7-1db6-4cea-b658-54c465114780",
+            "appointmentId": "fb711ea1-926d-4203-87dd-7c70db1fef6d",
+            "overallRating": "4.5",
+            "staffRating": "4.0",
+            "cleanlinessRating": "5.0",
+            "waitTimeRating": "3.0",
+            "treatmentRating": "4.5",
+            "title": "Great experience at the clinic",
+            "content": "The staff was very friendly and professional. The facility was clean and well-maintained.",
+            "isAnonymous": false,
+            "isVerified": true,
+            "status": "pending",
+            "photos": [
+              "https://example.com/photo1.jpg",
+              "https://example.com/photo2.jpg"
+            ],
+            "helpfulVotes": 0,
+            "totalVotes": 0,
+            "isEdited": false,
+            "editedAt": null,
+            "moderationNotes": null,
+            "moderatedBy": null,
+            "createdAt": "2025-07-11T17:39:52.030Z",
+            "updatedAt": "2025-07-11T17:39:52.030Z",
+            "votes": []
+          },
+          {
+            "id": "609c944e-c976-45ab-95a8-5921283602b5",
+            "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+            "patientId": "90bb6721-3f6c-4085-a309-aaa9b13bf0ed",
+            "appointmentId": "77267992-6233-4eea-8619-9b984d0f6904",
+            "overallRating": "4.5",
+            "staffRating": "4.0",
+            "cleanlinessRating": "5.0",
+            "waitTimeRating": "3.0",
+            "treatmentRating": "4.5",
+            "title": "Great experience at the clinic",
+            "content": "The staff was very friendly and professional. The facility was clean and well-maintained.",
+            "isAnonymous": false,
+            "isVerified": true,
+            "status": "pending",
+            "photos": [
+              "https://example.com/photo1.jpg",
+              "https://example.com/photo2.jpg"
+            ],
+            "helpfulVotes": 0,
+            "totalVotes": 0,
+            "isEdited": false,
+            "editedAt": null,
+            "moderationNotes": null,
+            "moderatedBy": null,
+            "createdAt": "2025-07-11T17:44:33.265Z",
+            "updatedAt": "2025-07-11T17:44:33.265Z",
+            "votes": []
+          },
+          {
+            "id": "172d5514-8ada-4404-ad66-a9fd20e05367",
+            "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+            "patientId": "90bb6721-3f6c-4085-a309-aaa9b13bf0ed",
+            "appointmentId": "dfe0843a-22cd-4e80-a994-f8bf89b85920",
+            "overallRating": "5.0",
+            "staffRating": null,
+            "cleanlinessRating": null,
+            "waitTimeRating": null,
+            "treatmentRating": null,
+            "title": "Another great review",
+            "content": "Excellent service and care.",
+            "isAnonymous": false,
+            "isVerified": true,
+            "status": "pending",
+            "photos": null,
+            "helpfulVotes": 0,
+            "totalVotes": 0,
+            "isEdited": false,
+            "editedAt": null,
+            "moderationNotes": null,
+            "moderatedBy": null,
+            "createdAt": "2025-07-11T17:44:33.286Z",
+            "updatedAt": "2025-07-11T17:44:33.286Z",
+            "votes": []
+          }
+        ]
+      }
+    },
+    {
+      "endpoint": "GET /reviews/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:44:33.845Z",
+        "path": "/reviews/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:44:33.856Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": [
+          "centerId: centerId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:44:33.864Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": [
+          "overallRating: overallRating must not be greater than 5"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:44:33.871Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": [
+          "title: title must be shorter than or equal to 200 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:44:33.878Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": [
+          "content: content must be shorter than or equal to 2000 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/response",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:44:34.028Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/response",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:44:34.033Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+        "method": "PUT",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /reviews/centers/d3dc99fa-b394-49a6-9fc0-fe048b03b1f2/analytics",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:44:34.042Z",
+        "path": "/reviews/centers/d3dc99fa-b394-49a6-9fc0-fe048b03b1f2/analytics",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:34.200Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+        "method": "PUT",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/response",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:44:34.210Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/response",
+        "method": "POST",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

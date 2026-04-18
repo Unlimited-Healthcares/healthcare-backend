@@ -1,0 +1,81 @@
+{
+  "moduleName": "referrals",
+  "timestamp": "2025-06-08T04:34:35.093Z",
+  "summary": {
+    "total": 4,
+    "passed": 0,
+    "failed": 4,
+    "successRate": 0,
+    "averageResponseTime": 16.75
+  },
+  "results": [
+    {
+      "endpoint": "POST /referrals",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:35.037Z",
+        "path": "/referrals",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /referrals",
+      "status": "FAIL",
+      "responseTime": 12,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:35.049Z",
+        "path": "/referrals?page=1&limit=10&status=pending",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /referrals/{{referral_id}}",
+      "status": "FAIL",
+      "responseTime": 19,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:35.066Z",
+        "path": "/referrals/%7B%7Breferral_id%7D%7D",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /referrals/me",
+      "status": "FAIL",
+      "responseTime": 23,
+      "statusCode": 403,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-06-08T04:34:35.086Z",
+        "path": "/referrals/me?type=all&status=active",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

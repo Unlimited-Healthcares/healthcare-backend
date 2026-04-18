@@ -1,0 +1,777 @@
+{
+  "moduleName": "Security",
+  "timestamp": "2025-07-11T19:07:48.174Z",
+  "summary": {
+    "total": 67,
+    "passed": 14,
+    "failed": 53,
+    "successRate": 20.8955223880597,
+    "averageResponseTime": 5.044776119402985
+  },
+  "results": [
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 5,
+      "statusCode": 429,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 429",
+      "responseBody": {
+        "statusCode": 429,
+        "timestamp": "2025-07-11T19:07:19.849Z",
+        "path": "/auth/me",
+        "method": "GET",
+        "message": "ThrottlerException: Too Many Requests",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 429,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 429",
+      "responseBody": {
+        "statusCode": 429,
+        "timestamp": "2025-07-11T19:07:19.853Z",
+        "path": "/auth/me",
+        "method": "GET",
+        "message": "ThrottlerException: Too Many Requests",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 429,
+      "expectedStatus": 429,
+      "error": null,
+      "responseBody": {
+        "statusCode": 429,
+        "timestamp": "2025-07-11T19:07:19.855Z",
+        "path": "/auth/me",
+        "method": "GET",
+        "message": "ThrottlerException: Too Many Requests",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T19:07:33.879Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password must be longer than or equal to 10 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T19:07:33.884Z",
+        "path": "/auth/register",
+        "method": "POST",
+        "message": [
+          "password: password must be longer than or equal to 10 characters, password must be a string",
+          "name: name must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 4,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T19:07:33.887Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": [
+          "email: email must be an email",
+          "password: password should not be empty, password must be longer than or equal to 8 characters"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T19:07:33.890Z",
+        "path": "/auth/me",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /auth/logout",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-11T19:07:33.894Z",
+        "path": "/auth/logout",
+        "method": "POST",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 47,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "FAIL",
+      "responseTime": 6,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 1,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 1,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 1,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 6,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 1,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 1,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 5,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 5,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "read ECONNRESET",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 400,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 2,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "POST /auth/register",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 0,
+      "expectedStatus": 201,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 0,
+      "expectedStatus": 200,
+      "error": "socket hang up",
+      "responseBody": null
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 46,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "6f667e07-07a9-4055-8159-679a40651979",
+        "email": "test-security-admin-1752260839625@example.com",
+        "roles": [
+          "admin"
+        ],
+        "displayId": "AD839687839",
+        "profile": null,
+        "createdAt": "2025-07-11T19:07:19.699Z",
+        "updatedAt": "2025-07-11T19:07:19.786Z",
+        "isActive": true
+      }
+    }
+  ]
+}

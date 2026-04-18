@@ -1,0 +1,408 @@
+{
+  "moduleName": "Notifications",
+  "timestamp": "2025-07-11T09:24:04.983Z",
+  "summary": {
+    "total": 24,
+    "passed": 22,
+    "failed": 2,
+    "successRate": 91.66666666666666,
+    "averageResponseTime": 46.25
+  },
+  "results": [
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 29,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications/unread-count",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": 0
+    },
+    {
+      "endpoint": "GET /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userId": "12a0bfbe-eb36-4e66-a6ec-fac2d5275481",
+        "quietHoursStart": null,
+        "quietHoursEnd": null,
+        "id": "6169fded-7a8e-4d7f-b1e4-e4b9e1ec748d",
+        "emailVerified": false,
+        "phoneVerified": false,
+        "medicalRecordRequest": "both",
+        "medicalRecordAccess": "push",
+        "recordShareExpiring": "both",
+        "appointment": "both",
+        "message": "both",
+        "system": "push",
+        "referral": "both",
+        "testResult": "both",
+        "payment": "both",
+        "marketing": "none",
+        "timezone": "UTC",
+        "createdAt": "2025-07-11T09:24:03.608Z",
+        "updatedAt": "2025-07-11T09:24:03.608Z"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "FAIL",
+      "responseTime": 17,
+      "statusCode": 500,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 500",
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T09:24:03.783Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": "Patients can only create message, emergency, or appointment_request notifications",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: Patients can only create message, emergency, or appointment_request notifications\n    at NotificationsController.createNotification (/usr/src/app/src/notifications/notifications.controller.ts:49:13)\n    at /usr/src/app/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 27,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "userId": "77d20ad2-fac8-4031-907b-8d62b83a8add",
+        "quietHoursStart": "22:00",
+        "quietHoursEnd": "08:00",
+        "id": "34162d04-eb39-42d9-a9aa-a9d6934e1aff",
+        "emailVerified": true,
+        "phoneVerified": false,
+        "medicalRecordRequest": "email",
+        "medicalRecordAccess": "push",
+        "recordShareExpiring": "both",
+        "appointment": "both",
+        "message": "email",
+        "system": "push",
+        "referral": "both",
+        "testResult": "email",
+        "payment": "push",
+        "marketing": "none",
+        "timezone": "UTC",
+        "createdAt": "2025-07-11T09:24:03.796Z",
+        "updatedAt": "2025-07-11T09:24:03.802Z"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/test/email",
+      "status": "PASS",
+      "responseTime": 126,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications/test/push",
+      "status": "PASS",
+      "responseTime": 124,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications/test/sms",
+      "status": "PASS",
+      "responseTime": 124,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "PUT /notifications/invalid-uuid/read",
+      "status": "PASS",
+      "responseTime": 213,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:24:04.397Z",
+        "path": "/notifications/invalid-uuid/read",
+        "method": "PUT",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/00000000-0000-0000-0000-000000000000/read",
+      "status": "PASS",
+      "responseTime": 32,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:24:04.430Z",
+        "path": "/notifications/00000000-0000-0000-0000-000000000000/read",
+        "method": "PUT",
+        "message": "Notification not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /notifications/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 19,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T09:24:04.450Z",
+        "path": "/notifications/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Notification not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:24:04.459Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": [
+          "title: title must be a string",
+          "type: type must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:24:04.469Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": [
+          "deliveryMethod: deliveryMethod must be one of the following values: in_app, email, sms, push, both, all"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/preferences",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T09:24:04.478Z",
+        "path": "/notifications/preferences",
+        "method": "PUT",
+        "message": [
+          "medicalRecordRequest: medicalRecordRequest must be one of the following values: none, email, push, both",
+          "appointment: appointment must be one of the following values: none, email, push, both"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/test/invalid_type",
+      "status": "PASS",
+      "responseTime": 124,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 500,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 500",
+      "responseBody": {
+        "statusCode": 500,
+        "timestamp": "2025-07-11T09:24:04.781Z",
+        "path": "/notifications",
+        "method": "POST",
+        "message": "Patients can only create message, emergency, or appointment_request notifications",
+        "error": "Internal Server Error",
+        "code": "INTERNAL_SERVER_ERROR",
+        "stack": "Error: Patients can only create message, emergency, or appointment_request notifications\n    at NotificationsController.createNotification (/usr/src/app/src/notifications/notifications.controller.ts:49:13)\n    at /usr/src/app/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+      }
+    },
+    {
+      "endpoint": "POST /notifications",
+      "status": "PASS",
+      "responseTime": 127,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "b4cd2b92-5eb6-4a2f-b7b0-8b58970fcabb",
+        "title": "Test Message",
+        "message": "This is a test message notification",
+        "type": "message",
+        "deliveryMethod": "in_app",
+        "isUrgent": false,
+        "centerId": null,
+        "relatedType": null,
+        "relatedId": null,
+        "data": null,
+        "readAt": null,
+        "sentAt": "2025-07-11T09:24:04.900Z",
+        "scheduledFor": null,
+        "expiresAt": null,
+        "errorMessage": null,
+        "id": "eb8c9977-6239-42c5-803a-41f474ed5b8b",
+        "isRead": false,
+        "deliveryStatus": "sent",
+        "createdAt": "2025-07-11T09:24:04.790Z",
+        "updatedAt": "2025-07-11T09:24:04.902Z"
+      }
+    },
+    {
+      "endpoint": "PUT /notifications/mark-all-read",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": ""
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [
+          {
+            "id": "eb8c9977-6239-42c5-803a-41f474ed5b8b",
+            "userId": "b4cd2b92-5eb6-4a2f-b7b0-8b58970fcabb",
+            "centerId": null,
+            "title": "Test Message",
+            "message": "This is a test message notification",
+            "type": "message",
+            "deliveryMethod": "in_app",
+            "relatedType": null,
+            "relatedId": null,
+            "data": null,
+            "isRead": true,
+            "isUrgent": false,
+            "readAt": "2025-07-11T09:24:04.920Z",
+            "sentAt": "2025-07-11T09:24:04.900Z",
+            "scheduledFor": null,
+            "expiresAt": null,
+            "deliveryStatus": "sent",
+            "errorMessage": null,
+            "createdAt": "2025-07-11T09:24:04.790Z",
+            "updatedAt": "2025-07-11T09:24:04.921Z"
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 1
+      }
+    }
+  ]
+}

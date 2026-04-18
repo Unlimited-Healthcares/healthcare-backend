@@ -1,0 +1,192 @@
+{
+  "moduleName": "WebSocket",
+  "timestamp": "2025-07-12T13:24:39.658Z",
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 6.181818181818182
+  },
+  "results": [
+    {
+      "endpoint": "GET /health",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "status": "ok",
+        "timestamp": "2025-07-12T13:24:38.972Z",
+        "uptime": 55.187548827,
+        "environment": "development",
+        "version": "2.1.0",
+        "database": {
+          "status": "connected",
+          "response_time": "5ms"
+        },
+        "memory": {
+          "used": "109.18 MB",
+          "total": "132.5 MB",
+          "percentage": "82.4%"
+        },
+        "services": {
+          "chat": "operational",
+          "video_conferencing": "operational",
+          "notifications": "operational",
+          "ai_assistant": "operational",
+          "emergency_services": "operational",
+          "blood_donation": "operational",
+          "equipment_marketplace": "operational"
+        }
+      }
+    },
+    {
+      "endpoint": "GET /notifications",
+      "status": "PASS",
+      "responseTime": 21,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "notifications": [],
+        "total": 0
+      }
+    },
+    {
+      "endpoint": "GET /chat",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "Chat WebSocket gateway is available",
+        "userId": "fc7e05e9-7e52-4aa1-b9d5-03d4c9d7d6dd",
+        "timestamp": "2025-07-12T13:24:39.319Z",
+        "websocketNamespace": "/chat"
+      }
+    },
+    {
+      "endpoint": "GET /video-conference",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "Video conference WebSocket gateway is available",
+        "userId": "1ff24f26-ca93-451b-b8b1-0b47e0db4e11",
+        "timestamp": "2025-07-12T13:24:39.481Z",
+        "websocketNamespace": "/video-conference"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-12T13:24:39.492Z",
+        "path": "/auth/login",
+        "method": "POST",
+        "message": "Invalid credentials",
+        "error": "Unauthorized",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /socket.io/",
+      "status": "PASS",
+      "responseTime": 1,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "code": 0,
+        "message": "Transport unknown"
+      }
+    },
+    {
+      "endpoint": "POST /notifications/invalid-endpoint",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T13:24:39.496Z",
+        "path": "/notifications/invalid-endpoint",
+        "method": "POST",
+        "message": "Cannot POST /notifications/invalid-endpoint",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /chat/invalid-endpoint",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T13:24:39.498Z",
+        "path": "/chat/invalid-endpoint",
+        "method": "POST",
+        "message": "Cannot POST /chat/invalid-endpoint",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /video-conference/invalid-endpoint",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T13:24:39.501Z",
+        "path": "/video-conference/invalid-endpoint",
+        "method": "POST",
+        "message": "Cannot POST /video-conference/invalid-endpoint",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /admin/websocket",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T13:24:39.652Z",
+        "path": "/admin/websocket",
+        "method": "GET",
+        "message": "Cannot GET /admin/websocket",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /socket.io/?EIO=4&transport=polling",
+      "status": "PASS",
+      "responseTime": 3,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": "0{\"sid\":\"UgPkfE4ES_MJ8XIVAAAB\",\"upgrades\":[\"websocket\"],\"pingInterval\":25000,\"pingTimeout\":20000,\"maxPayload\":1000000}"
+    }
+  ]
+}

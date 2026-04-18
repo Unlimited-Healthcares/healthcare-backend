@@ -1,0 +1,553 @@
+{
+  "moduleName": "Reviews",
+  "timestamp": "2025-07-11T17:16:44.640Z",
+  "summary": {
+    "total": 33,
+    "passed": 25,
+    "failed": 8,
+    "successRate": 75.75757575757575,
+    "averageResponseTime": 14.272727272727273
+  },
+  "results": [
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 49,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 21,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /reviews",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "reviews": [],
+        "total": 0,
+        "page": 1,
+        "limit": 5
+      }
+    },
+    {
+      "endpoint": "GET /reviews/123e4567-e89b-12d3-a456-426614174002",
+      "status": "PASS",
+      "responseTime": 26,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.509Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002",
+        "method": "GET",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /reviews/appointments/123e4567-e89b-12d3-a456-426614174001",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /reviews/centers/123e4567-e89b-12d3-a456-426614174000/summary",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "totalReviews": 0,
+        "averageRating": 0,
+        "ratingDistribution": {
+          "fiveStars": 0,
+          "fourStars": 0,
+          "threeStars": 0,
+          "twoStars": 0,
+          "oneStars": 0
+        },
+        "verifiedReviewsCount": 0,
+        "responseRate": 0,
+        "averageResponseTime": 86400000,
+        "recentReviews": []
+      }
+    },
+    {
+      "endpoint": "GET /reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 200",
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "FAIL",
+      "responseTime": 31,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.752Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": "Patient not found for this user",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "FAIL",
+      "responseTime": 18,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.771Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": "Patient not found for this user",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002",
+      "status": "PASS",
+      "responseTime": 54,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.825Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002",
+        "method": "PUT",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /reviews/123e4567-e89b-12d3-a456-426614174002",
+      "status": "PASS",
+      "responseTime": 19,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.845Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002",
+        "method": "DELETE",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.860Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/photos",
+        "method": "POST",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/vote",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:43.875Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/vote",
+        "method": "POST",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/response",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.032Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/response",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:44.200Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+        "method": "PUT",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /reviews/centers/123e4567-e89b-12d3-a456-426614174000/analytics",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /reviews/centers/123e4567-e89b-12d3-a456-426614174000/trends",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "ratingTrend": [],
+        "categoryTrends": {
+          "staff": [],
+          "cleanliness": [],
+          "waitTime": [],
+          "treatment": []
+        },
+        "responseRateTrend": []
+      }
+    },
+    {
+      "endpoint": "GET /reviews/centers/123e4567-e89b-12d3-a456-426614174000/advanced-analytics",
+      "status": "PASS",
+      "responseTime": 22,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "totalReviews": 0,
+        "sentimentAnalysis": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0,
+          "averageSentiment": 0,
+          "sentimentTrend": "stable"
+        },
+        "responseMetrics": {
+          "averageResponseTime": 0,
+          "totalResponses": 0,
+          "responseRate": 0,
+          "quickResponseCount": 0,
+          "delayedResponseCount": 0
+        },
+        "photoMetrics": {
+          "totalPhotos": 0,
+          "reviewsWithPhotos": 0,
+          "averagePhotosPerReview": 0
+        },
+        "trends": {
+          "daily": {},
+          "weekly": {},
+          "monthly": {},
+          "trend": "stable"
+        },
+        "reviewsWithVotes": []
+      }
+    },
+    {
+      "endpoint": "GET /reviews/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T17:16:44.247Z",
+        "path": "/reviews/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.254Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "FAIL",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.260Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "FAIL",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.267Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.275Z",
+        "path": "/reviews",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/response",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.430Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/response",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.438Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+        "method": "PUT",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /reviews/centers/123e4567-e89b-12d3-a456-426614174000/analytics",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T17:16:44.444Z",
+        "path": "/reviews/centers/123e4567-e89b-12d3-a456-426614174000/analytics",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PUT /reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:44.626Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/moderate",
+        "method": "PUT",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /reviews/123e4567-e89b-12d3-a456-426614174002/response",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T17:16:44.636Z",
+        "path": "/reviews/123e4567-e89b-12d3-a456-426614174002/response",
+        "method": "POST",
+        "message": "Review not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

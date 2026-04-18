@@ -1,0 +1,571 @@
+{
+  "moduleName": "Equipment Marketplace",
+  "timestamp": "2025-07-12T11:49:48.500Z",
+  "summary": {
+    "total": 28,
+    "passed": 18,
+    "failed": 10,
+    "successRate": 64.28571428571429,
+    "averageResponseTime": 14.785714285714286
+  },
+  "results": [
+    {
+      "endpoint": "POST /equipment/categories",
+      "status": "PASS",
+      "responseTime": 32,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Test Diagnostic Equipment",
+        "description": "Medical diagnostic and imaging equipment for testing",
+        "categoryCode": "TEST-1752320987619",
+        "isActive": true,
+        "sortOrder": 1,
+        "parentCategoryId": null,
+        "metadata": null,
+        "id": "dcd05ace-30af-4b01-9e8c-557f8cf30a4f",
+        "createdAt": "2025-07-12T11:49:47.646Z",
+        "updatedAt": "2025-07-12T11:49:47.646Z"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/vendors",
+      "status": "PASS",
+      "responseTime": 27,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "companyName": "Test Medical Equipment Vendor",
+        "email": "test-vendor-1752320987801@example.com",
+        "phone": "+1234567890",
+        "address": "123 Test Street, Test City, TS 12345",
+        "specialties": [
+          "diagnostic",
+          "imaging"
+        ],
+        "websiteUrl": "https://testvendor.com",
+        "description": "Leading provider of medical diagnostic equipment",
+        "contactPerson": null,
+        "businessLicense": null,
+        "taxId": null,
+        "verificationDate": null,
+        "verifiedBy": null,
+        "businessHours": null,
+        "logoUrl": null,
+        "id": "3fd3790e-c8e0-4259-8b99-8846525c8bff",
+        "verificationStatus": "pending",
+        "ratingAverage": "0.00",
+        "totalRatings": 0,
+        "isActive": true,
+        "createdAt": "2025-07-12T11:49:47.822Z",
+        "updatedAt": "2025-07-12T11:49:47.822Z"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:47.837Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/categories",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "dcd05ace-30af-4b01-9e8c-557f8cf30a4f",
+          "name": "Test Diagnostic Equipment",
+          "description": "Medical diagnostic and imaging equipment for testing",
+          "parentCategoryId": null,
+          "categoryCode": "TEST-1752320987619",
+          "isActive": true,
+          "sortOrder": 1,
+          "metadata": null,
+          "createdAt": "2025-07-12T11:49:47.646Z",
+          "updatedAt": "2025-07-12T11:49:47.646Z",
+          "parentCategory": null,
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /equipment/categories/hierarchy",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "dcd05ace-30af-4b01-9e8c-557f8cf30a4f",
+          "name": "Test Diagnostic Equipment",
+          "description": "Medical diagnostic and imaging equipment for testing",
+          "parentCategoryId": null,
+          "categoryCode": "TEST-1752320987619",
+          "isActive": true,
+          "sortOrder": 1,
+          "metadata": null,
+          "createdAt": "2025-07-12T11:49:47.646Z",
+          "updatedAt": "2025-07-12T11:49:47.646Z",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /equipment/categories",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:47.878Z",
+        "path": "/equipment/categories",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/vendors",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "3fd3790e-c8e0-4259-8b99-8846525c8bff",
+          "companyName": "Test Medical Equipment Vendor",
+          "contactPerson": null,
+          "email": "test-vendor-1752320987801@example.com",
+          "phone": "+1234567890",
+          "address": "123 Test Street, Test City, TS 12345",
+          "businessLicense": null,
+          "taxId": null,
+          "verificationStatus": "pending",
+          "verificationDate": null,
+          "verifiedBy": null,
+          "ratingAverage": "0.00",
+          "totalRatings": 0,
+          "isActive": true,
+          "businessHours": null,
+          "specialties": [
+            "diagnostic",
+            "imaging"
+          ],
+          "websiteUrl": "https://testvendor.com",
+          "description": "Leading provider of medical diagnostic equipment",
+          "logoUrl": null,
+          "createdAt": "2025-07-12T11:49:47.822Z",
+          "updatedAt": "2025-07-12T11:49:47.822Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /equipment/vendors",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 409,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 409",
+      "responseBody": {
+        "statusCode": 409,
+        "timestamp": "2025-07-12T11:49:47.904Z",
+        "path": "/equipment/vendors",
+        "method": "POST",
+        "message": "Email address already registered",
+        "error": "Conflict",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "items": [],
+        "total": 0,
+        "page": 1,
+        "limit": 20
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "items": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items/featured",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "FAIL",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:47.952Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/rental/requests",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1",
+          "equipmentId": "equipment-1",
+          "renterCenterId": "center-1",
+          "requestNumber": "RR-1234567890",
+          "startDate": "2024-06-01",
+          "endDate": "2024-06-15",
+          "deliveryRequired": false,
+          "setupRequired": false,
+          "trainingRequired": false,
+          "status": "pending",
+          "createdAt": "2025-07-12T11:49:47.961Z",
+          "updatedAt": "2025-07-12T11:49:47.961Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /equipment/rental/requests",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:47.968Z",
+        "path": "/equipment/rental/requests",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/sales/listings",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1",
+          "equipmentId": "equipment-1",
+          "listingNumber": "SL-1234567890",
+          "listingTitle": "High-Quality Medical Equipment",
+          "salePrice": 50000,
+          "negotiable": true,
+          "featured": false,
+          "warrantyIncluded": true,
+          "deliveryIncluded": false,
+          "installationIncluded": false,
+          "trainingIncluded": false,
+          "shippingCost": 500,
+          "bulkDiscountAvailable": false,
+          "listingStatus": "active",
+          "createdBy": "vendor-1",
+          "createdAt": "2025-07-12T11:49:47.978Z",
+          "updatedAt": "2025-07-12T11:49:47.978Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /equipment/sales/listings",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:47.987Z",
+        "path": "/equipment/sales/listings",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/maintenance/schedules",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1",
+          "equipmentId": "equipment-1",
+          "maintenanceType": "preventive",
+          "frequencyDays": 90,
+          "nextMaintenanceDate": "2024-06-01",
+          "priority": "medium",
+          "status": "scheduled",
+          "reminderSent": false,
+          "nextScheduleGenerated": false,
+          "createdAt": "2025-07-12T11:49:47.996Z",
+          "updatedAt": "2025-07-12T11:49:47.996Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /equipment/maintenance/records",
+      "status": "FAIL",
+      "responseTime": 5,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:49:48.001Z",
+        "path": "/equipment/maintenance/records",
+        "method": "GET",
+        "message": "Cannot GET /equipment/maintenance/records",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/upload/presigned-url",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:49:48.005Z",
+        "path": "/equipment/upload/presigned-url?fileName=test-equipment-image.jpg&fileType=image%2Fjpeg&equipmentId=00000000-0000-0000-0000-000000000005",
+        "method": "GET",
+        "message": "Cannot GET /equipment/upload/presigned-url?fileName=test-equipment-image.jpg&fileType=image%2Fjpeg&equipmentId=00000000-0000-0000-0000-000000000005",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:49:48.016Z",
+        "path": "/equipment/items/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:49:48.031Z",
+        "path": "/equipment/items/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Equipment item not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/categories/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 97,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:49:48.129Z",
+        "path": "/equipment/categories/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "FAIL",
+      "responseTime": 20,
+      "statusCode": 403,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:48.149Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/categories",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:48.325Z",
+        "path": "/equipment/categories",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:48.331Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:49:48.337Z",
+        "path": "/equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+        "method": "PATCH",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/vendors",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "3fd3790e-c8e0-4259-8b99-8846525c8bff",
+          "companyName": "Test Medical Equipment Vendor",
+          "contactPerson": null,
+          "email": "test-vendor-1752320987801@example.com",
+          "phone": "+1234567890",
+          "address": "123 Test Street, Test City, TS 12345",
+          "businessLicense": null,
+          "taxId": null,
+          "verificationStatus": "pending",
+          "verificationDate": null,
+          "verifiedBy": null,
+          "ratingAverage": "0.00",
+          "totalRatings": 0,
+          "isActive": true,
+          "businessHours": null,
+          "specialties": [
+            "diagnostic",
+            "imaging"
+          ],
+          "websiteUrl": "https://testvendor.com",
+          "description": "Leading provider of medical diagnostic equipment",
+          "logoUrl": null,
+          "createdAt": "2025-07-12T11:49:47.822Z",
+          "updatedAt": "2025-07-12T11:49:47.822Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "PATCH /equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:49:48.497Z",
+        "path": "/equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+        "method": "PATCH",
+        "message": "Equipment vendor not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

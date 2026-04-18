@@ -1,0 +1,462 @@
+{
+  "moduleName": "MedicalRecords",
+  "timestamp": "2025-07-11T06:18:45.071Z",
+  "summary": {
+    "total": 28,
+    "passed": 21,
+    "failed": 7,
+    "successRate": 75,
+    "averageResponseTime": 21.607142857142858
+  },
+  "results": [
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "records": [],
+        "pagination": {
+          "page": "1",
+          "limit": "10",
+          "total": 0,
+          "totalPages": 0
+        }
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/tags",
+      "status": "FAIL",
+      "responseTime": 195,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:18:44.387Z",
+        "path": "/medical-records/tags",
+        "method": "GET",
+        "message": "function unnest(text) does not exist",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 24,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/categories/hierarchy",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:18:44.442Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Test Category 1752214724429",
+        "description": "Test category for endpoint testing",
+        "parentCategoryId": null,
+        "id": "ba527bd4-f9f1-4549-a1c3-9f79c38c68d3",
+        "isActive": true,
+        "createdAt": "2025-07-11T06:18:44.457Z",
+        "updatedAt": "2025-07-11T06:18:44.457Z"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/files/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.474Z",
+        "path": "/medical-records/files/00000000-0000-0000-0000-000000000001",
+        "method": "GET",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/files/00000000-0000-0000-0000-000000000001/url",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.487Z",
+        "path": "/medical-records/files/00000000-0000-0000-0000-000000000001/url",
+        "method": "GET",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/files/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.498Z",
+        "path": "/medical-records/files/00000000-0000-0000-0000-000000000001",
+        "method": "DELETE",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000001/versions",
+      "status": "FAIL",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 404,
+      "error": "Expected 404, got 200",
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/versions/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.521Z",
+        "path": "/medical-records/versions/00000000-0000-0000-0000-000000000001",
+        "method": "GET",
+        "message": "Version not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/00000000-0000-0000-0000-000000000001/revert/1",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.537Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001/revert/1",
+        "method": "POST",
+        "message": "Version not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/versions/00000000-0000-0000-0000-000000000001/compare/00000000-0000-0000-0000-000000000002",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.553Z",
+        "path": "/medical-records/versions/00000000-0000-0000-0000-000000000001/compare/00000000-0000-0000-0000-000000000002",
+        "method": "GET",
+        "message": "Version not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/00000000-0000-0000-0000-000000000001/files/00000000-0000-0000-0000-000000000001/convert-dicom",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.570Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001/files/00000000-0000-0000-0000-000000000001/convert-dicom",
+        "method": "POST",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 34,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:18:44.604Z",
+        "path": "/medical-records/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.614Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.625Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "PATCH",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.636Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:18:44.645Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID",
+          "recordType: recordType must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:18:44.654Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "FAIL",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:18:44.815Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "FAIL",
+      "responseTime": 15,
+      "statusCode": 409,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 409",
+      "responseBody": {
+        "statusCode": 409,
+        "timestamp": "2025-07-11T06:18:44.829Z",
+        "path": "/medical-records/categories",
+        "method": "POST",
+        "message": "Category with this name already exists",
+        "error": "Conflict",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /medical-records/categories/00000000-0000-0000-0000-000000000001",
+      "status": "FAIL",
+      "responseTime": 16,
+      "statusCode": 404,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.845Z",
+        "path": "/medical-records/categories/00000000-0000-0000-0000-000000000001",
+        "method": "PATCH",
+        "message": "Category not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/categories/00000000-0000-0000-0000-000000000001",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 403,
+      "error": "Expected 403, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:18:44.859Z",
+        "path": "/medical-records/categories/00000000-0000-0000-0000-000000000001",
+        "method": "DELETE",
+        "message": "Category not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "ba527bd4-f9f1-4549-a1c3-9f79c38c68d3",
+          "name": "Test Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:44.457Z",
+          "updatedAt": "2025-07-11T06:18:44.457Z",
+          "parent": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Admin Category 1752214724429",
+        "description": "Test category for endpoint testing",
+        "parentCategoryId": null,
+        "id": "1de5143f-d25b-4f80-9007-3c7abd896a45",
+        "isActive": true,
+        "createdAt": "2025-07-11T06:18:45.064Z",
+        "updatedAt": "2025-07-11T06:18:45.064Z"
+      }
+    }
+  ]
+}

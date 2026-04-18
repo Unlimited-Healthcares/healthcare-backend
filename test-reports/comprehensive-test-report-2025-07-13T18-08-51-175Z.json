@@ -1,0 +1,297 @@
+{
+  "timestamp": "2025-07-13T18:08:51.175Z",
+  "summary": {
+    "total": 37,
+    "passed": 6,
+    "failed": 31,
+    "successRate": 16.216216216216218
+  },
+  "moduleResults": [
+    {
+      "name": "application",
+      "status": "passed",
+      "endpoints": [
+        {
+          "status": "passed",
+          "duration": 19452
+        }
+      ],
+      "errors": [],
+      "duration": 19452
+    },
+    {
+      "name": "authentication",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "passed",
+          "duration": 109
+        },
+        {
+          "status": "passed",
+          "duration": 90
+        },
+        {
+          "status": "passed",
+          "duration": 85
+        },
+        {
+          "status": "passed",
+          "duration": 10
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 5
+        },
+        {
+          "status": "passed",
+          "duration": 14
+        }
+      ],
+      "errors": [
+        "POST /auth/refresh: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 313
+    },
+    {
+      "name": "users",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 5
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 7
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        }
+      ],
+      "errors": [
+        "POST /users: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /users: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /users/{{user_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /users/{{user_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /users/{{user_id}}/profile: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 24
+    },
+    {
+      "name": "centers",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        }
+      ],
+      "errors": [
+        "POST /centers: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /centers: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /centers/types: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /centers/{{center_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /centers/{{center_id}}: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 17
+    },
+    {
+      "name": "appointments",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 5
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        }
+      ],
+      "errors": [
+        "POST /appointments: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /appointments: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /appointments/{{appointment_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "PATCH /appointments/{{appointment_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /appointments/me: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 18
+    },
+    {
+      "name": "referrals",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 5
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        }
+      ],
+      "errors": [
+        "POST /referrals: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /referrals: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /referrals/{{referral_id}}: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /referrals/me: expected 200 \"OK\", got 401 \"Unauthorized\""
+      ],
+      "duration": 15
+    },
+    {
+      "name": "medical-records",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 2
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 4
+        }
+      ],
+      "errors": [
+        "GET /medical-records: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /medical-records/tags: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /medical-records/categories: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "GET /medical-records/categories/hierarchy: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /medical-records: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /medical-records/search: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /medical-records/categories: expected 201 \"Created\", got 401 \"Unauthorized\""
+      ],
+      "duration": 22
+    },
+    {
+      "name": "chat-video",
+      "status": "failed",
+      "endpoints": [
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 401 \"Unauthorized\"",
+          "duration": 13
+        },
+        {
+          "status": "failed",
+          "error": "expected 200 \"OK\", got 401 \"Unauthorized\"",
+          "duration": 4
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 3
+        },
+        {
+          "status": "failed",
+          "error": "expected 201 \"Created\", got 404 \"Not Found\"",
+          "duration": 2
+        }
+      ],
+      "errors": [
+        "POST /chat/rooms: expected 201 \"Created\", got 401 \"Unauthorized\"",
+        "GET /chat/rooms: expected 200 \"OK\", got 401 \"Unauthorized\"",
+        "POST /chat/messages: expected 201 \"Created\", got 404 \"Not Found\"",
+        "POST /video/calls: expected 201 \"Created\", got 404 \"Not Found\""
+      ],
+      "duration": 22
+    }
+  ],
+  "testConfiguration": {
+    "totalModules": 8,
+    "testEnvironment": "test",
+    "databaseUrl": "Not configured"
+  }
+}

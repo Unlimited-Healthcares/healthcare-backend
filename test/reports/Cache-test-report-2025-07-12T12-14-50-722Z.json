@@ -1,0 +1,396 @@
+{
+  "moduleName": "Cache",
+  "timestamp": "2025-07-12T12:14:50.722Z",
+  "summary": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 11.375
+  },
+  "results": [
+    {
+      "endpoint": "GET /cache/debug/user",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "5d16442e-0133-44fa-89b6-a44f08e0876d",
+          "sub": "5d16442e-0133-44fa-89b6-a44f08e0876d",
+          "userId": "5d16442e-0133-44fa-89b6-a44f08e0876d",
+          "email": "test-cache-admin-1752322489721@example.com",
+          "roles": [
+            "admin"
+          ]
+        },
+        "roles": [
+          "admin"
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /cache/generate-key",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "key": "user:{\"action\":\"test\",\"userId\":\"123\"}",
+        "prefix": "user",
+        "params": {
+          "userId": "123",
+          "action": "test"
+        }
+      }
+    },
+    {
+      "endpoint": "POST /cache",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "message": "Value cached successfully",
+        "key": "test-key"
+      }
+    },
+    {
+      "endpoint": "POST /cache",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "message": "Value cached successfully",
+        "key": "test-key-2"
+      }
+    },
+    {
+      "endpoint": "POST /cache",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "message": "Value cached successfully",
+        "key": "simple-key"
+      }
+    },
+    {
+      "endpoint": "GET /cache/test-key",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": {
+          "message": "Hello from cache",
+          "timestamp": "2025-07-12T12:14:49.974Z"
+        },
+        "key": "test-key",
+        "timestamp": "2025-07-12T12:14:50.037Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "GET /cache/test-key-2",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": {
+          "data": "Another cached value",
+          "number": 42
+        },
+        "key": "test-key-2",
+        "timestamp": "2025-07-12T12:14:50.049Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "GET /cache/simple-key",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": "simple string value",
+        "key": "simple-key",
+        "timestamp": "2025-07-12T12:14:50.057Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "DELETE /cache/test-key-2",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "Cache key deleted successfully",
+        "key": "test-key-2"
+      }
+    },
+    {
+      "endpoint": "GET /cache/test-key-2",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": null,
+        "key": "test-key-2",
+        "timestamp": "2025-07-12T12:14:50.075Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "DELETE /cache",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "message": "Cache reset successfully",
+        "timestamp": "2025-07-12T12:14:50.084Z"
+      }
+    },
+    {
+      "endpoint": "GET /cache/test-key",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": null,
+        "key": "test-key",
+        "timestamp": "2025-07-12T12:14:50.108Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "GET /cache/simple-key",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": null,
+        "key": "simple-key",
+        "timestamp": "2025-07-12T12:14:50.117Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "POST /cache",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:14:50.132Z",
+        "path": "/cache",
+        "method": "POST",
+        "message": [
+          "key: key should not be empty, key must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /cache",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T12:14:50.144Z",
+        "path": "/cache",
+        "method": "POST",
+        "message": [
+          "key: key should not be empty"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /cache/non-existent-key",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "hit": true,
+        "data": null,
+        "key": "non-existent-key",
+        "timestamp": "2025-07-12T12:14:50.152Z",
+        "ttl": 3600
+      }
+    },
+    {
+      "endpoint": "GET /cache/stats/overview",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.337Z",
+        "path": "/cache/stats/overview",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /cache",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.355Z",
+        "path": "/cache",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /cache/test-key",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.363Z",
+        "path": "/cache/test-key",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /cache/test-key",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.379Z",
+        "path": "/cache/test-key",
+        "method": "DELETE",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /cache",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.385Z",
+        "path": "/cache",
+        "method": "DELETE",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /cache/stats/overview",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.554Z",
+        "path": "/cache/stats/overview",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /cache/generate-key",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.564Z",
+        "path": "/cache/generate-key?prefix=user",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /cache/stats/overview",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T12:14:50.719Z",
+        "path": "/cache/stats/overview",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

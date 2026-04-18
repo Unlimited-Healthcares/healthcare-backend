@@ -1,0 +1,64 @@
+{
+  "moduleName": "ai-services",
+  "timestamp": "2025-06-08T04:34:36.527Z",
+  "summary": {
+    "total": 3,
+    "passed": 0,
+    "failed": 3,
+    "successRate": 0,
+    "averageResponseTime": 4.666666666666667
+  },
+  "results": [
+    {
+      "endpoint": "POST /ai/symptoms/analyze",
+      "status": "FAIL",
+      "responseTime": 5,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:36.513Z",
+        "path": "/ai/symptoms/analyze",
+        "method": "POST",
+        "message": "Cannot POST /ai/symptoms/analyze",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /ai/treatment/recommend",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:36.519Z",
+        "path": "/ai/treatment/recommend",
+        "method": "POST",
+        "message": "Cannot POST /ai/treatment/recommend",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /ai/drugs/interactions",
+      "status": "FAIL",
+      "responseTime": 5,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:34:36.524Z",
+        "path": "/ai/drugs/interactions",
+        "method": "POST",
+        "message": "Cannot POST /ai/drugs/interactions",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

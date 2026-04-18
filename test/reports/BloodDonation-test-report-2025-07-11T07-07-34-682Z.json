@@ -1,0 +1,802 @@
+{
+  "moduleName": "BloodDonation",
+  "timestamp": "2025-07-11T07:07:34.682Z",
+  "summary": {
+    "total": 37,
+    "passed": 33,
+    "failed": 4,
+    "successRate": 89.1891891891892,
+    "averageResponseTime": 16.324324324324323
+  },
+  "results": [
+    {
+      "endpoint": "GET /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 31,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [
+          {
+            "id": "12384dc5-dbe5-4ed1-bfcd-fc40f0307b76",
+            "userId": "1c416f1a-4258-4b32-b472-4f63a9ce530e",
+            "donorNumber": "BD2025000001",
+            "bloodType": "A+",
+            "weightKg": "70.50",
+            "heightCm": 175,
+            "dateOfBirth": "1990-01-15",
+            "emergencyContactName": "John Smith",
+            "emergencyContactPhone": "+1234567890",
+            "medicalConditions": [
+              "diabetes"
+            ],
+            "medications": [
+              "metformin"
+            ],
+            "lastDonationDate": null,
+            "nextEligibleDate": "2025-09-05T07:01:47.526Z",
+            "totalDonations": 0,
+            "totalRewardPoints": 0,
+            "status": "eligible",
+            "notes": "First-time donor",
+            "createdAt": "2025-07-11T07:01:47.527Z",
+            "updatedAt": "2025-07-11T07:01:47.527Z",
+            "user": {
+              "id": "1c416f1a-4258-4b32-b472-4f63a9ce530e",
+              "displayId": "AD307131671",
+              "email": "test-blooddonation-admin-1752217307048@example.com",
+              "password": "$2b$10$aN457ObbCYo0Y63gXJtZI.nZJB8RMw9NyMln.AMwlokXalYOaAqPy",
+              "roles": [
+                "admin"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYmxvb2Rkb25hdGlvbi1hZG1pbi0xNzUyMjE3MzA3MDQ4QGV4YW1wbGUuY29tIiwic3ViIjoiMWM0MTZmMWEtNDI1OC00YjMyLWI0NzItNGY2M2E5Y2U1MzBlIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMjE3MzA3LCJleHAiOjE3NTI4MjIxMDd9.nct-MxTVr3Bc1A9d2iH1b7kP6N1mpp7UXm1SMUhgO-o",
+              "createdAt": "2025-07-11T07:01:47.145Z",
+              "updatedAt": "2025-07-11T07:01:47.263Z"
+            }
+          }
+        ],
+        "total": 1,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 1
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 21,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [
+          {
+            "id": "12384dc5-dbe5-4ed1-bfcd-fc40f0307b76",
+            "userId": "1c416f1a-4258-4b32-b472-4f63a9ce530e",
+            "donorNumber": "BD2025000001",
+            "bloodType": "A+",
+            "weightKg": "70.50",
+            "heightCm": 175,
+            "dateOfBirth": "1990-01-15",
+            "emergencyContactName": "John Smith",
+            "emergencyContactPhone": "+1234567890",
+            "medicalConditions": [
+              "diabetes"
+            ],
+            "medications": [
+              "metformin"
+            ],
+            "lastDonationDate": null,
+            "nextEligibleDate": "2025-09-05T07:01:47.526Z",
+            "totalDonations": 0,
+            "totalRewardPoints": 0,
+            "status": "eligible",
+            "notes": "First-time donor",
+            "createdAt": "2025-07-11T07:01:47.527Z",
+            "updatedAt": "2025-07-11T07:01:47.527Z",
+            "user": {
+              "id": "1c416f1a-4258-4b32-b472-4f63a9ce530e",
+              "displayId": "AD307131671",
+              "email": "test-blooddonation-admin-1752217307048@example.com",
+              "password": "$2b$10$aN457ObbCYo0Y63gXJtZI.nZJB8RMw9NyMln.AMwlokXalYOaAqPy",
+              "roles": [
+                "admin"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYmxvb2Rkb25hdGlvbi1hZG1pbi0xNzUyMjE3MzA3MDQ4QGV4YW1wbGUuY29tIiwic3ViIjoiMWM0MTZmMWEtNDI1OC00YjMyLWI0NzItNGY2M2E5Y2U1MzBlIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMjE3MzA3LCJleHAiOjE3NTI4MjIxMDd9.nct-MxTVr3Bc1A9d2iH1b7kP6N1mpp7UXm1SMUhgO-o",
+              "createdAt": "2025-07-11T07:01:47.145Z",
+              "updatedAt": "2025-07-11T07:01:47.263Z"
+            }
+          }
+        ],
+        "total": 1,
+        "page": 1,
+        "limit": 5,
+        "totalPages": 1
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 5,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 5,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/inventory",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "totalUnits": 0,
+        "availableUnits": 0,
+        "reservedUnits": 0,
+        "expiredUnits": 0,
+        "lowInventoryTypes": [],
+        "byBloodType": {}
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/inventory",
+      "status": "FAIL",
+      "responseTime": 121,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:33.761Z",
+        "path": "/blood-donation/inventory?bloodType=A%2B&centerId=550e8400-e29b-41d4-a716-446655440001",
+        "method": "GET",
+        "message": "insert or update on table \"blood_inventory\" violates foreign key constraint \"FK_4727b256f2c4a994099b67fad49\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 18,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "userId": "bcb5f95b-367b-4134-bd86-263888102ea1",
+        "donorNumber": "BD2025000002",
+        "bloodType": "A+",
+        "weightKg": 70.5,
+        "heightCm": 175,
+        "dateOfBirth": "1990-01-15T00:00:00.000Z",
+        "emergencyContactName": "John Smith",
+        "emergencyContactPhone": "+1234567890",
+        "medicalConditions": [
+          "diabetes"
+        ],
+        "medications": [
+          "metformin"
+        ],
+        "nextEligibleDate": "2025-09-05T07:07:33.873Z",
+        "notes": "First-time donor",
+        "lastDonationDate": null,
+        "id": "9c98622e-6aa9-4513-a538-c5368b5bfce0",
+        "totalDonations": 0,
+        "totalRewardPoints": 0,
+        "status": "eligible",
+        "createdAt": "2025-07-11T07:07:33.873Z",
+        "updatedAt": "2025-07-11T07:07:33.873Z"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/requests",
+      "status": "FAIL",
+      "responseTime": 50,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:33.928Z",
+        "path": "/blood-donation/requests",
+        "method": "POST",
+        "message": "insert or update on table \"blood_donation_requests\" violates foreign key constraint \"FK_6abe2b0e6447ab373a6f83c1b6d\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donations",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 404,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:07:33.950Z",
+        "path": "/blood-donation/donations",
+        "method": "POST",
+        "message": "Donor not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:33.961Z",
+        "path": "/blood-donation/donors/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:33.969Z",
+        "path": "/blood-donation/requests/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:33.976Z",
+        "path": "/blood-donation/donations/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:07:33.986Z",
+        "path": "/blood-donation/donors/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Blood donor not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:07:34.008Z",
+        "path": "/blood-donation/requests/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Blood donation request not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 20,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T07:07:34.029Z",
+        "path": "/blood-donation/donations/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Blood donation not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:34.037Z",
+        "path": "/blood-donation/donors",
+        "method": "POST",
+        "message": [
+          "dateOfBirth: dateOfBirth must be a valid ISO 8601 date string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:34.047Z",
+        "path": "/blood-donation/requests",
+        "method": "POST",
+        "message": [
+          "requestingCenterId: requestingCenterId must be a string",
+          "priority: priority must be one of the following values: low, medium, high, critical",
+          "neededBy: neededBy must be a valid ISO 8601 date string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:34.055Z",
+        "path": "/blood-donation/donations",
+        "method": "POST",
+        "message": [
+          "donorId: donorId should not be empty, donorId must be a string",
+          "bloodBankCenterId: bloodBankCenterId must be a string",
+          "donationDate: donationDate must be a valid ISO 8601 date string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:34.062Z",
+        "path": "/blood-donation/donors",
+        "method": "POST",
+        "message": [
+          "bloodType: bloodType must be one of the following values: A+, A-, B+, B-, AB+, AB-, O+, O-"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:34.070Z",
+        "path": "/blood-donation/requests",
+        "method": "POST",
+        "message": [
+          "bloodType: bloodType must be one of the following values: A+, A-, B+, B-, AB+, AB-, O+, O-",
+          "priority: priority must be one of the following values: low, medium, high, critical"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.219Z",
+        "path": "/blood-donation/donors",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.227Z",
+        "path": "/blood-donation/requests",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.233Z",
+        "path": "/blood-donation/donations",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/inventory",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.238Z",
+        "path": "/blood-donation/inventory",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.245Z",
+        "path": "/blood-donation/donors",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.250Z",
+        "path": "/blood-donation/requests",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.257Z",
+        "path": "/blood-donation/donations",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "POST /blood-donation/requests",
+      "status": "FAIL",
+      "responseTime": 46,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T07:07:34.457Z",
+        "path": "/blood-donation/requests",
+        "method": "POST",
+        "message": "insert or update on table \"blood_donation_requests\" violates foreign key constraint \"FK_6abe2b0e6447ab373a6f83c1b6d\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 33,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.491Z",
+        "path": "/blood-donation/donors",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T07:07:34.498Z",
+        "path": "/blood-donation/donations",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donors",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [
+          {
+            "id": "9c98622e-6aa9-4513-a538-c5368b5bfce0",
+            "userId": "bcb5f95b-367b-4134-bd86-263888102ea1",
+            "donorNumber": "BD2025000002",
+            "bloodType": "A+",
+            "weightKg": "70.50",
+            "heightCm": 175,
+            "dateOfBirth": "1990-01-15",
+            "emergencyContactName": "John Smith",
+            "emergencyContactPhone": "+1234567890",
+            "medicalConditions": [
+              "diabetes"
+            ],
+            "medications": [
+              "metformin"
+            ],
+            "lastDonationDate": null,
+            "nextEligibleDate": "2025-09-05T07:07:33.873Z",
+            "totalDonations": 0,
+            "totalRewardPoints": 0,
+            "status": "eligible",
+            "notes": "First-time donor",
+            "createdAt": "2025-07-11T07:07:33.873Z",
+            "updatedAt": "2025-07-11T07:07:33.873Z",
+            "user": {
+              "id": "bcb5f95b-367b-4134-bd86-263888102ea1",
+              "displayId": "AD653402380",
+              "email": "test-blooddonation-admin-1752217653326@example.com",
+              "password": "$2b$10$dTmSNTuZEZFAKnDUYQSMg.l1ZD52J0QKjxvSLI7tahBQ/qXh4g7DS",
+              "roles": [
+                "admin"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYmxvb2Rkb25hdGlvbi1hZG1pbi0xNzUyMjE3NjUzMzI2QGV4YW1wbGUuY29tIiwic3ViIjoiYmNiNWY5NWItMzY3Yi00MTM0LWJkODYtMjYzODg4MTAyZWExIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMjE3NjUzLCJleHAiOjE3NTI4MjI0NTN9.tu5M7h2BpJPS1aICY09jYt-2XHbFtTQCZl1LZGPh1yU",
+              "createdAt": "2025-07-11T07:07:33.415Z",
+              "updatedAt": "2025-07-11T07:07:33.521Z"
+            }
+          },
+          {
+            "id": "12384dc5-dbe5-4ed1-bfcd-fc40f0307b76",
+            "userId": "1c416f1a-4258-4b32-b472-4f63a9ce530e",
+            "donorNumber": "BD2025000001",
+            "bloodType": "A+",
+            "weightKg": "70.50",
+            "heightCm": 175,
+            "dateOfBirth": "1990-01-15",
+            "emergencyContactName": "John Smith",
+            "emergencyContactPhone": "+1234567890",
+            "medicalConditions": [
+              "diabetes"
+            ],
+            "medications": [
+              "metformin"
+            ],
+            "lastDonationDate": null,
+            "nextEligibleDate": "2025-09-05T07:01:47.526Z",
+            "totalDonations": 0,
+            "totalRewardPoints": 0,
+            "status": "eligible",
+            "notes": "First-time donor",
+            "createdAt": "2025-07-11T07:01:47.527Z",
+            "updatedAt": "2025-07-11T07:01:47.527Z",
+            "user": {
+              "id": "1c416f1a-4258-4b32-b472-4f63a9ce530e",
+              "displayId": "AD307131671",
+              "email": "test-blooddonation-admin-1752217307048@example.com",
+              "password": "$2b$10$aN457ObbCYo0Y63gXJtZI.nZJB8RMw9NyMln.AMwlokXalYOaAqPy",
+              "roles": [
+                "admin"
+              ],
+              "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYmxvb2Rkb25hdGlvbi1hZG1pbi0xNzUyMjE3MzA3MDQ4QGV4YW1wbGUuY29tIiwic3ViIjoiMWM0MTZmMWEtNDI1OC00YjMyLWI0NzItNGY2M2E5Y2U1MzBlIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzUyMjE3MzA3LCJleHAiOjE3NTI4MjIxMDd9.nct-MxTVr3Bc1A9d2iH1b7kP6N1mpp7UXm1SMUhgO-o",
+              "createdAt": "2025-07-11T07:01:47.145Z",
+              "updatedAt": "2025-07-11T07:01:47.263Z"
+            }
+          }
+        ],
+        "total": 2,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 1
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/requests",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/donations",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "data": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /blood-donation/inventory",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "totalUnits": 0,
+        "availableUnits": 0,
+        "reservedUnits": 0,
+        "expiredUnits": 0,
+        "lowInventoryTypes": [],
+        "byBloodType": {}
+      }
+    }
+  ]
+}

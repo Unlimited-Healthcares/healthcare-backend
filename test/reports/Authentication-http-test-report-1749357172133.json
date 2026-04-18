@@ -1,0 +1,71 @@
+{
+  "moduleName": "Authentication",
+  "timestamp": "2025-06-08T04:32:52.133Z",
+  "summary": {
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "successRate": 66.66666666666666,
+    "averageResponseTime": 136
+  },
+  "results": [
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 176,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "18158f36-6d3a-4138-b93d-e44210d236eb",
+        "displayId": "PT171805211",
+        "email": "test-auth-1749357171719@example.com",
+        "password": "$2b$10$Sr0lbY43gVhGOdw0Zlqa5O9.Zzi.7NC/npuYgGdl/cJ.rslH0HGz.",
+        "roles": [
+          "patient"
+        ],
+        "refreshToken": null,
+        "createdAt": "2025-06-08T04:32:51.808Z",
+        "updatedAt": "2025-06-08T04:32:51.808Z",
+        "profile": null
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 209,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzQ5MzU3MTcxNzE5QGV4YW1wbGUuY29tIiwic3ViIjoiMTgxNThmMzYtNmQzYS00MTM4LWI5M2QtZTQ0MjEwZDIzNmViIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NDkzNTcxNzEsImV4cCI6MTc0OTQ0MzU3MX0.7Jz5phFV0d5AJYpcSr4hvB-OnD-VjOyS3d0OuS20Lgg",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzQ5MzU3MTcxNzE5QGV4YW1wbGUuY29tIiwic3ViIjoiMTgxNThmMzYtNmQzYS00MTM4LWI5M2QtZTQ0MjEwZDIzNmViIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NDkzNTcxNzEsImV4cCI6MTc0OTk2MTk3MX0.LNrxhLN6H_u6mIBDUYERQYuLe4HIbrM3Mm8k-56o11g",
+        "user": {
+          "id": "18158f36-6d3a-4138-b93d-e44210d236eb",
+          "email": "test-auth-1749357171719@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT171805211"
+        }
+      }
+    },
+    {
+      "endpoint": "GET /auth/profile",
+      "status": "FAIL",
+      "responseTime": 23,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-06-08T04:32:52.127Z",
+        "path": "/auth/profile",
+        "method": "GET",
+        "message": "Cannot GET /auth/profile",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

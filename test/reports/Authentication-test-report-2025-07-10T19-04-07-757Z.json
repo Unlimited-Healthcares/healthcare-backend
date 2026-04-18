@@ -1,0 +1,71 @@
+{
+  "moduleName": "Authentication",
+  "timestamp": "2025-07-10T19:04:07.757Z",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 53.666666666666664
+  },
+  "results": [
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 70,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "e92f95cd-c84d-4be4-92aa-ff9e74287249",
+          "email": "test-auth-1752174247595@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT247655334"
+        },
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjQ3NTk1QGV4YW1wbGUuY29tIiwic3ViIjoiZTkyZjk1Y2QtYzg0ZC00YmU0LTkyYWEtZmY5ZTc0Mjg3MjQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1MjI2MDY0N30.aHFvyXL8lqIUVrQT3Aj287K-PKte8YMODCMes1XW-UQ"
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 77,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "user": {
+          "id": "e92f95cd-c84d-4be4-92aa-ff9e74287249",
+          "email": "test-auth-1752174247595@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT247655334"
+        },
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjQ3NTk1QGV4YW1wbGUuY29tIiwic3ViIjoiZTkyZjk1Y2QtYzg0ZC00YmU0LTkyYWEtZmY5ZTc0Mjg3MjQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1MjI2MDY0N30.aHFvyXL8lqIUVrQT3Aj287K-PKte8YMODCMes1XW-UQ"
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "d888d1d5-cb87-4b18-a19b-004d899f09f7",
+        "email": "test-authentication-patient-1752174247435@example.com",
+        "roles": [
+          "patient"
+        ],
+        "displayId": "PT247495869",
+        "profile": null,
+        "createdAt": "2025-07-10T19:04:07.505Z",
+        "updatedAt": "2025-07-10T19:04:07.585Z",
+        "isActive": true
+      }
+    }
+  ]
+}

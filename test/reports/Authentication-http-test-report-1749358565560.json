@@ -1,0 +1,73 @@
+{
+  "moduleName": "Authentication",
+  "timestamp": "2025-06-08T04:56:05.559Z",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 145
+  },
+  "results": [
+    {
+      "endpoint": "POST /auth/register",
+      "status": "PASS",
+      "responseTime": 197,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "46a2edd4-5449-4d30-be8d-b68a4150a118",
+        "displayId": "PT565219289",
+        "email": "test-auth-1749358565117@example.com",
+        "password": "$2b$10$vgQyoEblgqDk1.l1Li321ewaYoUXYJMyJiH5FxrMzFjOoWCTAovuC",
+        "roles": [
+          "patient"
+        ],
+        "refreshToken": null,
+        "createdAt": "2025-06-08T04:56:05.220Z",
+        "updatedAt": "2025-06-08T04:56:05.220Z",
+        "profile": null
+      }
+    },
+    {
+      "endpoint": "POST /auth/login",
+      "status": "PASS",
+      "responseTime": 210,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzQ5MzU4NTY1MTE3QGV4YW1wbGUuY29tIiwic3ViIjoiNDZhMmVkZDQtNTQ0OS00ZDMwLWJlOGQtYjY4YTQxNTBhMTE4Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NDkzNTg1NjUsImV4cCI6MTc0OTQ0NDk2NX0.ekz5wdemnN-NxLw9udHh9zrJQDmHFhG_Yid8RQoHtqA",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzQ5MzU4NTY1MTE3QGV4YW1wbGUuY29tIiwic3ViIjoiNDZhMmVkZDQtNTQ0OS00ZDMwLWJlOGQtYjY4YTQxNTBhMTE4Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NDkzNTg1NjUsImV4cCI6MTc0OTk2MzM2NX0.PZvVdARuVZ3lVVFyy10yTYxjl5Y33V8MmUkmC3Fs9oI",
+        "user": {
+          "id": "46a2edd4-5449-4d30-be8d-b68a4150a118",
+          "email": "test-auth-1749358565117@example.com",
+          "roles": [
+            "patient"
+          ],
+          "displayId": "PT565219289"
+        }
+      }
+    },
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 28,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "55c7ee6f-ec19-4302-8ed1-a4e0337ba53f",
+        "email": "test-authentication-patient-1749358564278@example.com",
+        "roles": [
+          "patient"
+        ],
+        "displayId": "PT564426324",
+        "profile": null,
+        "createdAt": "2025-06-08T04:56:04.452Z",
+        "updatedAt": "2025-06-08T04:56:04.729Z"
+      }
+    }
+  ]
+}

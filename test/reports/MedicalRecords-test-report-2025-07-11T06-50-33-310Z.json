@@ -1,0 +1,2915 @@
+{
+  "moduleName": "MedicalRecords",
+  "timestamp": "2025-07-11T06:50:33.309Z",
+  "summary": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 17.678571428571427
+  },
+  "results": [
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "a42bed57-e098-4ad6-8760-7c1c9bb10373",
+          "patientId": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216595961",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:49:56.986Z",
+          "updatedAt": "2025-07-11T06:49:56.986Z",
+          "patient": {
+            "id": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+            "userId": "9e6c6dc7-f639-47c0-b4fe-2d81c239d331",
+            "patientId": "PT596215395",
+            "medicalRecordNumber": "Elauc2N12B",
+            "emergencyContactName": "Annette Muller",
+            "emergencyContactPhone": "1-587-297-1673 x79256",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "A-",
+            "allergies": "Shellfish",
+            "chronicConditions": "",
+            "currentMedications": "Metformin, Lisinopril",
+            "insuranceProvider": "Cigna",
+            "insurancePolicyNumber": "6FG787ANAroF",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:49:56.216Z",
+            "updatedAt": "2025-07-11T06:49:56.216Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "9baf1f75-49c1-421f-96f1-3fe6e7dd0c9d",
+          "patientId": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216595961",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:49:56.618Z",
+          "updatedAt": "2025-07-11T06:49:56.618Z",
+          "patient": {
+            "id": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+            "userId": "9e6c6dc7-f639-47c0-b4fe-2d81c239d331",
+            "patientId": "PT596215395",
+            "medicalRecordNumber": "Elauc2N12B",
+            "emergencyContactName": "Annette Muller",
+            "emergencyContactPhone": "1-587-297-1673 x79256",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "A-",
+            "allergies": "Shellfish",
+            "chronicConditions": "",
+            "currentMedications": "Metformin, Lisinopril",
+            "insuranceProvider": "Cigna",
+            "insurancePolicyNumber": "6FG787ANAroF",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:49:56.216Z",
+            "updatedAt": "2025-07-11T06:49:56.216Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "8436d2a2-4962-42f1-a3eb-372c22b683a9",
+          "patientId": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216513299",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:34.273Z",
+          "updatedAt": "2025-07-11T06:48:34.273Z",
+          "patient": {
+            "id": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+            "userId": "47a2c700-b034-464c-9f37-ca48e4e91189",
+            "patientId": "PT513554969",
+            "medicalRecordNumber": "DuFdw450pj",
+            "emergencyContactName": "Nathan Runolfsdottir",
+            "emergencyContactPhone": "(710) 301-0336",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Diabetes",
+            "currentMedications": "",
+            "insuranceProvider": "UnitedHealth",
+            "insurancePolicyNumber": "eyCisDCYV5aH",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:33.554Z",
+            "updatedAt": "2025-07-11T06:48:33.554Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "b95c83a9-a715-4bbc-8266-c6f07999068e",
+          "patientId": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216513299",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:33.877Z",
+          "updatedAt": "2025-07-11T06:48:33.877Z",
+          "patient": {
+            "id": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+            "userId": "47a2c700-b034-464c-9f37-ca48e4e91189",
+            "patientId": "PT513554969",
+            "medicalRecordNumber": "DuFdw450pj",
+            "emergencyContactName": "Nathan Runolfsdottir",
+            "emergencyContactPhone": "(710) 301-0336",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Diabetes",
+            "currentMedications": "",
+            "insuranceProvider": "UnitedHealth",
+            "insurancePolicyNumber": "eyCisDCYV5aH",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:33.554Z",
+            "updatedAt": "2025-07-11T06:48:33.554Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "03448256-0970-495c-8cd0-2350ab5642c2",
+          "patientId": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216488755",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:09.757Z",
+          "updatedAt": "2025-07-11T06:48:09.757Z",
+          "patient": {
+            "id": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+            "userId": "6461bb2b-47e1-4415-92b5-e4c838931b75",
+            "patientId": "PT489009899",
+            "medicalRecordNumber": "zZhtJbKbo4",
+            "emergencyContactName": "Nathaniel Quigley",
+            "emergencyContactPhone": "402.704.3885 x508",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "B-",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Asthma, Diabetes",
+            "currentMedications": "Aspirin, Metformin",
+            "insuranceProvider": "Aetna",
+            "insurancePolicyNumber": "AFN4q38NL81q",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:09.011Z",
+            "updatedAt": "2025-07-11T06:48:09.011Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "5b15eb36-c28d-4c1c-a84a-b6eb0a44f46d",
+          "patientId": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216488755",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:09.426Z",
+          "updatedAt": "2025-07-11T06:48:09.426Z",
+          "patient": {
+            "id": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+            "userId": "6461bb2b-47e1-4415-92b5-e4c838931b75",
+            "patientId": "PT489009899",
+            "medicalRecordNumber": "zZhtJbKbo4",
+            "emergencyContactName": "Nathaniel Quigley",
+            "emergencyContactPhone": "402.704.3885 x508",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "B-",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Asthma, Diabetes",
+            "currentMedications": "Aspirin, Metformin",
+            "insuranceProvider": "Aetna",
+            "insurancePolicyNumber": "AFN4q38NL81q",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:09.011Z",
+            "updatedAt": "2025-07-11T06:48:09.011Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "ce924696-554d-4d6d-be50-2b7bfa8061a0",
+          "patientId": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216454991",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:35.966Z",
+          "updatedAt": "2025-07-11T06:47:35.966Z",
+          "patient": {
+            "id": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+            "userId": "45b22fc0-78e0-4133-9356-ad15bf745ee2",
+            "patientId": "PT455232257",
+            "medicalRecordNumber": "CXVfjpHJQP",
+            "emergencyContactName": "Sophia Rempel MD",
+            "emergencyContactPhone": "(666) 391-7090 x13658",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "AB-",
+            "allergies": "",
+            "chronicConditions": "",
+            "currentMedications": "",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "I0BVUO21tU7Z",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:47:35.232Z",
+            "updatedAt": "2025-07-11T06:47:35.232Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "5ebeb5dd-b4a2-461d-ab5c-19336b12ad5f",
+          "patientId": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216454991",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:35.545Z",
+          "updatedAt": "2025-07-11T06:47:35.545Z",
+          "patient": {
+            "id": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+            "userId": "45b22fc0-78e0-4133-9356-ad15bf745ee2",
+            "patientId": "PT455232257",
+            "medicalRecordNumber": "CXVfjpHJQP",
+            "emergencyContactName": "Sophia Rempel MD",
+            "emergencyContactPhone": "(666) 391-7090 x13658",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "AB-",
+            "allergies": "",
+            "chronicConditions": "",
+            "currentMedications": "",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "I0BVUO21tU7Z",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:47:35.232Z",
+            "updatedAt": "2025-07-11T06:47:35.232Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "f86ba04e-28c4-4ec7-916a-700286a113ac",
+          "patientId": "b8acabf0-b65d-44b9-851b-31679e233de7",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216419397",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:00.543Z",
+          "updatedAt": "2025-07-11T06:47:00.543Z",
+          "patient": {
+            "id": "b8acabf0-b65d-44b9-851b-31679e233de7",
+            "userId": "762b1c98-13c9-4e12-89bb-295b341cf1df",
+            "patientId": "PT419648485",
+            "medicalRecordNumber": "UzoZHoEeRW",
+            "emergencyContactName": "Santos Pacocha",
+            "emergencyContactPhone": "1-297-883-6684 x452",
+            "emergencyContactRelationship": "sibling",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Shellfish",
+            "chronicConditions": "Hypertension, Asthma",
+            "currentMedications": "Aspirin, Metformin, Lisinopril",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "008MaeEd0ljQ",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:46:59.649Z",
+            "updatedAt": "2025-07-11T06:46:59.649Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "fded1be0-727a-4d91-8191-7c1ddfd3f961",
+          "patientId": "b8acabf0-b65d-44b9-851b-31679e233de7",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216419397",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:00.136Z",
+          "updatedAt": "2025-07-11T06:47:00.136Z",
+          "patient": {
+            "id": "b8acabf0-b65d-44b9-851b-31679e233de7",
+            "userId": "762b1c98-13c9-4e12-89bb-295b341cf1df",
+            "patientId": "PT419648485",
+            "medicalRecordNumber": "UzoZHoEeRW",
+            "emergencyContactName": "Santos Pacocha",
+            "emergencyContactPhone": "1-297-883-6684 x452",
+            "emergencyContactRelationship": "sibling",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Shellfish",
+            "chronicConditions": "Hypertension, Asthma",
+            "currentMedications": "Aspirin, Metformin, Lisinopril",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "008MaeEd0ljQ",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:46:59.649Z",
+            "updatedAt": "2025-07-11T06:46:59.649Z"
+          },
+          "creator": null,
+          "files": []
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /medical-records/search",
+      "status": "PASS",
+      "responseTime": 19,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "records": [],
+        "pagination": {
+          "page": "1",
+          "limit": "10",
+          "total": 0,
+          "totalPages": 0
+        }
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/tags",
+      "status": "PASS",
+      "responseTime": 179,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:50:32.739Z",
+        "path": "/medical-records/tags",
+        "method": "GET",
+        "message": "function unnest(text) does not exist",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1de5143f-d25b-4f80-9007-3c7abd896a45",
+          "name": "Admin Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:45.064Z",
+          "updatedAt": "2025-07-11T06:18:45.064Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "3ce5b26d-2e10-4f19-83fe-4eec723d1693",
+          "name": "Admin Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:43.090Z",
+          "updatedAt": "2025-07-11T06:22:43.090Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b9d66f33-53ab-4cb6-8859-282db89e98a3",
+          "name": "Admin Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:45.362Z",
+          "updatedAt": "2025-07-11T06:25:45.362Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "a5a8551e-4507-45fc-ac6f-b80bf223edae",
+          "name": "Admin Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:56.295Z",
+          "updatedAt": "2025-07-11T06:27:56.295Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "3e04ebcc-5e9f-4aa2-8d07-fa34c58849a4",
+          "name": "Admin Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:18.423Z",
+          "updatedAt": "2025-07-11T06:44:18.423Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "01e79678-3c9c-498a-8b32-a6bcdf472f52",
+          "name": "Admin Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.772Z",
+          "updatedAt": "2025-07-11T06:47:00.772Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "5a3890af-9e3f-42cc-8873-348723582c5e",
+          "name": "Admin Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:36.196Z",
+          "updatedAt": "2025-07-11T06:47:36.196Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "c8dfce82-3b73-432f-a922-ba9df5e707cb",
+          "name": "Admin Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.970Z",
+          "updatedAt": "2025-07-11T06:48:09.970Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "c1f521e4-2e64-41cc-aac9-5be316683ec4",
+          "name": "Admin Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:34.482Z",
+          "updatedAt": "2025-07-11T06:48:34.482Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "61dc6390-231f-4a30-9dfc-daa4e50d833e",
+          "name": "Admin Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:57.219Z",
+          "updatedAt": "2025-07-11T06:49:57.219Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "e944a41a-282e-4a95-9441-7361006a5d3e",
+          "name": "Patient Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:42.875Z",
+          "updatedAt": "2025-07-11T06:22:42.875Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "6658d3d9-aaf8-4c4e-87e2-e5c69841128b",
+          "name": "Patient Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:45.171Z",
+          "updatedAt": "2025-07-11T06:25:45.171Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "633a7313-6068-4445-8ce9-64db64c8b399",
+          "name": "Patient Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:56.073Z",
+          "updatedAt": "2025-07-11T06:27:56.073Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0e5c8e11-61df-4d05-86b3-54335aeaf7fc",
+          "name": "Patient Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:18.203Z",
+          "updatedAt": "2025-07-11T06:44:18.203Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "08c04e38-9ed1-44ee-8e92-14c5bf4b3769",
+          "name": "Patient Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.557Z",
+          "updatedAt": "2025-07-11T06:47:00.557Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0557a927-c2dd-4b03-97db-4aff92f47f48",
+          "name": "Patient Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:35.979Z",
+          "updatedAt": "2025-07-11T06:47:35.979Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0b7a7e30-47b9-49a6-a32e-763dc5c510d6",
+          "name": "Patient Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.768Z",
+          "updatedAt": "2025-07-11T06:48:09.768Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "f3efd206-6de3-4899-8898-06433e981761",
+          "name": "Patient Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:34.285Z",
+          "updatedAt": "2025-07-11T06:48:34.285Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d02d2030-119f-4efe-880f-212ee8e6cdc4",
+          "name": "Patient Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:57.002Z",
+          "updatedAt": "2025-07-11T06:49:57.002Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "ba527bd4-f9f1-4549-a1c3-9f79c38c68d3",
+          "name": "Test Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:44.457Z",
+          "updatedAt": "2025-07-11T06:18:44.457Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "9ec27b57-8207-4ecc-ab0c-4c4102c769e2",
+          "name": "Test Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:42.538Z",
+          "updatedAt": "2025-07-11T06:22:42.538Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "12ce87a7-87df-4743-8722-01bad7cdecf2",
+          "name": "Test Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:44.814Z",
+          "updatedAt": "2025-07-11T06:25:44.814Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d609e4ec-940c-4205-907c-51e04704e7b5",
+          "name": "Test Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:55.684Z",
+          "updatedAt": "2025-07-11T06:27:55.684Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d0cead2c-7172-440b-be07-db2e93eb597b",
+          "name": "Test Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:17.801Z",
+          "updatedAt": "2025-07-11T06:44:17.801Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "e2f10450-95f5-4400-9517-fe887bbddf77",
+          "name": "Test Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.153Z",
+          "updatedAt": "2025-07-11T06:47:00.153Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "58d10d25-9596-44fc-9123-e32f7c334a1f",
+          "name": "Test Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:35.558Z",
+          "updatedAt": "2025-07-11T06:47:35.558Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d5437a21-69d7-4095-9fd6-b52e81d15ccf",
+          "name": "Test Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.441Z",
+          "updatedAt": "2025-07-11T06:48:09.441Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "197b2887-5e25-4854-bf22-9319a806013b",
+          "name": "Test Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:33.889Z",
+          "updatedAt": "2025-07-11T06:48:33.889Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b947865b-7bf6-4197-9ccc-00c1896b340e",
+          "name": "Test Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:56.634Z",
+          "updatedAt": "2025-07-11T06:49:56.634Z",
+          "parent": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /medical-records/categories/hierarchy",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1de5143f-d25b-4f80-9007-3c7abd896a45",
+          "name": "Admin Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:45.064Z",
+          "updatedAt": "2025-07-11T06:18:45.064Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "3ce5b26d-2e10-4f19-83fe-4eec723d1693",
+          "name": "Admin Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:43.090Z",
+          "updatedAt": "2025-07-11T06:22:43.090Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b9d66f33-53ab-4cb6-8859-282db89e98a3",
+          "name": "Admin Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:45.362Z",
+          "updatedAt": "2025-07-11T06:25:45.362Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "a5a8551e-4507-45fc-ac6f-b80bf223edae",
+          "name": "Admin Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:56.295Z",
+          "updatedAt": "2025-07-11T06:27:56.295Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "3e04ebcc-5e9f-4aa2-8d07-fa34c58849a4",
+          "name": "Admin Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:18.423Z",
+          "updatedAt": "2025-07-11T06:44:18.423Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "01e79678-3c9c-498a-8b32-a6bcdf472f52",
+          "name": "Admin Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.772Z",
+          "updatedAt": "2025-07-11T06:47:00.772Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "5a3890af-9e3f-42cc-8873-348723582c5e",
+          "name": "Admin Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:36.196Z",
+          "updatedAt": "2025-07-11T06:47:36.196Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "c8dfce82-3b73-432f-a922-ba9df5e707cb",
+          "name": "Admin Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.970Z",
+          "updatedAt": "2025-07-11T06:48:09.970Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "c1f521e4-2e64-41cc-aac9-5be316683ec4",
+          "name": "Admin Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:34.482Z",
+          "updatedAt": "2025-07-11T06:48:34.482Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "61dc6390-231f-4a30-9dfc-daa4e50d833e",
+          "name": "Admin Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:57.219Z",
+          "updatedAt": "2025-07-11T06:49:57.219Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "e944a41a-282e-4a95-9441-7361006a5d3e",
+          "name": "Patient Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:42.875Z",
+          "updatedAt": "2025-07-11T06:22:42.875Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "6658d3d9-aaf8-4c4e-87e2-e5c69841128b",
+          "name": "Patient Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:45.171Z",
+          "updatedAt": "2025-07-11T06:25:45.171Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "633a7313-6068-4445-8ce9-64db64c8b399",
+          "name": "Patient Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:56.073Z",
+          "updatedAt": "2025-07-11T06:27:56.073Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0e5c8e11-61df-4d05-86b3-54335aeaf7fc",
+          "name": "Patient Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:18.203Z",
+          "updatedAt": "2025-07-11T06:44:18.203Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "08c04e38-9ed1-44ee-8e92-14c5bf4b3769",
+          "name": "Patient Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.557Z",
+          "updatedAt": "2025-07-11T06:47:00.557Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0557a927-c2dd-4b03-97db-4aff92f47f48",
+          "name": "Patient Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:35.979Z",
+          "updatedAt": "2025-07-11T06:47:35.979Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0b7a7e30-47b9-49a6-a32e-763dc5c510d6",
+          "name": "Patient Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.768Z",
+          "updatedAt": "2025-07-11T06:48:09.768Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "f3efd206-6de3-4899-8898-06433e981761",
+          "name": "Patient Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:34.285Z",
+          "updatedAt": "2025-07-11T06:48:34.285Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d02d2030-119f-4efe-880f-212ee8e6cdc4",
+          "name": "Patient Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:57.002Z",
+          "updatedAt": "2025-07-11T06:49:57.002Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "ba527bd4-f9f1-4549-a1c3-9f79c38c68d3",
+          "name": "Test Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:44.457Z",
+          "updatedAt": "2025-07-11T06:18:44.457Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "9ec27b57-8207-4ecc-ab0c-4c4102c769e2",
+          "name": "Test Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:42.538Z",
+          "updatedAt": "2025-07-11T06:22:42.538Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "12ce87a7-87df-4743-8722-01bad7cdecf2",
+          "name": "Test Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:44.814Z",
+          "updatedAt": "2025-07-11T06:25:44.814Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d609e4ec-940c-4205-907c-51e04704e7b5",
+          "name": "Test Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:55.684Z",
+          "updatedAt": "2025-07-11T06:27:55.684Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d0cead2c-7172-440b-be07-db2e93eb597b",
+          "name": "Test Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:17.801Z",
+          "updatedAt": "2025-07-11T06:44:17.801Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "e2f10450-95f5-4400-9517-fe887bbddf77",
+          "name": "Test Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.153Z",
+          "updatedAt": "2025-07-11T06:47:00.153Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "58d10d25-9596-44fc-9123-e32f7c334a1f",
+          "name": "Test Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:35.558Z",
+          "updatedAt": "2025-07-11T06:47:35.558Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d5437a21-69d7-4095-9fd6-b52e81d15ccf",
+          "name": "Test Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.441Z",
+          "updatedAt": "2025-07-11T06:48:09.441Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "197b2887-5e25-4854-bf22-9319a806013b",
+          "name": "Test Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:33.889Z",
+          "updatedAt": "2025-07-11T06:48:33.889Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b947865b-7bf6-4197-9ccc-00c1896b340e",
+          "name": "Test Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:56.634Z",
+          "updatedAt": "2025-07-11T06:49:56.634Z",
+          "parent": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 14,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "patientId": "c93ef7bd-d5bb-43a2-b430-5f023f1431e1",
+        "recordType": "consultation",
+        "title": "Test Medical Record 1752216632105",
+        "description": "Test medical record for endpoint testing",
+        "recordData": {
+          "vitals": {
+            "bloodPressure": "120/80",
+            "heartRate": 72
+          },
+          "symptoms": [
+            "headache",
+            "fatigue"
+          ]
+        },
+        "tags": [
+          "test",
+          "endpoint"
+        ],
+        "category": "general",
+        "diagnosis": "Test diagnosis",
+        "treatment": "Test treatment",
+        "notes": "Test notes",
+        "medications": [
+          {
+            "name": "Test Medication",
+            "dosage": "10mg",
+            "frequency": "daily"
+          }
+        ],
+        "isSensitive": false,
+        "isShareable": true,
+        "version": 1,
+        "isLatestVersion": true,
+        "centerId": null,
+        "createdBy": null,
+        "followUp": null,
+        "parentRecordId": null,
+        "sharingRestrictions": null,
+        "fileAttachments": null,
+        "id": "4402e70e-d960-46da-a2d5-6a6a633fbb79",
+        "status": "active",
+        "createdAt": "2025-07-11T06:50:32.774Z",
+        "updatedAt": "2025-07-11T06:50:32.774Z"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 16,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Test Category 1752216632105",
+        "description": "Test category for endpoint testing",
+        "parentCategoryId": null,
+        "id": "f1264cbd-1540-430d-aeac-aaf2533aa0c4",
+        "isActive": true,
+        "createdAt": "2025-07-11T06:50:32.789Z",
+        "updatedAt": "2025-07-11T06:50:32.789Z"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/files/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.805Z",
+        "path": "/medical-records/files/00000000-0000-0000-0000-000000000001",
+        "method": "GET",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/files/00000000-0000-0000-0000-000000000001/url",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.815Z",
+        "path": "/medical-records/files/00000000-0000-0000-0000-000000000001/url",
+        "method": "GET",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/files/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.824Z",
+        "path": "/medical-records/files/00000000-0000-0000-0000-000000000001",
+        "method": "DELETE",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000001/versions",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /medical-records/versions/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.844Z",
+        "path": "/medical-records/versions/00000000-0000-0000-0000-000000000001",
+        "method": "GET",
+        "message": "Version not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/00000000-0000-0000-0000-000000000001/revert/1",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.856Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001/revert/1",
+        "method": "POST",
+        "message": "Version not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/versions/00000000-0000-0000-0000-000000000001/compare/00000000-0000-0000-0000-000000000002",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.866Z",
+        "path": "/medical-records/versions/00000000-0000-0000-0000-000000000001/compare/00000000-0000-0000-0000-000000000002",
+        "method": "GET",
+        "message": "Version not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/00000000-0000-0000-0000-000000000001/files/00000000-0000-0000-0000-000000000001/convert-dicom",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.877Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000001/files/00000000-0000-0000-0000-000000000001/convert-dicom",
+        "method": "POST",
+        "message": "File not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 28,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:50:32.904Z",
+        "path": "/medical-records/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.915Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.927Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "PATCH",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:32.935Z",
+        "path": "/medical-records/00000000-0000-0000-0000-000000000000",
+        "method": "DELETE",
+        "message": "Medical record not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:50:32.944Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID",
+          "recordType: recordType must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-11T06:50:32.952Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": [
+          "patientId: patientId must be a UUID"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-11T06:50:33.107Z",
+        "path": "/medical-records",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Patient Category 1752216632105",
+        "description": "Test category for endpoint testing",
+        "parentCategoryId": null,
+        "id": "b8fa0dc9-a972-44c3-a694-384bf91bdd47",
+        "isActive": true,
+        "createdAt": "2025-07-11T06:50:33.114Z",
+        "updatedAt": "2025-07-11T06:50:33.114Z"
+      }
+    },
+    {
+      "endpoint": "PATCH /medical-records/categories/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:33.124Z",
+        "path": "/medical-records/categories/00000000-0000-0000-0000-000000000001",
+        "method": "PATCH",
+        "message": "Category not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "DELETE /medical-records/categories/00000000-0000-0000-0000-000000000001",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-11T06:50:33.133Z",
+        "path": "/medical-records/categories/00000000-0000-0000-0000-000000000001",
+        "method": "DELETE",
+        "message": "Category not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /medical-records",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "4402e70e-d960-46da-a2d5-6a6a633fbb79",
+          "patientId": "c93ef7bd-d5bb-43a2-b430-5f023f1431e1",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216632105",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:50:32.774Z",
+          "updatedAt": "2025-07-11T06:50:32.774Z",
+          "patient": {
+            "id": "c93ef7bd-d5bb-43a2-b430-5f023f1431e1",
+            "userId": "42f9087b-245c-4cab-a78b-2b19fc4d80c5",
+            "patientId": "PT632352151",
+            "medicalRecordNumber": "cZzmjNuoO4",
+            "emergencyContactName": "Dr. Loren Beahan",
+            "emergencyContactPhone": "1-647-210-7231",
+            "emergencyContactRelationship": "spouse",
+            "bloodType": "A+",
+            "allergies": "Peanuts, Shellfish",
+            "chronicConditions": "Hypertension",
+            "currentMedications": "Lisinopril, Aspirin",
+            "insuranceProvider": "UnitedHealth",
+            "insurancePolicyNumber": "n2yAglWawboV",
+            "preferredLanguage": "German",
+            "consentDataSharing": true,
+            "consentResearch": true,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:50:32.353Z",
+            "updatedAt": "2025-07-11T06:50:32.353Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "a42bed57-e098-4ad6-8760-7c1c9bb10373",
+          "patientId": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216595961",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:49:56.986Z",
+          "updatedAt": "2025-07-11T06:49:56.986Z",
+          "patient": {
+            "id": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+            "userId": "9e6c6dc7-f639-47c0-b4fe-2d81c239d331",
+            "patientId": "PT596215395",
+            "medicalRecordNumber": "Elauc2N12B",
+            "emergencyContactName": "Annette Muller",
+            "emergencyContactPhone": "1-587-297-1673 x79256",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "A-",
+            "allergies": "Shellfish",
+            "chronicConditions": "",
+            "currentMedications": "Metformin, Lisinopril",
+            "insuranceProvider": "Cigna",
+            "insurancePolicyNumber": "6FG787ANAroF",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:49:56.216Z",
+            "updatedAt": "2025-07-11T06:49:56.216Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "9baf1f75-49c1-421f-96f1-3fe6e7dd0c9d",
+          "patientId": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216595961",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:49:56.618Z",
+          "updatedAt": "2025-07-11T06:49:56.618Z",
+          "patient": {
+            "id": "9004ca88-d7fa-4650-bacc-3ea434fcb6bf",
+            "userId": "9e6c6dc7-f639-47c0-b4fe-2d81c239d331",
+            "patientId": "PT596215395",
+            "medicalRecordNumber": "Elauc2N12B",
+            "emergencyContactName": "Annette Muller",
+            "emergencyContactPhone": "1-587-297-1673 x79256",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "A-",
+            "allergies": "Shellfish",
+            "chronicConditions": "",
+            "currentMedications": "Metformin, Lisinopril",
+            "insuranceProvider": "Cigna",
+            "insurancePolicyNumber": "6FG787ANAroF",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:49:56.216Z",
+            "updatedAt": "2025-07-11T06:49:56.216Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "8436d2a2-4962-42f1-a3eb-372c22b683a9",
+          "patientId": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216513299",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:34.273Z",
+          "updatedAt": "2025-07-11T06:48:34.273Z",
+          "patient": {
+            "id": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+            "userId": "47a2c700-b034-464c-9f37-ca48e4e91189",
+            "patientId": "PT513554969",
+            "medicalRecordNumber": "DuFdw450pj",
+            "emergencyContactName": "Nathan Runolfsdottir",
+            "emergencyContactPhone": "(710) 301-0336",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Diabetes",
+            "currentMedications": "",
+            "insuranceProvider": "UnitedHealth",
+            "insurancePolicyNumber": "eyCisDCYV5aH",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:33.554Z",
+            "updatedAt": "2025-07-11T06:48:33.554Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "b95c83a9-a715-4bbc-8266-c6f07999068e",
+          "patientId": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216513299",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:33.877Z",
+          "updatedAt": "2025-07-11T06:48:33.877Z",
+          "patient": {
+            "id": "8389f67b-7c60-4ca5-9c68-7e50f2fa2b3b",
+            "userId": "47a2c700-b034-464c-9f37-ca48e4e91189",
+            "patientId": "PT513554969",
+            "medicalRecordNumber": "DuFdw450pj",
+            "emergencyContactName": "Nathan Runolfsdottir",
+            "emergencyContactPhone": "(710) 301-0336",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Diabetes",
+            "currentMedications": "",
+            "insuranceProvider": "UnitedHealth",
+            "insurancePolicyNumber": "eyCisDCYV5aH",
+            "preferredLanguage": "English",
+            "consentDataSharing": true,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:33.554Z",
+            "updatedAt": "2025-07-11T06:48:33.554Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "03448256-0970-495c-8cd0-2350ab5642c2",
+          "patientId": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216488755",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:09.757Z",
+          "updatedAt": "2025-07-11T06:48:09.757Z",
+          "patient": {
+            "id": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+            "userId": "6461bb2b-47e1-4415-92b5-e4c838931b75",
+            "patientId": "PT489009899",
+            "medicalRecordNumber": "zZhtJbKbo4",
+            "emergencyContactName": "Nathaniel Quigley",
+            "emergencyContactPhone": "402.704.3885 x508",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "B-",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Asthma, Diabetes",
+            "currentMedications": "Aspirin, Metformin",
+            "insuranceProvider": "Aetna",
+            "insurancePolicyNumber": "AFN4q38NL81q",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:09.011Z",
+            "updatedAt": "2025-07-11T06:48:09.011Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "5b15eb36-c28d-4c1c-a84a-b6eb0a44f46d",
+          "patientId": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216488755",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:48:09.426Z",
+          "updatedAt": "2025-07-11T06:48:09.426Z",
+          "patient": {
+            "id": "ff8bc5e2-d696-4c09-bc17-0d29333f509f",
+            "userId": "6461bb2b-47e1-4415-92b5-e4c838931b75",
+            "patientId": "PT489009899",
+            "medicalRecordNumber": "zZhtJbKbo4",
+            "emergencyContactName": "Nathaniel Quigley",
+            "emergencyContactPhone": "402.704.3885 x508",
+            "emergencyContactRelationship": "parent",
+            "bloodType": "B-",
+            "allergies": "Peanuts, Penicillin",
+            "chronicConditions": "Asthma, Diabetes",
+            "currentMedications": "Aspirin, Metformin",
+            "insuranceProvider": "Aetna",
+            "insurancePolicyNumber": "AFN4q38NL81q",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": false,
+            "consentMarketing": true,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:48:09.011Z",
+            "updatedAt": "2025-07-11T06:48:09.011Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "ce924696-554d-4d6d-be50-2b7bfa8061a0",
+          "patientId": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216454991",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:35.966Z",
+          "updatedAt": "2025-07-11T06:47:35.966Z",
+          "patient": {
+            "id": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+            "userId": "45b22fc0-78e0-4133-9356-ad15bf745ee2",
+            "patientId": "PT455232257",
+            "medicalRecordNumber": "CXVfjpHJQP",
+            "emergencyContactName": "Sophia Rempel MD",
+            "emergencyContactPhone": "(666) 391-7090 x13658",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "AB-",
+            "allergies": "",
+            "chronicConditions": "",
+            "currentMedications": "",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "I0BVUO21tU7Z",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:47:35.232Z",
+            "updatedAt": "2025-07-11T06:47:35.232Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "5ebeb5dd-b4a2-461d-ab5c-19336b12ad5f",
+          "patientId": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216454991",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:35.545Z",
+          "updatedAt": "2025-07-11T06:47:35.545Z",
+          "patient": {
+            "id": "411a60ad-72d1-492d-9c88-9bd59d3537ac",
+            "userId": "45b22fc0-78e0-4133-9356-ad15bf745ee2",
+            "patientId": "PT455232257",
+            "medicalRecordNumber": "CXVfjpHJQP",
+            "emergencyContactName": "Sophia Rempel MD",
+            "emergencyContactPhone": "(666) 391-7090 x13658",
+            "emergencyContactRelationship": "friend",
+            "bloodType": "AB-",
+            "allergies": "",
+            "chronicConditions": "",
+            "currentMedications": "",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "I0BVUO21tU7Z",
+            "preferredLanguage": "German",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:47:35.232Z",
+            "updatedAt": "2025-07-11T06:47:35.232Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "f86ba04e-28c4-4ec7-916a-700286a113ac",
+          "patientId": "b8acabf0-b65d-44b9-851b-31679e233de7",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216419397",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:00.543Z",
+          "updatedAt": "2025-07-11T06:47:00.543Z",
+          "patient": {
+            "id": "b8acabf0-b65d-44b9-851b-31679e233de7",
+            "userId": "762b1c98-13c9-4e12-89bb-295b341cf1df",
+            "patientId": "PT419648485",
+            "medicalRecordNumber": "UzoZHoEeRW",
+            "emergencyContactName": "Santos Pacocha",
+            "emergencyContactPhone": "1-297-883-6684 x452",
+            "emergencyContactRelationship": "sibling",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Shellfish",
+            "chronicConditions": "Hypertension, Asthma",
+            "currentMedications": "Aspirin, Metformin, Lisinopril",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "008MaeEd0ljQ",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:46:59.649Z",
+            "updatedAt": "2025-07-11T06:46:59.649Z"
+          },
+          "creator": null,
+          "files": []
+        },
+        {
+          "id": "fded1be0-727a-4d91-8191-7c1ddfd3f961",
+          "patientId": "b8acabf0-b65d-44b9-851b-31679e233de7",
+          "centerId": null,
+          "createdBy": null,
+          "recordType": "consultation",
+          "title": "Test Medical Record 1752216419397",
+          "description": "Test medical record for endpoint testing",
+          "recordData": {
+            "vitals": {
+              "heartRate": 72,
+              "bloodPressure": "120/80"
+            },
+            "symptoms": [
+              "headache",
+              "fatigue"
+            ]
+          },
+          "tags": [
+            "test",
+            "endpoint"
+          ],
+          "category": "general",
+          "diagnosis": "Test diagnosis",
+          "treatment": "Test treatment",
+          "notes": "Test notes",
+          "followUp": null,
+          "medications": [
+            {
+              "name": "Test Medication",
+              "dosage": "10mg",
+              "frequency": "daily"
+            }
+          ],
+          "status": "active",
+          "version": 1,
+          "parentRecordId": null,
+          "isSensitive": false,
+          "isShareable": true,
+          "isLatestVersion": true,
+          "sharingRestrictions": null,
+          "fileAttachments": null,
+          "createdAt": "2025-07-11T06:47:00.136Z",
+          "updatedAt": "2025-07-11T06:47:00.136Z",
+          "patient": {
+            "id": "b8acabf0-b65d-44b9-851b-31679e233de7",
+            "userId": "762b1c98-13c9-4e12-89bb-295b341cf1df",
+            "patientId": "PT419648485",
+            "medicalRecordNumber": "UzoZHoEeRW",
+            "emergencyContactName": "Santos Pacocha",
+            "emergencyContactPhone": "1-297-883-6684 x452",
+            "emergencyContactRelationship": "sibling",
+            "bloodType": "AB+",
+            "allergies": "Peanuts, Shellfish",
+            "chronicConditions": "Hypertension, Asthma",
+            "currentMedications": "Aspirin, Metformin, Lisinopril",
+            "insuranceProvider": "Blue Cross",
+            "insurancePolicyNumber": "008MaeEd0ljQ",
+            "preferredLanguage": "Spanish",
+            "consentDataSharing": false,
+            "consentResearch": true,
+            "consentMarketing": false,
+            "isActive": true,
+            "createdAt": "2025-07-11T06:46:59.649Z",
+            "updatedAt": "2025-07-11T06:46:59.649Z"
+          },
+          "creator": null,
+          "files": []
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1de5143f-d25b-4f80-9007-3c7abd896a45",
+          "name": "Admin Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:45.064Z",
+          "updatedAt": "2025-07-11T06:18:45.064Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "3ce5b26d-2e10-4f19-83fe-4eec723d1693",
+          "name": "Admin Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:43.090Z",
+          "updatedAt": "2025-07-11T06:22:43.090Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b9d66f33-53ab-4cb6-8859-282db89e98a3",
+          "name": "Admin Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:45.362Z",
+          "updatedAt": "2025-07-11T06:25:45.362Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "a5a8551e-4507-45fc-ac6f-b80bf223edae",
+          "name": "Admin Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:56.295Z",
+          "updatedAt": "2025-07-11T06:27:56.295Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "3e04ebcc-5e9f-4aa2-8d07-fa34c58849a4",
+          "name": "Admin Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:18.423Z",
+          "updatedAt": "2025-07-11T06:44:18.423Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "01e79678-3c9c-498a-8b32-a6bcdf472f52",
+          "name": "Admin Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.772Z",
+          "updatedAt": "2025-07-11T06:47:00.772Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "5a3890af-9e3f-42cc-8873-348723582c5e",
+          "name": "Admin Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:36.196Z",
+          "updatedAt": "2025-07-11T06:47:36.196Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "c8dfce82-3b73-432f-a922-ba9df5e707cb",
+          "name": "Admin Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.970Z",
+          "updatedAt": "2025-07-11T06:48:09.970Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "c1f521e4-2e64-41cc-aac9-5be316683ec4",
+          "name": "Admin Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:34.482Z",
+          "updatedAt": "2025-07-11T06:48:34.482Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "61dc6390-231f-4a30-9dfc-daa4e50d833e",
+          "name": "Admin Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:57.219Z",
+          "updatedAt": "2025-07-11T06:49:57.219Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "e944a41a-282e-4a95-9441-7361006a5d3e",
+          "name": "Patient Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:42.875Z",
+          "updatedAt": "2025-07-11T06:22:42.875Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "6658d3d9-aaf8-4c4e-87e2-e5c69841128b",
+          "name": "Patient Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:45.171Z",
+          "updatedAt": "2025-07-11T06:25:45.171Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "633a7313-6068-4445-8ce9-64db64c8b399",
+          "name": "Patient Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:56.073Z",
+          "updatedAt": "2025-07-11T06:27:56.073Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0e5c8e11-61df-4d05-86b3-54335aeaf7fc",
+          "name": "Patient Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:18.203Z",
+          "updatedAt": "2025-07-11T06:44:18.203Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "08c04e38-9ed1-44ee-8e92-14c5bf4b3769",
+          "name": "Patient Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.557Z",
+          "updatedAt": "2025-07-11T06:47:00.557Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0557a927-c2dd-4b03-97db-4aff92f47f48",
+          "name": "Patient Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:35.979Z",
+          "updatedAt": "2025-07-11T06:47:35.979Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "0b7a7e30-47b9-49a6-a32e-763dc5c510d6",
+          "name": "Patient Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.768Z",
+          "updatedAt": "2025-07-11T06:48:09.768Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "f3efd206-6de3-4899-8898-06433e981761",
+          "name": "Patient Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:34.285Z",
+          "updatedAt": "2025-07-11T06:48:34.285Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d02d2030-119f-4efe-880f-212ee8e6cdc4",
+          "name": "Patient Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:57.002Z",
+          "updatedAt": "2025-07-11T06:49:57.002Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b8fa0dc9-a972-44c3-a694-384bf91bdd47",
+          "name": "Patient Category 1752216632105",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:50:33.114Z",
+          "updatedAt": "2025-07-11T06:50:33.114Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "ba527bd4-f9f1-4549-a1c3-9f79c38c68d3",
+          "name": "Test Category 1752214724429",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:18:44.457Z",
+          "updatedAt": "2025-07-11T06:18:44.457Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "9ec27b57-8207-4ecc-ab0c-4c4102c769e2",
+          "name": "Test Category 1752214962510",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:22:42.538Z",
+          "updatedAt": "2025-07-11T06:22:42.538Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "12ce87a7-87df-4743-8722-01bad7cdecf2",
+          "name": "Test Category 1752215144754",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:25:44.814Z",
+          "updatedAt": "2025-07-11T06:25:44.814Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d609e4ec-940c-4205-907c-51e04704e7b5",
+          "name": "Test Category 1752215275586",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:27:55.684Z",
+          "updatedAt": "2025-07-11T06:27:55.684Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d0cead2c-7172-440b-be07-db2e93eb597b",
+          "name": "Test Category 1752216257735",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:44:17.801Z",
+          "updatedAt": "2025-07-11T06:44:17.801Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "e2f10450-95f5-4400-9517-fe887bbddf77",
+          "name": "Test Category 1752216419397",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:00.153Z",
+          "updatedAt": "2025-07-11T06:47:00.153Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "58d10d25-9596-44fc-9123-e32f7c334a1f",
+          "name": "Test Category 1752216454991",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:47:35.558Z",
+          "updatedAt": "2025-07-11T06:47:35.558Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "d5437a21-69d7-4095-9fd6-b52e81d15ccf",
+          "name": "Test Category 1752216488755",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:09.441Z",
+          "updatedAt": "2025-07-11T06:48:09.441Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "197b2887-5e25-4854-bf22-9319a806013b",
+          "name": "Test Category 1752216513299",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:48:33.889Z",
+          "updatedAt": "2025-07-11T06:48:33.889Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "b947865b-7bf6-4197-9ccc-00c1896b340e",
+          "name": "Test Category 1752216595961",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:49:56.634Z",
+          "updatedAt": "2025-07-11T06:49:56.634Z",
+          "parent": null,
+          "children": []
+        },
+        {
+          "id": "f1264cbd-1540-430d-aeac-aaf2533aa0c4",
+          "name": "Test Category 1752216632105",
+          "description": "Test category for endpoint testing",
+          "parentCategoryId": null,
+          "isActive": true,
+          "createdAt": "2025-07-11T06:50:32.789Z",
+          "updatedAt": "2025-07-11T06:50:32.789Z",
+          "parent": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /medical-records/categories",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "name": "Admin Category 1752216632105",
+        "description": "Test category for endpoint testing",
+        "parentCategoryId": null,
+        "id": "7e339197-577e-4789-8e90-8d01ff035a89",
+        "isActive": true,
+        "createdAt": "2025-07-11T06:50:33.303Z",
+        "updatedAt": "2025-07-11T06:50:33.303Z"
+      }
+    }
+  ]
+}

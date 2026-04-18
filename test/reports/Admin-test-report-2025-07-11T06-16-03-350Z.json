@@ -1,0 +1,112 @@
+{
+  "moduleName": "Admin",
+  "timestamp": "2025-07-11T06:16:03.350Z",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 39
+  },
+  "results": [
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "c54048c5-1ef4-4216-a11c-92a5f81b8f11",
+          "displayId": "PT526454035",
+          "email": "test-users-patient-1752214526371@example.com",
+          "password": "$2b$10$T2hhhcq2aNinoRQkOCDKwelTEinN16fMwoxEZ9oL.jM87LJLaFWAi",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMjE0NTI2MzcxQGV4YW1wbGUuY29tIiwic3ViIjoiYzU0MDQ4YzUtMWVmNC00MjE2LWExMWMtOTJhNWY4MWI4ZjExIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIyMTQ1MjYsImV4cCI6MTc1MjgxOTMyNn0.mDuoHNn1sAN63QZsUuTsBGHYPKcIJWIkVtRhvof8jmE",
+          "createdAt": "2025-07-11T06:15:26.474Z",
+          "updatedAt": "2025-07-11T06:15:26.588Z",
+          "profile": null
+        },
+        {
+          "id": "9338b4a1-9131-4d2e-8f63-2037ccbb29a8",
+          "displayId": "AD526676834",
+          "email": "test-users-admin-1752214526615@example.com",
+          "password": "$2b$10$vzxw55YyO5xq0U1UVmsa/O631kfsnYeAuR1pJn050sv9Thymd5gp6",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjIxNDUyNjYxNUBleGFtcGxlLmNvbSIsInN1YiI6IjkzMzhiNGExLTkxMzEtNGQyZS04ZjYzLTIwMzdjY2JiMjlhOCIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjIxNDUyNiwiZXhwIjoxNzUyODE5MzI2fQ.1HMX-VlSr1f36ZwulBM-kNmHuIDI3C5IzFpkMycn9L4",
+          "createdAt": "2025-07-11T06:15:26.677Z",
+          "updatedAt": "2025-07-11T06:15:26.763Z",
+          "profile": null
+        },
+        {
+          "id": "cdac69df-af84-4d62-8163-3ae336c33121",
+          "displayId": "AD563099977",
+          "email": "test-admin-admin-1752214563033@example.com",
+          "password": "$2b$10$eEuLFc8i2pE6v/K/eAZoHe/O7R0av5bffa00IttaoqPVD/WxStbsa",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYWRtaW4tYWRtaW4tMTc1MjIxNDU2MzAzM0BleGFtcGxlLmNvbSIsInN1YiI6ImNkYWM2OWRmLWFmODQtNGQ2Mi04MTYzLTNhZTMzNmMzMzEyMSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjIxNDU2MywiZXhwIjoxNzUyODE5MzYzfQ.yAyra600Lai2mP0h7nv-m4OCokBY7U5wSYStC2vXCl4",
+          "createdAt": "2025-07-11T06:16:03.115Z",
+          "updatedAt": "2025-07-11T06:16:03.215Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /users",
+      "status": "PASS",
+      "responseTime": 80,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "id": "a5fdddc0-ada4-4ed2-8908-48835087da2f",
+        "displayId": "PT563313726",
+        "email": "admin-test-user-1752214563232@example.com",
+        "password": "$2b$10$OHof0j.fJs/MaWBo02ZBQe3D5J0NQyd.13FJpjMlmTCbNuPkhBNCO",
+        "roles": [
+          "patient"
+        ],
+        "refreshToken": null,
+        "createdAt": "2025-07-11T06:16:03.315Z",
+        "updatedAt": "2025-07-11T06:16:03.315Z",
+        "profile": null
+      }
+    },
+    {
+      "endpoint": "POST /centers",
+      "status": "PASS",
+      "responseTime": 26,
+      "statusCode": 201,
+      "expectedStatus": 201,
+      "error": null,
+      "responseBody": {
+        "displayId": "HSP563335216",
+        "name": "Test Center 1752214563232",
+        "type": "hospital",
+        "address": "123 Test Street",
+        "phone": "+1234567890",
+        "email": "center-1752214563232@example.com",
+        "latitude": null,
+        "longitude": null,
+        "city": null,
+        "state": null,
+        "country": null,
+        "postalCode": null,
+        "hours": null,
+        "imageUrl": null,
+        "locationMetadata": null,
+        "id": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+        "isActive": true,
+        "createdAt": "2025-07-11T06:16:03.336Z",
+        "updatedAt": "2025-07-11T06:16:03.336Z"
+      }
+    }
+  ]
+}

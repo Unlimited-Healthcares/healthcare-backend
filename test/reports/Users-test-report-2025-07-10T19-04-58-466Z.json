@@ -1,0 +1,451 @@
+{
+  "moduleName": "Users",
+  "timestamp": "2025-07-10T19:04:58.466Z",
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "successRate": 100,
+    "averageResponseTime": 42.8
+  },
+  "results": [
+    {
+      "endpoint": "GET /auth/me",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "id": "2ed41d25-d01b-432b-8ccc-348c84a0b38e",
+        "email": "test-users-patient-1752174297934@example.com",
+        "roles": [
+          "patient"
+        ],
+        "displayId": "PT297996145",
+        "profile": null,
+        "createdAt": "2025-07-10T19:04:58.007Z",
+        "updatedAt": "2025-07-10T19:04:58.090Z",
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "0469e4f4-0e8e-4e2d-a04b-4c0449479e61",
+          "displayId": "PT451870150",
+          "email": "test-authentication-patient-1752173451760@example.com",
+          "password": "$2b$10$KS/I/h5M9EFwof4/iC7EHObJ82iuRWSnUy1RR5Do8BINKK/4C5.A2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczNDUxNzYwQGV4YW1wbGUuY29tIiwic3ViIjoiMDQ2OWU0ZjQtMGU4ZS00ZTJkLWEwNGItNGMwNDQ5NDc5ZTYxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM0NTIsImV4cCI6MTc1Mjc3ODI1Mn0.dJg0bQ-7woFDZ7z4feo3_bEAEzoLxqbERNzmcJsdCis",
+          "createdAt": "2025-07-10T18:50:51.890Z",
+          "updatedAt": "2025-07-10T18:50:52.024Z",
+          "profile": null
+        },
+        {
+          "id": "e65e11e4-6bc7-4b4a-bbdd-aa7b6b255691",
+          "displayId": "PT833759949",
+          "email": "test-authentication-patient-1752173833687@example.com",
+          "password": "$2b$10$.MmXlGrGLq5WC7tnSBM10.jShTTBPbLCP8MCFyKk/0v61hwTtwDOG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczODMzNjg3QGV4YW1wbGUuY29tIiwic3ViIjoiZTY1ZTExZTQtNmJjNy00YjRhLWJiZGQtYWE3YjZiMjU1NjkxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM4MzMsImV4cCI6MTc1Mjc3ODYzM30.ssJxtm6uT7eext7gb_kwqraaHpu0o0wcru6RUy2fhF4",
+          "createdAt": "2025-07-10T18:57:13.778Z",
+          "updatedAt": "2025-07-10T18:57:13.884Z",
+          "profile": null
+        },
+        {
+          "id": "d888d1d5-cb87-4b18-a19b-004d899f09f7",
+          "displayId": "PT247495869",
+          "email": "test-authentication-patient-1752174247435@example.com",
+          "password": "$2b$10$m7xSHit7xtTtkEGiwDfqzOLwRsdcRWAoRffyZ.cHk3lNxVmWTsHNq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjQ3NDM1QGV4YW1wbGUuY29tIiwic3ViIjoiZDg4OGQxZDUtY2I4Ny00YjE4LWExOWItMDA0ZDg5OWYwOWY3Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.WG9JljJpkU-2BsnqXQ6VhE7m6ln9gEXiAGcoJfsMn_w",
+          "createdAt": "2025-07-10T19:04:07.505Z",
+          "updatedAt": "2025-07-10T19:04:07.585Z",
+          "profile": null
+        },
+        {
+          "id": "de0a21ed-4b04-4327-8776-d5ffb0b395bb",
+          "displayId": "PT952894931",
+          "email": "test-authentication-patient-1752173952833@example.com",
+          "password": "$2b$10$E1fywIKylArGBlvoodB7b.W4kIjX/EoxtoAfjyRC1mOlZ1fyGS3pq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczOTUyODMzQGV4YW1wbGUuY29tIiwic3ViIjoiZGUwYTIxZWQtNGIwNC00MzI3LTg3NzYtZDVmZmIwYjM5NWJiIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM5NTIsImV4cCI6MTc1Mjc3ODc1Mn0.kdo-0Nc6pxoKrQ2E7pu_P_AKUqQ-lv9Q3nj_sSBc3FU",
+          "createdAt": "2025-07-10T18:59:12.904Z",
+          "updatedAt": "2025-07-10T18:59:12.983Z",
+          "profile": null
+        },
+        {
+          "id": "5fdb1013-6bff-4018-8fc9-8d8a4d4660a2",
+          "displayId": "PT035903299",
+          "email": "test-authentication-patient-1752174035840@example.com",
+          "password": "$2b$10$dB2qVbUvGm6vl/Kfh0j7buLGxV25kR9mZmJgf/6W2nDBl1P1FFRFm",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MDM1ODQwQGV4YW1wbGUuY29tIiwic3ViIjoiNWZkYjEwMTMtNmJmZi00MDE4LThmYzktOGQ4YTRkNDY2MGEyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQwMzUsImV4cCI6MTc1Mjc3ODgzNX0.dvOehLI5ZrgwYba4ItwmMs3jJA0xXI9ar5t-SODuF8I",
+          "createdAt": "2025-07-10T19:00:35.913Z",
+          "updatedAt": "2025-07-10T19:00:35.996Z",
+          "profile": null
+        },
+        {
+          "id": "ec5f43a1-4eb8-4dae-980a-1efbba8b3e82",
+          "displayId": "PT116160859",
+          "email": "test-authentication-patient-1752174116096@example.com",
+          "password": "$2b$10$wnml0O9PJ9C5jHGXXd5UnuGMgLdMrE6L5f0tpM4yLUnfzy/CD1ibq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MTE2MDk2QGV4YW1wbGUuY29tIiwic3ViIjoiZWM1ZjQzYTEtNGViOC00ZGFlLTk4MGEtMWVmYmJhOGIzZTgyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQxMTYsImV4cCI6MTc1Mjc3ODkxNn0.vHYfUYVy1krh9rRpjF4YuBnZmcghTLk5K2wofGXB7F4",
+          "createdAt": "2025-07-10T19:01:56.169Z",
+          "updatedAt": "2025-07-10T19:01:56.250Z",
+          "profile": null
+        },
+        {
+          "id": "54c3f5ec-61a8-4756-86d2-e20620eb9352",
+          "displayId": "PT885794092",
+          "email": "test@example.com",
+          "password": "$2b$10$lgqFcjFj8NkYrpiXLnpAZOgozS4XWiLxm990gJmC30RXOWVZW1h02",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAZXhhbXBsZS5jb20iLCJzdWIiOiI1NGMzZjVlYy02MWE4LTQ3NTYtODZkMi1lMjA2MjBlYjkzNTIiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDIwMiwiZXhwIjoxNzUyNzc5MDAyfQ.SRPL0EMxhdY9dkV1R1br_Q9IpiOIBb8-t_I7DF-DtUQ",
+          "createdAt": "2025-07-10T18:58:05.805Z",
+          "updatedAt": "2025-07-10T19:03:22.732Z",
+          "profile": null
+        },
+        {
+          "id": "e37e0a10-55de-4d76-b5f4-ad908ec39f15",
+          "displayId": "PT235732770",
+          "email": "test-authentication-patient-1752174235671@example.com",
+          "password": "$2b$10$k2YhThcNeSjQ85.MY7MgnOfBaIVtE0RnwMIEckWXxiP3mXFw.HMe2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjM1NjcxQGV4YW1wbGUuY29tIiwic3ViIjoiZTM3ZTBhMTAtNTVkZS00ZDc2LWI1ZjQtYWQ5MDhlYzM5ZjE1Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.boh0r_Gk1CBi8I97wS-dzXGPW68v7xPb6Mz3904bR_M",
+          "createdAt": "2025-07-10T19:03:55.742Z",
+          "updatedAt": "2025-07-10T19:03:55.820Z",
+          "profile": null
+        },
+        {
+          "id": "457506c2-b8e4-4cac-98ac-297e7b6e7b5b",
+          "displayId": "PT235890155",
+          "email": "test-auth-1752174235830@example.com",
+          "password": "$2b$10$kwJpL6aKKjPEYbJjhgzJ2euCbxc4Fji.1sDtUfuZJx3TovT2pIGpy",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjM1ODMwQGV4YW1wbGUuY29tIiwic3ViIjoiNDU3NTA2YzItYjhlNC00Y2FjLTk4YWMtMjk3ZTdiNmU3YjViIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.X8gXQOw81goz23l9WP180kokti6tAFySVd0dPRzoNJs",
+          "createdAt": "2025-07-10T19:03:55.891Z",
+          "updatedAt": "2025-07-10T19:03:55.966Z",
+          "profile": null
+        },
+        {
+          "id": "e92f95cd-c84d-4be4-92aa-ff9e74287249",
+          "displayId": "PT247655334",
+          "email": "test-auth-1752174247595@example.com",
+          "password": "$2b$10$YQEOz/5W1zNEtKm9PrQEGe0h71jn1iswjmHtdX6XiWqpmx65cd4q2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjQ3NTk1QGV4YW1wbGUuY29tIiwic3ViIjoiZTkyZjk1Y2QtYzg0ZC00YmU0LTkyYWEtZmY5ZTc0Mjg3MjQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.uoUFNFu52929sCn5XniVGfyElUaSXnv-r3dcmJTOyUM",
+          "createdAt": "2025-07-10T19:04:07.655Z",
+          "updatedAt": "2025-07-10T19:04:07.732Z",
+          "profile": null
+        },
+        {
+          "id": "c4564c85-9c0c-489d-a595-9cebf565c642",
+          "displayId": "AD282498467",
+          "email": "test-admin-admin-1752174282436@example.com",
+          "password": "$2b$10$wxKZwST3Idng7wLcs0E2A.m8Stz41vh.PNhZKkh2E4KDeoUKiPRcq",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYWRtaW4tYWRtaW4tMTc1MjE3NDI4MjQzNkBleGFtcGxlLmNvbSIsInN1YiI6ImM0NTY0Yzg1LTljMGMtNDg5ZC1hNTk1LTljZWJmNTY1YzY0MiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI4MiwiZXhwIjoxNzUyNzc5MDgyfQ.KZ_vSjE_kPSQdvAlCiKYCB1jAVp1lf-Vor7ISGZHFEU",
+          "createdAt": "2025-07-10T19:04:42.507Z",
+          "updatedAt": "2025-07-10T19:04:42.586Z",
+          "profile": null
+        },
+        {
+          "id": "a340c9b5-b966-477b-ab30-d65e4f9261b9",
+          "displayId": "PT282674738",
+          "email": "admin-test-user-1752174282595@example.com",
+          "password": "$2b$10$X8W4Xgt46vdOcdzdRTgz/Owa9zlUYGokfANr7sB46an/fY6j1tld.",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-10T19:04:42.675Z",
+          "updatedAt": "2025-07-10T19:04:42.675Z",
+          "profile": null
+        },
+        {
+          "id": "2ed41d25-d01b-432b-8ccc-348c84a0b38e",
+          "displayId": "PT297996145",
+          "email": "test-users-patient-1752174297934@example.com",
+          "password": "$2b$10$YtFoebfRoY232oTYmDeXWevUpIAGMJm6SizLSdf50yKOQMbQlSVJe",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMTc0Mjk3OTM0QGV4YW1wbGUuY29tIiwic3ViIjoiMmVkNDFkMjUtZDAxYi00MzJiLThjY2MtMzQ4Yzg0YTBiMzhlIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyOTgsImV4cCI6MTc1Mjc3OTA5OH0.06bUPxng14wahoSbX-4vHEh162gZUroDVfFOsPv_ybE",
+          "createdAt": "2025-07-10T19:04:58.007Z",
+          "updatedAt": "2025-07-10T19:04:58.090Z",
+          "profile": null
+        },
+        {
+          "id": "a5bb1ddd-6e4a-4508-aab7-5ef882b19e1e",
+          "displayId": "AD298174839",
+          "email": "test-users-admin-1752174298111@example.com",
+          "password": "$2b$10$lepj3isiKNLCIpkp188.A.wFb4BlwtLHEMi6layXSiQxRYRNTqlte",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjE3NDI5ODExMUBleGFtcGxlLmNvbSIsInN1YiI6ImE1YmIxZGRkLTZlNGEtNDUwOC1hYWI3LTVlZjg4MmIxOWUxZSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI5OCwiZXhwIjoxNzUyNzc5MDk4fQ.bE3x_GWeWfJv9_qsbWoLrSAWmPcEzSwd4rDiBcrkcIg",
+          "createdAt": "2025-07-10T19:04:58.175Z",
+          "updatedAt": "2025-07-10T19:04:58.250Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /users",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "0469e4f4-0e8e-4e2d-a04b-4c0449479e61",
+          "displayId": "PT451870150",
+          "email": "test-authentication-patient-1752173451760@example.com",
+          "password": "$2b$10$KS/I/h5M9EFwof4/iC7EHObJ82iuRWSnUy1RR5Do8BINKK/4C5.A2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczNDUxNzYwQGV4YW1wbGUuY29tIiwic3ViIjoiMDQ2OWU0ZjQtMGU4ZS00ZTJkLWEwNGItNGMwNDQ5NDc5ZTYxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM0NTIsImV4cCI6MTc1Mjc3ODI1Mn0.dJg0bQ-7woFDZ7z4feo3_bEAEzoLxqbERNzmcJsdCis",
+          "createdAt": "2025-07-10T18:50:51.890Z",
+          "updatedAt": "2025-07-10T18:50:52.024Z",
+          "profile": null
+        },
+        {
+          "id": "e65e11e4-6bc7-4b4a-bbdd-aa7b6b255691",
+          "displayId": "PT833759949",
+          "email": "test-authentication-patient-1752173833687@example.com",
+          "password": "$2b$10$.MmXlGrGLq5WC7tnSBM10.jShTTBPbLCP8MCFyKk/0v61hwTtwDOG",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczODMzNjg3QGV4YW1wbGUuY29tIiwic3ViIjoiZTY1ZTExZTQtNmJjNy00YjRhLWJiZGQtYWE3YjZiMjU1NjkxIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM4MzMsImV4cCI6MTc1Mjc3ODYzM30.ssJxtm6uT7eext7gb_kwqraaHpu0o0wcru6RUy2fhF4",
+          "createdAt": "2025-07-10T18:57:13.778Z",
+          "updatedAt": "2025-07-10T18:57:13.884Z",
+          "profile": null
+        },
+        {
+          "id": "d888d1d5-cb87-4b18-a19b-004d899f09f7",
+          "displayId": "PT247495869",
+          "email": "test-authentication-patient-1752174247435@example.com",
+          "password": "$2b$10$m7xSHit7xtTtkEGiwDfqzOLwRsdcRWAoRffyZ.cHk3lNxVmWTsHNq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjQ3NDM1QGV4YW1wbGUuY29tIiwic3ViIjoiZDg4OGQxZDUtY2I4Ny00YjE4LWExOWItMDA0ZDg5OWYwOWY3Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.WG9JljJpkU-2BsnqXQ6VhE7m6ln9gEXiAGcoJfsMn_w",
+          "createdAt": "2025-07-10T19:04:07.505Z",
+          "updatedAt": "2025-07-10T19:04:07.585Z",
+          "profile": null
+        },
+        {
+          "id": "de0a21ed-4b04-4327-8776-d5ffb0b395bb",
+          "displayId": "PT952894931",
+          "email": "test-authentication-patient-1752173952833@example.com",
+          "password": "$2b$10$E1fywIKylArGBlvoodB7b.W4kIjX/EoxtoAfjyRC1mOlZ1fyGS3pq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTczOTUyODMzQGV4YW1wbGUuY29tIiwic3ViIjoiZGUwYTIxZWQtNGIwNC00MzI3LTg3NzYtZDVmZmIwYjM5NWJiIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzM5NTIsImV4cCI6MTc1Mjc3ODc1Mn0.kdo-0Nc6pxoKrQ2E7pu_P_AKUqQ-lv9Q3nj_sSBc3FU",
+          "createdAt": "2025-07-10T18:59:12.904Z",
+          "updatedAt": "2025-07-10T18:59:12.983Z",
+          "profile": null
+        },
+        {
+          "id": "5fdb1013-6bff-4018-8fc9-8d8a4d4660a2",
+          "displayId": "PT035903299",
+          "email": "test-authentication-patient-1752174035840@example.com",
+          "password": "$2b$10$dB2qVbUvGm6vl/Kfh0j7buLGxV25kR9mZmJgf/6W2nDBl1P1FFRFm",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MDM1ODQwQGV4YW1wbGUuY29tIiwic3ViIjoiNWZkYjEwMTMtNmJmZi00MDE4LThmYzktOGQ4YTRkNDY2MGEyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQwMzUsImV4cCI6MTc1Mjc3ODgzNX0.dvOehLI5ZrgwYba4ItwmMs3jJA0xXI9ar5t-SODuF8I",
+          "createdAt": "2025-07-10T19:00:35.913Z",
+          "updatedAt": "2025-07-10T19:00:35.996Z",
+          "profile": null
+        },
+        {
+          "id": "ec5f43a1-4eb8-4dae-980a-1efbba8b3e82",
+          "displayId": "PT116160859",
+          "email": "test-authentication-patient-1752174116096@example.com",
+          "password": "$2b$10$wnml0O9PJ9C5jHGXXd5UnuGMgLdMrE6L5f0tpM4yLUnfzy/CD1ibq",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MTE2MDk2QGV4YW1wbGUuY29tIiwic3ViIjoiZWM1ZjQzYTEtNGViOC00ZGFlLTk4MGEtMWVmYmJhOGIzZTgyIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQxMTYsImV4cCI6MTc1Mjc3ODkxNn0.vHYfUYVy1krh9rRpjF4YuBnZmcghTLk5K2wofGXB7F4",
+          "createdAt": "2025-07-10T19:01:56.169Z",
+          "updatedAt": "2025-07-10T19:01:56.250Z",
+          "profile": null
+        },
+        {
+          "id": "54c3f5ec-61a8-4756-86d2-e20620eb9352",
+          "displayId": "PT885794092",
+          "email": "test@example.com",
+          "password": "$2b$10$lgqFcjFj8NkYrpiXLnpAZOgozS4XWiLxm990gJmC30RXOWVZW1h02",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAZXhhbXBsZS5jb20iLCJzdWIiOiI1NGMzZjVlYy02MWE4LTQ3NTYtODZkMi1lMjA2MjBlYjkzNTIiLCJyb2xlcyI6WyJwYXRpZW50Il0sImlhdCI6MTc1MjE3NDIwMiwiZXhwIjoxNzUyNzc5MDAyfQ.SRPL0EMxhdY9dkV1R1br_Q9IpiOIBb8-t_I7DF-DtUQ",
+          "createdAt": "2025-07-10T18:58:05.805Z",
+          "updatedAt": "2025-07-10T19:03:22.732Z",
+          "profile": null
+        },
+        {
+          "id": "e37e0a10-55de-4d76-b5f4-ad908ec39f15",
+          "displayId": "PT235732770",
+          "email": "test-authentication-patient-1752174235671@example.com",
+          "password": "$2b$10$k2YhThcNeSjQ85.MY7MgnOfBaIVtE0RnwMIEckWXxiP3mXFw.HMe2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aGVudGljYXRpb24tcGF0aWVudC0xNzUyMTc0MjM1NjcxQGV4YW1wbGUuY29tIiwic3ViIjoiZTM3ZTBhMTAtNTVkZS00ZDc2LWI1ZjQtYWQ5MDhlYzM5ZjE1Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.boh0r_Gk1CBi8I97wS-dzXGPW68v7xPb6Mz3904bR_M",
+          "createdAt": "2025-07-10T19:03:55.742Z",
+          "updatedAt": "2025-07-10T19:03:55.820Z",
+          "profile": null
+        },
+        {
+          "id": "457506c2-b8e4-4cac-98ac-297e7b6e7b5b",
+          "displayId": "PT235890155",
+          "email": "test-auth-1752174235830@example.com",
+          "password": "$2b$10$kwJpL6aKKjPEYbJjhgzJ2euCbxc4Fji.1sDtUfuZJx3TovT2pIGpy",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjM1ODMwQGV4YW1wbGUuY29tIiwic3ViIjoiNDU3NTA2YzItYjhlNC00Y2FjLTk4YWMtMjk3ZTdiNmU3YjViIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyMzUsImV4cCI6MTc1Mjc3OTAzNX0.X8gXQOw81goz23l9WP180kokti6tAFySVd0dPRzoNJs",
+          "createdAt": "2025-07-10T19:03:55.891Z",
+          "updatedAt": "2025-07-10T19:03:55.966Z",
+          "profile": null
+        },
+        {
+          "id": "e92f95cd-c84d-4be4-92aa-ff9e74287249",
+          "displayId": "PT247655334",
+          "email": "test-auth-1752174247595@example.com",
+          "password": "$2b$10$YQEOz/5W1zNEtKm9PrQEGe0h71jn1iswjmHtdX6XiWqpmx65cd4q2",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYXV0aC0xNzUyMTc0MjQ3NTk1QGV4YW1wbGUuY29tIiwic3ViIjoiZTkyZjk1Y2QtYzg0ZC00YmU0LTkyYWEtZmY5ZTc0Mjg3MjQ5Iiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyNDcsImV4cCI6MTc1Mjc3OTA0N30.uoUFNFu52929sCn5XniVGfyElUaSXnv-r3dcmJTOyUM",
+          "createdAt": "2025-07-10T19:04:07.655Z",
+          "updatedAt": "2025-07-10T19:04:07.732Z",
+          "profile": null
+        },
+        {
+          "id": "c4564c85-9c0c-489d-a595-9cebf565c642",
+          "displayId": "AD282498467",
+          "email": "test-admin-admin-1752174282436@example.com",
+          "password": "$2b$10$wxKZwST3Idng7wLcs0E2A.m8Stz41vh.PNhZKkh2E4KDeoUKiPRcq",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtYWRtaW4tYWRtaW4tMTc1MjE3NDI4MjQzNkBleGFtcGxlLmNvbSIsInN1YiI6ImM0NTY0Yzg1LTljMGMtNDg5ZC1hNTk1LTljZWJmNTY1YzY0MiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI4MiwiZXhwIjoxNzUyNzc5MDgyfQ.KZ_vSjE_kPSQdvAlCiKYCB1jAVp1lf-Vor7ISGZHFEU",
+          "createdAt": "2025-07-10T19:04:42.507Z",
+          "updatedAt": "2025-07-10T19:04:42.586Z",
+          "profile": null
+        },
+        {
+          "id": "a340c9b5-b966-477b-ab30-d65e4f9261b9",
+          "displayId": "PT282674738",
+          "email": "admin-test-user-1752174282595@example.com",
+          "password": "$2b$10$X8W4Xgt46vdOcdzdRTgz/Owa9zlUYGokfANr7sB46an/fY6j1tld.",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": null,
+          "createdAt": "2025-07-10T19:04:42.675Z",
+          "updatedAt": "2025-07-10T19:04:42.675Z",
+          "profile": null
+        },
+        {
+          "id": "2ed41d25-d01b-432b-8ccc-348c84a0b38e",
+          "displayId": "PT297996145",
+          "email": "test-users-patient-1752174297934@example.com",
+          "password": "$2b$10$YtFoebfRoY232oTYmDeXWevUpIAGMJm6SizLSdf50yKOQMbQlSVJe",
+          "roles": [
+            "patient"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtcGF0aWVudC0xNzUyMTc0Mjk3OTM0QGV4YW1wbGUuY29tIiwic3ViIjoiMmVkNDFkMjUtZDAxYi00MzJiLThjY2MtMzQ4Yzg0YTBiMzhlIiwicm9sZXMiOlsicGF0aWVudCJdLCJpYXQiOjE3NTIxNzQyOTgsImV4cCI6MTc1Mjc3OTA5OH0.06bUPxng14wahoSbX-4vHEh162gZUroDVfFOsPv_ybE",
+          "createdAt": "2025-07-10T19:04:58.007Z",
+          "updatedAt": "2025-07-10T19:04:58.090Z",
+          "profile": null
+        },
+        {
+          "id": "a5bb1ddd-6e4a-4508-aab7-5ef882b19e1e",
+          "displayId": "AD298174839",
+          "email": "test-users-admin-1752174298111@example.com",
+          "password": "$2b$10$lepj3isiKNLCIpkp188.A.wFb4BlwtLHEMi6layXSiQxRYRNTqlte",
+          "roles": [
+            "admin"
+          ],
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QtdXNlcnMtYWRtaW4tMTc1MjE3NDI5ODExMUBleGFtcGxlLmNvbSIsInN1YiI6ImE1YmIxZGRkLTZlNGEtNDUwOC1hYWI3LTVlZjg4MmIxOWUxZSIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTc1MjE3NDI5OCwiZXhwIjoxNzUyNzc5MDk4fQ.bE3x_GWeWfJv9_qsbWoLrSAWmPcEzSwd4rDiBcrkcIg",
+          "createdAt": "2025-07-10T19:04:58.175Z",
+          "updatedAt": "2025-07-10T19:04:58.250Z",
+          "profile": null
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /users/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 156,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-10T19:04:58.435Z",
+        "path": "/users/invalid-uuid",
+        "method": "GET",
+        "message": "User with ID invalid-uuid not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /users/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 26,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-10T19:04:58.462Z",
+        "path": "/users/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "User with ID 00000000-0000-0000-0000-000000000000 not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

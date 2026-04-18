@@ -1,0 +1,65 @@
+services:
+  - type: web
+    name: healthcare-backend
+    env: docker
+    plan: free # Use free tier to avoid payment information requirement
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: API_PREFIX
+        value: api
+      - key: DATABASE_URL
+        fromDatabase:
+          name: healthcare-db
+          property: connectionString
+      - key: REDIS_HOST
+        fromService:
+          type: redis
+          name: healthcare-cache
+          property: host
+      - key: REDIS_PORT
+        fromService:
+          type: redis
+          name: healthcare-cache
+          property: port
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
+      - key: ENCRYPTION_SALT
+        generateValue: true
+      - key: SUPABASE_URL
+        value: "REPLACEME_WITH_SUPABASE_URL"
+      - key: SUPABASE_KEY
+        value: "REPLACEME_WITH_SUPABASE_ANON_KEY"
+      - key: SMTP_HOST
+        value: "smtp.gmail.com"
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        value: "info.unlimitedhealthcare@gmail.com"
+      - key: SMTP_PASS
+        value: "REPLACEME_WITH_GMAIL_APP_PASSWORD"
+      - key: EMAIL_FROM
+        value: "info.unlimitedhealthcare@gmail.com"
+      - key: FRONTEND_URL
+        value: "https://unlimitedhealthcares.com"
+      - key: CORS_ORIGIN
+        value: "https://unlimitedhealthcares.com,https://www.unlimitedhealthcares.com,https://healthcare-backend-vih6.onrender.com"
+  - type: keyvalue
+    name: healthcare-cache
+    plan: free
+    maxmemoryPolicy: allkeys-lru
+    ipAllowList: [] # Allow all services within the blueprint to connect
+
+databases:
+  - name: healthcare-db
+    plan: free
+    databaseName: healthcare
+    user: healthcare_user

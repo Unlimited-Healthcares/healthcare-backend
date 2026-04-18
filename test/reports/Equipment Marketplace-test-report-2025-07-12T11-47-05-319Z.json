@@ -1,0 +1,419 @@
+{
+  "moduleName": "Equipment Marketplace",
+  "timestamp": "2025-07-12T11:47:05.318Z",
+  "summary": {
+    "total": 25,
+    "passed": 16,
+    "failed": 9,
+    "successRate": 64,
+    "averageResponseTime": 14.12
+  },
+  "results": [
+    {
+      "endpoint": "GET /equipment/categories",
+      "status": "PASS",
+      "responseTime": 28,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "GET /equipment/categories/hierarchy",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /equipment/categories",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:04.722Z",
+        "path": "/equipment/categories",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/vendors",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /equipment/vendors",
+      "status": "FAIL",
+      "responseTime": 13,
+      "statusCode": 400,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:47:04.745Z",
+        "path": "/equipment/vendors",
+        "method": "POST",
+        "message": [
+          "companyName: companyName should not be empty, companyName must be a string"
+        ],
+        "error": "Http Exception",
+        "code": "VALIDATION_FAILED"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "items": [],
+        "total": 0,
+        "page": 1,
+        "limit": 20
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items",
+      "status": "PASS",
+      "responseTime": 15,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "items": [],
+        "total": 0,
+        "page": 1,
+        "limit": 10
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items/featured",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:04.795Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/rental/requests",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1",
+          "equipmentId": "equipment-1",
+          "renterCenterId": "center-1",
+          "requestNumber": "RR-1234567890",
+          "startDate": "2024-06-01",
+          "endDate": "2024-06-15",
+          "deliveryRequired": false,
+          "setupRequired": false,
+          "trainingRequired": false,
+          "status": "pending",
+          "createdAt": "2025-07-12T11:47:04.805Z",
+          "updatedAt": "2025-07-12T11:47:04.805Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /equipment/rental/requests",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:04.813Z",
+        "path": "/equipment/rental/requests",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/sales/listings",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1",
+          "equipmentId": "equipment-1",
+          "listingNumber": "SL-1234567890",
+          "listingTitle": "High-Quality Medical Equipment",
+          "salePrice": 50000,
+          "negotiable": true,
+          "featured": false,
+          "warrantyIncluded": true,
+          "deliveryIncluded": false,
+          "installationIncluded": false,
+          "trainingIncluded": false,
+          "shippingCost": 500,
+          "bulkDiscountAvailable": false,
+          "listingStatus": "active",
+          "createdBy": "vendor-1",
+          "createdAt": "2025-07-12T11:47:04.821Z",
+          "updatedAt": "2025-07-12T11:47:04.821Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "POST /equipment/sales/listings",
+      "status": "FAIL",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 201,
+      "error": "Expected 201, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:04.830Z",
+        "path": "/equipment/sales/listings",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/maintenance/schedules",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": [
+        {
+          "id": "1",
+          "equipmentId": "equipment-1",
+          "maintenanceType": "preventive",
+          "frequencyDays": 90,
+          "nextMaintenanceDate": "2024-06-01",
+          "priority": "medium",
+          "status": "scheduled",
+          "reminderSent": false,
+          "nextScheduleGenerated": false,
+          "createdAt": "2025-07-12T11:47:04.837Z",
+          "updatedAt": "2025-07-12T11:47:04.837Z"
+        }
+      ]
+    },
+    {
+      "endpoint": "GET /equipment/maintenance/records",
+      "status": "FAIL",
+      "responseTime": 4,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:47:04.842Z",
+        "path": "/equipment/maintenance/records",
+        "method": "GET",
+        "message": "Cannot GET /equipment/maintenance/records",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/upload/presigned-url",
+      "status": "FAIL",
+      "responseTime": 3,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:47:04.845Z",
+        "path": "/equipment/upload/presigned-url?fileName=test-equipment-image.jpg&fileType=image%2Fjpeg&equipmentId=00000000-0000-0000-0000-000000000005",
+        "method": "GET",
+        "message": "Cannot GET /equipment/upload/presigned-url?fileName=test-equipment-image.jpg&fileType=image%2Fjpeg&equipmentId=00000000-0000-0000-0000-000000000005",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 11,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:47:04.856Z",
+        "path": "/equipment/items/invalid-uuid",
+        "method": "GET",
+        "message": "Validation failed (uuid is expected)",
+        "error": "Bad Request",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/items/00000000-0000-0000-0000-000000000000",
+      "status": "PASS",
+      "responseTime": 26,
+      "statusCode": 404,
+      "expectedStatus": 404,
+      "error": null,
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:47:04.882Z",
+        "path": "/equipment/items/00000000-0000-0000-0000-000000000000",
+        "method": "GET",
+        "message": "Equipment item not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/categories/invalid-uuid",
+      "status": "PASS",
+      "responseTime": 102,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:47:04.984Z",
+        "path": "/equipment/categories/invalid-uuid",
+        "method": "GET",
+        "message": "invalid input syntax for type uuid: \"invalid-uuid\"",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "FAIL",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 400,
+      "error": "Expected 400, got 403",
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:04.992Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/categories",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:05.142Z",
+        "path": "/equipment/categories",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "POST /equipment/items",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:05.148Z",
+        "path": "/equipment/items",
+        "method": "POST",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "PATCH /equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+      "status": "PASS",
+      "responseTime": 6,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:47:05.154Z",
+        "path": "/equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+        "method": "PATCH",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /equipment/vendors",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": []
+    },
+    {
+      "endpoint": "PATCH /equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+      "status": "FAIL",
+      "responseTime": 9,
+      "statusCode": 404,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 404",
+      "responseBody": {
+        "statusCode": 404,
+        "timestamp": "2025-07-12T11:47:05.315Z",
+        "path": "/equipment/vendors/00000000-0000-0000-0000-000000000001/verification",
+        "method": "PATCH",
+        "message": "Equipment vendor not found",
+        "error": "Not Found",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}

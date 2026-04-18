@@ -1,0 +1,2289 @@
+{
+  "moduleName": "Audit",
+  "timestamp": "2025-07-12T11:32:37.261Z",
+  "summary": {
+    "total": 19,
+    "passed": 18,
+    "failed": 1,
+    "successRate": 94.73684210526315,
+    "averageResponseTime": 24.94736842105263
+  },
+  "results": [
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "FAIL",
+      "responseTime": 115,
+      "statusCode": 400,
+      "expectedStatus": 200,
+      "error": "Expected 200, got 400",
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:32:36.459Z",
+        "path": "/analytics/audit-logs",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [
+          {
+            "id": "73378f1c-d3a3-42d2-9152-43ae2a938743",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "ee14d18d-bcb8-4a70-9983-55d45fa8e6f2",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW appointments",
+              "resourceType": "appointments",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.982Z"
+          },
+          {
+            "id": "47d06e87-8f97-4f02-9667-a0adbe46ed3f",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "ee14d18d-bcb8-4a70-9983-55d45fa8e6f2",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW appointments",
+              "resourceType": "appointments"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.979Z"
+          },
+          {
+            "id": "cb548611-e8b8-4b7d-aa79-d914c508eb54",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "91bd8440-6456-429b-9048-610b16367ec9",
+            "details": {
+              "consentId": "c5cbced1-cc47-4a79-8513-13704c542fc9",
+              "description": "User granted medical_treatment consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.816Z"
+          },
+          {
+            "id": "1c63adaa-7be5-4e40-a09d-ae3f1aed9da1",
+            "action": "DATA_BREACH",
+            "entityType": "SECURITY",
+            "entityId": null,
+            "userId": "system",
+            "details": {
+              "severity": "MEDIUM",
+              "description": "Test data breach notification",
+              "detectionDate": "2025-07-11T18:19:55.436Z",
+              "dataCategories": [
+                "personal_info",
+                "medical_records"
+              ],
+              "affectedUserCount": 1
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.443Z"
+          },
+          {
+            "id": "42d578bf-f2fe-4b12-b177-8afe486b8a64",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "80f78426-9047-4ecf-ad8e-aaa43396e6ae",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW medical_records",
+              "resourceType": "medical_records",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.277Z"
+          },
+          {
+            "id": "f527b697-dd69-4e19-b317-ff751e3b0a8f",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "80f78426-9047-4ecf-ad8e-aaa43396e6ae",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW medical_records",
+              "resourceType": "medical_records"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.272Z"
+          },
+          {
+            "id": "66166c19-455b-4202-b846-a3607d313809",
+            "action": "DATA_CORRECTION",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "fields": [
+                "name",
+                "email"
+              ],
+              "description": "User data correction requested"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.114Z"
+          },
+          {
+            "id": "5b5d5182-419e-4b20-a791-20bd0323509e",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "requestId": "8fb7b96a-d8f6-4f23-87b0-a7b8fd7ed90f",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.101Z"
+          },
+          {
+            "id": "2f04ff78-bbf2-466d-8967-03bc16e738ed",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "consentId": "533a6a6f-ab52-484a-a03b-e054aa2280b0",
+              "description": "User granted marketing consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.086Z"
+          },
+          {
+            "id": "7277a2d6-18c7-4407-a2d9-1049c3322218",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.071Z"
+          }
+        ],
+        "total": 200,
+        "page": 1,
+        "totalPages": 20
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 23,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [
+          {
+            "id": "9ff2aae3-8065-435e-bf34-7a449056dd1d",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "75a82d4b-f8f6-4beb-9d58-acd1d60a4905",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "9bdabc4d-801c-44f5-b01d-32e4e705cd63",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:02:27.674Z"
+          },
+          {
+            "id": "2c10fe03-bb3b-4687-b899-032a5f655333",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "f2cf3b8f-7991-417c-9e46-22995bc28ebf",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "f1ee25bf-de07-4fea-bea9-986ab94b9f84",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:00:59.844Z"
+          },
+          {
+            "id": "2e4a9ff0-3bcf-41b1-8c1f-d22cdb5ddf9f",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "409e1dce-aff5-461e-aad6-5f6ed202d2ae",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "52c944ee-80b6-4453-9ebf-9aadbe0aa78c",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:58:51.110Z"
+          },
+          {
+            "id": "13589628-ad7c-450a-9090-ecc713b2c5f4",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "662b4a36-e18f-4507-a01d-441b6f4fa5ee",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:56:58.397Z"
+          },
+          {
+            "id": "a9e09bae-8594-45ac-93ba-2abc25234ef8",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "f3358844-6b8a-4a62-8641-6bf8ee2b0151",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "e8a786be-0ced-46da-9eb9-eda3897507e6",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:56:05.709Z"
+          }
+        ],
+        "total": 5,
+        "page": 1,
+        "totalPages": 1
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [],
+        "total": 0,
+        "page": 1,
+        "totalPages": 0
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [
+          {
+            "id": "1811b528-7f6c-47b7-91a9-8bde5e46c4cc",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "abaa4ce4-3074-4b36-954e-9923661eb8e6",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW appointments",
+              "resourceType": "appointments",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:09.253Z"
+          },
+          {
+            "id": "50500f1d-03f0-46c9-baf7-2c0213592b51",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "abaa4ce4-3074-4b36-954e-9923661eb8e6",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW appointments",
+              "resourceType": "appointments"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:09.251Z"
+          },
+          {
+            "id": "a75afbe9-1124-491d-a6ce-8f4e1b6025f7",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "27b4dccf-fbc2-4e69-9b80-e80f089a011d",
+            "details": {
+              "consentId": "44244437-9639-439f-ae55-cb51846eaeea",
+              "description": "User granted medical_treatment consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:09.079Z"
+          },
+          {
+            "id": "691196b1-4731-4c01-b2ca-0b39a733c008",
+            "action": "DATA_BREACH",
+            "entityType": "SECURITY",
+            "entityId": null,
+            "userId": "system",
+            "details": {
+              "severity": "MEDIUM",
+              "description": "Test data breach notification",
+              "detectionDate": "2025-07-11T18:19:08.680Z",
+              "dataCategories": [
+                "personal_info",
+                "medical_records"
+              ],
+              "affectedUserCount": 1
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.688Z"
+          },
+          {
+            "id": "b9e6535a-ad9e-450f-ac29-34cd45332b06",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "3dabe65e-e95b-4cd6-a725-7aefd2748015",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW medical_records",
+              "resourceType": "medical_records",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.500Z"
+          },
+          {
+            "id": "ffc97e39-7b92-4e2b-930b-adc349dd741d",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "3dabe65e-e95b-4cd6-a725-7aefd2748015",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW medical_records",
+              "resourceType": "medical_records"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.497Z"
+          },
+          {
+            "id": "1f38af93-a3b5-4a29-8f62-f99269f3831e",
+            "action": "DATA_CORRECTION",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "fields": [
+                "name",
+                "email"
+              ],
+              "description": "User data correction requested"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.327Z"
+          },
+          {
+            "id": "450e4bcb-e6b5-4a42-9991-3dccd1fca88a",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "requestId": "d5d81e32-d2ab-47af-9c27-b133d0a9a2ed",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.310Z"
+          },
+          {
+            "id": "542ce847-64ab-4ae7-bd12-4d17004d11a8",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "consentId": "e351a77e-fcee-4fd3-88bc-8a890003bf1c",
+              "description": "User granted marketing consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.290Z"
+          },
+          {
+            "id": "09af9fa6-ecc6-44ce-9d6d-08ed72d7b71f",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.271Z"
+          }
+        ],
+        "total": 200,
+        "page": 2,
+        "totalPages": 20
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 10,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [
+          {
+            "id": "73378f1c-d3a3-42d2-9152-43ae2a938743",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "ee14d18d-bcb8-4a70-9983-55d45fa8e6f2",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW appointments",
+              "resourceType": "appointments",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.982Z"
+          },
+          {
+            "id": "47d06e87-8f97-4f02-9667-a0adbe46ed3f",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "ee14d18d-bcb8-4a70-9983-55d45fa8e6f2",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW appointments",
+              "resourceType": "appointments"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.979Z"
+          },
+          {
+            "id": "cb548611-e8b8-4b7d-aa79-d914c508eb54",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "91bd8440-6456-429b-9048-610b16367ec9",
+            "details": {
+              "consentId": "c5cbced1-cc47-4a79-8513-13704c542fc9",
+              "description": "User granted medical_treatment consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.816Z"
+          },
+          {
+            "id": "1c63adaa-7be5-4e40-a09d-ae3f1aed9da1",
+            "action": "DATA_BREACH",
+            "entityType": "SECURITY",
+            "entityId": null,
+            "userId": "system",
+            "details": {
+              "severity": "MEDIUM",
+              "description": "Test data breach notification",
+              "detectionDate": "2025-07-11T18:19:55.436Z",
+              "dataCategories": [
+                "personal_info",
+                "medical_records"
+              ],
+              "affectedUserCount": 1
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.443Z"
+          },
+          {
+            "id": "42d578bf-f2fe-4b12-b177-8afe486b8a64",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "80f78426-9047-4ecf-ad8e-aaa43396e6ae",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW medical_records",
+              "resourceType": "medical_records",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.277Z"
+          },
+          {
+            "id": "f527b697-dd69-4e19-b317-ff751e3b0a8f",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "80f78426-9047-4ecf-ad8e-aaa43396e6ae",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW medical_records",
+              "resourceType": "medical_records"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.272Z"
+          },
+          {
+            "id": "66166c19-455b-4202-b846-a3607d313809",
+            "action": "DATA_CORRECTION",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "fields": [
+                "name",
+                "email"
+              ],
+              "description": "User data correction requested"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.114Z"
+          },
+          {
+            "id": "5b5d5182-419e-4b20-a791-20bd0323509e",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "requestId": "8fb7b96a-d8f6-4f23-87b0-a7b8fd7ed90f",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.101Z"
+          },
+          {
+            "id": "2f04ff78-bbf2-466d-8967-03bc16e738ed",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "consentId": "533a6a6f-ab52-484a-a03b-e054aa2280b0",
+              "description": "User granted marketing consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.086Z"
+          },
+          {
+            "id": "7277a2d6-18c7-4407-a2d9-1049c3322218",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+            "details": {
+              "userId": "64ef8cb4-5bdc-43db-8bea-24b4dfd88828",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:55.071Z"
+          },
+          {
+            "id": "1811b528-7f6c-47b7-91a9-8bde5e46c4cc",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "abaa4ce4-3074-4b36-954e-9923661eb8e6",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW appointments",
+              "resourceType": "appointments",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:09.253Z"
+          },
+          {
+            "id": "50500f1d-03f0-46c9-baf7-2c0213592b51",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "abaa4ce4-3074-4b36-954e-9923661eb8e6",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW appointments",
+              "resourceType": "appointments"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:09.251Z"
+          },
+          {
+            "id": "a75afbe9-1124-491d-a6ce-8f4e1b6025f7",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "27b4dccf-fbc2-4e69-9b80-e80f089a011d",
+            "details": {
+              "consentId": "44244437-9639-439f-ae55-cb51846eaeea",
+              "description": "User granted medical_treatment consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:09.079Z"
+          },
+          {
+            "id": "691196b1-4731-4c01-b2ca-0b39a733c008",
+            "action": "DATA_BREACH",
+            "entityType": "SECURITY",
+            "entityId": null,
+            "userId": "system",
+            "details": {
+              "severity": "MEDIUM",
+              "description": "Test data breach notification",
+              "detectionDate": "2025-07-11T18:19:08.680Z",
+              "dataCategories": [
+                "personal_info",
+                "medical_records"
+              ],
+              "affectedUserCount": 1
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.688Z"
+          },
+          {
+            "id": "b9e6535a-ad9e-450f-ac29-34cd45332b06",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "3dabe65e-e95b-4cd6-a725-7aefd2748015",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW medical_records",
+              "resourceType": "medical_records",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.500Z"
+          },
+          {
+            "id": "ffc97e39-7b92-4e2b-930b-adc349dd741d",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "3dabe65e-e95b-4cd6-a725-7aefd2748015",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW medical_records",
+              "resourceType": "medical_records"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.497Z"
+          },
+          {
+            "id": "1f38af93-a3b5-4a29-8f62-f99269f3831e",
+            "action": "DATA_CORRECTION",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "fields": [
+                "name",
+                "email"
+              ],
+              "description": "User data correction requested"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.327Z"
+          },
+          {
+            "id": "450e4bcb-e6b5-4a42-9991-3dccd1fca88a",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "requestId": "d5d81e32-d2ab-47af-9c27-b133d0a9a2ed",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.310Z"
+          },
+          {
+            "id": "542ce847-64ab-4ae7-bd12-4d17004d11a8",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "consentId": "e351a77e-fcee-4fd3-88bc-8a890003bf1c",
+              "description": "User granted marketing consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.290Z"
+          },
+          {
+            "id": "09af9fa6-ecc6-44ce-9d6d-08ed72d7b71f",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+            "details": {
+              "userId": "8119a191-91c7-4211-a521-a1620b46b43d",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:19:08.271Z"
+          },
+          {
+            "id": "3696542a-cbb9-4295-8dc5-63bd4c820b9a",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "286745d3-e9db-4151-8909-d8fdb0d0fd23",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW appointments",
+              "resourceType": "appointments",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.864Z"
+          },
+          {
+            "id": "e0d4a169-c38b-48cd-a7bc-aa1ebc054a6a",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "286745d3-e9db-4151-8909-d8fdb0d0fd23",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW appointments",
+              "resourceType": "appointments"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.857Z"
+          },
+          {
+            "id": "a274699f-cc6b-4f77-a2fe-00bee8f0dc47",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "87e425a2-fe67-48a8-a79a-ab59589ee100",
+            "details": {
+              "consentId": "b63cd2af-4b58-4ec6-9c1a-0423b8a6a497",
+              "description": "User granted medical_treatment consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.682Z"
+          },
+          {
+            "id": "2c6f11d0-5ec8-4533-8152-d65b3942249e",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "a3b5ceac-d1b6-4eda-aeea-1fe28e3d552c",
+            "details": {
+              "requestId": "bb1408cd-c83e-4325-b977-31c996e97c6f",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.344Z"
+          },
+          {
+            "id": "cd62e009-2876-468a-a820-52c6bb3268b4",
+            "action": "DATA_BREACH",
+            "entityType": "SECURITY",
+            "entityId": null,
+            "userId": "system",
+            "details": {
+              "severity": "MEDIUM",
+              "description": "Test data breach notification",
+              "detectionDate": "2025-07-11T18:18:21.278Z",
+              "dataCategories": [
+                "personal_info",
+                "medical_records"
+              ],
+              "affectedUserCount": 1
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.291Z"
+          },
+          {
+            "id": "71778f38-f1fe-469f-8f33-5bd6df2beaf1",
+            "action": "AUTHORIZED",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "2adeb4c6-cc07-4477-84ee-10d909f7bb80",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User authorized to VIEW medical_records",
+              "resourceType": "medical_records",
+              "hasPermission": true,
+              "hasValidRelationship": true,
+              "isWithinAllowedHours": true
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.121Z"
+          },
+          {
+            "id": "79361b14-648e-44bb-a48c-58e44c4e2f00",
+            "action": "ATTEMPT",
+            "entityType": "PHI_ACCESS",
+            "entityId": null,
+            "userId": "2adeb4c6-cc07-4477-84ee-10d909f7bb80",
+            "details": {
+              "patientId": "123e4567-e89b-12d3-a456-426614174000",
+              "description": "User attempted to VIEW medical_records",
+              "resourceType": "medical_records"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:21.117Z"
+          },
+          {
+            "id": "2d78d072-1cd2-4685-be56-21198a098c96",
+            "action": "DATA_CORRECTION",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "c233b209-c1ae-4904-89a8-9a5de182d20e",
+            "details": {
+              "fields": [
+                "name",
+                "email"
+              ],
+              "description": "User data correction requested"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:20.946Z"
+          },
+          {
+            "id": "996ac568-a006-4b49-b5a7-2282f0f880b0",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "c233b209-c1ae-4904-89a8-9a5de182d20e",
+            "details": {
+              "requestId": "c185066e-fc36-4da4-a74d-56884c04bb54",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:20.931Z"
+          },
+          {
+            "id": "43d183ad-0ee1-4b5b-8fcd-f74696da75ab",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "c233b209-c1ae-4904-89a8-9a5de182d20e",
+            "details": {
+              "consentId": "3a7c5c3b-7d90-4115-ad1b-38e08e8e52e7",
+              "description": "User granted marketing consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:20.912Z"
+          },
+          {
+            "id": "c5d1375e-0785-48cf-8182-7cc4579a5061",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "c233b209-c1ae-4904-89a8-9a5de182d20e",
+            "details": {
+              "userId": "c233b209-c1ae-4904-89a8-9a5de182d20e",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:18:20.893Z"
+          },
+          {
+            "id": "0e187ba9-c7b0-4bc4-847e-75a20249f56c",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "c7ba093e-b099-4951-adf1-44d461d97453",
+            "details": {
+              "consentId": "9331adcd-d133-4279-b201-4f282ab8c9dc",
+              "description": "User granted medical_treatment consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:37.676Z"
+          },
+          {
+            "id": "ba39782d-1e46-4fbd-b848-1c1a85136381",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "e9dabaac-4997-4c4d-af1a-87d8fdd29cbc",
+            "details": {
+              "requestId": "ce921e0e-c452-488b-9a08-7b42329d26cc",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:37.328Z"
+          },
+          {
+            "id": "14f5fd0f-6124-4d4f-8073-9fa264ce486b",
+            "action": "DATA_BREACH",
+            "entityType": "SECURITY",
+            "entityId": null,
+            "userId": "system",
+            "details": {
+              "severity": "MEDIUM",
+              "description": "Test data breach notification",
+              "detectionDate": "2025-07-11T18:15:37.271Z",
+              "dataCategories": [
+                "personal_info",
+                "medical_records"
+              ],
+              "affectedUserCount": 1
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:37.280Z"
+          },
+          {
+            "id": "f4b093ca-4e58-4230-880d-f07922686859",
+            "action": "DATA_CORRECTION",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "191269c3-9af7-41d7-8ec6-fc0b0f922351",
+            "details": {
+              "fields": [
+                "name",
+                "email"
+              ],
+              "description": "User data correction requested"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:36.951Z"
+          },
+          {
+            "id": "05397335-687b-4013-a86d-988288d7bf01",
+            "action": "REQUESTED",
+            "entityType": "DATA_DELETION",
+            "entityId": null,
+            "userId": "191269c3-9af7-41d7-8ec6-fc0b0f922351",
+            "details": {
+              "requestId": "6dd4fbd2-ee90-4512-a5de-aa4fe5f5671f",
+              "description": "User requested data deletion"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:36.935Z"
+          },
+          {
+            "id": "9cb346ca-7464-4a33-b18e-71d8b7ef54dd",
+            "action": "GRANTED",
+            "entityType": "CONSENT",
+            "entityId": null,
+            "userId": "191269c3-9af7-41d7-8ec6-fc0b0f922351",
+            "details": {
+              "consentId": "069d5d2e-19cb-4564-93a2-e5a58e36f13f",
+              "description": "User granted marketing consent"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:36.901Z"
+          },
+          {
+            "id": "a0c9a64f-f1cb-411b-9ff3-f42f9fbfe254",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "191269c3-9af7-41d7-8ec6-fc0b0f922351",
+            "details": {
+              "userId": "191269c3-9af7-41d7-8ec6-fc0b0f922351",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:15:36.762Z"
+          },
+          {
+            "id": "9ea60da3-31f5-4cc3-a31c-0040a46ceb88",
+            "action": "DATA_EXPORT",
+            "entityType": "GDPR",
+            "entityId": null,
+            "userId": "93e9bdf7-4821-4748-886b-30d91b0e4265",
+            "details": {
+              "userId": "93e9bdf7-4821-4748-886b-30d91b0e4265",
+              "description": "User data exported"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:14:24.034Z"
+          },
+          {
+            "id": "c38a742a-11be-4c6d-82f0-d143d885cbb7",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "16bfdce0-1c98-4c70-b3f8-7842d7652a7d",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.766Z"
+          },
+          {
+            "id": "1ffdcd7b-f9c8-4367-94e0-227182e185d3",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "5ac05534-a332-4d09-b15f-291bdbd8cb43",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.745Z"
+          },
+          {
+            "id": "594a7a33-9fef-4049-a81e-cec9b411057b",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "910de2e2-7bff-4bd6-85ff-74347c83ee54",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.724Z"
+          },
+          {
+            "id": "04604181-bcc8-435e-857d-bdd4fbd03236",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "9c5ae47a-189b-49f7-8ea4-92f5e34b1065",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.710Z"
+          },
+          {
+            "id": "df1fbe50-a507-4572-9a49-a7c9453dd541",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "meeting",
+              "description": "Video conference created",
+              "conferenceId": "d55bc9cc-e8c6-4cd8-824a-e0a49a056a98",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.695Z"
+          },
+          {
+            "id": "6d55dfef-3731-47c3-817f-166e61181d81",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "training",
+              "description": "Video conference created",
+              "conferenceId": "ea416c06-a14c-4eff-b06a-17b6e1af340a",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.678Z"
+          },
+          {
+            "id": "04b503ac-dfec-44cf-978f-4cb8903c005b",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "group_session",
+              "description": "Video conference created",
+              "conferenceId": "10067b11-ae60-47e4-b55e-071e32cfe629",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.663Z"
+          },
+          {
+            "id": "b97f1247-5197-42ca-8397-92019633f9bb",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "emergency",
+              "description": "Video conference created",
+              "conferenceId": "36989218-4f86-4843-943c-7513bb63647d",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.646Z"
+          },
+          {
+            "id": "4b1bc3a1-efab-4e50-962a-00e4d8821ac5",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "a1353e6a-ee96-4039-9b38-d451eab766a9",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "fd21ce35-6412-463e-8455-dab06ea4e111",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.621Z"
+          },
+          {
+            "id": "c5c88278-b9fc-4271-b23f-86b868ccb8ce",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "caf014b0-e353-4820-bf12-5cc3d1bdd61f",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "07fed78b-2108-41df-ae64-13cf86a3b7af",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:07:54.289Z"
+          },
+          {
+            "id": "68d3876e-30e9-4549-b2e7-040ca1a71339",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "01429bbf-8d21-4dcc-98fe-f612019a4b24",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.948Z"
+          },
+          {
+            "id": "d5c7725e-3499-45a5-b97c-5e5d16df6c49",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "42c554ee-7b6f-44d9-9967-9f11ec3a8577",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.931Z"
+          },
+          {
+            "id": "4ec47322-463f-4aa3-8cfc-abf2772e40a6",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "922aecb7-23cb-4804-90b5-296f9e13e3d7",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.912Z"
+          },
+          {
+            "id": "b58d74b2-170c-44e4-9528-317eb76096b1",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "1d5cf898-3f57-4c77-bab6-1843f5595bb9",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.897Z"
+          },
+          {
+            "id": "e9a75898-93c9-44d1-87f6-2eaf5efe2116",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "meeting",
+              "description": "Video conference created",
+              "conferenceId": "124a3fd1-c0d0-49e8-829a-83aeeff2894d",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.883Z"
+          },
+          {
+            "id": "e1834b59-a9cd-489a-9358-c130e1741910",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "training",
+              "description": "Video conference created",
+              "conferenceId": "2a7170cd-adc9-4deb-a99a-8de43be8fa73",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.866Z"
+          },
+          {
+            "id": "cd446a12-0fbd-4d1f-9dc8-9d3e9fddef23",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "group_session",
+              "description": "Video conference created",
+              "conferenceId": "a59220a6-bc59-45e7-8bdb-9159f7a30c5e",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.850Z"
+          },
+          {
+            "id": "fda961ea-2d36-43af-8ef8-7f3682e3ea32",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "emergency",
+              "description": "Video conference created",
+              "conferenceId": "12c9e728-461d-48d4-a658-8b18ae1fd3e1",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.830Z"
+          },
+          {
+            "id": "3bf13918-5920-4b7a-85de-a6aadbce1cd4",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "233b07c7-28fb-4a09-84ec-a887047b07b1",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "2084f4f5-7499-491b-9104-6d9e2cc41b0d",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.805Z"
+          },
+          {
+            "id": "f496c794-4491-42ef-9eca-86868f18c9a6",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "1784ccc4-bdc7-4643-a0b3-5c33c3eed2e9",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "41076bea-a5fc-43ff-b7af-a93919a55d79",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:05:35.471Z"
+          },
+          {
+            "id": "d8163800-355f-416a-9ef3-d2655a73e74d",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "ae57e49a-7274-48ef-97d5-80837062888f",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.962Z"
+          },
+          {
+            "id": "d3a6f9e6-fdfc-4257-86ed-aab406b7723d",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "a09a7ea4-1650-424a-a2f2-49df085f2f4e",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.948Z"
+          },
+          {
+            "id": "57c27a03-42c8-417e-9f45-357fbc30e547",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "27f261d3-5725-4a88-b207-74b08e1dc3de",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.929Z"
+          },
+          {
+            "id": "d03d8ac2-f591-4875-8deb-21aa5b48d120",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "f443ab0b-fc19-4d13-96b8-0d9e61f0b3f5",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.910Z"
+          },
+          {
+            "id": "0b49a874-0c43-4b27-8ef6-fcca8068bb05",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "meeting",
+              "description": "Video conference created",
+              "conferenceId": "54899649-d7b1-4367-9a83-059c1370df80",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.894Z"
+          },
+          {
+            "id": "9d3d1b76-650a-468f-8e83-8dc8fee9c21a",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "training",
+              "description": "Video conference created",
+              "conferenceId": "e5ddbb1a-d877-4593-8ea8-2c5dac7cbf96",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.878Z"
+          },
+          {
+            "id": "d7513f9e-491b-4931-bbc3-0f63bd62a97c",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "group_session",
+              "description": "Video conference created",
+              "conferenceId": "fe77ab2d-2058-408d-87d5-fdd84fb216a4",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.861Z"
+          },
+          {
+            "id": "fdfda2f3-f16b-43d2-9173-b4a3ae0821d0",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "emergency",
+              "description": "Video conference created",
+              "conferenceId": "5355dc7d-5413-47f5-b249-916899d4a9c0",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.836Z"
+          },
+          {
+            "id": "14b7c488-4b92-4102-9c2f-e554a84cf7a8",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "83a208d7-38ed-4eaa-a946-b369e6290144",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "58a531bc-9bac-4cba-ba81-11d9abd3f5ee",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.808Z"
+          },
+          {
+            "id": "5872980d-5876-4942-bb5e-f10c3f53583f",
+            "action": "CREATE_CONFERENCE",
+            "entityType": "video_conference",
+            "entityId": null,
+            "userId": "4f981d88-aada-490f-a213-6d5f28560d65",
+            "details": {
+              "type": "consultation",
+              "description": "Video conference created",
+              "conferenceId": "c5d095d3-7e0d-415a-8812-c5d7fd27bcfd",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T18:04:30.461Z"
+          },
+          {
+            "id": "282edfc0-6b52-420f-9ca6-09848c0737c9",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "975f0e77-1e04-42ab-942f-fe52a7efd4b5",
+            "userId": "8b1da930-3ab1-41cd-8b99-c2568932064e",
+            "details": {
+              "rating": 5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:36.572Z"
+          },
+          {
+            "id": "780f8f35-0c3a-4cc9-a879-e8a3a7aa8a60",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "36bd5425-595d-44bb-ab5c-58906e78d169",
+            "userId": "8b1da930-3ab1-41cd-8b99-c2568932064e",
+            "details": {
+              "rating": 4.5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:36.556Z"
+          },
+          {
+            "id": "7295f8be-21c1-4dcb-8b16-aac53678a6ec",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "cacf05c8-f778-46a0-9751-54a479fd00af",
+            "userId": "6b67809b-eb8b-43f1-afe8-cdff9915ef3c",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "407cd2d6-bb8a-409f-9eea-af41a3003265"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:36.453Z"
+          },
+          {
+            "id": "ef698801-eda8-4549-85ae-deebe72b5e48",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "47ad6e8c-0151-4a1c-94c8-841923ae25df",
+            "userId": "6b67809b-eb8b-43f1-afe8-cdff9915ef3c",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "407cd2d6-bb8a-409f-9eea-af41a3003265"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:36.435Z"
+          },
+          {
+            "id": "3a28f44c-a8f7-42da-9da9-0f0f1e4bb693",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "b1ce1268-ea4a-44fd-bfb4-54266f42a2d1",
+            "userId": "fedf89c9-5380-4185-bb1a-3d20f3d2ba4b",
+            "details": {
+              "rating": 5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:23.542Z"
+          },
+          {
+            "id": "d8d071bc-bbff-4ae2-8bb5-fedde5361593",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "c189600f-4d10-4129-8bd2-089b7b63baa1",
+            "userId": "fedf89c9-5380-4185-bb1a-3d20f3d2ba4b",
+            "details": {
+              "rating": 4.5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:23.525Z"
+          },
+          {
+            "id": "02974051-2828-4273-bf5d-875501119b53",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "26b861d6-c323-4690-9c38-ee33820a3c86",
+            "userId": "d4b4c356-c9cf-43b2-b133-c7c14378e6e3",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "41d39515-90f6-4b4c-bf74-af2fa7ddfce3"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:23.365Z"
+          },
+          {
+            "id": "f315f7f2-0d35-412d-b9e2-24a07113a1e9",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "90d87597-8812-4d2c-ae03-b62f49bd2cbb",
+            "userId": "d4b4c356-c9cf-43b2-b133-c7c14378e6e3",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "41d39515-90f6-4b4c-bf74-af2fa7ddfce3"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:45:23.348Z"
+          },
+          {
+            "id": "0625713e-500b-4942-8706-1704af28183c",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "a407e02c-fe47-48f7-86d7-fb97a5f121b9",
+            "userId": "0ba8548b-1fd8-48e0-9260-1b9be9aeeb62",
+            "details": {
+              "rating": 5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:46.046Z"
+          },
+          {
+            "id": "653eb1b4-519a-40d8-94dc-887acbed6063",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "ce43af3d-24c8-430b-aa42-0747fb1595f9",
+            "userId": "0ba8548b-1fd8-48e0-9260-1b9be9aeeb62",
+            "details": {
+              "rating": 4.5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:46.029Z"
+          },
+          {
+            "id": "ba0c614f-185b-4df8-b4fb-b639c9a8e634",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "c1679a0a-27ef-4887-8842-32e020c2dc0a",
+            "userId": "cc844f84-3172-4959-97a8-8af468ab1781",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "2497f89d-c4f1-425a-9984-f09572e8876d"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:45.917Z"
+          },
+          {
+            "id": "35713d95-df3e-4b98-963a-db4c1b28fb11",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "961c5d04-6d2b-4de9-99fd-5424dd7c794d",
+            "userId": "cc844f84-3172-4959-97a8-8af468ab1781",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "2497f89d-c4f1-425a-9984-f09572e8876d"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:45.898Z"
+          },
+          {
+            "id": "8f63c979-d476-4770-ad32-56e9dd415b31",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "172d5514-8ada-4404-ad66-a9fd20e05367",
+            "userId": "82c1065e-1f64-4b28-ad49-5bada817e663",
+            "details": {
+              "rating": 5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:33.289Z"
+          },
+          {
+            "id": "86a8988c-9a98-41e0-860d-3d90d449c245",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "609c944e-c976-45ab-95a8-5921283602b5",
+            "userId": "82c1065e-1f64-4b28-ad49-5bada817e663",
+            "details": {
+              "rating": 4.5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:33.270Z"
+          },
+          {
+            "id": "4666cc30-2ef1-447b-a73b-2b3041423a8f",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "dfe0843a-22cd-4e80-a994-f8bf89b85920",
+            "userId": "ce556f52-1bb9-433b-8ec3-b62d5f0e86d3",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "90bb6721-3f6c-4085-a309-aaa9b13bf0ed"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:33.123Z"
+          },
+          {
+            "id": "639afb51-c418-4e70-a1f4-8993be9b5250",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "77267992-6233-4eea-8619-9b984d0f6904",
+            "userId": "ce556f52-1bb9-433b-8ec3-b62d5f0e86d3",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "90bb6721-3f6c-4085-a309-aaa9b13bf0ed"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:44:33.106Z"
+          },
+          {
+            "id": "e4664267-a1d4-4066-b452-9f709bbd1ef1",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "d11a9f2c-5c66-471f-a393-df721ab23ff4",
+            "userId": "301b5d01-3ac8-424a-8f70-8d39c3a4dd13",
+            "details": {
+              "rating": 4.5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:39:52.033Z"
+          },
+          {
+            "id": "9cd7d0c1-b673-46fd-b6bc-125da5450f72",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "fb711ea1-926d-4203-87dd-7c70db1fef6d",
+            "userId": "8bb64537-575e-4acf-b491-a22d3c75de1a",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "454e3ae7-1db6-4cea-b658-54c465114780"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:39:51.900Z"
+          },
+          {
+            "id": "d5b21cc7-e014-487a-89e9-b37c5ebf40fe",
+            "action": "CREATE_REVIEW",
+            "entityType": "Review",
+            "entityId": "1583310a-589f-402e-b3d9-d6decb1a63ca",
+            "userId": "34e1fed2-9e48-4ed1-b8f4-9ba7cc04e02a",
+            "details": {
+              "rating": 4.5,
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:39:27.835Z"
+          },
+          {
+            "id": "64f50879-7cf8-4822-9944-4f002f6cc66c",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "2201bda8-950b-4566-8491-83d4b9e1e881",
+            "userId": "a2c68c34-dc89-41da-b89a-c879e0fba432",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "5acf7cd0-0953-4173-9231-c0f22993304e"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:39:27.674Z"
+          },
+          {
+            "id": "96caa001-4faf-4611-87b4-8e87fb7b2a80",
+            "action": "APPOINTMENT_CREATED",
+            "entityType": "appointment",
+            "entityId": "52749798-7582-47eb-850e-1af873846ef4",
+            "userId": "dfa8b7f8-3304-4f23-bdc7-02274a28a411",
+            "details": {
+              "centerId": "d3dc99fa-b394-49a6-9fc0-fe048b03b1f2",
+              "patientId": "eae9e33c-457f-4c00-afed-49a5659c1de1"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:38:55.718Z"
+          },
+          {
+            "id": "4cc3a408-5361-4009-9dda-bb8e69a75915",
+            "action": "DELETE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "5ed4c23b-13c3-4cf5-9716-9d0c036aabfc",
+            "details": {
+              "description": "Deleted geofence zone: Updated Hospital Entrance",
+              "geofenceZoneId": "9bdabc4d-801c-44f5-b01d-32e4e705cd63"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:02:27.872Z"
+          },
+          {
+            "id": "c81a1a14-46d3-40ec-8e32-83da82830234",
+            "action": "UPDATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "5ed4c23b-13c3-4cf5-9716-9d0c036aabfc",
+            "details": {
+              "changes": {
+                "name": "Updated Hospital Entrance",
+                "radius": 150,
+                "description": "Updated geofence zone description"
+              },
+              "description": "Updated geofence zone: Test Hospital Entrance",
+              "geofenceZoneId": "9bdabc4d-801c-44f5-b01d-32e4e705cd63"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:02:27.860Z"
+          },
+          {
+            "id": "9ff2aae3-8065-435e-bf34-7a449056dd1d",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "75a82d4b-f8f6-4beb-9d58-acd1d60a4905",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "9bdabc4d-801c-44f5-b01d-32e4e705cd63",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:02:27.674Z"
+          },
+          {
+            "id": "488aa9af-f066-43f4-a64e-733703b88d05",
+            "action": "DELETE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "7547e208-08a3-480f-915c-bf4c6c6c3923",
+            "details": {
+              "description": "Deleted geofence zone: Updated Hospital Entrance",
+              "geofenceZoneId": "f1ee25bf-de07-4fea-bea9-986ab94b9f84"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:01:00.051Z"
+          },
+          {
+            "id": "4c11f11c-ae95-41a5-9a98-e83527473b0f",
+            "action": "UPDATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "7547e208-08a3-480f-915c-bf4c6c6c3923",
+            "details": {
+              "changes": {
+                "name": "Updated Hospital Entrance",
+                "radius": 150,
+                "description": "Updated geofence zone description"
+              },
+              "description": "Updated geofence zone: Test Hospital Entrance",
+              "geofenceZoneId": "f1ee25bf-de07-4fea-bea9-986ab94b9f84"
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:01:00.032Z"
+          },
+          {
+            "id": "2c10fe03-bb3b-4687-b899-032a5f655333",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "f2cf3b8f-7991-417c-9e46-22995bc28ebf",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "f1ee25bf-de07-4fea-bea9-986ab94b9f84",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T17:00:59.844Z"
+          },
+          {
+            "id": "2e4a9ff0-3bcf-41b1-8c1f-d22cdb5ddf9f",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "409e1dce-aff5-461e-aad6-5f6ed202d2ae",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "52c944ee-80b6-4453-9ebf-9aadbe0aa78c",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:58:51.110Z"
+          },
+          {
+            "id": "13589628-ad7c-450a-9090-ecc713b2c5f4",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "2e325e10-d52b-4217-a76f-6f297b9e0de0",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "662b4a36-e18f-4507-a01d-441b6f4fa5ee",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:56:58.397Z"
+          },
+          {
+            "id": "a9e09bae-8594-45ac-93ba-2abc25234ef8",
+            "action": "CREATE",
+            "entityType": "geofence_zone",
+            "entityId": null,
+            "userId": "f3358844-6b8a-4a62-8641-6bf8ee2b0151",
+            "details": {
+              "name": "Test Hospital Entrance",
+              "radius": 100,
+              "status": "active",
+              "description": "Geofence zone for the main hospital entrance area",
+              "centerLatitude": 40.7128,
+              "geofenceZoneId": "e8a786be-0ced-46da-9eb9-eda3897507e6",
+              "centerLongitude": -74.006
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:56:05.709Z"
+          },
+          {
+            "id": "b560cf97-3b3f-46b3-9d5c-e09786460199",
+            "action": "CREATE_CHAT_ROOM",
+            "entityType": "chat_room",
+            "entityId": null,
+            "userId": "cd1c0216-df2c-4543-8296-d6e5fccb5a43",
+            "details": {
+              "type": "emergency",
+              "roomId": "b15a58bc-3f24-438f-afcb-63f9c559910a",
+              "description": "Chat room created",
+              "participants": 0
+            },
+            "ipAddress": null,
+            "userAgent": null,
+            "timestamp": "2025-07-11T16:50:30.776Z"
+          }
+        ],
+        "total": 200,
+        "page": 1,
+        "totalPages": 2
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 17,
+      "statusCode": 200,
+      "expectedStatus": 200,
+      "error": null,
+      "responseBody": {
+        "logs": [],
+        "total": 200,
+        "page": 999,
+        "totalPages": 20
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 146,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:32:36.729Z",
+        "path": "/analytics/audit-logs?page=-1&limit=10",
+        "method": "GET",
+        "message": "OFFSET must not be negative",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 37,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:32:36.765Z",
+        "path": "/analytics/audit-logs?page=1&limit=-5",
+        "method": "GET",
+        "message": "LIMIT must not be negative",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 12,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:32:36.778Z",
+        "path": "/analytics/audit-logs?startDate=invalid-date&endDate=2024-12-31",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 13,
+      "statusCode": 400,
+      "expectedStatus": 400,
+      "error": null,
+      "responseBody": {
+        "statusCode": 400,
+        "timestamp": "2025-07-12T11:32:36.791Z",
+        "path": "/analytics/audit-logs?startDate=2024-01-01&endDate=invalid-date",
+        "method": "GET",
+        "message": "Provided \"skip\" value is not a number. Please provide a numeric value.",
+        "error": "Database Error",
+        "code": "DATABASE_ERROR"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 9,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:32:36.947Z",
+        "path": "/analytics/audit-logs",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 7,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:32:36.955Z",
+        "path": "/analytics/audit-logs?page=1&limit=10",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 8,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:32:37.109Z",
+        "path": "/analytics/audit-logs",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 5,
+      "statusCode": 403,
+      "expectedStatus": 403,
+      "error": null,
+      "responseBody": {
+        "statusCode": 403,
+        "timestamp": "2025-07-12T11:32:37.256Z",
+        "path": "/analytics/audit-logs",
+        "method": "GET",
+        "message": "Forbidden resource",
+        "error": "Forbidden",
+        "code": "HTTP_EXCEPTION"
+      }
+    },
+    {
+      "endpoint": "GET /analytics/audit-logs",
+      "status": "PASS",
+      "responseTime": 2,
+      "statusCode": 401,
+      "expectedStatus": 401,
+      "error": null,
+      "responseBody": {
+        "statusCode": 401,
+        "timestamp": "2025-07-12T11:32:37.258Z",
+        "path": "/analytics/audit-logs",
+        "method": "GET",
+        "message": "Unauthorized",
+        "error": "Http Exception",
+        "code": "HTTP_EXCEPTION"
+      }
+    }
+  ]
+}
