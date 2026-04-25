@@ -498,26 +498,28 @@ export class UsersService {
     // Update licenseExpiryDate and professionalStatus on User entity if provided
     if (profileDto.licenseExpiryDate) {
       const expiryDate = new Date(profileDto.licenseExpiryDate);
-      const isFuture = expiryDate > new Date();
 
-      const userUpdate: any = { licenseExpiryDate: expiryDate };
+      // Only proceed if it's a valid date
+      if (!isNaN(expiryDate.getTime())) {
+        const isFuture = expiryDate > new Date();
+        const userUpdate: any = { licenseExpiryDate: expiryDate };
 
-      // If the license is renewed (future date), we automatically approve the professional status
-      // to clear any "expired" or "rejected" states on the dashboard.
-      if (isFuture) {
-        userUpdate.professionalStatus = 'APPROVED';
+        // If the license is renewed (future date), we automatically approve the professional status
+        // to clear any "expired" or "rejected" states on the dashboard.
+        if (isFuture) {
+          userUpdate.professionalStatus = 'APPROVED';
+        }
+
+        await this.usersRepository.update(userId, userUpdate);
       }
-
-      await this.usersRepository.update(userId, userUpdate);
     }
 
     // Map common frontend aliases to entity columns
     const mappedDto: any = { ...profileDto };
 
     // licenseNumber -> practiceNumber
-    if (mappedDto.licenseNumber !== undefined) {
+    if (mappedDto.licenseNumber && !mappedDto.practiceNumber) {
       mappedDto.practiceNumber = mappedDto.licenseNumber;
-      delete mappedDto.licenseNumber;
     }
 
     // specialty -> specialization

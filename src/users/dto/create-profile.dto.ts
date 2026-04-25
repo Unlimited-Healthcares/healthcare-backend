@@ -311,8 +311,19 @@ export class CreateProfileDto {
     description: 'Professional license expiry date',
     example: '2025-12-31'
   })
-  @IsDateString()
+  @IsString()
   @IsOptional()
   licenseExpiryDate?: string;
+
+  // Frontend Aliases (to ensure they survive ValidationPipe whitelist)
+  @ApiPropertyOptional({ description: 'Alias for specialization' })
+  @IsString()
+  @IsOptional()
+  specialty?: string;
+
+  @ApiPropertyOptional({ description: 'Alias for services' })
+  @IsArray()
+  @IsOptional()
+  offeredServices?: any[];
 }
 
