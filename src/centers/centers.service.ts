@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException, ConflictException, BadRequestException } from '@nestjs/common';
+import { Injectable, NotFoundException, ConflictException, BadRequestException, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { HealthcareCenter } from './entities/center.entity';
@@ -22,6 +22,7 @@ import { MulterFile } from '../types/express';
 
 @Injectable()
 export class CentersService {
+  private readonly logger = new Logger(CentersService.name);
   /**
    * Transform center entity to PublicCenterSearchDto for search results - excludes ALL sensitive data
    */
@@ -488,85 +489,125 @@ export class CentersService {
   }
 
   async searchCenters(filters: SearchCentersDto): Promise<PublicCenterSearchResponseDto> {
-    const queryBuilder = this.centersRepository
-      .createQueryBuilder('center')
-      .leftJoinAndSelect('center.staff', 'staff')
-      .where('center.isActive = :isActive', { isActive: true });
+    try {
+      this.logger.debug(`Searching centers with filters: ${JSON.stringify(filters)}`);
 
-    // Filter by center type
-    if (filters.type) {
-      queryBuilder.andWhere('center.type = :type', { type: filters.type });
-    }
+      const queryBuilder = this.centersRepository
+        .createQueryBuilder('center')
+        .leftJoinAndSelect('center.staff', 'staff')
+        .leftJoinAndSelect('center.services', 'services')
+        .select([
+          'center.id',
+          'center.displayId',
+          'center.name',
+          'center.logoUrl',
+          'center.description',
+          'center.type',
+          'center.address',
+          'center.latitude',
+          'center.longitude',
+          'center.city',
+          'center.state',
+          'center.country',
+          'center.postalCode',
+          'center.phone',
+          'center.email',
+          'center.hours',
+          'center.businessRegNumber',
+          'center.locationMetadata',
+          'center.isActive',
+          'center.paymentSettings',
+          'staff.id',
+          'staff.userId',
+          'staff.centerId',
+          'staff.role',
+          'services.id',
+          'services.serviceName',
+          'services.description',
+          'services.basePrice',
+          'services.currency',
+          'services.serviceCategory',
+          'services.isActive'
+        ])
+        .where('center.isActive = :isActive', { isActive: true });
 
-    // Generic search (name, description, ID, phone, etc.)
-    if (filters.search) {
-      queryBuilder.andWhere(
-        '(center.name ILIKE :search OR center.description ILIKE :search OR center.business_registration_number ILIKE :search OR center.displayId ILIKE :search OR center.phone ILIKE :search)',
-        { search: `%${filters.search}%` }
-      );
-    }
+      // Filter by center type
+      if (filters.type) {
+        queryBuilder.andWhere('center.type = :type', { type: filters.type });
+      }
 
-    // Filter by location
-    if (filters.city) {
-      queryBuilder.andWhere('center.city ILIKE :city', { city: `%${filters.city}%` });
-    }
-    if (filters.state) {
-      queryBuilder.andWhere('center.state ILIKE :state', { state: `%${filters.state}%` });
-    }
-    if (filters.country) {
-      queryBuilder.andWhere('center.country ILIKE :country', { country: `%${filters.country}%` });
-    }
+      // Generic search (name, description, ID, phone, etc.)
+      if (filters.search) {
+        queryBuilder.andWhere(
+          '(center.name ILIKE :search OR center.description ILIKE :search OR center.businessRegNumber ILIKE :search OR center.displayId ILIKE :search OR center.phone ILIKE :search)',
+          { search: `%${filters.search}%` }
+        );
+      }
 
-    // Legacy location filter (searches in address)
-    if (filters.location && !filters.city && !filters.state && !filters.country) {
-      queryBuilder.andWhere('center.address ILIKE :location', {
-        location: `%${filters.location}%`
+      // Filter by location
+      if (filters.city) {
+        queryBuilder.andWhere('center.city ILIKE :city', { city: `%${filters.city}%` });
+      }
+      if (filters.state) {
+        queryBuilder.andWhere('center.state ILIKE :state', { state: `%${filters.state}%` });
+      }
+      if (filters.country) {
+        queryBuilder.andWhere('center.country ILIKE :country', { country: `%${filters.country}%` });
+      }
+
+      // Legacy location filter (searches in address)
+      if (filters.location && !filters.city && !filters.state && !filters.country) {
+        queryBuilder.andWhere('center.address ILIKE :location', {
+          location: `%${filters.location}%`
+        });
+      }
+
+      // Filter by services (legacy/array-like) or single service keyword
+      if (filters.service) {
+        queryBuilder.andWhere(`EXISTS (
+          SELECT 1 FROM center_services service 
+          WHERE service.center_id = center.id
+          AND service."name" ILIKE :serviceQuery
+          AND service."is_available" = true
+        )`, { serviceQuery: `%${filters.service}%` });
+      } else if (filters.services) {
+        const serviceList = filters.services.split(',').map(s => s.trim());
+        // For multiple services, centers that offer ANY of them
+        queryBuilder.andWhere(`EXISTS (
+          SELECT 1 FROM center_services service 
+          WHERE service.center_id = center.id
+          AND service."name" = ANY(:services)
+          AND service."is_available" = true
+        )`, { services: serviceList });
+      }
+
+      // Apply pagination and get results with count
+      const [centers, total] = await queryBuilder
+        .skip((filters.page - 1) * filters.limit)
+        .take(filters.limit)
+        .getManyAndCount();
+
+      const hasMore = (filters.page * filters.limit) < total;
+
+      this.logger.debug(`Search completed. Found ${centers.length} centers out of ${total} total`);
+
+      // Transform centers to public search DTOs to exclude ALL sensitive fields
+      const publicCenters = centers.map(center => {
+        const owner = center.staff?.find(staff => staff.role === 'owner');
+        return this.transformToPublicSearchCenter(center, owner?.userId);
       });
+
+      return {
+        centers: publicCenters,
+        total,
+        page: filters.page,
+        limit: filters.limit,
+        hasMore
+      };
+    } catch (error) {
+      this.logger.error(`Error searching centers: ${error.message}`, error.stack);
+      throw error;
     }
-
-    // Filter by services (legacy/array-like) or single service keyword
-    if (filters.service) {
-      queryBuilder.andWhere(`EXISTS (
-        SELECT 1 FROM center_services service 
-        WHERE service.center_id = center.id
-        AND service."name" ILIKE :serviceQuery
-        AND service."is_available" = true
-      )`, { serviceQuery: `%${filters.service}%` });
-    } else if (filters.services) {
-      const serviceList = filters.services.split(',').map(s => s.trim());
-      // For multiple services, centers that offer ANY of them
-      queryBuilder.andWhere(`EXISTS (
-        SELECT 1 FROM center_services service 
-        WHERE service.center_id = center.id
-        AND service."name" = ANY(:services)
-        AND service."is_available" = true
-      )`, { services: serviceList });
-    }
-
-    // Get total count
-    const total = await queryBuilder.getCount();
-
-    // Apply pagination
-    const centers = await queryBuilder
-      .skip((filters.page - 1) * filters.limit)
-      .take(filters.limit)
-      .getMany();
-
-    const hasMore = (filters.page * filters.limit) < total;
-
-    // Transform centers to public search DTOs to exclude ALL sensitive fields
-    const publicCenters = centers.map(center => {
-      const owner = center.staff?.find(staff => staff.role === 'owner');
-      return this.transformToPublicSearchCenter(center, owner?.userId);
-    });
-
-    return {
-      centers: publicCenters,
-      total,
-      page: filters.page,
-      limit: filters.limit,
-      hasMore
-    };
   }
 
   async getNearbyCenters(location: NearbyCentersDto): Promise<PublicCenterSearchDto[]> {
@@ -597,7 +638,41 @@ export class CentersService {
 
     const queryBuilder = this.centersRepository
       .createQueryBuilder('center')
-      .leftJoinAndSelect('center.staff', 'staff')
+      .leftJoin('center.staff', 'staff')
+      .leftJoin('center.services', 'services')
+      .select([
+        'center.id',
+        'center.displayId',
+        'center.name',
+        'center.logoUrl',
+        'center.description',
+        'center.type',
+        'center.address',
+        'center.latitude',
+        'center.longitude',
+        'center.city',
+        'center.state',
+        'center.country',
+        'center.postalCode',
+        'center.phone',
+        'center.email',
+        'center.hours',
+        'center.businessRegNumber',
+        'center.locationMetadata',
+        'center.isActive',
+        'center.paymentSettings',
+        'staff.id',
+        'staff.userId',
+        'staff.centerId',
+        'staff.role',
+        'services.id',
+        'services.serviceName',
+        'services.description',
+        'services.basePrice',
+        'services.currency',
+        'services.serviceCategory',
+        'services.isActive'
+      ])
       .where('center.isActive = :isActive', { isActive: true })
       // Use PostGIS geography ST_DWithin for highly accurate and indexed spatial search
       .andWhere(
