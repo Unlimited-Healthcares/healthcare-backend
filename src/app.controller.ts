@@ -30,10 +30,10 @@ export class AppController {
     return {
       success: true,
       data: {
-        maintenanceMode: maintenance.enabled,
-        maintenanceMessage: maintenance.message,
+        maintenanceMode: false, // Force false for local testing
+        maintenanceMessage: '',
         registrationEnabled: isRegistrationEnabled,
-        aiAssistanceEnabled: isAiEnabled,
+        aiAssistanceEnabled: true, // Force true for local testing
       }
     };
   }
