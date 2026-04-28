@@ -56,6 +56,7 @@ export class SafeUserDto {
     height?: number;
     weight?: number;
     specialization?: string;
+    specialty?: string; // Alias for specialization
     practiceNumber?: string;
     governmentIdType?: string;
     governmentIdNumber?: string;
@@ -69,6 +70,14 @@ export class SafeUserDto {
       price?: number;
       is_available?: boolean;
     }>;
+    offeredServices?: Array<{
+      id?: string;
+      name: string;
+      description?: string;
+      category?: string;
+      price?: number;
+      is_available?: boolean;
+    }>; // Alias for services
     certificates?: Array<{
       name: string;
       issuer: string;

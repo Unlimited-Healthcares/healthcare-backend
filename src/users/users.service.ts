@@ -149,6 +149,7 @@ export class UsersService {
         height: user.profile.height,
         weight: user.profile.weight,
         specialization: user.profile.specialization,
+        specialty: user.profile.specialization, // Alias for frontend compatibility
         practiceNumber: user.profile.practiceNumber,
         governmentIdType: user.profile.governmentIdType,
         governmentIdNumber: user.profile.governmentIdNumber,
@@ -161,6 +162,7 @@ export class UsersService {
         professionalPractice: user.profile.professionalPractice,
         businessRegistration: user.profile.businessRegistration,
         services: user.profile.services,
+        offeredServices: user.profile.services, // Alias for frontend compatibility
         paymentSettings: user.profile.paymentSettings,
         createdAt: user.profile.createdAt,
         updatedAt: user.profile.updatedAt,
@@ -493,22 +495,47 @@ export class UsersService {
       }
     }
 
-    // Update licenseExpiryDate on User entity if provided
+    // Update licenseExpiryDate and professionalStatus on User entity if provided
     if (profileDto.licenseExpiryDate) {
-      await this.usersRepository.update(userId, {
-        licenseExpiryDate: new Date(profileDto.licenseExpiryDate)
-      });
+      const expiryDate = new Date(profileDto.licenseExpiryDate);
+
+      // Only proceed if it's a valid date
+      if (!isNaN(expiryDate.getTime())) {
+        const isFuture = expiryDate > new Date();
+        const userUpdate: any = { licenseExpiryDate: expiryDate };
+
+        // If the license is renewed (future date), we automatically approve the professional status
+        // to clear any "expired" or "rejected" states on the dashboard.
+        if (isFuture) {
+          userUpdate.professionalStatus = 'APPROVED';
+        }
+
+        await this.usersRepository.update(userId, userUpdate);
+      }
     }
 
-    // Map licenseNumber (frontend alias) to practiceNumber (entity column)
-    const mappedDto: UpdateProfileDto & { practiceNumber?: string; licenseNumber?: string } = { ...profileDto };
-    if (mappedDto.licenseNumber !== undefined) {
+    // Map common frontend aliases to entity columns
+    const mappedDto: any = { ...profileDto };
+
+    // licenseNumber -> practiceNumber
+    if (mappedDto.licenseNumber && !mappedDto.practiceNumber) {
       mappedDto.practiceNumber = mappedDto.licenseNumber;
-      delete mappedDto.licenseNumber;
+    }
+
+    // specialty -> specialization
+    if (mappedDto.specialty !== undefined) {
+      mappedDto.specialization = mappedDto.specialty;
+      delete mappedDto.specialty;
+    }
+
+    // offeredServices -> services
+    if (mappedDto.offeredServices !== undefined) {
+      mappedDto.services = mappedDto.offeredServices;
+      delete mappedDto.offeredServices;
     }
 
     if (!profile) {
-      const { dateOfBirth, ...rest } = mappedDto;
+      const { dateOfBirth, licenseExpiryDate, ...rest } = mappedDto;
       const newProfile = this.profilesRepository.create({
         ...(rest as unknown as Partial<Profile>),
         dateOfBirth: dateOfBirth ? new Date(dateOfBirth) : undefined,
@@ -531,7 +558,10 @@ export class UsersService {
       }
     });
 
-    await this.profilesRepository.update({ userId }, mappedDto as unknown as Partial<Profile>);
+    // Extract licenseExpiryDate (already handled) to avoid passing it to profilesRepository
+    const { licenseExpiryDate, ...profileUpdateData } = mappedDto;
+
+    await this.profilesRepository.update({ userId }, profileUpdateData as unknown as Partial<Profile>);
 
     // Notify user about profile update
     await this.notificationsService.createNotification({
