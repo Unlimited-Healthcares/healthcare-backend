@@ -16,8 +16,11 @@ export class RolesGuard implements CanActivate {
       return true;
     }
     const { user } = context.switchToHttp().getRequest();
-    // BY USER REQUEST: Disable role-based restrictions to allow all roles to access everything.
-    // As long as the user is authenticated (checked by JwtAuthGuard), we allow access.
-    return !!user;
+    
+    if (!user || !user.roles) {
+      return false;
+    }
+
+    return requiredRoles.some((role) => user.roles?.includes(role));
   }
 }

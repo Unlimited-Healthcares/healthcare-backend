@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, Between } from 'typeorm';
 import { Appointment } from './entities/appointment.entity';
@@ -237,7 +237,21 @@ export class AppointmentsService {
     userId: string,
   ): Promise<Appointment> {
     const appointment = await this.findOne(id);
+    // If status is being changed to cancelled, ensure reason is provided
+    if (updateAppointmentDto.appointmentStatus === 'cancelled' &&
+      !updateAppointmentDto.cancellationReason &&
+      !appointment.cancellationReason) {
+      throw new BadRequestException('Cancellation reason is required when status is set to cancelled.');
+    }
+
     Object.assign(appointment, updateAppointmentDto);
+
+    // If cancelled, set cancellation metadata
+    if (appointment.appointmentStatus === 'cancelled') {
+      appointment.cancelledAt = appointment.cancelledAt || new Date();
+      appointment.cancelledBy = appointment.cancelledBy || userId;
+    }
+
     const updatedAppointment = await this.appointmentRepository.save(appointment);
 
     // Log the update
@@ -638,10 +652,42 @@ export class AppointmentsService {
     appointment.confirmationStatus = 'confirmed';
     appointment.confirmedAt = new Date();
 
-    return this.appointmentRepository.save(appointment);
+    const savedAppointment = await this.appointmentRepository.save(appointment);
+
+    // Notify patient
+    if (savedAppointment.patientId) {
+      await this.notificationsService.createNotification({
+        userId: savedAppointment.patientId,
+        title: 'Appointment Confirmed',
+        message: `Your appointment for ${savedAppointment.appointmentDate.toLocaleString()} has been confirmed.`,
+        type: 'appointment_confirmed',
+        deliveryMethod: 'both',
+        relatedType: 'appointment',
+        relatedId: savedAppointment.id
+      });
+    }
+
+    // Notify provider
+    if (savedAppointment.providerId) {
+      await this.notificationsService.createNotification({
+        userId: savedAppointment.providerId,
+        title: 'Appointment Confirmed',
+        message: `An appointment with patient ${savedAppointment.patientId} for ${savedAppointment.appointmentDate.toLocaleString()} has been confirmed.`,
+        type: 'appointment_confirmed',
+        deliveryMethod: 'both',
+        relatedType: 'appointment',
+        relatedId: savedAppointment.id
+      });
+    }
+
+    return savedAppointment;
   }
 
   async cancel(id: string, reason: string, cancelledBy: string): Promise<Appointment> {
+    if (!reason || reason.trim().length === 0) {
+      throw new BadRequestException('Cancellation reason is required and must be documented.');
+    }
+
     const appointment = await this.findOne(id);
 
     appointment.appointmentStatus = 'cancelled';
@@ -649,7 +695,35 @@ export class AppointmentsService {
     appointment.cancelledBy = cancelledBy;
     appointment.cancelledAt = new Date();
 
-    return this.appointmentRepository.save(appointment);
+    const savedAppointment = await this.appointmentRepository.save(appointment);
+
+    // Notify patient
+    if (savedAppointment.patientId) {
+      await this.notificationsService.createNotification({
+        userId: savedAppointment.patientId,
+        title: 'Appointment Cancelled',
+        message: `Your appointment for ${savedAppointment.appointmentDate.toLocaleString()} has been cancelled. Reason: ${reason}`,
+        type: 'appointment_cancelled',
+        deliveryMethod: 'both',
+        relatedType: 'appointment',
+        relatedId: savedAppointment.id
+      });
+    }
+
+    // Notify provider
+    if (savedAppointment.providerId) {
+      await this.notificationsService.createNotification({
+        userId: savedAppointment.providerId,
+        title: 'Appointment Cancelled',
+        message: `The appointment with patient ${savedAppointment.patientId} for ${savedAppointment.appointmentDate.toLocaleString()} has been cancelled. Reason: ${reason}`,
+        type: 'appointment_cancelled',
+        deliveryMethod: 'both',
+        relatedType: 'appointment',
+        relatedId: savedAppointment.id
+      });
+    }
+
+    return savedAppointment;
   }
 
   async completeAppointment(

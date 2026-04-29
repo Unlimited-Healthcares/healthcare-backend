@@ -1,5 +1,4 @@
-
-import { IsString, IsOptional, IsEnum, IsBoolean, IsNumber, IsUUID, IsDateString } from 'class-validator';
+import { IsString, IsOptional, IsEnum, IsBoolean, IsNumber, IsUUID, IsDateString, Max } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class CreateVideoConferenceDto {
@@ -45,6 +44,7 @@ export class CreateVideoConferenceDto {
   @ApiPropertyOptional({ example: 10 })
   @IsOptional()
   @IsNumber()
+  @Max(10)
   maxParticipants?: number;
 
   @ApiPropertyOptional({ example: true })

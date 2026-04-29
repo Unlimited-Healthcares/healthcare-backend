@@ -20,6 +20,7 @@ interface SearchFilters {
   dateTo?: Date;
   patientId?: string;
   centerId: string;
+  workspaceId?: string;
 }
 
 @Injectable()
@@ -148,7 +149,7 @@ export class MedicalRecordsService {
     return saved;
   }
 
-  async findAll(centerId: string, patientId?: string, requester?: { userId: string, roles: string[] }): Promise<MedicalRecord[]> {
+  async findAll(centerId: string, patientId?: string, requester?: { userId: string, roles: string[] }, workspaceId?: string): Promise<MedicalRecord[]> {
     const whereCondition: FindOptionsWhere<MedicalRecord> = {
       centerId,
       status: 'active'
@@ -161,6 +162,10 @@ export class MedicalRecordsService {
 
     if (patientId) {
       fullWhereCondition.patientId = patientId;
+    }
+
+    if (workspaceId) {
+      fullWhereCondition.workspaceId = workspaceId;
     }
 
     const records = await this.medicalRecordsRepository.find({

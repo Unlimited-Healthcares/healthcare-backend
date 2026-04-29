@@ -53,11 +53,11 @@ export class MedicalRecordsController {
   }
 
   @Get()
-  async findAll(@Req() req, @Query('patientId') patientId?: string) {
+  async findAll(@Req() req, @Query('patientId') patientId?: string, @Query('workspaceId') workspaceId?: string) {
     return await this.medicalRecordsService.findAll(req.user.centerId, patientId, {
       userId: req.user.id,
       roles: req.user.roles
-    });
+    }, workspaceId);
   }
 
   // Enhanced Search and Filtering - MUST come before :id routes
@@ -71,6 +71,7 @@ export class MedicalRecordsController {
     @Query('dateFrom') dateFrom?: string,
     @Query('dateTo') dateTo?: string,
     @Query('patientId') patientId?: string,
+    @Query('workspaceId') workspaceId?: string,
     @Query('page') page = 1,
     @Query('limit') limit = 10,
   ) {
@@ -84,6 +85,7 @@ export class MedicalRecordsController {
       dateTo: dateTo ? new Date(dateTo) : undefined,
       patientId,
       centerId: req.user.centerId,
+      workspaceId
     };
 
     return await this.medicalRecordsService.searchRecords(filters, page, limit, {

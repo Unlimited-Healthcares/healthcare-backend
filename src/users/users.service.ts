@@ -706,6 +706,27 @@ export class UsersService {
         );
       }
 
+      // Filter by price range
+      if (filters.minPrice !== undefined) {
+        queryBuilder.andWhere(
+          `EXISTS (
+            SELECT 1 FROM jsonb_array_elements(profile.services) AS s
+            WHERE (s->>'price')::numeric >= :minPrice
+          )`,
+          { minPrice: filters.minPrice }
+        );
+      }
+
+      if (filters.maxPrice !== undefined) {
+        queryBuilder.andWhere(
+          `EXISTS (
+            SELECT 1 FROM jsonb_array_elements(profile.services) AS s
+            WHERE (s->>'price')::numeric <= :maxPrice
+          )`,
+          { maxPrice: filters.maxPrice }
+        );
+      }
+
       // Get users and total count in one go
       const [users, total] = await queryBuilder
         .skip((filters.page - 1) * filters.limit)

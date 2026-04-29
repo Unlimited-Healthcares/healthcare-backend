@@ -197,6 +197,19 @@ export class VideoConferencingService {
       throw new ForbiddenException('Conference is not active');
     }
 
+    // ENFORCEMENT: Check max participants
+    const activeParticipantsCount = await this.participantRepository.count({
+      where: {
+        conferenceId,
+        leaveTime: IsNull(),
+        joinTime: Not(IsNull())
+      }
+    });
+
+    if (activeParticipantsCount >= conference.maxParticipants) {
+      throw new ForbiddenException(`Conference has reached its maximum capacity of ${conference.maxParticipants} participants`);
+    }
+
     participant.joinTime = new Date();
     participant.invitationStatus = 'accepted';
 

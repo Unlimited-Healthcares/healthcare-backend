@@ -13,6 +13,10 @@ export class CreateMedicalRecordDto {
   @IsUUID()
   createdBy?: string;
 
+  @IsOptional()
+  @IsUUID()
+  workspaceId?: string;
+
   @IsString()
   recordType: string;
 

@@ -4,7 +4,7 @@ import * as bcrypt from 'bcrypt';
 import { v4 as uuidv4 } from 'uuid';
 
 async function seedAccounts() {
-    const connectionString = 'postgresql://healthcare_user:qvlc4jKWSRGFlbVAhA9ZToKCuzxPYMp5@dpg-d6dqt2ctgctc73cgvbf0-a.oregon-postgres.render.com/healthcare_y6g1';
+    const connectionString = 'postgresql://healthcare_user:yUUbWAO0dJFZUM7Sv2ipW3tvClDlPU1p@dpg-d7hig8v7f7vs738jttkg-a.oregon-postgres.render.com/healthcare_bzg0';
     const client = new Client({
         connectionString,
         ssl: { rejectUnauthorized: false }

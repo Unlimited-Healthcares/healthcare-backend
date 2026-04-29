@@ -581,6 +581,25 @@ export class CentersService {
         )`, { services: serviceList });
       }
 
+      // Filter by price range
+      if (filters.minPrice !== undefined) {
+        queryBuilder.andWhere(`EXISTS (
+          SELECT 1 FROM center_services service 
+          WHERE service.center_id = center.id
+          AND service."price" >= :minPrice
+          AND service."is_available" = true
+        )`, { minPrice: filters.minPrice });
+      }
+
+      if (filters.maxPrice !== undefined) {
+        queryBuilder.andWhere(`EXISTS (
+          SELECT 1 FROM center_services service 
+          WHERE service.center_id = center.id
+          AND service."price" <= :maxPrice
+          AND service."is_available" = true
+        )`, { maxPrice: filters.maxPrice });
+      }
+
       // Apply pagination and get results with count
       const [centers, total] = await queryBuilder
         .skip((filters.page - 1) * filters.limit)

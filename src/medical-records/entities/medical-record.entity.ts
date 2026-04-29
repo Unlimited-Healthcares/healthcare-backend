@@ -18,6 +18,9 @@ export class MedicalRecord {
   @Column({ nullable: true })
   createdBy: string;
 
+  @Column({ nullable: true })
+  workspaceId: string;
+
   @Column({ length: 100 })
   recordType: string; // diagnosis, prescription, lab_result, imaging, surgery, etc.
 
