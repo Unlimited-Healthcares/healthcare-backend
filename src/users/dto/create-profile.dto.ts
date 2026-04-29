@@ -126,6 +126,26 @@ export class CreateProfileDto {
   @IsOptional()
   weight?: number;
 
+  @ApiPropertyOptional({ example: 36.5, description: 'Body temperature in Celsius' })
+  @IsNumber()
+  @IsOptional()
+  bodyTemperature?: number;
+
+  @ApiPropertyOptional({ example: '120/80', description: 'Blood pressure reading' })
+  @IsString()
+  @IsOptional()
+  bloodPressure?: string;
+
+  @ApiPropertyOptional({ example: 'Peanuts, Penicillin', description: 'Known allergies' })
+  @IsString()
+  @IsOptional()
+  allergies?: string;
+
+  @ApiPropertyOptional({ example: 'no', description: 'Chronic disease status' })
+  @IsString()
+  @IsOptional()
+  chronicDisease?: string;
+
   @ApiPropertyOptional({ example: 'Cardiology', description: 'Medical specialization' })
   @IsString()
   @IsOptional()

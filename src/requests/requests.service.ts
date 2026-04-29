@@ -289,6 +289,20 @@ export class RequestsService {
             metadata: createRequestDto.metadata
           }
         });
+
+        // Also notify the sender (Confirmation)
+        await this.notificationsService.createNotification({
+          userId: createRequestDto.senderId,
+          type: 'request_sent',
+          title: `${formattedRequestType} Sent Successfully`,
+          message: `Your ${formattedRequestType.toLowerCase()} request has been sent to ${recipientName}. We will notify you once they respond.`,
+          data: {
+            requestId: savedRequest.id,
+            recipientId: createRequestDto.recipientId,
+            recipientName,
+            requestType: createRequestDto.requestType
+          }
+        });
       } else if (paymentStatus === 'pending') {
         this.logger.debug(`Request ${savedRequest.id} created but awaiting payment. Notification suppressed.`);
       }

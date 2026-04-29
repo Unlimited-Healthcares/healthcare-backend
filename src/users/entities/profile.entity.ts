@@ -55,6 +55,18 @@ export class Profile {
   @Column({ type: 'decimal', precision: 5, scale: 2, nullable: true })
   weight: number;
 
+  @Column({ type: 'decimal', precision: 5, scale: 2, nullable: true })
+  bodyTemperature: number;
+
+  @Column({ nullable: true })
+  bloodPressure: string;
+
+  @Column({ type: 'text', nullable: true })
+  allergies: string;
+
+  @Column({ nullable: true })
+  chronicDisease: string;
+
   @Column({ nullable: true })
   specialization: string; // For doctors
 
