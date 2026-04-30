@@ -24,6 +24,8 @@ import { ClinicalWorkspace } from './workspaces/entities/clinical-workspace.enti
 import { ClinicalLog } from './workspaces/entities/clinical-log-entry.entity';
 import { ClinicalWorkspacesService } from './workspaces/clinical-workspaces.service';
 import { ClinicalWorkspacesController } from './workspaces/clinical-workspaces.controller';
+import { DischargeModule } from './discharge/discharge.module';
+import { RehabModule } from './rehab/rehab.module';
 
 @Module({
     imports: [
@@ -42,6 +44,8 @@ import { ClinicalWorkspacesController } from './workspaces/clinical-workspaces.c
         ChatModule,
         AuditModule,
         UsersModule,
+        DischargeModule,
+        RehabModule,
     ],
     controllers: [
         EncountersController,

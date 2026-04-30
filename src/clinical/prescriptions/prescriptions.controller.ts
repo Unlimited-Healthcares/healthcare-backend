@@ -34,4 +34,14 @@ export class PrescriptionsController {
     update(@Param('id') id: string, @Body() updatePrescriptionDto: UpdatePrescriptionDto) {
         return this.prescriptionsService.update(id, updatePrescriptionDto);
     }
+
+    @Post(':id/verify')
+    @Roles('pharmacist', 'admin')
+    verify(
+        @Param('id') id: string,
+        @Body() verificationData: { status: string; notes?: string; interactionFlags?: any[] },
+        @Request() req
+    ) {
+        return this.prescriptionsService.verify(id, req.user.userId, verificationData);
+    }
 }

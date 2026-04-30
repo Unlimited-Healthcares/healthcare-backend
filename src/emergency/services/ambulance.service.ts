@@ -295,10 +295,36 @@ export class AmbulanceService {
       });
     }
 
-    return this.requestRepository.findOne({
-      where: { id: requestId },
-      relations: ['ambulance'],
-    });
+    return await this.requestRepository.findOne({ where: { id: requestId }, relations: ['ambulance'] });
+  }
+
+  async updateClinicalData(
+    requestId: string,
+    clinicalData: {
+      vitals?: any;
+      interventions?: any[];
+      sceneMedia?: string[];
+    }
+  ): Promise<AmbulanceRequest> {
+    const request = await this.requestRepository.findOne({ where: { id: requestId }, relations: ['ambulance'] });
+    if (!request) throw new NotFoundException('Ambulance request not found');
+
+    if (clinicalData.vitals) request.clinicalVitals = { ...request.clinicalVitals, ...clinicalData.vitals };
+    if (clinicalData.interventions) request.interventions = [...(request.interventions || []), ...clinicalData.interventions];
+    if (clinicalData.sceneMedia) request.sceneMedia = [...(request.sceneMedia || []), ...clinicalData.sceneMedia];
+
+    const saved = await this.requestRepository.save(request);
+
+    // Notify ER Doctors & MDT
+    await this.notificationsService.broadcast({
+      title: '🚑 CLINICAL DATA UPDATE',
+      message: `Vitals/Assessment updated for Request ${request.requestNumber}`,
+      type: 'emergency',
+      isUrgent: true,
+      data: { requestId, vitals: clinicalData.vitals }
+    }, { roles: ['doctor', 'nurse'] });
+
+    return saved;
   }
 
   async updateAmbulanceLocation(

@@ -32,8 +32,24 @@ export class Prescription {
     @Column({ type: 'text', nullable: true })
     notes: string;
 
-    @Column({ length: 50, default: 'active' })
-    status: string; // active, completed, cancelled, expired
+    @Column({ length: 50, default: 'pending_verification' })
+    status: string; // pending_verification, verified, active, completed, cancelled, expired, flag_interaction
+
+    @Column({ name: 'pharmacist_id', nullable: true })
+    pharmacistId: string;
+
+    @Column({ name: 'verified_at', nullable: true })
+    verifiedAt: Date;
+
+    @Column({ name: 'pharmacist_notes', type: 'text', nullable: true })
+    pharmacistNotes: string;
+
+    @Column({ name: 'interaction_flags', type: 'jsonb', nullable: true })
+    interactionFlags: Array<{
+        severity: 'low' | 'medium' | 'high';
+        description: string;
+        drugs: string[];
+    }>;
 
     @Column({ name: 'expires_at', nullable: true })
     expiresAt: Date;
@@ -46,6 +62,10 @@ export class Prescription {
 
     @UpdateDateColumn({ name: 'updated_at' })
     updatedAt: Date;
+
+    @ManyToOne(() => User)
+    @JoinColumn({ name: 'pharmacist_id' })
+    pharmacist: User;
 
     // Relations
     @ManyToOne(() => Patient)

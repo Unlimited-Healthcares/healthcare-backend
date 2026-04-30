@@ -171,6 +171,30 @@ export class AmbulanceRequest {
   @Column({ name: 'delivered_at', nullable: true })
   deliveredAt: Date;
 
+  @Column({ name: 'clinical_vitals', type: 'jsonb', nullable: true })
+  clinicalVitals: {
+    heartRate?: number;
+    bloodPressure?: string;
+    spo2?: number;
+    gcs?: number;
+    glucose?: number;
+    temperature?: number;
+    respiratoryRate?: number;
+    timestamp?: string;
+  };
+
+  @Column({ name: 'interventions', type: 'jsonb', nullable: true })
+  interventions: Array<{
+    type: string;
+    description: string;
+    timestamp: Date;
+    administeredBy: string;
+    dosage?: string;
+  }>;
+
+  @Column({ name: 'scene_media', type: 'jsonb', nullable: true })
+  sceneMedia: string[];
+
   @Column({ type: 'jsonb', nullable: true })
   metadata: Record<string, unknown>;
 

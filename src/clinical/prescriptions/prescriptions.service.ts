@@ -79,4 +79,33 @@ export class PrescriptionsService {
         Object.assign(prescription, updatePrescriptionDto);
         return this.prescriptionRepository.save(prescription);
     }
+
+    async verify(id: string, pharmacistId: string, verificationData: {
+        status: string;
+        notes?: string;
+        interactionFlags?: any[];
+    }): Promise<Prescription> {
+        const prescription = await this.findOne(id);
+        
+        prescription.status = verificationData.status;
+        prescription.pharmacistId = pharmacistId;
+        prescription.verifiedAt = new Date();
+        if (verificationData.notes) prescription.pharmacistNotes = verificationData.notes;
+        if (verificationData.interactionFlags) prescription.interactionFlags = verificationData.interactionFlags;
+
+        const saved = await this.prescriptionRepository.save(prescription);
+
+        // Notify Doctor if interaction flagged
+        if (verificationData.status === 'flag_interaction' && prescription.providerId) {
+            await this.notificationsService.createNotification({
+                userId: prescription.providerId,
+                type: 'clinical_alert',
+                title: 'Prescription Flagged by Pharmacy',
+                message: `Interaction detected for ${prescription.prescriptionNumber}. Action Required.`,
+                data: { prescriptionId: id, status: 'flagged' }
+            });
+        }
+
+        return saved;
+    }
 }

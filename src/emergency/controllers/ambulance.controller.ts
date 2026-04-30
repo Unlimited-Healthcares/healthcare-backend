@@ -207,6 +207,26 @@ export class AmbulanceController {
     };
   }
 
+  @Put('requests/:id/clinical-data')
+  @ApiOperation({ summary: 'Update clinical data for ambulance request' })
+  @ApiResponse({ status: 200, description: 'Clinical data updated successfully' })
+  @Roles('admin', 'ambulance_driver')
+  async updateClinicalData(
+    @Param('id') id: string,
+    @Body() clinicalData: {
+      vitals?: any;
+      interventions?: any[];
+      sceneMedia?: string[];
+    }
+  ) {
+    const request = await this.ambulanceService.updateClinicalData(id, clinicalData);
+    return {
+      success: true,
+      data: request,
+      message: 'Clinical data updated successfully',
+    };
+  }
+
   @Post('coordinate-response')
   @HttpCode(200)
   @ApiOperation({ summary: 'Coordinate emergency response' })
