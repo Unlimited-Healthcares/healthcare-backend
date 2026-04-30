@@ -33,4 +33,11 @@ export class RehabController {
     logProgress(@Param('id') id: string, @Body() log: any) {
         return this.rehabService.logProgress(id, log);
     }
+
+    @Post('assessment')
+    @Roles('allied_practitioner', 'doctor', 'admin')
+    saveAssessment(@Body() data: any, @Request() req) {
+        // For now, we'll just log it or save it as a clinical log entry
+        return this.rehabService.saveAssessment(data, req.user.userId);
+    }
 }

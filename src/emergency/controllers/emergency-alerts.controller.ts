@@ -36,14 +36,14 @@ interface EmergencyMedicalData {
   notes?: string;
 }
 
-@ApiTags('emergency/alerts')
-@Controller('emergency/alerts')
+@ApiTags('emergency')
+@Controller('emergency')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @ApiBearerAuth('access-token')
 export class EmergencyAlertsController {
   constructor(private readonly alertsService: EmergencyAlertsService) { }
 
-  @Post('sos')
+  @Post('alerts/sos')
   @ApiOperation({ summary: 'Trigger SOS alert' })
   @ApiResponse({ status: 201, description: 'SOS alert created successfully' })
   @Roles('patient', 'doctor', 'nurse', 'admin', 'center', 'staff')
@@ -73,7 +73,38 @@ export class EmergencyAlertsController {
     };
   }
 
-  @Get()
+  @Post('broadcast')
+  @ApiOperation({ summary: 'Broadcast emergency signal' })
+  @ApiResponse({ status: 201, description: 'Emergency broadcast initiated' })
+  @Roles('patient', 'doctor', 'nurse', 'admin', 'center', 'staff')
+  async broadcastEmergency(
+    @Body() broadcastData: {
+      patientId: string;
+      location: { latitude: number; longitude: number };
+      phoneNumber: string;
+      type: string;
+      broadcastRadius?: string;
+    },
+    @Request() req: AuthenticatedRequest
+  ) {
+    const alert = await this.alertsService.createSOSAlert({
+      type: AlertType.MEDICAL_EMERGENCY,
+      description: `BROADCAST SIGNAL: ${broadcastData.type}`,
+      latitude: broadcastData.location.latitude,
+      longitude: broadcastData.location.longitude,
+      contactNumber: broadcastData.phoneNumber,
+      patientId: broadcastData.patientId,
+      userId: req.user.id,
+    });
+
+    return {
+      success: true,
+      data: alert,
+      message: 'Emergency signal broadcasted to nearest centers',
+    };
+  }
+
+  @Get('alerts')
   @ApiOperation({ summary: 'Get emergency alerts' })
   @ApiResponse({ status: 200, description: 'Emergency alerts retrieved successfully' })
   @Roles('admin', 'doctor', 'nurse', 'patient', 'center', 'staff')
@@ -84,10 +115,8 @@ export class EmergencyAlertsController {
     @Query('page') page?: number,
     @Query('limit') limit?: number
   ) {
-    const userRole = req.user.roles[0]; // Use first role from roles array
+    const userRole = req.user.roles[0];
     const filters: JsonObject = { type, status, page, limit };
-
-    // BY USER REQUEST: Removed patient-only restriction
 
     const result = await this.alertsService.getActiveAlerts(filters);
 
@@ -103,7 +132,7 @@ export class EmergencyAlertsController {
     };
   }
 
-  @Put(':id/acknowledge')
+  @Put('alerts/:id/acknowledge')
   @ApiOperation({ summary: 'Acknowledge emergency alert' })
   @ApiResponse({ status: 200, description: 'Alert acknowledged successfully' })
   @Roles('admin', 'doctor', 'nurse', 'center', 'staff')
@@ -120,7 +149,7 @@ export class EmergencyAlertsController {
     };
   }
 
-  @Put(':id/resolve')
+  @Put('alerts/:id/resolve')
   @ApiOperation({ summary: 'Resolve emergency alert' })
   @ApiResponse({ status: 200, description: 'Alert resolved successfully' })
   @Roles('admin', 'doctor', 'nurse', 'center', 'staff')
@@ -144,7 +173,7 @@ export class EmergencyAlertsController {
     };
   }
 
-  @Post('emergency-contacts')
+  @Post('alerts/emergency-contacts')
   @ApiOperation({ summary: 'Add emergency contact' })
   @ApiResponse({ status: 201, description: 'Emergency contact added successfully' })
   @Roles('patient', 'doctor', 'nurse', 'admin', 'center', 'staff')
@@ -174,7 +203,7 @@ export class EmergencyAlertsController {
     };
   }
 
-  @Get('emergency-contacts')
+  @Get('alerts/emergency-contacts')
   @ApiOperation({ summary: 'Get emergency contacts' })
   @ApiResponse({ status: 200, description: 'Emergency contacts retrieved successfully' })
   @Roles('patient', 'doctor', 'nurse', 'admin', 'center', 'staff')

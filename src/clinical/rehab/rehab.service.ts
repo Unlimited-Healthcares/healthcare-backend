@@ -70,4 +70,15 @@ export class RehabService {
 
         return this.rehabRepository.save(plan);
     }
+
+    async saveAssessment(data: any, authorId: string): Promise<any> {
+        // In a real scenario, this would save to a PhysioAssessment entity
+        // For now, we return the saved data to simulate persistence
+        return {
+            ...data,
+            id: Math.random().toString(36).substr(2, 9),
+            authorId,
+            timestamp: new Date().toISOString()
+        };
+    }
 }

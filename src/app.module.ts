@@ -66,10 +66,12 @@ import { ClinicalWorkflowModule } from './clinical/clinical-workflow.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { BiotechModule } from './biotech/biotech.module';
+import { PharmacyModule } from './pharmacy/pharmacy.module';
 
 @Module({
   imports: [
     BiotechModule,
+    PharmacyModule,
     ServeStaticModule.forRoot({
       rootPath: join(process.cwd(), 'public'),
       serveRoot: '/ota-staging', // Download will be at /ota-staging/dist.zip
