@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RehabPlan } from './entities/rehab-plan.entity';
-import { NotificationsService } from '../../../notifications/notifications.service';
+import { NotificationsService } from '../../notifications/notifications.service';
 
 @Injectable()
 export class RehabService {
@@ -18,7 +18,7 @@ export class RehabService {
             physioId,
             status: 'active'
         });
-        const saved = await this.rehabRepository.save(plan);
+        const saved = await this.rehabRepository.save(plan) as any;
 
         // Notify patient about new rehab plan
         try {

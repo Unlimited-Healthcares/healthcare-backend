@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { DischargePlan } from './entities/discharge-plan.entity';
+import { DischargePlan } from '../entities/discharge-plan.entity';
 import { CareTask } from '../../../care-tasks/entities/care-task.entity';
 import { NotificationsService } from '../../../notifications/notifications.service';
 
@@ -21,7 +21,7 @@ export class DischargeService {
             doctorId,
             status: 'active'
         });
-        const savedPlan = await this.planRepository.save(plan);
+        const savedPlan = await this.planRepository.save(plan) as any;
 
         // Create Nurse Tasks
         const tasks = [

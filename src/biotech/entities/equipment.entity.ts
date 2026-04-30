@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne } from 'typeorm';
-import { Center } from '../../centers/entities/center.entity';
+import { HealthcareCenter } from '../../centers/entities/center.entity';
 
 export enum EquipmentStatus {
     ONLINE = 'online',
@@ -41,8 +41,8 @@ export class Equipment {
     @Column({ nullable: true })
     nextCalibrationDate: Date;
 
-    @ManyToOne(() => Center)
-    center: Center;
+    @ManyToOne(() => HealthcareCenter)
+    center: HealthcareCenter;
 
     @Column()
     centerId: string;
