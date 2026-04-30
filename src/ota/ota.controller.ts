@@ -11,12 +11,18 @@ export class OtaController {
     @Public()
     async checkUpdate(
         @Query() query: Record<string, unknown>,
-        @Body() body: Record<string, unknown>
+        @Body() body: Record<string, unknown>,
+        @Query('id') queryId?: string,
+        @Query('version') queryVersion?: string,
+        @Headers() headers?: Record<string, string>
     ) {
         try {
-            const appId = query.id || body.id;
-            const currentVersion = query.version || body.version;
-            const fallbackVersion = query.current_version || body.current_version;
+            // Capgo sends version and id in various places depending on version/config
+            const appId = queryId || (body?.id as string) || (headers?.['x-capacitor-updater-id'] as string) || 'unknown';
+            const currentVersion = queryVersion || (body?.version as string) || (headers?.['x-capacitor-updater-version'] as string);
+            const fallbackVersion = (query?.current_version as string) || (body?.current_version as string);
+            
+            const actualCurrentVersion = currentVersion || fallbackVersion || 'unknown';
 
             const configPath = path.resolve(process.cwd(), 'ota.config.json');
 
@@ -28,14 +34,16 @@ export class OtaController {
             }
 
             const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-            const actualCurrentVersion = currentVersion || fallbackVersion;
 
             console.log(`📡 OTA Request (${appId}): Locally=${actualCurrentVersion}, Latest=${config.latest_version}`);
-
-            // If versions match, Capgo expects a 204 No Content
+            
+            // If versions match, Capgo expects a 204 No Content or empty
             if (config.latest_version === actualCurrentVersion) {
+                console.log(`✅ Version matches (${actualCurrentVersion}). No update needed.`);
                 return null;
             }
+
+            console.log(`🚀 Update available: ${actualCurrentVersion} -> ${config.latest_version}`);
 
             // Return latest info in the format Capgo expects
             return {
